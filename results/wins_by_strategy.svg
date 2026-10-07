@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="940" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 940" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="940"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-940)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="940" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40" y="900" style="font-family: Helvetica; font-size: 25px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1800) scale(1,-1)">Winning bets by strategy</text>
+			<text x="40" y="874" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1748) scale(1,-1)">Labels show wins / bets. Most rules bet every match; expected-return rules can skip matches.</text>
+			<path d="M 40,843 L 66,843 Z" style="stroke: rgb(15%,39%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="74" y="839" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1678) scale(1,-1)">Original independent</text>
+			<path d="M 330,843 L 356,843 Z" style="stroke: rgb(3%,52%,45%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="364" y="839" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1678) scale(1,-1)">Joint 2D: exact</text>
+			<path d="M 620,843 L 646,843 Z" style="stroke: rgb(80%,47%,12%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="654" y="839" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1678) scale(1,-1)">Joint 2D: simulated</text>
+			<path d="M 910,843 L 936,843 Z" style="stroke: rgb(58%,32%,69%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="944" y="839" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1678) scale(1,-1)">One RF: goal vector</text>
+			<path d="M 285,89 L 285,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="282.22" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">0</text>
+			<path d="M 372.058824,89 L 372.058824,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="363.7188235294118" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">100</text>
+			<path d="M 459.117647,89 L 459.117647,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="450.77764705882356" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">200</text>
+			<path d="M 546.176471,89 L 546.176471,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="537.8364705882353" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">300</text>
+			<path d="M 633.235294,89 L 633.235294,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="624.895294117647" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">400</text>
+			<path d="M 720.294118,89 L 720.294118,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="711.9541176470588" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">500</text>
+			<path d="M 807.352941,89 L 807.352941,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="799.0129411764706" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">600</text>
+			<path d="M 894.411765,89 L 894.411765,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="886.0717647058823" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">700</text>
+			<path d="M 981.470588,89 L 981.470588,805 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="973.1305882352941" y="70" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,140) scale(1,-1)">800</text>
+			<text x="173.42000000000002" y="770" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1540) scale(1,-1)">Most likely outcome</text>
+			<rect x="285" y="780" width="676.4470588235295" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="968.4470588235295" y="782" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1564) scale(1,-1)">777 / 1,447</text>
+			<rect x="285" y="764" width="676.4470588235295" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="968.4470588235295" y="766" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1532) scale(1,-1)">777 / 1,447</text>
+			<rect x="285" y="748" width="679.9294117647058" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="971.9294117647058" y="750" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1500) scale(1,-1)">781 / 1,447</text>
+			<rect x="285" y="732" width="678.1882352941177" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="970.1882352941177" y="734" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1468) scale(1,-1)">779 / 1,447</text>
+			<text x="173.695" y="692" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1384) scale(1,-1)">Expected return &gt; 1</text>
+			<rect x="285" y="702" width="280.3294117647058" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="572.3294117647058" y="704" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1408) scale(1,-1)">322 / 1,023</text>
+			<rect x="285" y="686" width="256.82352941176464" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="548.8235294117646" y="688" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1376) scale(1,-1)">295 / 992</text>
+			<rect x="285" y="670" width="267.2705882352941" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="559.2705882352941" y="672" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1344) scale(1,-1)">307 / 1,001</text>
+			<rect x="285" y="654" width="252.47058823529414" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="544.4705882352941" y="656" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1312) scale(1,-1)">290 / 1,012</text>
+			<text x="175.224" y="614" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1228) scale(1,-1)">Log odds weighting</text>
+			<rect x="285" y="624" width="386.5411764705882" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="678.5411764705882" y="626" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1252) scale(1,-1)">444 / 1,447</text>
+			<rect x="285" y="608" width="383.92941176470595" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="675.929411764706" y="610" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1220) scale(1,-1)">441 / 1,447</text>
+			<rect x="285" y="592" width="386.5411764705882" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="678.5411764705882" y="594" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1188) scale(1,-1)">444 / 1,447</text>
+			<rect x="285" y="576" width="360.4235294117648" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="652.4235294117648" y="578" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1156) scale(1,-1)">414 / 1,447</text>
+			<text x="185.014" y="536" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1072) scale(1,-1)">Square-root odds</text>
+			<rect x="285" y="546" width="679.9294117647058" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="971.9294117647058" y="548" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1096) scale(1,-1)">781 / 1,447</text>
+			<rect x="285" y="530" width="679.9294117647058" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="971.9294117647058" y="532" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1064) scale(1,-1)">781 / 1,447</text>
+			<rect x="285" y="514" width="683.4117647058823" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="975.4117647058823" y="516" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1032) scale(1,-1)">785 / 1,447</text>
+			<rect x="285" y="498" width="677.3176470588236" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="969.3176470588236" y="500" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1000) scale(1,-1)">778 / 1,447</text>
+			<text x="184.409" y="458" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,916) scale(1,-1)">Square-root profit</text>
+			<rect x="285" y="468" width="585.9058823529411" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="877.9058823529411" y="470" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,940) scale(1,-1)">673 / 1,447</text>
+			<rect x="285" y="452" width="579.8117647058823" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="871.8117647058823" y="454" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,908) scale(1,-1)">666 / 1,447</text>
+			<rect x="285" y="436" width="581.5529411764705" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="873.5529411764705" y="438" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,876) scale(1,-1)">668 / 1,447</text>
+			<rect x="285" y="420" width="571.9764705882353" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="863.9764705882353" y="422" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,844) scale(1,-1)">657 / 1,447</text>
+			<text x="163.63" y="380" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,760) scale(1,-1)">Legacy draw-to-home</text>
+			<rect x="285" y="390" width="649.4588235294118" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="941.4588235294118" y="392" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,784) scale(1,-1)">746 / 1,447</text>
+			<rect x="285" y="374" width="647.7176470588236" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="939.7176470588236" y="376" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,752) scale(1,-1)">744 / 1,447</text>
+			<rect x="285" y="358" width="648.5882352941177" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="940.5882352941177" y="360" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,720) scale(1,-1)">745 / 1,447</text>
+			<rect x="285" y="342" width="644.2352941176471" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="936.2352941176471" y="344" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,688) scale(1,-1)">740 / 1,447</text>
+			<text x="131.84" y="302" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,604) scale(1,-1)">Legacy draw-to-home return</text>
+			<rect x="285" y="312" width="545.8588235294118" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="837.8588235294118" y="314" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,628) scale(1,-1)">627 / 1,447</text>
+			<rect x="285" y="296" width="544.1176470588235" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="836.1176470588235" y="298" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,596) scale(1,-1)">625 / 1,447</text>
+			<rect x="285" y="280" width="544.1176470588235" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="836.1176470588235" y="282" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,564) scale(1,-1)">625 / 1,447</text>
+			<rect x="285" y="264" width="542.3764705882353" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="834.3764705882353" y="266" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,532) scale(1,-1)">623 / 1,447</text>
+			<text x="164.851" y="224" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,448) scale(1,-1)">Legacy market power</text>
+			<rect x="285" y="234" width="322.11764705882354" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="614.1176470588235" y="236" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,472) scale(1,-1)">370 / 1,447</text>
+			<rect x="285" y="218" width="322.11764705882354" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="614.1176470588235" y="220" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,440) scale(1,-1)">370 / 1,447</text>
+			<rect x="285" y="202" width="322.11764705882354" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="614.1176470588235" y="204" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,408) scale(1,-1)">370 / 1,447</text>
+			<rect x="285" y="186" width="322.11764705882354" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="614.1176470588235" y="188" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,376) scale(1,-1)">370 / 1,447</text>
+			<text x="159.95600000000002" y="146" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,292) scale(1,-1)">Legacy variance score</text>
+			<rect x="285" y="156" width="273.36470588235295" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,39%,70%); fill-rule: evenodd;"/>
+			<text x="565.364705882353" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,316) scale(1,-1)">314 / 1,447</text>
+			<rect x="285" y="140" width="275.1058823529412" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,52%,45%); fill-rule: evenodd;"/>
+			<text x="567.1058823529412" y="142" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,284) scale(1,-1)">316 / 1,447</text>
+			<rect x="285" y="124" width="275.1058823529412" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(80%,47%,12%); fill-rule: evenodd;"/>
+			<text x="567.1058823529412" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,252) scale(1,-1)">316 / 1,447</text>
+			<rect x="285" y="108" width="275.1058823529412" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,32%,69%); fill-rule: evenodd;"/>
+			<text x="567.1058823529412" y="110" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,220) scale(1,-1)">316 / 1,447</text>
+			<text x="599.565" y="47" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,94) scale(1,-1)">Winning bets (count)</text>
+			<text x="40" y="20" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">Win counts do not measure profitability: payouts differ. Read alongside the cumulative-profit chart.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,41 @@
+This experiment adapts the random-forest branch of prediction.ipynb. It uses the same
+features, hyperparameter grid and train.csv/test.csv split, with fixed random seeds and correct
+row alignment. The absent league column is omitted. Betting odds remain input features, as in
+the source notebook. Seven incomplete training rows are dropped; no test labels train the models.
+The baseline is a reproducible refit, not the old pickle. Only the RF branch is compared here.
+
+RF_vector is ONE native multi-output RandomForestRegressor fitted to the two-column
+target [home_score, away_score]. All 2,000 trees share splits across both targets; it is
+not a MultiOutputRegressor wrapper. Depth=5, max_features=0.3, and max_samples=0.5
+are held at the previous training-CV-selected values to isolate the loss change.
+The vector model uses criterion='squared_error' and training out-of-bag MSE scoring.
+No new hyperparameter search is performed; the previous settings are held fixed.
+Its predictions average leaf means across trees to estimate conditional means.
+For the RF_vector outcome/betting comparison, these point predictions feed the original independent
+Poisson/Skellam conversion. The separate-forest baselines retain 200 trees each, so the
+comparison also differs in tree count. Shared-tree prediction does NOT remove the
+conditional independence assumption in the outcome conversion. Squared-error training estimates
+goal means but does not establish a Poisson distribution. Rates are floored at 1e-8 only for
+probability conversion; MSE, MAE, and RMSE use raw predictions and are all reported.
+
+The joint model retains the RF predictors as offsets: u=RF_home*exp(b_home),
+v=RF_away*exp(b_away), c=exp(g0+g_home*log(RF_home)+g_away*log(RF_away)).
+Five global coefficients are fitted by joint score likelihood on three-fold out-of-fold TRAIN
+predictions. Each match receives three rates. H=Poisson(u)+W and A=Poisson(v)+W,
+where W=Poisson(c) is shared. Dependence is constrained to be nonnegative.
+This is a joint calibration layer, not end-to-end joint training of the forests. A separately
+calibrated independent control estimates only the two mean-scale coefficients using the same OOF data.
+Hyperparameter selection uses all training folds; this is not nested or chronological validation.
+The CSVs contain no dates, so a clean temporal split or upstream feature leakage cannot be verified.
+
+Simulation uses 50,000 score pairs per match and a fixed seed. Exact probabilities are also reported
+because the shared count cancels from H-A, which is Skellam(u,v). Use exact results to distinguish
+model changes from Monte Carlo variation. Joint score NLL assesses the full 2D distribution.
+
+Each bet stakes one unit. A win earns decimal_odds-1; a loss costs one unit. Profit excludes the
+original notebook's arbitrary initial one-unit balance. ROI=net_profit/number_of_bets.
+The nine original decision rules are reproduced, including legacy heuristics. Moving draw
+probability into the home column is only a selection heuristic: a real draw still loses a home-win
+bet; these are not double-chance bets. The original 'Sharpe' expression is labeled a legacy score,
+not a Sharpe ratio. Market power weighting uses only market probabilities and must match across models.
+No strategy or threshold is selected using these test results. Test profit is a retrospective result.

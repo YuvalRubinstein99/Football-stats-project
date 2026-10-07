@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="880" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 880" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="880"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-880)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="880" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40" y="842" style="font-family: Helvetica; font-size: 25px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1684) scale(1,-1)">Where predictions fail</text>
+			<text x="40" y="816" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1632) scale(1,-1)">Confusion matrices: rows = actual outcome; columns = predicted outcome. Cells show match counts.</text>
+			<text x="80" y="778" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1556) scale(1,-1)">Separate RFs</text>
+			<text x="106.5525" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Away</text>
+			<text x="45.105000000000004" y="705.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1410) scale(1,-1)">Away</text>
+			<rect x="80" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(52%,67%,88%); fill-rule: evenodd;"/>
+			<text x="107.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">250</text>
+			<rect x="160" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="195.83" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">0</text>
+			<rect x="240" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(67%,77%,91%); fill-rule: evenodd;"/>
+			<text x="267.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">173</text>
+			<text x="187.1685" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Draw</text>
+			<text x="46.336999999999996" y="625.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1250) scale(1,-1)">Draw</text>
+			<rect x="80" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,79%,92%); fill-rule: evenodd;"/>
+			<text x="107.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">130</text>
+			<rect x="160" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="195.83" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">0</text>
+			<rect x="240" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,65%,87%); fill-rule: evenodd;"/>
+			<text x="267.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">222</text>
+			<text x="265.3315" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Home</text>
+			<text x="42.663" y="545.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1090) scale(1,-1)">Home</text>
+			<rect x="80" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(82%,88%,95%); fill-rule: evenodd;"/>
+			<text x="107.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">145</text>
+			<rect x="160" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="195.83" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">0</text>
+			<rect x="240" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(37%,56%,84%); fill-rule: evenodd;"/>
+			<text x="267.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">527</text>
+			<text x="470" y="778" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1556) scale(1,-1)">Joint Poisson</text>
+			<text x="496.5525" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Away</text>
+			<text x="435.105" y="705.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1410) scale(1,-1)">Away</text>
+			<rect x="470" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(52%,67%,88%); fill-rule: evenodd;"/>
+			<text x="497.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">250</text>
+			<rect x="550" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="585.83" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">0</text>
+			<rect x="630" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(67%,77%,91%); fill-rule: evenodd;"/>
+			<text x="657.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">173</text>
+			<text x="577.1685" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Draw</text>
+			<text x="436.337" y="625.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1250) scale(1,-1)">Draw</text>
+			<rect x="470" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,79%,92%); fill-rule: evenodd;"/>
+			<text x="497.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">131</text>
+			<rect x="550" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="585.83" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">0</text>
+			<rect x="630" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(49%,65%,87%); fill-rule: evenodd;"/>
+			<text x="657.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">221</text>
+			<text x="655.3315" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Home</text>
+			<text x="432.663" y="545.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1090) scale(1,-1)">Home</text>
+			<rect x="470" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(82%,88%,95%); fill-rule: evenodd;"/>
+			<text x="497.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">145</text>
+			<rect x="550" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="585.83" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">0</text>
+			<rect x="630" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(37%,56%,84%); fill-rule: evenodd;"/>
+			<text x="657.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">527</text>
+			<text x="860" y="778" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1556) scale(1,-1)">Vector RF (2,000 trees)</text>
+			<text x="886.5525" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Away</text>
+			<text x="825.105" y="705.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1410) scale(1,-1)">Away</text>
+			<rect x="860" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(53%,68%,88%); fill-rule: evenodd;"/>
+			<text x="887.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">245</text>
+			<rect x="940" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="975.83" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">0</text>
+			<rect x="1020" y="665" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(66%,76%,91%); fill-rule: evenodd;"/>
+			<text x="1047.49" y="701.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1402) scale(1,-1)">178</text>
+			<text x="967.1685" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Draw</text>
+			<text x="826.337" y="625.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1250) scale(1,-1)">Draw</text>
+			<rect x="860" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,81%,93%); fill-rule: evenodd;"/>
+			<text x="887.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">119</text>
+			<rect x="940" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="975.83" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">0</text>
+			<rect x="1020" y="585" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(47%,63%,86%); fill-rule: evenodd;"/>
+			<text x="1047.49" y="621.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1242) scale(1,-1)">233</text>
+			<text x="1045.3315" y="755" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1510) scale(1,-1)">Home</text>
+			<text x="822.663" y="545.0" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1090) scale(1,-1)">Home</text>
+			<rect x="860" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(83%,88%,95%); fill-rule: evenodd;"/>
+			<text x="887.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">138</text>
+			<rect x="940" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="975.83" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">0</text>
+			<rect x="1020" y="505" width="80" height="80" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,56%,84%); fill-rule: evenodd;"/>
+			<text x="1047.49" y="541.0" style="font-family: Helvetica; font-size: 15px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,1082) scale(1,-1)">534</text>
+			<text x="45" y="454" style="font-family: Helvetica; font-size: 18px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,908) scale(1,-1)">Confidence versus actual accuracy</text>
+			<text x="45" y="432" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,864) scale(1,-1)">Each point is a confidence bin with at least 30 matches. Below the dashed line = overconfident.</text>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 80,115 L 740,115 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,115 L 80,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 174.285714,115 L 174.285714,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 268.571429,115 L 268.571429,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 362.857143,115 L 362.857143,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 457.142857,115 L 457.142857,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 551.428571,115 L 551.428571,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 645.714286,115 L 645.714286,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 740,115 L 740,110 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,80,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.3</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,174.285714,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.4</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,268.571429,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.5</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,362.857143,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.6</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,457.142857,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.7</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,551.428571,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.8</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,645.714286,110)">
+							<text x="-6.25" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0.9</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,740,110)">
+							<text x="-2.5" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">1</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 80,115 L 80,395 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,115 L 75,115 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,155 L 75,155 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,195 L 75,195 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,235 L 75,235 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,275 L 75,275 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,315 L 75,315 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,355 L 75,355 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,395 L 75,395 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,75,115)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.3</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,155)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.4</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,195)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.5</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,235)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.6</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,275)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.7</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,315)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.8</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,355)">
+							<text x="-12.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0.9</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,395)">
+							<text x="-5.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">1</text>
+						</g>
+					</g>
+				</g>
+				<path d="M 80,155 L 740,155 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,195 L 740,195 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,235 L 740,235 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,275 L 740,275 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,315 L 740,315 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,355 L 740,355 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,395 L 740,395 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<polyline points="80 115, 740 395" style="stroke: rgb(60%,63%,68%); stroke-linecap: round; stroke-width: 2; fill: None; fill-rule: evenodd; stroke-dasharray: 4, 3;"/>
+					<polyline points="159.3165 136.7143, 213.2206 181.1538, 317.287 214.5251, 407.6157 265.1299, 489.4344 289.4" style="stroke: rgb(15%,39%,70%); stroke-linecap: round; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+					<polyline points="159.1793 141.0317, 213.7218 179.913, 317.5458 216.6359, 407.9981 267.5664, 487.6671 290.7983" style="stroke: rgb(3%,52%,45%); stroke-linecap: round; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+					<polyline points="160.5675 146.6588, 208.9572 183.7097, 320.2576 215.2597, 410.5278 261.6667, 484.3819 301.8966" style="stroke: rgb(58%,32%,69%); stroke-linecap: round; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+					<polyline points="153.3708 156.8321, 220.826 182.7049, 315.3684 223.2282, 406.696 250.0459, 497.4778 304.0909, 583.3895 317.2222" style="stroke: rgb(80%,47%,12%); stroke-linecap: round; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="333.967" y="82" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,164) scale(1,-1)">Mean predicted confidence</text>
+			<text x="80" y="403" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,806) scale(1,-1)">Observed accuracy</text>
+			<path d="M 805,368 L 835,368 Z" style="stroke: rgb(60%,63%,68%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="845" y="364" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,728) scale(1,-1)">Perfect calibration</text>
+			<path d="M 805,338 L 835,338 Z" style="stroke: rgb(15%,39%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="845" y="334" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,668) scale(1,-1)">Separate RFs</text>
+			<path d="M 805,308 L 835,308 Z" style="stroke: rgb(3%,52%,45%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="845" y="304" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,608) scale(1,-1)">Joint Poisson</text>
+			<path d="M 805,278 L 835,278 Z" style="stroke: rgb(58%,32%,69%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="845" y="274" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,548) scale(1,-1)">Vector RF (2,000 trees)</text>
+			<path d="M 805,248 L 835,248 Z" style="stroke: rgb(80%,47%,12%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="845" y="244" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,488) scale(1,-1)">Market</text>
+			<text x="40" y="40" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,80) scale(1,-1)">Descriptive test-set diagnostics, not new training features. Small groups are flagged in the tables.</text>
+			<text x="40" y="20" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">Actual outcome and goal-total slices are retrospective; confidence bins can contain different matches for each model.</text>
+		</g>
+	</g>
+</svg>

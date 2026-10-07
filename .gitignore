@@ -1,0 +1,21 @@
+.prediction_deps/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# Reproducible local artifacts. Keep summary tables, figures, and match predictions.
+/results/*.joblib
+/results/bet_ledger.csv
+/results/*_bet_ledger.csv
+/results/training_oof_predictions.csv
+/results/vector_previous_poisson_cv_results.csv
+/results/*.tmp
