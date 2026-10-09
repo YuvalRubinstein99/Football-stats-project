@@ -12,11 +12,13 @@ from evaluate_home_loss import main as evaluate_binary
 from evaluate_home_win import main as evaluate_binary_win
 from rebuild_strategy_results import main as rebuild_strategies
 from plot_home_or_skip import main as plot_home_or_skip
+from analyze_matchweeks import main as analyze_matchweeks
 
 from project_paths import ROOT as root
 rebuild_strategies()
 make_plots()
 analyze_errors()
+analyze_matchweeks()
 plot_gap()
 evaluate_binary()
 evaluate_binary('sqrt_profit')
@@ -54,6 +56,12 @@ vector_function = next(node for node in ast.parse(implementation).body
                        if isinstance(node, ast.FunctionDef) and node.name == 'fit_vector_forest')
 vector_source = ast.get_source_segment(implementation, vector_function)
 error_slices = pd.read_csv(root / 'results/error_slices.csv')
+matchweeks = pd.read_csv(root / 'results/matchweek_errors.csv')
+matchweek_plot = code('from analyze_matchweeks import main as analyze_matchweeks\nanalyze_matchweeks()\n'
+                      'display(Image(filename=str(experiment.OUT / "matchweek_errors.png")))\n')
+matchweek_plot['outputs'] = [{'output_type':'display_data','metadata':{},'data':{
+    'image/png':base64.b64encode((root/'results/matchweek_errors.png').read_bytes()).decode('ascii'),
+    'text/plain':['Individual matchweek errors: vector RF']}}]
 team_errors = pd.read_csv(root / 'results/team_errors.csv')
 worst_predictions = pd.read_csv(root / 'results/worst_predictions.csv')
 error_columns = ['model','area','group','matches','small_sample','accuracy','mean_log_loss',
@@ -216,6 +224,17 @@ notebook['cells'] = [
          'error_columns = '+repr(error_columns)+'\n'
          'display(error_slices.loc[error_slices.model == ERROR_MODEL, error_columns])\n',
          error_slices.loc[error_slices.model=='RF_vector',error_columns]),
+    markdown('### Which matchweeks have the highest errors?\n'
+             'Individual matchweeks are ranked by **outcome error rate** (wrong home/draw/away predictions), '
+             'breaking ties by log loss. The table also shows mean log loss and goal MSE/MAE. '
+             'Rank 1 means highest error for that metric. Counts below 30 are flagged; all weeks remain visible. '
+             'Matches are pooled across the test data by matchweek number, so league and season composition '
+             'may differ. This is descriptive, not evidence that matchweek causes errors. '
+             'The plot shows the vector RF; change ERROR_MODEL below to inspect another model.'),
+    code('matchweeks = pd.read_csv(experiment.OUT / "matchweek_errors.csv")\n'
+         'display(matchweeks[matchweeks.model == ERROR_MODEL].sort_values(["error_rate", "mean_log_loss"], '
+         'ascending=False).head(10))\n', matchweeks[matchweeks.model=='RF_vector'].head(10)),
+    matchweek_plot,
     markdown('### Compare outcome recall across models'),
     code('outcome_errors = error_slices[error_slices.area == "Actual outcome (retrospective)"]\n'
          'display(outcome_errors.pivot(index="model", columns="group", values="accuracy").reset_index())\n',

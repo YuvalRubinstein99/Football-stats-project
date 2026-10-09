@@ -45,6 +45,7 @@ def main():
         'Actual total goals (retrospective)': pd.cut(totals, [-1,1,3,5,np.inf], labels=['0–1','2–3','4–5','6+']),
         'Player rating gap (absolute)': pd.cut(gap.abs(), [-np.inf,2,5,np.inf], labels=['0–2','2–5','5+']),
         'Matchweek': pd.cut(weeks, [0,10,20,30,np.inf], labels=['1–10','11–20','21–30','31+']),
+        'Individual matchweek': weeks,
         'Market favorite strength': pd.cut(predictions[['Market_Away','Market_Draw','Market_Home']].max(axis=1),
                                           [0,.4,.55,.7,1], labels=['≤40%','40–55%','55–70%','70%+'])}
     mean_prefix = {'RF_independent':'independent', 'RF_independent_calibrated':'calibrated',

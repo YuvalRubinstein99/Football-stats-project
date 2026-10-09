@@ -9,6 +9,7 @@ Open [the main notebook](../notebooks/prediction_bivariate.ipynb) for the comple
 | `match_predictions.csv` | Test-row identifiers, actual scores, odds, predicted means/rates, and outcome probabilities |
 | `run_details.json` | Input hashes, versions, feature names, seed, and fitted parameters |
 | `error_slices.csv`, `team_errors.csv`, `worst_predictions.csv` | Failure analysis |
+| `matchweek_errors.csv`, `.png`, `.svg` | Individual matchweek rankings and vector RF error plots |
 | `outcome_calibration.csv` | Per-outcome probability calibration |
 | `probability_gap_winnings.csv` | Probability-gap bins and average realized winnings |
 | `home_*_strategy.csv` | Binary decision-rule results, including square-root-profit variants |

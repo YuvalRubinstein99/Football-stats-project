@@ -54,6 +54,19 @@ def main():
                 expected = np.where(records.bet, np.where(labels == 2, predictions.B365H - 1, -1), 0)
                 np.testing.assert_allclose(records.net_profit_units, expected)
     slices = pd.read_csv(OUT / 'error_slices.csv')
+    weeks = pd.read_csv(OUT / 'matchweek_errors.csv')
+    raw = pd.read_csv(DATA / 'test.csv').iloc[predictions.source_test_row.to_numpy()]
+    week_numbers = raw.Matchweek.astype(str).str.split().str[-1].astype(int).to_numpy()
+    assert not weeks.duplicated(['model', 'matchweek']).any()
+    for model, records in weeks.groupby('model'):
+        probabilities = predictions[[model+'_'+s for s in ['Away', 'Draw', 'Home']]].to_numpy()
+        assert records.matches.sum() == len(predictions)
+        for row in records.itertuples():
+            mask = week_numbers == row.matchweek
+            assert row.matches == mask.sum()
+            assert row.errors == (probabilities[mask].argmax(axis=1) != labels[mask]).sum()
+            np.testing.assert_allclose(row.error_rate, row.errors/row.matches)
+            np.testing.assert_allclose(row.mean_log_loss, -np.log(np.clip(probabilities[mask, labels[mask]], 1e-15, 1)).mean())
     assert (slices[slices.area!='Overall'].groupby(['model','area']).matches.sum()==len(predictions)).all()
     for stem in ['home_win', 'home_loss', 'home_win_sqrt_profit', 'home_loss_sqrt_profit']:
         if not (OUT / (stem+'_bet_ledger.csv')).exists():

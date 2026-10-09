@@ -40,6 +40,8 @@ Keep only the home-win selections from the binary square-root-profit rule. Compa
 
 ## Diagnostics
 
+Individual matchweek rankings are saved in `matchweek_errors.csv` for every model. They report wrong-outcome counts and rates, mean log loss, and goal MAE/MSE, with separate descending error ranks (ties share the minimum rank). The notebook highlights the ten highest outcome-error weeks and plots all observed weeks for the vector RF. Weeks with fewer than 30 matches are flagged. These groups pool test matches by matchweek number across available competitions and seasons; differences may reflect their composition rather than a matchweek effect. Market probabilities have no goal-mean predictions, so market goal metrics remain missing.
+
 The notebook includes actual-outcome recall, goal-total slices, player-rating gaps, matchweek, market-favorite strength, prediction confidence, teams, and the largest wrong-prediction log losses. Actual-outcome and goal-total slices are retrospective. Team groups overlap. Groups below 30 matches are flagged, and team rankings require at least 30 matches. These are descriptions of where errors occur, not evidence of their causes.
 
 The binned scatter uses fixed probability-gap bins of width 0.10, where gap means `max(P away, P draw, P home) - min(...)`. Each point shows mean gap versus realized mean net profit on most-likely-outcome bets; it is not an estimated profitable betting threshold.
