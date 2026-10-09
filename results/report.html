@@ -2753,7 +2753,89 @@
       <td>-61.4161</td>
     </tr>
   </tbody>
-</table><img src="home_win_sqrt_profit_strategy.svg" alt="Home win binary strategy winnings" style="width:100%;height:auto"><!-- binary-home-win-sqrt:end --><h2>Method and limitations</h2><pre>This experiment adapts the random-forest branch of prediction.ipynb. It uses the same
+</table><img src="home_win_sqrt_profit_strategy.svg" alt="Home win binary strategy winnings" style="width:100%;height:auto"><!-- binary-home-win-sqrt:end --><!-- home-or-skip:start --><h2>Home win or skip: square-root-profit weighting</h2><p>Compare p_home * sqrt(home_odds - 1) with (p_away + p_draw) * sqrt(max(D - 1, 0)), where D = 1 / (1/away_odds + 1/draw_odds). Bet one unit on home if its score is at least as high; otherwise do not bet. Actual draws lose home bets. Skips have zero stake and profit. ROI uses placed bets only. Weighting changes selection, not actual payouts. No added expected-utility or value threshold.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>strategy</th>
+      <th>bets</th>
+      <th>wins</th>
+      <th>losses</th>
+      <th>win_rate</th>
+      <th>net_profit_units</th>
+      <th>roi</th>
+      <th>skipped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RF_independent</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>930</td>
+      <td>391</td>
+      <td>539</td>
+      <td>0.4204</td>
+      <td>70.4500</td>
+      <td>0.0758</td>
+      <td>517</td>
+    </tr>
+    <tr>
+      <td>RF_independent_calibrated</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>903</td>
+      <td>382</td>
+      <td>521</td>
+      <td>0.4230</td>
+      <td>79.6700</td>
+      <td>0.0882</td>
+      <td>544</td>
+    </tr>
+    <tr>
+      <td>RF_bivariate_exact</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>886</td>
+      <td>371</td>
+      <td>515</td>
+      <td>0.4187</td>
+      <td>80.0000</td>
+      <td>0.0903</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <td>RF_bivariate_simulated</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>889</td>
+      <td>371</td>
+      <td>518</td>
+      <td>0.4173</td>
+      <td>75.4700</td>
+      <td>0.0849</td>
+      <td>558</td>
+    </tr>
+    <tr>
+      <td>RF_vector</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>942</td>
+      <td>401</td>
+      <td>541</td>
+      <td>0.4257</td>
+      <td>84.3800</td>
+      <td>0.0896</td>
+      <td>505</td>
+    </tr>
+    <tr>
+      <td>Market</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>945</td>
+      <td>339</td>
+      <td>606</td>
+      <td>0.3587</td>
+      <td>46.5000</td>
+      <td>0.0492</td>
+      <td>502</td>
+    </tr>
+  </tbody>
+</table><img src="home_win_or_skip_strategy.svg" alt="Home win or skip cumulative profit" style="width:100%;height:auto"><!-- home-or-skip:end --><h2>Method and limitations</h2><pre>This experiment adapts the random-forest branch of prediction.ipynb. It uses the same
 features, hyperparameter grid and train.csv/test.csv split, with fixed random seeds and correct
 row alignment. The absent league column is omitted. Betting odds remain input features, as in
 the source notebook. Seven incomplete training rows are dropped; no test labels train the models.

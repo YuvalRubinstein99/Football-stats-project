@@ -34,6 +34,10 @@ No quoted double-chance odds are available. A combined outcome is synthesized by
 
 Square-root-profit weighting uses `p × sqrt(odds − 1)`. Synthetic payouts at or below one receive zero weight because they cannot generate a positive profit even when correct. The home-not-to-lose hedge has this property in 13 matches.
 
+### Home win or skip
+
+Keep only the home-win selections from the binary square-root-profit rule. Compare `p_home × sqrt(home_odds − 1)` with `(p_away + p_draw) × sqrt(max(D − 1, 0))`, where `D = 1 / (1/away_odds + 1/draw_odds)`. If the home score is at least as high, stake one unit on home; otherwise stake zero. Ties favor home, matching the binary rule. A draw or away win loses a placed home bet. Skips have zero profit and do not enter the ROI denominator. The synthetic odds are used only for comparison; no away/draw hedge is placed. No extra loss penalty or positive-expected-return filter is applied.
+
 ## Diagnostics
 
 The notebook includes actual-outcome recall, goal-total slices, player-rating gaps, matchweek, market-favorite strength, prediction confidence, teams, and the largest wrong-prediction log losses. Actual-outcome and goal-total slices are retrospective. Team groups overlap. Groups below 30 matches are flagged, and team rankings require at least 30 matches. These are descriptions of where errors occur, not evidence of their causes.

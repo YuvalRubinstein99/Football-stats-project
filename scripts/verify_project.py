@@ -42,6 +42,17 @@ def main():
         assert not ledger.duplicated(['model','strategy','test_position']).any()
         summed = ledger.groupby(['model','strategy']).net_profit_units.sum().sort_index()
         np.testing.assert_allclose(strategies.set_index(['model','strategy']).net_profit_units.sort_index(), summed)
+        from betting_rules import HOME_OR_SKIP
+        selected = ledger[ledger.strategy == HOME_OR_SKIP]
+        if not selected.empty:
+            reference = pd.read_csv(OUT / 'home_win_sqrt_profit_bet_ledger.csv')
+            for model, records in selected.groupby('model'):
+                records = records.sort_values('test_position')
+                old = reference[reference.model == model].sort_values('test_position')
+                np.testing.assert_array_equal(records.bet, old.home_stake == 1)
+                assert (records.pick == 2).all()
+                expected = np.where(records.bet, np.where(labels == 2, predictions.B365H - 1, -1), 0)
+                np.testing.assert_allclose(records.net_profit_units, expected)
     slices = pd.read_csv(OUT / 'error_slices.csv')
     assert (slices[slices.area!='Overall'].groupby(['model','area']).matches.sum()==len(predictions)).all()
     for stem in ['home_win', 'home_loss', 'home_win_sqrt_profit', 'home_loss_sqrt_profit']:

@@ -12,6 +12,7 @@ Open [the main notebook](../notebooks/prediction_bivariate.ipynb) for the comple
 | `outcome_calibration.csv` | Per-outcome probability calibration |
 | `probability_gap_winnings.csv` | Probability-gap bins and average realized winnings |
 | `home_*_strategy.csv` | Binary decision-rule results, including square-root-profit variants |
+| `home_win_or_skip_strategy.csv`, `.png`, `.svg` | Home-only square-root-profit selections, skipped matches, and cumulative profit |
 | `*_confusion.csv` | Actual-outcome rows versus predicted-outcome columns |
 
 Run `python run.py report` from the repository root to rebuild the report and plots from saved predictions. Detailed betting ledgers are reconstructed locally and ignored by Git. `python run.py train` regenerates the predictions and the ignored trained model.

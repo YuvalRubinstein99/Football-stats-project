@@ -11,6 +11,7 @@ from plot_probability_gap import main as plot_gap
 from evaluate_home_loss import main as evaluate_binary
 from evaluate_home_win import main as evaluate_binary_win
 from rebuild_strategy_results import main as rebuild_strategies
+from plot_home_or_skip import main as plot_home_or_skip
 
 from project_paths import ROOT as root
 rebuild_strategies()
@@ -21,6 +22,7 @@ evaluate_binary()
 evaluate_binary('sqrt_profit')
 evaluate_binary_win()
 evaluate_binary_win('sqrt_profit')
+plot_home_or_skip()
 original = json.loads((root / 'notebooks/legacy/prediction.ipynb').read_text(encoding='utf-8'))
 notebook = copy.deepcopy(original)
 
@@ -41,6 +43,12 @@ def code(text, table=None):
 
 metrics = pd.read_csv(root / 'results/model_metrics.csv')
 strategies = pd.read_csv(root / 'results/strategy_results.csv')
+home_skip_summary = pd.read_csv(root / 'results/home_win_or_skip_strategy.csv')
+home_skip_plot = code('from plot_home_or_skip import main as plot_home_or_skip\nplot_home_or_skip()\n'
+                      'display(Image(filename=str(experiment.OUT / "home_win_or_skip_strategy.png")))\n')
+home_skip_plot['outputs'] = [{'output_type':'display_data','metadata':{},'data':{
+    'image/png':base64.b64encode((root/'results/home_win_or_skip_strategy.png').read_bytes()).decode('ascii'),
+    'text/plain':['Home win or skip cumulative profit']}}]
 implementation = (root / 'src/prediction_bivariate.py').read_text(encoding='utf-8')
 vector_function = next(node for node in ast.parse(implementation).body
                        if isinstance(node, ast.FunctionDef) and node.name == 'fit_vector_forest')
@@ -186,6 +194,16 @@ notebook['cells'] = [
     code('sqrt_win_summary = pd.read_csv(experiment.OUT / "home_win_sqrt_profit_strategy.csv")\n'
          'display(sqrt_win_summary)\n',sqrt_win_summary),
     sqrt_win_plot,
+    markdown('## Home win or skip: square-root-profit weighting\n'
+             'Use the same binary comparison above: **p(home) × √(home odds − 1)** versus '
+             '**(p(away) + p(draw)) × √(synthetic away-or-draw odds − 1)**. '
+             'Bet one unit on home when its score is at least as high; otherwise **do not bet**. '
+             'There is no additional expected-utility or positive-return filter. '
+             'A draw or away win loses a placed bet. Skips have zero stake and profit; ROI divides by placed bets. '
+             'Square-root weighting affects selection only; reported profit uses actual decimal payouts.'),
+    code('home_skip_summary = pd.read_csv(experiment.OUT / "home_win_or_skip_strategy.csv")\n'
+         'display(home_skip_summary)\n', home_skip_summary),
+    home_skip_plot,
     markdown('## Where do the models fail?\n'
              'Compare actual versus predicted outcomes and confidence versus observed accuracy below. '
              'The CSV diagnostics cover **all models**. Group sizes below 30 are flagged; '

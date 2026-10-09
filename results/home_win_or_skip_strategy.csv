@@ -1,0 +1,7 @@
+model,strategy,bets,wins,losses,win_rate,net_profit_units,roi,skipped
+RF_independent,Home win or skip (sqrt profit),930,391,539,0.4204301075268817,70.45000000000002,0.075752688172043,517
+RF_independent_calibrated,Home win or skip (sqrt profit),903,382,521,0.4230343300110742,79.67,0.0882281284606866,544
+RF_bivariate_exact,Home win or skip (sqrt profit),886,371,515,0.4187358916478555,80.0,0.0902934537246049,561
+RF_bivariate_simulated,Home win or skip (sqrt profit),889,371,518,0.4173228346456692,75.47,0.0848931383577052,558
+RF_vector,Home win or skip (sqrt profit),942,401,541,0.4256900212314225,84.37999999999998,0.0895753715498938,505
+Market,Home win or skip (sqrt profit),945,339,606,0.3587301587301587,46.500000000000014,0.0492063492063492,502
