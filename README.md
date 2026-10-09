@@ -6,6 +6,74 @@ The current experiment compares two separate random forests, a single **2,000-tr
 
 ## Start here
 
+### Live predictions and local interface
+
+The live workflow downloads expected/confirmed lineups from RotoWire, current EA
+overall ratings, and results/Bet365 odds from Football-Data. It feeds lineup rating
+summaries and pre-match form into the **existing 2,000-tree random forest** and
+exports home/draw/away probabilities and goal counts. No API key is required.
+See [integration details and limitations](docs/live-lineup-integration.md).
+
+```bash
+# Launch the interface, then open http://127.0.0.1:8765
+python -m pip install -r requirements-live.txt
+python run.py app
+
+# Or collect data and predict directly from the command line
+python run.py predict
+python run.py predict --model lineup_rf --leagues E0 SP1 --days 14
+
+# Repeat using already downloaded source files
+python run.py predict --offline
+
+# Check parsing, date isolation, probabilities, and exports without network access
+python scripts/test_live_predictions.py
+python scripts/test_lineup_integration.py
+```
+
+Choose leagues and click **Refresh & predict** in the interface. Supported leagues:
+Premier League (`E0`), La Liga (`SP1`), Bundesliga (`D1`), Serie A (`I1`), and Ligue 1
+(`F1`). Outputs and source caches are saved under `results/live/`; the interface
+can reload the last successful run. Stop the server with Ctrl+C. Use `--port 8766`
+if the default port is occupied. Run one pipeline at a time against this directory.
+
+**Strategy selections** compares all 14 existing backtest rules, including the
+binary home-win/home-loss and home-or-skip rules. Choose a rule or **All strategies**
+to see its selection, decimal odds, actual model probability, expected net profit
+per unit, and stake split. Synthetic double-chance prices are explicitly labeled.
+Missing odds produce **Unavailable**; threshold failures produce **Skip**. Each
+strategy is an alternative, and one unit means one total stake per match. This
+does not place bets. Export all rows using **Download all strategy selections**.
+To add strategies to an existing saved run without downloading again, execute
+`python src/live_bets.py`. Validate the rules with `python scripts/test_live_bets.py`.
+
+The default **Lineups + EA ratings** mode requires 22 uniquely matched starters,
+Bet365 odds, and the saved model with matching training metadata. It withholds
+fixtures with missing inputs, shows their reasons, and exposes each predicted
+XI and its ratings. Matchweeks may be explicitly labeled estimates; official
+overrides are supported. Predicted lineups and current launch ratings are not
+identical to the historical model's training inputs, so live accuracy is unverified.
+
+The optional **results-only Poisson baseline** remains available with
+`python run.py predict --model poisson`. This mode needs only the standard library.
+It uses home/away scoring and conceding rates, exponentially weighted with a
+180-day half-life and shrunk toward league averages using eight pseudo-matches.
+It needs no FIFA ratings, injuries, lineups, or odds. The interface reports
+walk-forward accuracy and log loss on up to 60 recent matches per league, with
+a league-average Poisson comparator. At least 100 earlier matches are required
+for evaluation. These checks do not establish that the model is profitable or
+better than the existing forest.
+
+Only fixtures supplied by the provider can be predicted; its CSV is a limited
+upcoming list, not the entire future season. An empty list is reported explicitly.
+Dates use the current UTC date, source times are displayed verbatim, and today's
+fixtures may already have started. Training excludes today's results. Historical
+files for the requested seasons must all download successfully; failures do not
+silently substitute stale cache files. Offline mode explicitly uses cached files.
+Source timestamps and hashes are stored in `predictions.json`. Small team samples
+are flagged. The modal score and expected goal counts are different quantities;
+predicted goal counts are not shot-based xG.
+
 - [Main notebook](notebooks/prediction_bivariate.ipynb): saved results, model code, plots, and error analysis.
 - [HTML report](results/report.html): download and open locally with the other files in `results/`; GitHub displays its source.
 - [Model metrics](results/model_metrics.csv) and [strategy results](results/strategy_results.csv).

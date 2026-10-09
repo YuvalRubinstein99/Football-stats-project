@@ -19,3 +19,5 @@ Thumbs.db
 /results/training_oof_predictions.csv
 /results/vector_previous_poisson_cv_results.csv
 /results/*.tmp
+/results/live/
+.lineup_deps/

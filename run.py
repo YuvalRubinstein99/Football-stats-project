@@ -1,4 +1,4 @@
-"""Project entry point: train, report, or check."""
+"""Project entry point: train, report, check, app, or predict."""
 from pathlib import Path
 import argparse
 import runpy
@@ -9,9 +9,19 @@ ROOT = Path(__file__).resolve().parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['train', 'report', 'check'])
-    command = parser.parse_args().command
+    parser.add_argument('command', choices=['train', 'report', 'check', 'app', 'predict'])
+    args, remaining = parser.parse_known_args()
+    command = args.command
     sys.path.insert(0, str(ROOT / 'src'))
+    if command in ('app', 'predict'):
+        if command == 'app':
+            from prediction_app import main as live_main
+        else:
+            from live_predictions import main as live_main
+        live_main(remaining)
+        return
+    if remaining:
+        parser.error('unrecognized arguments: ' + ' '.join(remaining))
     if command == 'train':
         from prediction_bivariate import main as train
         train()
