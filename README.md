@@ -1,5 +1,13 @@
 # Football score prediction and betting backtests
 
+**Current evaluation policy:** OOB-based training profit reporting and the old
+strategy-search endpoint are retired. Active ledgers, CSVs, manual-filter results
+and profit curves contain held-out test matches only. Training-period profit is
+unavailable until chronological predictions are built. Earlier search files are
+retained as historical artifacts, not active validation; their reproduction
+command is disabled. Existing model training and live inference are unchanged.
+Older descriptions below of training OOB reports refer to that retired workflow.
+
 Predict home and away football goals, convert the score predictions into match-outcome probabilities, and compare betting decision rules on recorded odds.
 
 The current experiment compares two separate random forests, a single **2,000-tree multi-output random forest**, and a bivariate Poisson calibration layer. It also examines where predictions fail and whether probability-based betting rules produce positive historical returns.
