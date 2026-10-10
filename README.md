@@ -159,3 +159,56 @@ requirements.txt      Current workflow dependencies
 ```
 
 Historical data and model files were preserved during cleanup. The repository still contains about 152 MB of pre-existing tracked material; restructuring does not reduce Git history. See [data notes](docs/data.md) before redistributing the datasets, and [legacy notes](docs/legacy.md) before running older notebooks. No software or dataset license has been selected by this cleanup.
+# Five-level dollar staking
+
+The interface adds a separate staking gate to all 14 original selections: skip
+nonpositive model expected value, then rank positive selections by the Kelly score
+`(probability * odds - 1) / (odds - 1)`. Fixed score bands `(0,1%]`, `(1%,2%]`,
+`(2%,3%]`, `(3%,4%]`, and `>4%` map to $1, $2, $3, $4, and $5 total per match.
+These are ranking bands, not percentages of a bankroll. Amounts can be edited in
+the interface; edits affect the displayed live and historical dollar amounts only.
+CSV exports retain the default $1–$5 amounts. Synthetic legs split the total stake.
+
+Run `python scripts/backtest_stake_levels.py` to rebuild season/level summaries and
+the full ledger in `results/stake_level_*`. Training results use the saved vector
+forest's out-of-bag predictions; test results use held-out `RF_vector` predictions.
+OOB is not a chronological walk-forward evaluation. Historical inputs use actual
+lineups and differ from live projected lineups. Season labels are uniquely matched
+to source season tables; unmatched or ambiguous model rows stop the build.
+The fixed thresholds are not selected to maximize historical profits.
+
+The history panel reports total stakes, gross returns (including returned stakes),
+net profits, ROI, and the original flat-$1 strategy comparison. This is hypothetical
+accounting with no compounding, bankroll limit, fees, or cent rounding of synthetic
+legs. The project has already inspected its test set in previous analyses.
+Check boundaries and reconcile every ledger row with the summaries using
+`python scripts/test_stake_levels.py`.
+
+Historical charts in the interface follow the selected strategy and edited dollar
+stakes. Select All strategies to compare train/test ROI, or a single strategy for
+season net profits. Run `python scripts/plot_stake_history.py` after rebuilding the
+backtest to export the default $1–$5 figures as `results/stake_history_*.png` and
+SVG. Exported figures use the saved amounts, not unsaved browser edits.
+
+Run `python scripts/plot_stake_cumulative.py` after rebuilding the backtest to
+generate cumulative profit curves for all strategies and the exported
+`results/stake_cumulative_profit.png`. Each curve starts at zero and settles
+all bets within each season/matchweek together. Exact kickoff dates are absent,
+so these are matchweek-ordered profit curves, not daily bankroll histories.
+The builder verifies all 28 final curve values against the historical summaries.
+
+## Fixed-model strategy search
+
+`python scripts/search_betting_strategies.py` searches 2,240 flat-stake combinations
+of 14 existing rules, raw/logistic-calibrated probabilities, five minimum edges,
+four odds bands, and four outcome filters. Calibration uses 2014–18 OOB rows;
+selection uses 2018–20; 2020–22 is an audit period; previously inspected 2022–23
+test results are reported separately. Shortlisted flat rules also test three
+Kelly band widths (1%, 2.5%, 5%) with $1–$5 stakes. No live settings change.
+
+This isolates strategy selection using the saved model. Its OOB trees still
+contain later training seasons: it is **not** a leakage-free chronological
+model backtest. Search winners may fail on later periods. The HTML report at
+`/strategy-search`, JSON, full search CSV and finalist CSV are written under
+`results/strategy_search*`. Run `python scripts/test_strategy_search.py` to audit
+selection independence from holdout metrics and reconcile period accounting.

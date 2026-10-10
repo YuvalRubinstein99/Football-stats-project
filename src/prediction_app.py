@@ -8,6 +8,7 @@ from urllib.parse import urlparse
 
 from live_predictions import LEAGUES, LIVE, pipeline
 from live_bets import enrich, export_csv
+from pathlib import Path
 
 PAGE = r'''<!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -27,7 +28,10 @@ button{background:#77e2bc;color:#0c1420;font-weight:700;cursor:pointer}button:di
 <label><input type="checkbox" id="offline"> Use cached files</label><button id="run">Refresh & predict</button></div>
 <p id="status" role="status" aria-live="polite">Ready. Refresh to collect data and generate predictions.</p><div id="warnings" role="alert"></div></div>
 <div class="panel"><h2>Strategy selections</h2><label for="strategy">Compare a betting rule</label><select id="strategy"></select> <a href="/strategies.csv">Download all strategy selections</a>
-<p class="muted">Each strategy is an alternative approach. Amounts show one total unit per match. Model EV is expected net profit per unit, not a guaranteed return. Synthetic double chance splits a stake across two 1X2 bets; its effective odds are not a quoted market price. Prices are from the saved prediction run.</p><div class="scroll"><table><thead><tr><th>Match</th><th id='strategy-heading'>Strategy</th><th>Selection</th><th>Odds</th><th>Probability</th><th>Model EV / unit</th><th>Stake split</th></tr></thead><tbody id="bets"></tbody></table></div></div>
+<p class="muted">Five-level staking skips selections with no positive model edge. Kelly score = model EV / (decimal odds − 1). Levels 1–5 cover scores (0,1%], (1%,2%], (2%,3%], (3%,4%], and above 4%. These fixed tiers rank stakes; they are not bankroll percentages or a guarantee of profit.</p>
+<div class="controls" id="stake-inputs"></div><p class="muted" id="stake-message">Dollar amounts apply to the total stake per match. Edits update this view only; CSV exports use $1–$5. Synthetic double chance splits that total across two bets. Saved odds may have changed.</p>
+<div class="scroll"><table><thead><tr><th>Match</th><th id='strategy-heading'>Strategy</th><th>Selection / staking action</th><th>Odds</th><th>Probability</th><th>Model EV / unit</th><th>Dollar stake split</th><th>Level / total</th></tr></thead><tbody id="bets"></tbody></table></div></div>
+<div class="panel"><h2>Historical dollar returns</h2><p class="muted">Uses the saved lineup vector RF and the betting rule selected above. Training OOB and held-out test results are shown separately. Changing the live prediction model does not change this historical model.</p><p id="stake-method" class="muted">Loading historical results…</p><p><a href="/stake-results.csv">Download season and level results ($1–$5)</a> · <a href="/stake-ledger.csv">Download every historical bet ($1–$5)</a></p><h3>By season</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Season</th><th>Bets / skips / unavailable</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th><th>Original flat $1 net</th></tr></thead><tbody id="stake-seasons"></tbody></table></div><h3>By stake level · all seasons in each split</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Level</th><th>Bets</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th></tr></thead><tbody id="stake-levels"></tbody></table></div></div>
 <div class="panel"><h2>Upcoming matches</h2><p id="stamp" class="muted">No run loaded.</p><a id="download" href="/predictions.csv" hidden>Download predictions CSV</a>
 <div class="scroll"><table><thead><tr><th>Date / source time</th><th>League</th><th>Match</th><th>Home</th><th>Draw</th><th>Away</th><th>Expected goals</th><th>Likely score</th></tr></thead><tbody id="rows"></tbody></table></div></div>
 <div class="panel" id="unavailable" hidden><h2>Fixtures needing attention</h2><p class="muted">These fixtures have no lineup-model prediction. Resolve the missing inputs, then refresh.</p><div id="skipped"></div></div>
@@ -45,16 +49,20 @@ for(const p of currentReport.predictions){for(const b of p.strategies??[]){
 if(!showAll&&b.strategy!==$('strategy').value)continue;
 const row=document.createElement('tr');cell(row,`${p.date} · ${p.home} vs ${p.away}`);
 cell(row,b.strategy);row.lastElementChild.hidden=!showAll;
-cell(row,b.action==='Bet'?b.selection:b.action,b.action==='Bet'?'prob':'');
+cell(row,b.stake_level?b.selection:(b.staking_action??b.action)+(b.action==='Bet'?' · '+b.selection:''),b.stake_level?'prob':'');
 cell(row,b.decimal_odds===null?'—':b.decimal_odds.toFixed(2)+(b.synthetic?' (synthetic)':''));
 cell(row,b.probability===null?'—':(100*b.probability).toFixed(1)+'%');
 cell(row,b.expected_net_per_unit===null?'—':(b.expected_net_per_unit>=0?'+':'')+b.expected_net_per_unit.toFixed(3));
-cell(row,b.action==='Bet'?[['Home',b.home_stake],['Draw',b.draw_stake],['Away',b.away_stake]].filter(x=>x[1]>0).map(x=>`${x[0]}: ${x[1].toFixed(3)}u`).join(' + '):'0 units');body.append(row);
-if(b.note){const noteRow=document.createElement('tr'),td=document.createElement('td');td.colSpan=showAll?7:6;td.className='muted';td.style.whiteSpace='normal';td.textContent=b.note;noteRow.append(td);body.append(noteRow)}
+const amount=b.stake_level?(typeof stakeAmounts==='undefined'?[1,2,3,4,5]:stakeAmounts)[b.stake_level-1]:0;
+cell(row,amount?[['Home',b.home_stake],['Draw',b.draw_stake],['Away',b.away_stake]].filter(x=>x[1]>0).map(x=>`${x[0]}: $${(amount*x[1]).toFixed(2)}`).join(' + '):'$0');
+cell(row,b.stake_level?`${b.stake_level} / $${amount.toFixed(2)}`:'Skip / $0');body.append(row);
+const note=[b.note,b.staking_reason].filter(Boolean).join(' ');
+if(note){const noteRow=document.createElement('tr'),td=document.createElement('td');td.colSpan=showAll?8:7;td.className='muted';td.style.whiteSpace='normal';td.textContent=note;noteRow.append(td);body.append(noteRow)}
 }}
 if(!body.children.length){const row=document.createElement('tr');cell(row,'No predictions with strategy selections available.');body.append(row)}
+if(typeof renderStakeHistory==='function')renderStakeHistory();
 }
-$('strategy').onchange=renderBets;
+$('strategy').onchange=()=>{renderBets();renderStakeHistory()};
 function render(r){$('stamp').textContent=`Generated ${r.generated_at} · ${r.model_kind==='lineup_rf'?'Current-season form':r.seasons+' seasons'} · ${r.days}-day window · ${r.model} · ${r.predictions.length} predictions`;
 currentReport=r;const selected=$('strategy').value||'Square-root profit weighting';$('strategy').replaceChildren();for(const name of [...(r.strategy_names??[]),'all']){const option=document.createElement('option');option.value=name;option.textContent=name==='all'?'All strategies':name;$('strategy').append(option)}$('strategy').value=selected;renderBets();
 $('warnings').textContent=r.warnings.join('\n');$('rows').replaceChildren();
@@ -67,7 +75,7 @@ $('sources').textContent=(r.model_kind==='lineup_rf'?'* Team unseen in historica
 async function poll(){try{const res=await fetch('/api/status');if(!res.ok)throw Error('Unable to read server status');const s=await res.json();$('run').disabled=s.running;$('status').textContent=s.error?'Run failed: '+s.error:s.message;if(s.result&&s.result.generated_at!==displayed){render(s.result);displayed=s.result.generated_at}if(s.error&&s.result)$('status').textContent+='\nShowing the previous successful run below.'}catch(e){$('status').textContent=e.message}finally{setTimeout(poll,1200)}}
 $('model').onchange=()=>{$('seasons').disabled=$('model').value==='lineup_rf'};$('model').onchange();
 $('run').onclick=async()=>{const seasons=Number($('seasons').value),days=Number($('days').value);if(!Number.isInteger(seasons)||seasons<1||seasons>10||!Number.isInteger(days)||days<1||days>90){$('status').textContent='Choose 1–10 seasons and 1–90 days.';return}$('run').disabled=true;try{const r=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':'__TOKEN__'},body:JSON.stringify({model:$('model').value,leagues:$('league').value==='all'?Object.keys(names):[$('league').value],seasons,days,offline:$('offline').checked})});if(!r.ok)throw Error((await r.json()).error);$('status').textContent='Starting…'}catch(e){$('status').textContent=e.message;$('run').disabled=false}};poll();
-</script></html>'''
+</script><script src="/stake-ui.js"></script></html>'''
 
 
 def main(argv=None):
@@ -124,6 +132,20 @@ def main(argv=None):
             path = urlparse(self.path).path
             if path == '/':
                 return self.send(200, page, 'text/html')
+            if path == '/stake-ui.js':
+                return self.send(200, Path(__file__).with_name('stake-ui.js').read_bytes(), 'application/javascript')
+            stake_files = {'/api/stake-results': ('stake_level_results.json','application/json'),
+                           '/strategy-search': ('strategy_search.html','text/html'),
+                           '/strategy-search.csv': ('strategy_search_finalists.csv','text/csv'),
+                           '/api/stake-curves': ('stake_cumulative.json','application/json'),
+                           '/stake-results.csv': ('stake_level_results.csv','text/csv'),
+                           '/stake-ledger.csv': ('stake_level_bet_ledger.csv','text/csv')}
+            if path in stake_files:
+                filename, content_type = stake_files[path]
+                artifact = LIVE.parent / filename
+                if artifact.exists():
+                    return self.send(200, artifact.read_bytes(), content_type)
+                return self.send(404, {'error':'Run python scripts/backtest_stake_levels.py to build historical results.'})
             if path == '/api/status':
                 with lock:
                     if not state['running'] and saved.exists():

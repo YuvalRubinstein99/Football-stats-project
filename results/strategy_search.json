@@ -1,0 +1,7209 @@
+{
+  "methodology": "Exploratory fixed-model study. Earliest 2014-18 OOB seasons fit logistic calibration; 2018-20 select strategies and stake bands; 2020-22 audit the frozen choices; 2022-23 is a previously inspected held-out comparison. Base training probabilities are OOB from a forest trained across 2014-22, so they can use later-season information. This is NOT a leakage-free walk-forward model backtest. One original strategy selection per match, filtered afterward. Synthetic selections qualify only for the all-outcomes filter. Odds bands overlap at 2 and 4 across alternative candidates. Flat search requires 100 total bets and 30 in each search season. Balanced score = search net profit minus half max drawdown minus losses in negative search seasons. Drawdown profile requires positive search profit when available. Five-level bands use Kelly score widths 1%, 2.5%, or 5%, capped at $5; flat stakes are $1. Drawdown uses season/matchweek/source-row order, not exact kickoff order. No fees, bankroll limits, or synthetic cent rounding. Selection across many candidates risks overfitting. No live settings changed.",
+  "grid_count": 2240,
+  "eligible_count": 593,
+  "finalist_count": 92,
+  "diagnostics": [
+    {
+      "model": "Raw RF",
+      "period": "calibration",
+      "auc": 0.6839713594090625,
+      "log_loss": 0.9593123171940952
+    },
+    {
+      "model": "Raw RF",
+      "period": "search",
+      "auc": 0.6828535350122203,
+      "log_loss": 0.9672951943141682
+    },
+    {
+      "model": "Raw RF",
+      "period": "validation",
+      "auc": 0.68713863892683,
+      "log_loss": 0.9771892221521241
+    },
+    {
+      "model": "Raw RF",
+      "period": "test",
+      "auc": 0.6624307490968189,
+      "log_loss": 0.9788412680858174
+    },
+    {
+      "model": "Calibrated RF",
+      "period": "calibration",
+      "auc": 0.6843774789310172,
+      "log_loss": 0.9557198136317023
+    },
+    {
+      "model": "Calibrated RF",
+      "period": "search",
+      "auc": 0.6829164398044331,
+      "log_loss": 0.9654264710966391
+    },
+    {
+      "model": "Calibrated RF",
+      "period": "validation",
+      "auc": 0.6863616376629476,
+      "log_loss": 0.9758281691179239
+    },
+    {
+      "model": "Calibrated RF",
+      "period": "test",
+      "auc": 0.6624827075796828,
+      "log_loss": 0.9768659631312984
+    },
+    {
+      "model": "Market",
+      "period": "calibration",
+      "auc": 0.6849817470697399,
+      "log_loss": 0.955054906791502
+    },
+    {
+      "model": "Market",
+      "period": "search",
+      "auc": 0.6877780961179769,
+      "log_loss": 0.962467421177006
+    },
+    {
+      "model": "Market",
+      "period": "validation",
+      "auc": 0.6863223589123929,
+      "log_loss": 0.9751661959079432
+    },
+    {
+      "model": "Market",
+      "period": "test",
+      "auc": 0.657364594530662,
+      "log_loss": 0.9806747764076013
+    }
+  ],
+  "chosen": {
+    "profit": {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 920,
+        "staked": 2523.0,
+        "net": 268.89,
+        "roi": 0.10657550535077288,
+        "drawdown": 85.5,
+        "balanced": 226.14
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 1966.0,
+        "net": 133.03,
+        "roi": 0.06766531027466938,
+        "drawdown": 139.25
+      },
+      "test": {
+        "bets": 367,
+        "staked": 978.0,
+        "net": 151.3,
+        "roi": 0.1547034764826176,
+        "drawdown": 101.75
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 1502.0,
+          "net": 85.89,
+          "roi": 0.05718375499334221,
+          "drawdown": 85.5
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 1021.0,
+          "net": 183.0,
+          "roi": 0.1792360430950049,
+          "drawdown": 71.25
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 955.0,
+          "net": 38.529999999999994,
+          "roi": 0.04034554973821989,
+          "drawdown": 85.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 1011.0,
+          "net": 94.5,
+          "roi": 0.09347181008902077,
+          "drawdown": 79.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 978.0,
+          "net": 151.3,
+          "roi": 0.1547034764826176,
+          "drawdown": 101.75
+        }
+      ]
+    },
+    "drawdown": {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Most likely outcome",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    "balanced": {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 920,
+        "staked": 2523.0,
+        "net": 268.89,
+        "roi": 0.10657550535077288,
+        "drawdown": 85.5,
+        "balanced": 226.14
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 1966.0,
+        "net": 133.03,
+        "roi": 0.06766531027466938,
+        "drawdown": 139.25
+      },
+      "test": {
+        "bets": 367,
+        "staked": 978.0,
+        "net": 151.3,
+        "roi": 0.1547034764826176,
+        "drawdown": 101.75
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 1502.0,
+          "net": 85.89,
+          "roi": 0.05718375499334221,
+          "drawdown": 85.5
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 1021.0,
+          "net": 183.0,
+          "roi": 0.1792360430950049,
+          "drawdown": 71.25
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 955.0,
+          "net": 38.529999999999994,
+          "roi": 0.04034554973821989,
+          "drawdown": 85.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 1011.0,
+          "net": 94.5,
+          "roi": 0.09347181008902077,
+          "drawdown": 79.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 978.0,
+          "net": 151.3,
+          "roi": 0.1547034764826176,
+          "drawdown": 101.75
+        }
+      ]
+    }
+  },
+  "finalists": [
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Most likely outcome",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Most likely outcome",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Most likely outcome",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Most likely outcome",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 954,
+        "staked": 954.0,
+        "net": 109.03000000000002,
+        "roi": 0.11428721174004194,
+        "drawdown": 41.239999999999995,
+        "balanced": 88.41000000000003
+      },
+      "validation": {
+        "bets": 772,
+        "staked": 772.0,
+        "net": 95.22,
+        "roi": 0.1233419689119171,
+        "drawdown": 28.0
+      },
+      "test": {
+        "bets": 387,
+        "staked": 387.0,
+        "net": 23.71,
+        "roi": 0.061266149870801034,
+        "drawdown": 27.92
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 542,
+          "staked": 542.0,
+          "net": 38.040000000000006,
+          "roi": 0.07018450184501847,
+          "drawdown": 41.239999999999995
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 412,
+          "staked": 412.0,
+          "net": 70.99000000000001,
+          "roi": 0.17230582524271848,
+          "drawdown": 31.24000000000001
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 377,
+          "staked": 377.0,
+          "net": 41.89,
+          "roi": 0.11111405835543767,
+          "drawdown": 22.75
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 395,
+          "staked": 395.0,
+          "net": 53.33,
+          "roi": 0.1350126582278481,
+          "drawdown": 24.67
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 387,
+          "staked": 387.0,
+          "net": 23.71,
+          "roi": 0.061266149870801034,
+          "drawdown": 27.92
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 954,
+        "staked": 2608.0,
+        "net": 169.64,
+        "roi": 0.06504601226993864,
+        "drawdown": 89.5,
+        "balanced": 124.88999999999999
+      },
+      "validation": {
+        "bets": 772,
+        "staked": 2068.0,
+        "net": 155.52999999999997,
+        "roi": 0.07520793036750482,
+        "drawdown": 92.75
+      },
+      "test": {
+        "bets": 387,
+        "staked": 1032.0,
+        "net": 242.8,
+        "roi": 0.23527131782945737,
+        "drawdown": 77.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 542,
+          "staked": 1531.0,
+          "net": 67.63999999999999,
+          "roi": 0.04418027433050293,
+          "drawdown": 89.5
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 412,
+          "staked": 1077.0,
+          "net": 102.0,
+          "roi": 0.0947075208913649,
+          "drawdown": 85.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 377,
+          "staked": 1009.0,
+          "net": 31.529999999999987,
+          "roi": 0.03124876114965311,
+          "drawdown": 90.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 395,
+          "staked": 1059.0,
+          "net": 124.00000000000001,
+          "roi": 0.11709159584513694,
+          "drawdown": 73.75
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 387,
+          "staked": 1032.0,
+          "net": 242.8,
+          "roi": 0.23527131782945737,
+          "drawdown": 77.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 954,
+        "staked": 1411.0,
+        "net": 103.31,
+        "roi": 0.07321757618710135,
+        "drawdown": 60.75,
+        "balanced": 72.935
+      },
+      "validation": {
+        "bets": 772,
+        "staked": 1118.0,
+        "net": 137.27,
+        "roi": 0.12278175313059035,
+        "drawdown": 44.75
+      },
+      "test": {
+        "bets": 387,
+        "staked": 563.0,
+        "net": 105.92,
+        "roi": 0.18813499111900533,
+        "drawdown": 37.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 542,
+          "staked": 824.0,
+          "net": 16.82,
+          "roi": 0.020412621359223303,
+          "drawdown": 60.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 412,
+          "staked": 587.0,
+          "net": 86.49,
+          "roi": 0.14734241908006812,
+          "drawdown": 46.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 377,
+          "staked": 544.0,
+          "net": 66.78,
+          "roi": 0.12275735294117647,
+          "drawdown": 43.1
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 395,
+          "staked": 574.0,
+          "net": 70.49000000000001,
+          "roi": 0.1228048780487805,
+          "drawdown": 44.75
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 387,
+          "staked": 563.0,
+          "net": 105.92,
+          "roi": 0.18813499111900533,
+          "drawdown": 37.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 954,
+        "staked": 1030.0,
+        "net": 108.68,
+        "roi": 0.10551456310679612,
+        "drawdown": 48.75,
+        "balanced": 84.305
+      },
+      "validation": {
+        "bets": 772,
+        "staked": 833.0,
+        "net": 112.57999999999998,
+        "roi": 0.1351500600240096,
+        "drawdown": 26.25
+      },
+      "test": {
+        "bets": 387,
+        "staked": 422.0,
+        "net": 44.400000000000006,
+        "roi": 0.10521327014218011,
+        "drawdown": 26.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 542,
+          "staked": 591.0,
+          "net": 30.939999999999998,
+          "roi": 0.052351945854483925,
+          "drawdown": 48.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 412,
+          "staked": 439.0,
+          "net": 77.74000000000001,
+          "roi": 0.1770842824601367,
+          "drawdown": 34.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 377,
+          "staked": 408.0,
+          "net": 59.419999999999995,
+          "roi": 0.14563725490196078,
+          "drawdown": 25.75
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 395,
+          "staked": 425.0,
+          "net": 53.16,
+          "roi": 0.12508235294117645,
+          "drawdown": 26.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 387,
+          "staked": 422.0,
+          "net": 44.400000000000006,
+          "roi": 0.10521327014218011,
+          "drawdown": 26.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 126,
+        "staked": 126.0,
+        "net": 34.75,
+        "roi": 0.2757936507936508,
+        "drawdown": 17.75,
+        "balanced": 25.875
+      },
+      "validation": {
+        "bets": 122,
+        "staked": 122.0,
+        "net": 9.739999999999998,
+        "roi": 0.07983606557377047,
+        "drawdown": 21.42
+      },
+      "test": {
+        "bets": 54,
+        "staked": 54.0,
+        "net": 32.61,
+        "roi": 0.6038888888888889,
+        "drawdown": 12.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 72.0,
+          "net": 3.25,
+          "roi": 0.04513888888888889,
+          "drawdown": 17.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 54.0,
+          "net": 31.5,
+          "roi": 0.5833333333333334,
+          "drawdown": 10.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 65,
+          "staked": 65.0,
+          "net": -8.64,
+          "roi": -0.13292307692307692,
+          "drawdown": 21.42
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 57,
+          "staked": 57.0,
+          "net": 18.38,
+          "roi": 0.32245614035087716,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 54,
+          "staked": 54.0,
+          "net": 32.61,
+          "roi": 0.6038888888888889,
+          "drawdown": 12.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 126,
+        "staked": 428.0,
+        "net": 105.0,
+        "roi": 0.24532710280373832,
+        "drawdown": 64.0,
+        "balanced": 73.0
+      },
+      "validation": {
+        "bets": 122,
+        "staked": 411.0,
+        "net": 41.480000000000004,
+        "roi": 0.10092457420924575,
+        "drawdown": 74.19
+      },
+      "test": {
+        "bets": 54,
+        "staked": 201.0,
+        "net": 126.55000000000001,
+        "roi": 0.6296019900497513,
+        "drawdown": 42.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 251.0,
+          "net": 1.0,
+          "roi": 0.00398406374501992,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 177.0,
+          "net": 104.0,
+          "roi": 0.5875706214689266,
+          "drawdown": 21.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 65,
+          "staked": 222.0,
+          "net": -3.6400000000000006,
+          "roi": -0.0163963963963964,
+          "drawdown": 74.19
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 57,
+          "staked": 189.0,
+          "net": 45.120000000000005,
+          "roi": 0.23873015873015876,
+          "drawdown": 38.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 54,
+          "staked": 201.0,
+          "net": 126.55000000000001,
+          "roi": 0.6296019900497513,
+          "drawdown": 42.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 126,
+        "staked": 229.0,
+        "net": 32.75,
+        "roi": 0.14301310043668122,
+        "drawdown": 34.5,
+        "balanced": -1.75
+      },
+      "validation": {
+        "bets": 122,
+        "staked": 219.0,
+        "net": 47.85,
+        "roi": 0.21849315068493153,
+        "drawdown": 39.260000000000005
+      },
+      "test": {
+        "bets": 54,
+        "staked": 116.0,
+        "net": 76.74000000000001,
+        "roi": 0.6615517241379311,
+        "drawdown": 23.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 134.0,
+          "net": -17.25,
+          "roi": -0.1287313432835821,
+          "drawdown": 33.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 95.0,
+          "net": 50.0,
+          "roi": 0.5263157894736842,
+          "drawdown": 11.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 65,
+          "staked": 114.0,
+          "net": 21.140000000000004,
+          "roi": 0.1854385964912281,
+          "drawdown": 39.260000000000005
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 57,
+          "staked": 105.0,
+          "net": 26.709999999999997,
+          "roi": 0.2543809523809524,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 54,
+          "staked": 116.0,
+          "net": 76.74000000000001,
+          "roi": 0.6615517241379311,
+          "drawdown": 23.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Expected return > 1",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 126,
+        "staked": 150.0,
+        "net": 32.0,
+        "roi": 0.21333333333333335,
+        "drawdown": 24.75,
+        "balanced": 14.875
+      },
+      "validation": {
+        "bets": 122,
+        "staked": 143.0,
+        "net": 28.490000000000002,
+        "roi": 0.19923076923076924,
+        "drawdown": 25.42
+      },
+      "test": {
+        "bets": 54,
+        "staked": 74.0,
+        "net": 55.8,
+        "roi": 0.754054054054054,
+        "drawdown": 15.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 85.0,
+          "net": -4.75,
+          "roi": -0.05588235294117647,
+          "drawdown": 24.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 65.0,
+          "net": 36.75,
+          "roi": 0.5653846153846154,
+          "drawdown": 11.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 65,
+          "staked": 74.0,
+          "net": 6.110000000000001,
+          "roi": 0.08256756756756758,
+          "drawdown": 25.42
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 57,
+          "staked": 69.0,
+          "net": 22.38,
+          "roi": 0.3243478260869565,
+          "drawdown": 15.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 54,
+          "staked": 74.0,
+          "net": 55.8,
+          "roi": 0.754054054054054,
+          "drawdown": 15.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 221,
+        "staked": 221.0,
+        "net": 58.31999999999999,
+        "roi": 0.2638914027149321,
+        "drawdown": 22.25,
+        "balanced": 47.19499999999999
+      },
+      "validation": {
+        "bets": 206,
+        "staked": 206.0,
+        "net": -18.98,
+        "roi": -0.09213592233009708,
+        "drawdown": 28.89
+      },
+      "test": {
+        "bets": 104,
+        "staked": 104.0,
+        "net": -0.14000000000000057,
+        "roi": -0.0013461538461538515,
+        "drawdown": 27.42
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 126,
+          "staked": 126.0,
+          "net": 23.08,
+          "roi": 0.18317460317460316,
+          "drawdown": 22.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 95,
+          "staked": 95.0,
+          "net": 35.239999999999995,
+          "roi": 0.3709473684210526,
+          "drawdown": 15.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 113,
+          "staked": 113.0,
+          "net": -19.61,
+          "roi": -0.17353982300884954,
+          "drawdown": 28.89
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 93,
+          "staked": 93.0,
+          "net": 0.629999999999999,
+          "roi": 0.006774193548387086,
+          "drawdown": 19.05
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 104,
+          "staked": 104.0,
+          "net": -0.14000000000000057,
+          "roi": -0.0013461538461538515,
+          "drawdown": 27.42
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 221,
+        "staked": 752.0,
+        "net": 169.23,
+        "roi": 0.22503989361702126,
+        "drawdown": 91.25,
+        "balanced": 123.60499999999999
+      },
+      "validation": {
+        "bets": 206,
+        "staked": 726.0,
+        "net": -19.67000000000001,
+        "roi": -0.027093663911845742,
+        "drawdown": 95.94999999999999
+      },
+      "test": {
+        "bets": 104,
+        "staked": 355.0,
+        "net": 48.050000000000004,
+        "roi": 0.13535211267605635,
+        "drawdown": 75.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 126,
+          "staked": 426.0,
+          "net": 56.08,
+          "roi": 0.1316431924882629,
+          "drawdown": 79.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 95,
+          "staked": 326.0,
+          "net": 113.14999999999999,
+          "roi": 0.34708588957055214,
+          "drawdown": 65.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 113,
+          "staked": 394.0,
+          "net": -40.720000000000006,
+          "roi": -0.10335025380710662,
+          "drawdown": 95.94999999999999
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 93,
+          "staked": 332.0,
+          "net": 21.05,
+          "roi": 0.06340361445783133,
+          "drawdown": 56.7
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 104,
+          "staked": 355.0,
+          "net": 48.050000000000004,
+          "roi": 0.13535211267605635,
+          "drawdown": 75.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 221,
+        "staked": 425.0,
+        "net": 88.32,
+        "roi": 0.20781176470588233,
+        "drawdown": 61.0,
+        "balanced": 57.81999999999999
+      },
+      "validation": {
+        "bets": 206,
+        "staked": 397.0,
+        "net": 25.82,
+        "roi": 0.06503778337531486,
+        "drawdown": 53.559999999999995
+      },
+      "test": {
+        "bets": 104,
+        "staked": 203.0,
+        "net": 46.57,
+        "roi": 0.2294088669950739,
+        "drawdown": 40.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 126,
+          "staked": 246.0,
+          "net": 12.329999999999998,
+          "roi": 0.05012195121951219,
+          "drawdown": 48.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 95,
+          "staked": 179.0,
+          "net": 75.99,
+          "roi": 0.42452513966480443,
+          "drawdown": 32.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 113,
+          "staked": 215.0,
+          "net": 9.780000000000001,
+          "roi": 0.04548837209302326,
+          "drawdown": 53.559999999999995
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 93,
+          "staked": 182.0,
+          "net": 16.04,
+          "roi": 0.08813186813186813,
+          "drawdown": 32.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 104,
+          "staked": 203.0,
+          "net": 46.57,
+          "roi": 0.2294088669950739,
+          "drawdown": 40.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 221,
+        "staked": 273.0,
+        "net": 65.57,
+        "roi": 0.24018315018315015,
+        "drawdown": 32.5,
+        "balanced": 49.31999999999999
+      },
+      "validation": {
+        "bets": 206,
+        "staked": 256.0,
+        "net": -1.6199999999999992,
+        "roi": -0.006328124999999997,
+        "drawdown": 38.56
+      },
+      "test": {
+        "bets": 104,
+        "staked": 133.0,
+        "net": 22.55,
+        "roi": 0.16954887218045114,
+        "drawdown": 28.34
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 126,
+          "staked": 157.0,
+          "net": 17.58,
+          "roi": 0.11197452229299362,
+          "drawdown": 30.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 95,
+          "staked": 116.0,
+          "net": 47.989999999999995,
+          "roi": 0.4137068965517241,
+          "drawdown": 18.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 113,
+          "staked": 139.0,
+          "net": -8.079999999999998,
+          "roi": -0.058129496402877685,
+          "drawdown": 38.56
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 93,
+          "staked": 117.0,
+          "net": 6.459999999999999,
+          "roi": 0.055213675213675206,
+          "drawdown": 21.05
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 104,
+          "staked": 133.0,
+          "net": 22.55,
+          "roi": 0.16954887218045114,
+          "drawdown": 28.34
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 110,
+        "staked": 110.0,
+        "net": 19.58,
+        "roi": 0.178,
+        "drawdown": 21.75,
+        "balanced": 6.704999999999998
+      },
+      "validation": {
+        "bets": 109,
+        "staked": 109.0,
+        "net": 20.240000000000002,
+        "roi": 0.18568807339449542,
+        "drawdown": 12.0
+      },
+      "test": {
+        "bets": 53,
+        "staked": 53.0,
+        "net": 11.860000000000001,
+        "roi": 0.2237735849056604,
+        "drawdown": 13.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 60,
+          "staked": 60.0,
+          "net": -2.0,
+          "roi": -0.03333333333333333,
+          "drawdown": 21.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 50,
+          "staked": 50.0,
+          "net": 21.58,
+          "roi": 0.4316,
+          "drawdown": 8.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 53,
+          "staked": 53.0,
+          "net": 12.360000000000001,
+          "roi": 0.23320754716981135,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 56.0,
+          "net": 7.88,
+          "roi": 0.1407142857142857,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 53,
+          "staked": 53.0,
+          "net": 11.860000000000001,
+          "roi": 0.2237735849056604,
+          "drawdown": 13.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 110,
+        "staked": 371.0,
+        "net": 40.08,
+        "roi": 0.10803234501347708,
+        "drawdown": 83.0,
+        "balanced": -48.17
+      },
+      "validation": {
+        "bets": 109,
+        "staked": 369.0,
+        "net": 72.98000000000002,
+        "roi": 0.19777777777777783,
+        "drawdown": 48.4
+      },
+      "test": {
+        "bets": 53,
+        "staked": 189.0,
+        "net": 95.05000000000001,
+        "roi": 0.502910052910053,
+        "drawdown": 42.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 60,
+          "staked": 206.0,
+          "net": -46.75,
+          "roi": -0.22694174757281554,
+          "drawdown": 77.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 50,
+          "staked": 165.0,
+          "net": 86.83,
+          "roi": 0.5262424242424242,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 53,
+          "staked": 188.0,
+          "net": 39.36000000000001,
+          "roi": 0.20936170212765962,
+          "drawdown": 48.19
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 181.0,
+          "net": 33.620000000000005,
+          "roi": 0.1857458563535912,
+          "drawdown": 48.4
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 53,
+          "staked": 189.0,
+          "net": 95.05000000000001,
+          "roi": 0.502910052910053,
+          "drawdown": 42.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 110,
+        "staked": 200.0,
+        "net": 15.329999999999998,
+        "roi": 0.07665,
+        "drawdown": 48.5,
+        "balanced": -35.67
+      },
+      "validation": {
+        "bets": 109,
+        "staked": 200.0,
+        "net": 64.35,
+        "roi": 0.32175,
+        "drawdown": 25.549999999999997
+      },
+      "test": {
+        "bets": 53,
+        "staked": 111.0,
+        "net": 59.99,
+        "roi": 0.5404504504504505,
+        "drawdown": 24.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 60,
+          "staked": 111.0,
+          "net": -26.75,
+          "roi": -0.240990990990991,
+          "drawdown": 42.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 50,
+          "staked": 89.0,
+          "net": 42.08,
+          "roi": 0.4728089887640449,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 53,
+          "staked": 99.0,
+          "net": 45.14,
+          "roi": 0.45595959595959595,
+          "drawdown": 23.259999999999998
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 101.0,
+          "net": 19.209999999999997,
+          "roi": 0.19019801980198017,
+          "drawdown": 25.55
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 53,
+          "staked": 111.0,
+          "net": 59.99,
+          "roi": 0.5404504504504505,
+          "drawdown": 24.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Log odds weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 110,
+        "staked": 133.0,
+        "net": 17.83,
+        "roi": 0.13406015037593982,
+        "drawdown": 29.75,
+        "balanced": -7.045000000000002
+      },
+      "validation": {
+        "bets": 109,
+        "staked": 130.0,
+        "net": 38.989999999999995,
+        "roi": 0.2999230769230769,
+        "drawdown": 14.0
+      },
+      "test": {
+        "bets": 53,
+        "staked": 72.0,
+        "net": 36.05,
+        "roi": 0.5006944444444444,
+        "drawdown": 16.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 60,
+          "staked": 73.0,
+          "net": -10.0,
+          "roi": -0.136986301369863,
+          "drawdown": 27.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 50,
+          "staked": 60.0,
+          "net": 27.83,
+          "roi": 0.4638333333333333,
+          "drawdown": 9.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 53,
+          "staked": 62.0,
+          "net": 27.11,
+          "roi": 0.43725806451612903,
+          "drawdown": 14.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 68.0,
+          "net": 11.879999999999999,
+          "roi": 0.17470588235294116,
+          "drawdown": 14.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 53,
+          "staked": 72.0,
+          "net": 36.05,
+          "roi": 0.5006944444444444,
+          "drawdown": 16.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root odds weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root odds weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root odds weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root odds weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0.2,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 109,
+        "staked": 109.0,
+        "net": 19.35,
+        "roi": 0.17752293577981654,
+        "drawdown": 21.0,
+        "balanced": 8.850000000000001
+      },
+      "validation": {
+        "bets": 92,
+        "staked": 92.0,
+        "net": -21.75,
+        "roi": -0.23641304347826086,
+        "drawdown": 30.5
+      },
+      "test": {
+        "bets": 47,
+        "staked": 47.0,
+        "net": 14.76,
+        "roi": 0.3140425531914894,
+        "drawdown": 9.4
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 4.6,
+          "roi": 0.06865671641791045,
+          "drawdown": 16.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 42,
+          "staked": 42.0,
+          "net": 14.75,
+          "roi": 0.35119047619047616,
+          "drawdown": 8.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 50,
+          "staked": 50.0,
+          "net": -11.25,
+          "roi": -0.225,
+          "drawdown": 30.5
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 42,
+          "staked": 42.0,
+          "net": -10.5,
+          "roi": -0.25,
+          "drawdown": 15.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 47,
+          "staked": 47.0,
+          "net": 14.76,
+          "roi": 0.3140425531914894,
+          "drawdown": 9.4
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0.2,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 109,
+        "staked": 514.0,
+        "net": 84.75,
+        "roi": 0.16488326848249027,
+        "drawdown": 95.0,
+        "balanced": 37.25
+      },
+      "validation": {
+        "bets": 92,
+        "staked": 440.0,
+        "net": -96.75,
+        "roi": -0.21988636363636363,
+        "drawdown": 146.5
+      },
+      "test": {
+        "bets": 47,
+        "staked": 227.0,
+        "net": 81.80000000000001,
+        "roi": 0.36035242290748903,
+        "drawdown": 45.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 318.0,
+          "net": 24.0,
+          "roi": 0.07547169811320754,
+          "drawdown": 77.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 42,
+          "staked": 196.0,
+          "net": 60.75,
+          "roi": 0.30994897959183676,
+          "drawdown": 38.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 50,
+          "staked": 240.0,
+          "net": -54.25,
+          "roi": -0.22604166666666667,
+          "drawdown": 146.5
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 42,
+          "staked": 200.0,
+          "net": -42.5,
+          "roi": -0.2125,
+          "drawdown": 73.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 47,
+          "staked": 227.0,
+          "net": 81.80000000000001,
+          "roi": 0.36035242290748903,
+          "drawdown": 45.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0.2,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 109,
+        "staked": 292.0,
+        "net": 45.65,
+        "roi": 0.15633561643835617,
+        "drawdown": 53.0,
+        "balanced": 19.15
+      },
+      "validation": {
+        "bets": 92,
+        "staked": 249.0,
+        "net": -12.75,
+        "roi": -0.05120481927710843,
+        "drawdown": 73.0
+      },
+      "test": {
+        "bets": 47,
+        "staked": 137.0,
+        "net": 64.62,
+        "roi": 0.47167883211678835,
+        "drawdown": 23.6
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 180.0,
+          "net": 8.899999999999999,
+          "roi": 0.04944444444444444,
+          "drawdown": 45.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 42,
+          "staked": 112.0,
+          "net": 36.75,
+          "roi": 0.328125,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 50,
+          "staked": 136.0,
+          "net": 1.25,
+          "roi": 0.009191176470588236,
+          "drawdown": 73.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 42,
+          "staked": 113.0,
+          "net": -14.0,
+          "roi": -0.12389380530973451,
+          "drawdown": 46.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 47,
+          "staked": 137.0,
+          "net": 64.62,
+          "roi": 0.47167883211678835,
+          "drawdown": 23.6
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0.2,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 109,
+        "staked": 169.0,
+        "net": 26.2,
+        "roi": 0.15502958579881657,
+        "drawdown": 30.0,
+        "balanced": 11.2
+      },
+      "validation": {
+        "bets": 92,
+        "staked": 142.0,
+        "net": -10.25,
+        "roi": -0.0721830985915493,
+        "drawdown": 41.0
+      },
+      "test": {
+        "bets": 47,
+        "staked": 79.0,
+        "net": 37.85,
+        "roi": 0.4791139240506329,
+        "drawdown": 13.8
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 104.0,
+          "net": 4.699999999999999,
+          "roi": 0.045192307692307684,
+          "drawdown": 26.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 42,
+          "staked": 65.0,
+          "net": 21.5,
+          "roi": 0.33076923076923076,
+          "drawdown": 13.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 50,
+          "staked": 77.0,
+          "net": -2.25,
+          "roi": -0.02922077922077922,
+          "drawdown": 41.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 42,
+          "staked": 65.0,
+          "net": -8.0,
+          "roi": -0.12307692307692308,
+          "drawdown": 27.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 47,
+          "staked": 79.0,
+          "net": 37.85,
+          "roi": 0.4791139240506329,
+          "drawdown": 13.8
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Square-root profit weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home weighting",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 512,
+        "staked": 512.0,
+        "net": 100.52,
+        "roi": 0.196328125,
+        "drawdown": 45.0,
+        "balanced": 78.02
+      },
+      "validation": {
+        "bets": 437,
+        "staked": 437.0,
+        "net": 44.019999999999996,
+        "roi": 0.10073226544622425,
+        "drawdown": 42.0
+      },
+      "test": {
+        "bets": 193,
+        "staked": 193.0,
+        "net": -8.64,
+        "roi": -0.044766839378238346,
+        "drawdown": 35.89
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 299,
+          "staked": 299.0,
+          "net": 18.779999999999998,
+          "roi": 0.06280936454849498,
+          "drawdown": 45.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 213,
+          "staked": 213.0,
+          "net": 81.74,
+          "roi": 0.3837558685446009,
+          "drawdown": 19.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 226,
+          "staked": 226.0,
+          "net": 29.89,
+          "roi": 0.1322566371681416,
+          "drawdown": 29.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 211,
+          "staked": 211.0,
+          "net": 14.129999999999999,
+          "roi": 0.06696682464454976,
+          "drawdown": 30.619999999999997
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 193,
+          "staked": 193.0,
+          "net": -8.64,
+          "roi": -0.044766839378238346,
+          "drawdown": 35.89
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 512,
+        "staked": 1493.0,
+        "net": 244.93,
+        "roi": 0.16405224380442063,
+        "drawdown": 92.0,
+        "balanced": 198.93
+      },
+      "validation": {
+        "bets": 437,
+        "staked": 1300.0,
+        "net": 116.32999999999998,
+        "roi": 0.08948461538461537,
+        "drawdown": 124.0
+      },
+      "test": {
+        "bets": 193,
+        "staked": 586.0,
+        "net": 83.05000000000001,
+        "roi": 0.14172354948805463,
+        "drawdown": 109.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 299,
+          "staked": 900.0,
+          "net": 77.28,
+          "roi": 0.08586666666666667,
+          "drawdown": 92.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 213,
+          "staked": 593.0,
+          "net": 167.65,
+          "roi": 0.2827150084317032,
+          "drawdown": 52.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 226,
+          "staked": 664.0,
+          "net": 42.779999999999994,
+          "roi": 0.06442771084337348,
+          "drawdown": 75.68
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 211,
+          "staked": 636.0,
+          "net": 73.55,
+          "roi": 0.11564465408805032,
+          "drawdown": 84.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 193,
+          "staked": 586.0,
+          "net": 83.05000000000001,
+          "roi": 0.14172354948805463,
+          "drawdown": 109.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 512,
+        "staked": 804.0,
+        "net": 129.51999999999998,
+        "roi": 0.16109452736318405,
+        "drawdown": 58.0,
+        "balanced": 100.51999999999998
+      },
+      "validation": {
+        "bets": 437,
+        "staked": 699.0,
+        "net": 97.82000000000001,
+        "roi": 0.13994277539341918,
+        "drawdown": 65.0
+      },
+      "test": {
+        "bets": 193,
+        "staked": 322.0,
+        "net": 45.07,
+        "roi": 0.13996894409937888,
+        "drawdown": 54.5
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 299,
+          "staked": 485.0,
+          "net": 18.03,
+          "roi": 0.03717525773195877,
+          "drawdown": 58.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 213,
+          "staked": 319.0,
+          "net": 111.49,
+          "roi": 0.34949843260188085,
+          "drawdown": 25.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 226,
+          "staked": 356.0,
+          "net": 54.28,
+          "roi": 0.15247191011235955,
+          "drawdown": 41.34
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 211,
+          "staked": 343.0,
+          "net": 43.540000000000006,
+          "roi": 0.1269387755102041,
+          "drawdown": 50.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 193,
+          "staked": 322.0,
+          "net": 45.07,
+          "roi": 0.13996894409937888,
+          "drawdown": 54.5
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 512,
+        "staked": 569.0,
+        "net": 110.77,
+        "roi": 0.19467486818980667,
+        "drawdown": 43.75,
+        "balanced": 88.895
+      },
+      "validation": {
+        "bets": 437,
+        "staked": 490.0,
+        "net": 65.38,
+        "roi": 0.13342857142857142,
+        "drawdown": 43.5
+      },
+      "test": {
+        "bets": 193,
+        "staked": 225.0,
+        "net": 11.05,
+        "roi": 0.04911111111111111,
+        "drawdown": 35.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 299,
+          "staked": 335.0,
+          "net": 16.279999999999998,
+          "roi": 0.048597014925373126,
+          "drawdown": 43.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 213,
+          "staked": 234.0,
+          "net": 94.49,
+          "roi": 0.4038034188034188,
+          "drawdown": 20.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 226,
+          "staked": 254.0,
+          "net": 46.419999999999995,
+          "roi": 0.182755905511811,
+          "drawdown": 32.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 211,
+          "staked": 236.0,
+          "net": 18.96,
+          "roi": 0.08033898305084747,
+          "drawdown": 31.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 193,
+          "staked": 225.0,
+          "net": 11.05,
+          "roi": 0.04911111111111111,
+          "drawdown": 35.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 127,
+        "staked": 127.0,
+        "net": 33.75,
+        "roi": 0.265748031496063,
+        "drawdown": 17.75,
+        "balanced": 24.875
+      },
+      "validation": {
+        "bets": 128,
+        "staked": 128.0,
+        "net": 16.689999999999998,
+        "roi": 0.13039062499999998,
+        "drawdown": 17.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 56.0,
+        "net": 30.61,
+        "roi": 0.5466071428571428,
+        "drawdown": 12.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 73,
+          "staked": 73.0,
+          "net": 2.25,
+          "roi": 0.030821917808219176,
+          "drawdown": 17.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 54.0,
+          "net": 31.5,
+          "roi": 0.5833333333333334,
+          "drawdown": 10.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 70,
+          "staked": 70.0,
+          "net": -4.890000000000001,
+          "roi": -0.06985714285714287,
+          "drawdown": 17.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 58.0,
+          "net": 21.58,
+          "roi": 0.37206896551724133,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 56.0,
+          "net": 30.61,
+          "roi": 0.5466071428571428,
+          "drawdown": 12.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 127,
+        "staked": 432.0,
+        "net": 101.0,
+        "roi": 0.2337962962962963,
+        "drawdown": 64.0,
+        "balanced": 66.0
+      },
+      "validation": {
+        "bets": 128,
+        "staked": 426.0,
+        "net": 61.33,
+        "roi": 0.14396713615023474,
+        "drawdown": 63.94
+      },
+      "test": {
+        "bets": 56,
+        "staked": 206.0,
+        "net": 121.55000000000001,
+        "roi": 0.5900485436893205,
+        "drawdown": 42.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 73,
+          "staked": 255.0,
+          "net": -3.0,
+          "roi": -0.011764705882352941,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 177.0,
+          "net": 104.0,
+          "roi": 0.5875706214689266,
+          "drawdown": 21.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 70,
+          "staked": 234.0,
+          "net": 6.609999999999999,
+          "roi": 0.028247863247863245,
+          "drawdown": 63.94
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 192.0,
+          "net": 54.72,
+          "roi": 0.285,
+          "drawdown": 38.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 206.0,
+          "net": 121.55000000000001,
+          "roi": 0.5900485436893205,
+          "drawdown": 42.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 127,
+        "staked": 231.0,
+        "net": 30.75,
+        "roi": 0.1331168831168831,
+        "drawdown": 34.5,
+        "balanced": -5.75
+      },
+      "validation": {
+        "bets": 128,
+        "staked": 227.0,
+        "net": 57.550000000000004,
+        "roi": 0.25352422907488986,
+        "drawdown": 32.76
+      },
+      "test": {
+        "bets": 56,
+        "staked": 119.0,
+        "net": 73.74000000000001,
+        "roi": 0.6196638655462186,
+        "drawdown": 23.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 73,
+          "staked": 136.0,
+          "net": -19.25,
+          "roi": -0.14154411764705882,
+          "drawdown": 33.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 95.0,
+          "net": 50.0,
+          "roi": 0.5263157894736842,
+          "drawdown": 11.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 70,
+          "staked": 121.0,
+          "net": 27.640000000000004,
+          "roi": 0.22842975206611574,
+          "drawdown": 32.76
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 106.0,
+          "net": 29.91,
+          "roi": 0.2821698113207547,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 119.0,
+          "net": 73.74000000000001,
+          "roi": 0.6196638655462186,
+          "drawdown": 23.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy draw-to-home return weighting",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 127,
+        "staked": 151.0,
+        "net": 31.0,
+        "roi": 0.2052980132450331,
+        "drawdown": 24.75,
+        "balanced": 12.875
+      },
+      "validation": {
+        "bets": 128,
+        "staked": 149.0,
+        "net": 35.44,
+        "roi": 0.23785234899328858,
+        "drawdown": 21.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 76.0,
+        "net": 53.8,
+        "roi": 0.7078947368421052,
+        "drawdown": 15.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 73,
+          "staked": 86.0,
+          "net": -5.75,
+          "roi": -0.06686046511627906,
+          "drawdown": 24.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 65.0,
+          "net": 36.75,
+          "roi": 0.5653846153846154,
+          "drawdown": 11.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 70,
+          "staked": 79.0,
+          "net": 9.860000000000001,
+          "roi": 0.1248101265822785,
+          "drawdown": 21.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 70.0,
+          "net": 25.58,
+          "roi": 0.3654285714285714,
+          "drawdown": 15.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 76.0,
+          "net": 53.8,
+          "roi": 0.7078947368421052,
+          "drawdown": 15.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy market power weighting",
+        "min_edge": 0,
+        "min_odds": 2,
+        "max_odds": 4,
+        "outcome": "draw",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 100,
+        "staked": 100.0,
+        "net": 7.200000000000003,
+        "roi": 0.07200000000000002,
+        "drawdown": 14.649999999999999,
+        "balanced": -10.274999999999999
+      },
+      "validation": {
+        "bets": 87,
+        "staked": 87.0,
+        "net": 8.749999999999996,
+        "roi": 0.10057471264367812,
+        "drawdown": 14.75
+      },
+      "test": {
+        "bets": 44,
+        "staked": 44.0,
+        "net": 6.300000000000001,
+        "roi": 0.1431818181818182,
+        "drawdown": 9.2
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 47,
+          "staked": 47.0,
+          "net": 17.35,
+          "roi": 0.36914893617021277,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 53,
+          "staked": 53.0,
+          "net": -10.150000000000002,
+          "roi": -0.1915094339622642,
+          "drawdown": 14.649999999999999
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 35,
+          "staked": 35.0,
+          "net": -10.25,
+          "roi": -0.29285714285714287,
+          "drawdown": 13.05
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 52,
+          "staked": 52.0,
+          "net": 19.0,
+          "roi": 0.36538461538461536,
+          "drawdown": 8.6
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 44,
+          "staked": 44.0,
+          "net": 6.300000000000001,
+          "roi": 0.1431818181818182,
+          "drawdown": 9.2
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy market power weighting",
+        "min_edge": 0,
+        "min_odds": 2,
+        "max_odds": 4,
+        "outcome": "draw",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 100,
+        "staked": 130.0,
+        "net": 13.850000000000001,
+        "roi": 0.10653846153846155,
+        "drawdown": 21.25,
+        "balanced": -10.825
+      },
+      "validation": {
+        "bets": 87,
+        "staked": 108.0,
+        "net": 5.849999999999998,
+        "roi": 0.05416666666666665,
+        "drawdown": 22.25
+      },
+      "test": {
+        "bets": 44,
+        "staked": 53.0,
+        "net": 0.8000000000000007,
+        "roi": 0.015094339622641523,
+        "drawdown": 13.2
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 47,
+          "staked": 66.0,
+          "net": 27.900000000000002,
+          "roi": 0.4227272727272728,
+          "drawdown": 9.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 53,
+          "staked": 64.0,
+          "net": -14.05,
+          "roi": -0.21953125,
+          "drawdown": 17.549999999999997
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 35,
+          "staked": 46.0,
+          "net": -14.05,
+          "roi": -0.30543478260869567,
+          "drawdown": 18.05
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 52,
+          "staked": 62.0,
+          "net": 19.9,
+          "roi": 0.32096774193548383,
+          "drawdown": 10.1
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 44,
+          "staked": 53.0,
+          "net": 0.8000000000000007,
+          "roi": 0.015094339622641523,
+          "drawdown": 13.2
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy market power weighting",
+        "min_edge": 0,
+        "min_odds": 2,
+        "max_odds": 4,
+        "outcome": "draw",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 100,
+        "staked": 102.0,
+        "net": 8.900000000000002,
+        "roi": 0.08725490196078434,
+        "drawdown": 15.649999999999997,
+        "balanced": -10.075
+      },
+      "validation": {
+        "bets": 87,
+        "staked": 87.0,
+        "net": 8.749999999999996,
+        "roi": 0.10057471264367812,
+        "drawdown": 14.75
+      },
+      "test": {
+        "bets": 44,
+        "staked": 44.0,
+        "net": 6.300000000000001,
+        "roi": 0.1431818181818182,
+        "drawdown": 9.2
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 47,
+          "staked": 48.0,
+          "net": 20.05,
+          "roi": 0.41770833333333335,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 53,
+          "staked": 54.0,
+          "net": -11.150000000000002,
+          "roi": -0.20648148148148152,
+          "drawdown": 15.649999999999999
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 35,
+          "staked": 35.0,
+          "net": -10.25,
+          "roi": -0.29285714285714287,
+          "drawdown": 13.05
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 52,
+          "staked": 52.0,
+          "net": 19.0,
+          "roi": 0.36538461538461536,
+          "drawdown": 8.6
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 44,
+          "staked": 44.0,
+          "net": 6.300000000000001,
+          "roi": 0.1431818181818182,
+          "drawdown": 9.2
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy market power weighting",
+        "min_edge": 0,
+        "min_odds": 2,
+        "max_odds": 4,
+        "outcome": "draw",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 100,
+        "staked": 100.0,
+        "net": 7.200000000000003,
+        "roi": 0.07200000000000002,
+        "drawdown": 14.649999999999999,
+        "balanced": -10.274999999999999
+      },
+      "validation": {
+        "bets": 87,
+        "staked": 87.0,
+        "net": 8.749999999999996,
+        "roi": 0.10057471264367812,
+        "drawdown": 14.75
+      },
+      "test": {
+        "bets": 44,
+        "staked": 44.0,
+        "net": 6.300000000000001,
+        "roi": 0.1431818181818182,
+        "drawdown": 9.2
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 47,
+          "staked": 47.0,
+          "net": 17.35,
+          "roi": 0.36914893617021277,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 53,
+          "staked": 53.0,
+          "net": -10.150000000000002,
+          "roi": -0.1915094339622642,
+          "drawdown": 14.649999999999999
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 35,
+          "staked": 35.0,
+          "net": -10.25,
+          "roi": -0.29285714285714287,
+          "drawdown": 13.05
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 52,
+          "staked": 52.0,
+          "net": 19.0,
+          "roi": 0.36538461538461536,
+          "drawdown": 8.6
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 44,
+          "staked": 44.0,
+          "net": 6.300000000000001,
+          "roi": 0.1431818181818182,
+          "drawdown": 9.2
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 920,
+        "staked": 920.0,
+        "net": 151.28000000000003,
+        "roi": 0.16443478260869568,
+        "drawdown": 37.75,
+        "balanced": 132.40500000000003
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 733.0,
+        "net": 69.72,
+        "roi": 0.09511596180081855,
+        "drawdown": 52.0
+      },
+      "test": {
+        "bets": 367,
+        "staked": 367.0,
+        "net": -11.040000000000003,
+        "roi": -0.030081743869209816,
+        "drawdown": 40.02
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 528.0,
+          "net": 41.290000000000006,
+          "roi": 0.07820075757575759,
+          "drawdown": 37.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 392.0,
+          "net": 109.99000000000001,
+          "roi": 0.28058673469387757,
+          "drawdown": 26.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 358.0,
+          "net": 34.39,
+          "roi": 0.09606145251396649,
+          "drawdown": 37.25
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 375.0,
+          "net": 35.33,
+          "roi": 0.09421333333333333,
+          "drawdown": 30.599999999999994
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 367.0,
+          "net": -11.040000000000003,
+          "roi": -0.030081743869209816,
+          "drawdown": 40.02
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 920,
+        "staked": 2523.0,
+        "net": 268.89,
+        "roi": 0.10657550535077288,
+        "drawdown": 85.5,
+        "balanced": 226.14
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 1966.0,
+        "net": 133.03,
+        "roi": 0.06766531027466938,
+        "drawdown": 139.25
+      },
+      "test": {
+        "bets": 367,
+        "staked": 978.0,
+        "net": 151.3,
+        "roi": 0.1547034764826176,
+        "drawdown": 101.75
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 1502.0,
+          "net": 85.89,
+          "roi": 0.05718375499334221,
+          "drawdown": 85.5
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 1021.0,
+          "net": 183.0,
+          "roi": 0.1792360430950049,
+          "drawdown": 71.25
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 955.0,
+          "net": 38.529999999999994,
+          "roi": 0.04034554973821989,
+          "drawdown": 85.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 1011.0,
+          "net": 94.5,
+          "roi": 0.09347181008902077,
+          "drawdown": 79.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 978.0,
+          "net": 151.3,
+          "roi": 0.1547034764826176,
+          "drawdown": 101.75
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 920,
+        "staked": 1367.0,
+        "net": 147.56,
+        "roi": 0.10794440380395026,
+        "drawdown": 59.75,
+        "balanced": 117.685
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 1071.0,
+        "net": 111.77000000000001,
+        "roi": 0.10436041083099908,
+        "drawdown": 72.75
+      },
+      "test": {
+        "bets": 367,
+        "staked": 540.0,
+        "net": 66.67,
+        "roi": 0.12346296296296297,
+        "drawdown": 51.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 808.0,
+          "net": 22.07,
+          "roi": 0.027314356435643564,
+          "drawdown": 59.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 559.0,
+          "net": 125.49,
+          "roi": 0.2244901610017889,
+          "drawdown": 33.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 519.0,
+          "net": 57.28000000000001,
+          "roi": 0.1103660886319846,
+          "drawdown": 44.099999999999994
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 552.0,
+          "net": 54.49000000000001,
+          "roi": 0.09871376811594204,
+          "drawdown": 51.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 540.0,
+          "net": 66.67,
+          "roi": 0.12346296296296297,
+          "drawdown": 51.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 920,
+        "staked": 996.0,
+        "net": 150.93,
+        "roi": 0.15153614457831327,
+        "drawdown": 47.75,
+        "balanced": 127.055
+      },
+      "validation": {
+        "bets": 733,
+        "staked": 793.0,
+        "net": 88.08,
+        "roi": 0.1110718789407314,
+        "drawdown": 46.75
+      },
+      "test": {
+        "bets": 367,
+        "staked": 402.0,
+        "net": 9.650000000000002,
+        "roi": 0.024004975124378113,
+        "drawdown": 37.44
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 528,
+          "staked": 577.0,
+          "net": 34.19,
+          "roi": 0.05925476603119584,
+          "drawdown": 47.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 392,
+          "staked": 419.0,
+          "net": 116.74000000000001,
+          "roi": 0.27861575178997616,
+          "drawdown": 29.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 358,
+          "staked": 389.0,
+          "net": 51.92,
+          "roi": 0.13347043701799485,
+          "drawdown": 31.5
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 375,
+          "staked": 404.0,
+          "net": 36.16,
+          "roi": 0.0895049504950495,
+          "drawdown": 32.599999999999994
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 367,
+          "staked": 402.0,
+          "net": 9.650000000000002,
+          "roi": 0.024004975124378113,
+          "drawdown": 37.44
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.1,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 107,
+        "staked": 107.0,
+        "net": 11.55,
+        "roi": 0.10794392523364486,
+        "drawdown": 17.0,
+        "balanced": 3.0500000000000007
+      },
+      "validation": {
+        "bets": 120,
+        "staked": 120.0,
+        "net": -7.51,
+        "roi": -0.06258333333333334,
+        "drawdown": 23.169999999999998
+      },
+      "test": {
+        "bets": 55,
+        "staked": 55.0,
+        "net": 55.540000000000006,
+        "roi": 1.009818181818182,
+        "drawdown": 8.399999999999999
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 66,
+          "staked": 66.0,
+          "net": 1.3000000000000007,
+          "roi": 0.01969696969696971,
+          "drawdown": 13.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 41,
+          "staked": 41.0,
+          "net": 10.25,
+          "roi": 0.25,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 69.0,
+          "net": -3.54,
+          "roi": -0.051304347826086956,
+          "drawdown": 12.32
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 51,
+          "staked": 51.0,
+          "net": -3.9699999999999998,
+          "roi": -0.07784313725490195,
+          "drawdown": 19.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 55,
+          "staked": 55.0,
+          "net": 55.540000000000006,
+          "roi": 1.009818181818182,
+          "drawdown": 8.399999999999999
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.1,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 107,
+        "staked": 440.0,
+        "net": 68.5,
+        "roi": 0.15568181818181817,
+        "drawdown": 61.0,
+        "balanced": 36.75
+      },
+      "validation": {
+        "bets": 120,
+        "staked": 482.0,
+        "net": -3.960000000000001,
+        "roi": -0.008215767634854773,
+        "drawdown": 96.18
+      },
+      "test": {
+        "bets": 55,
+        "staked": 234.0,
+        "net": 195.62,
+        "roi": 0.835982905982906,
+        "drawdown": 30.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 66,
+          "staked": 268.0,
+          "net": -1.25,
+          "roi": -0.0046641791044776115,
+          "drawdown": 52.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 41,
+          "staked": 172.0,
+          "net": 69.75,
+          "roi": 0.4055232558139535,
+          "drawdown": 26.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 277.0,
+          "net": 8.419999999999998,
+          "roi": 0.030397111913357394,
+          "drawdown": 40.95
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 51,
+          "staked": 205.0,
+          "net": -12.379999999999999,
+          "roi": -0.06039024390243902,
+          "drawdown": 82.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 55,
+          "staked": 234.0,
+          "net": 195.62,
+          "roi": 0.835982905982906,
+          "drawdown": 30.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.1,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 107,
+        "staked": 228.0,
+        "net": 11.350000000000001,
+        "roi": 0.049780701754385974,
+        "drawdown": 35.0,
+        "balanced": -23.549999999999997
+      },
+      "validation": {
+        "bets": 120,
+        "staked": 251.0,
+        "net": 29.479999999999997,
+        "roi": 0.11745019920318724,
+        "drawdown": 46.839999999999996
+      },
+      "test": {
+        "bets": 55,
+        "staked": 133.0,
+        "net": 114.95,
+        "roi": 0.8642857142857143,
+        "drawdown": 16.200000000000003
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 66,
+          "staked": 138.0,
+          "net": -17.4,
+          "roi": -0.12608695652173912,
+          "drawdown": 28.8
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 41,
+          "staked": 90.0,
+          "net": 28.75,
+          "roi": 0.3194444444444444,
+          "drawdown": 14.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 140.0,
+          "net": 32.919999999999995,
+          "roi": 0.2351428571428571,
+          "drawdown": 19.64
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 51,
+          "staked": 111.0,
+          "net": -3.4399999999999995,
+          "roi": -0.030990990990990987,
+          "drawdown": 42.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 55,
+          "staked": 133.0,
+          "net": 114.95,
+          "roi": 0.8642857142857143,
+          "drawdown": 16.200000000000003
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Legacy variance score",
+        "min_edge": 0.1,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 107,
+        "staked": 133.0,
+        "net": 6.800000000000001,
+        "roi": 0.05112781954887219,
+        "drawdown": 22.0,
+        "balanced": -11.899999999999999
+      },
+      "validation": {
+        "bets": 120,
+        "staked": 146.0,
+        "net": 6.239999999999998,
+        "roi": 0.04273972602739725,
+        "drawdown": 26.669999999999998
+      },
+      "test": {
+        "bets": 55,
+        "staked": 80.0,
+        "net": 82.08000000000001,
+        "roi": 1.0260000000000002,
+        "drawdown": 9.799999999999997
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 66,
+          "staked": 80.0,
+          "net": -7.699999999999999,
+          "roi": -0.09624999999999999,
+          "drawdown": 17.4
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 41,
+          "staked": 53.0,
+          "net": 14.5,
+          "roi": 0.27358490566037735,
+          "drawdown": 8.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 81.0,
+          "net": 8.209999999999997,
+          "roi": 0.10135802469135799,
+          "drawdown": 16.32
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 51,
+          "staked": 65.0,
+          "net": -1.9699999999999989,
+          "roi": -0.03030769230769229,
+          "drawdown": 24.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 55,
+          "staked": 80.0,
+          "net": 82.08000000000001,
+          "roi": 1.0260000000000002,
+          "drawdown": 9.799999999999997
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 322,
+        "staked": 322.0,
+        "net": 66.52,
+        "roi": 0.206583850931677,
+        "drawdown": 41.25,
+        "balanced": 45.894999999999996
+      },
+      "validation": {
+        "bets": 301,
+        "staked": 301.0,
+        "net": -32.480000000000004,
+        "roi": -0.10790697674418606,
+        "drawdown": 46.86
+      },
+      "test": {
+        "bets": 126,
+        "staked": 126.0,
+        "net": 21.36,
+        "roi": 0.16952380952380952,
+        "drawdown": 20.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 183,
+          "staked": 183.0,
+          "net": 25.779999999999998,
+          "roi": 0.1408743169398907,
+          "drawdown": 41.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 139.0,
+          "net": 40.739999999999995,
+          "roi": 0.2930935251798561,
+          "drawdown": 16.75
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 171.0,
+          "net": -19.11,
+          "roi": -0.11175438596491227,
+          "drawdown": 38.56
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 130,
+          "staked": 130.0,
+          "net": -13.370000000000001,
+          "roi": -0.10284615384615385,
+          "drawdown": 30.55
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 126.0,
+          "net": 21.36,
+          "roi": 0.16952380952380952,
+          "drawdown": 20.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 322,
+        "staked": 992.0,
+        "net": 180.43,
+        "roi": 0.1818850806451613,
+        "drawdown": 116.75,
+        "balanced": 122.055
+      },
+      "validation": {
+        "bets": 301,
+        "staked": 936.0,
+        "net": -67.17,
+        "roi": -0.07176282051282051,
+        "drawdown": 115.63
+      },
+      "test": {
+        "bets": 126,
+        "staked": 405.0,
+        "net": 130.05,
+        "roi": 0.3211111111111111,
+        "drawdown": 58.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 183,
+          "staked": 573.0,
+          "net": 70.78,
+          "roi": 0.12352530541012216,
+          "drawdown": 116.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 419.0,
+          "net": 109.65,
+          "roi": 0.26169451073985683,
+          "drawdown": 58.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 516.0,
+          "net": -77.22,
+          "roi": -0.14965116279069768,
+          "drawdown": 115.63
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 130,
+          "staked": 420.0,
+          "net": 10.049999999999997,
+          "roi": 0.02392857142857142,
+          "drawdown": 83.7
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 405.0,
+          "net": 130.05,
+          "roi": 0.3211111111111111,
+          "drawdown": 58.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 322,
+        "staked": 553.0,
+        "net": 88.52,
+        "roi": 0.16007233273056057,
+        "drawdown": 64.0,
+        "balanced": 56.519999999999996
+      },
+      "validation": {
+        "bets": 301,
+        "staked": 512.0,
+        "net": 15.319999999999999,
+        "roi": 0.029921874999999997,
+        "drawdown": 58.900000000000006
+      },
+      "test": {
+        "bets": 126,
+        "staked": 230.0,
+        "net": 80.07,
+        "roi": 0.3481304347826087,
+        "drawdown": 34.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 183,
+          "staked": 322.0,
+          "net": 15.029999999999998,
+          "roi": 0.04667701863354037,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 231.0,
+          "net": 73.49,
+          "roi": 0.3181385281385281,
+          "drawdown": 25.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 283.0,
+          "net": 0.2799999999999976,
+          "roi": 0.0009893992932862106,
+          "drawdown": 58.900000000000006
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 130,
+          "staked": 229.0,
+          "net": 15.040000000000001,
+          "roi": 0.0656768558951965,
+          "drawdown": 42.85
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 230.0,
+          "net": 80.07,
+          "roi": 0.3481304347826087,
+          "drawdown": 34.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 322,
+        "staked": 375.0,
+        "net": 72.77,
+        "roi": 0.19405333333333333,
+        "drawdown": 43.25,
+        "balanced": 51.144999999999996
+      },
+      "validation": {
+        "bets": 301,
+        "staked": 351.0,
+        "net": -15.120000000000001,
+        "roi": -0.04307692307692308,
+        "drawdown": 42.06
+      },
+      "test": {
+        "bets": 126,
+        "staked": 155.0,
+        "net": 44.05,
+        "roi": 0.28419354838709676,
+        "drawdown": 24.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 183,
+          "staked": 215.0,
+          "net": 19.279999999999998,
+          "roi": 0.08967441860465115,
+          "drawdown": 43.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 160.0,
+          "net": 53.489999999999995,
+          "roi": 0.33431249999999996,
+          "drawdown": 19.25
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 197.0,
+          "net": -7.580000000000001,
+          "roi": -0.0384771573604061,
+          "drawdown": 42.06
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 130,
+          "staked": 154.0,
+          "net": -7.540000000000001,
+          "roi": -0.04896103896103897,
+          "drawdown": 31.05
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 155.0,
+          "net": 44.05,
+          "roi": 0.28419354838709676,
+          "drawdown": 24.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 126,
+        "staked": 126.0,
+        "net": 34.75,
+        "roi": 0.2757936507936508,
+        "drawdown": 17.75,
+        "balanced": 25.875
+      },
+      "validation": {
+        "bets": 127,
+        "staked": 127.0,
+        "net": 17.689999999999998,
+        "roi": 0.13929133858267714,
+        "drawdown": 16.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 56.0,
+        "net": 30.61,
+        "roi": 0.5466071428571428,
+        "drawdown": 12.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 72.0,
+          "net": 3.25,
+          "roi": 0.04513888888888889,
+          "drawdown": 17.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 54.0,
+          "net": 31.5,
+          "roi": 0.5833333333333334,
+          "drawdown": 10.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 69.0,
+          "net": -3.8900000000000006,
+          "roi": -0.05637681159420291,
+          "drawdown": 16.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 58.0,
+          "net": 21.58,
+          "roi": 0.37206896551724133,
+          "drawdown": 12.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 56.0,
+          "net": 30.61,
+          "roi": 0.5466071428571428,
+          "drawdown": 12.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 126,
+        "staked": 428.0,
+        "net": 105.0,
+        "roi": 0.24532710280373832,
+        "drawdown": 64.0,
+        "balanced": 73.0
+      },
+      "validation": {
+        "bets": 127,
+        "staked": 424.0,
+        "net": 63.33,
+        "roi": 0.1493632075471698,
+        "drawdown": 61.94
+      },
+      "test": {
+        "bets": 56,
+        "staked": 206.0,
+        "net": 121.55000000000001,
+        "roi": 0.5900485436893205,
+        "drawdown": 42.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 251.0,
+          "net": 1.0,
+          "roi": 0.00398406374501992,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 177.0,
+          "net": 104.0,
+          "roi": 0.5875706214689266,
+          "drawdown": 21.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 232.0,
+          "net": 8.61,
+          "roi": 0.03711206896551724,
+          "drawdown": 61.94
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 192.0,
+          "net": 54.72,
+          "roi": 0.285,
+          "drawdown": 38.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 206.0,
+          "net": 121.55000000000001,
+          "roi": 0.5900485436893205,
+          "drawdown": 42.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 126,
+        "staked": 229.0,
+        "net": 32.75,
+        "roi": 0.14301310043668122,
+        "drawdown": 34.5,
+        "balanced": -1.75
+      },
+      "validation": {
+        "bets": 127,
+        "staked": 226.0,
+        "net": 58.550000000000004,
+        "roi": 0.259070796460177,
+        "drawdown": 31.759999999999998
+      },
+      "test": {
+        "bets": 56,
+        "staked": 119.0,
+        "net": 73.74000000000001,
+        "roi": 0.6196638655462186,
+        "drawdown": 23.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 134.0,
+          "net": -17.25,
+          "roi": -0.1287313432835821,
+          "drawdown": 33.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 95.0,
+          "net": 50.0,
+          "roi": 0.5263157894736842,
+          "drawdown": 11.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 120.0,
+          "net": 28.640000000000004,
+          "roi": 0.2386666666666667,
+          "drawdown": 31.759999999999998
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 106.0,
+          "net": 29.91,
+          "roi": 0.2821698113207547,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 119.0,
+          "net": 73.74000000000001,
+          "roi": 0.6196638655462186,
+          "drawdown": 23.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home win or skip (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 126,
+        "staked": 150.0,
+        "net": 32.0,
+        "roi": 0.21333333333333335,
+        "drawdown": 24.75,
+        "balanced": 14.875
+      },
+      "validation": {
+        "bets": 127,
+        "staked": 148.0,
+        "net": 36.44,
+        "roi": 0.2462162162162162,
+        "drawdown": 20.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 76.0,
+        "net": 53.8,
+        "roi": 0.7078947368421052,
+        "drawdown": 15.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 85.0,
+          "net": -4.75,
+          "roi": -0.05588235294117647,
+          "drawdown": 24.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 65.0,
+          "net": 36.75,
+          "roi": 0.5653846153846154,
+          "drawdown": 11.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 78.0,
+          "net": 10.860000000000001,
+          "roi": 0.13923076923076924,
+          "drawdown": 20.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 58,
+          "staked": 70.0,
+          "net": 25.58,
+          "roi": 0.3654285714285714,
+          "drawdown": 15.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 76.0,
+          "net": 53.8,
+          "roi": 0.7078947368421052,
+          "drawdown": 15.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 594,
+        "staked": 594.0,
+        "net": 83.46000000000001,
+        "roi": 0.14050505050505052,
+        "drawdown": 46.8,
+        "balanced": 60.06000000000001
+      },
+      "validation": {
+        "bets": 423,
+        "staked": 423.0,
+        "net": 102.5,
+        "roi": 0.24231678486997635,
+        "drawdown": 36.75
+      },
+      "test": {
+        "bets": 239,
+        "staked": 239.0,
+        "net": -39.900000000000006,
+        "roi": -0.16694560669456068,
+        "drawdown": 57.099999999999994
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 345,
+          "staked": 345.0,
+          "net": 19.710000000000004,
+          "roi": 0.05713043478260871,
+          "drawdown": 46.8
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 249,
+          "staked": 249.0,
+          "net": 63.75000000000001,
+          "roi": 0.2560240963855422,
+          "drawdown": 35.650000000000006
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 182,
+          "staked": 182.0,
+          "net": 54.0,
+          "roi": 0.2967032967032967,
+          "drawdown": 24.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 241,
+          "staked": 241.0,
+          "net": 48.5,
+          "roi": 0.2012448132780083,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 239,
+          "staked": 239.0,
+          "net": -39.900000000000006,
+          "roi": -0.16694560669456068,
+          "drawdown": 57.099999999999994
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 594,
+        "staked": 1524.0,
+        "net": 84.66,
+        "roi": 0.0555511811023622,
+        "drawdown": 121.0,
+        "balanced": 24.159999999999997
+      },
+      "validation": {
+        "bets": 423,
+        "staked": 1018.0,
+        "net": 199.0,
+        "roi": 0.19548133595284872,
+        "drawdown": 109.25
+      },
+      "test": {
+        "bets": 239,
+        "staked": 569.0,
+        "net": -3.249999999999993,
+        "roi": -0.0057117750439367185,
+        "drawdown": 95.15
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 345,
+          "staked": 927.0,
+          "net": 21.309999999999995,
+          "roi": 0.022988133764832788,
+          "drawdown": 121.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 249,
+          "staked": 597.0,
+          "net": 63.349999999999994,
+          "roi": 0.10611390284757118,
+          "drawdown": 103.44999999999999
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 182,
+          "staked": 432.0,
+          "net": 113.75,
+          "roi": 0.2633101851851852,
+          "drawdown": 56.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 241,
+          "staked": 586.0,
+          "net": 85.25,
+          "roi": 0.1454778156996587,
+          "drawdown": 59.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 239,
+          "staked": 569.0,
+          "net": -3.249999999999993,
+          "roi": -0.0057117750439367185,
+          "drawdown": 95.15
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 594,
+        "staked": 809.0,
+        "net": 58.74,
+        "roi": 0.07260815822002473,
+        "drawdown": 61.1,
+        "balanced": 28.19
+      },
+      "validation": {
+        "bets": 423,
+        "staked": 551.0,
+        "net": 95.75,
+        "roi": 0.17377495462794917,
+        "drawdown": 54.75
+      },
+      "test": {
+        "bets": 239,
+        "staked": 308.0,
+        "net": -25.650000000000002,
+        "roi": -0.08327922077922079,
+        "drawdown": 61.35
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 345,
+          "staked": 485.0,
+          "net": 12.240000000000002,
+          "roi": 0.02523711340206186,
+          "drawdown": 61.1
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 249,
+          "staked": 324.0,
+          "net": 46.5,
+          "roi": 0.14351851851851852,
+          "drawdown": 55.55
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 182,
+          "staked": 232.0,
+          "net": 56.5,
+          "roi": 0.2435344827586207,
+          "drawdown": 32.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 241,
+          "staked": 319.0,
+          "net": 39.25,
+          "roi": 0.12304075235109718,
+          "drawdown": 27.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 239,
+          "staked": 308.0,
+          "net": -25.650000000000002,
+          "roi": -0.08327922077922079,
+          "drawdown": 61.35
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 594,
+        "staked": 617.0,
+        "net": 76.86,
+        "roi": 0.12457050243111831,
+        "drawdown": 49.8,
+        "balanced": 51.96
+      },
+      "validation": {
+        "bets": 423,
+        "staked": 433.0,
+        "net": 103.5,
+        "roi": 0.2390300230946882,
+        "drawdown": 36.75
+      },
+      "test": {
+        "bets": 239,
+        "staked": 245.0,
+        "net": -41.900000000000006,
+        "roi": -0.17102040816326533,
+        "drawdown": 59.099999999999994
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 345,
+          "staked": 362.0,
+          "net": 19.11,
+          "roi": 0.05279005524861878,
+          "drawdown": 49.8
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 249,
+          "staked": 255.0,
+          "net": 57.75000000000001,
+          "roi": 0.22647058823529415,
+          "drawdown": 38.650000000000006
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 182,
+          "staked": 187.0,
+          "net": 60.0,
+          "roi": 0.32085561497326204,
+          "drawdown": 24.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 241,
+          "staked": 246.0,
+          "net": 43.5,
+          "roi": 0.17682926829268292,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 239,
+          "staked": 245.0,
+          "net": -41.900000000000006,
+          "roi": -0.17102040816326533,
+          "drawdown": 59.099999999999994
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 115,
+        "staked": 115.0,
+        "net": 3.160000000000004,
+        "roi": 0.027478260869565254,
+        "drawdown": 13.46,
+        "balanced": -3.5699999999999963
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 85.0,
+        "net": -4.499999999999998,
+        "roi": -0.052941176470588214,
+        "drawdown": 10.979999999999999
+      },
+      "test": {
+        "bets": 45,
+        "staked": 45.0,
+        "net": -12.120000000000001,
+        "roi": -0.26933333333333337,
+        "drawdown": 12.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 67.0,
+          "net": 1.7900000000000031,
+          "roi": 0.026716417910447807,
+          "drawdown": 9.15
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 48.0,
+          "net": 1.370000000000001,
+          "roi": 0.028541666666666687,
+          "drawdown": 6.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 49.0,
+          "net": -7.799999999999999,
+          "roi": -0.15918367346938772,
+          "drawdown": 10.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 36.0,
+          "net": 3.3000000000000003,
+          "roi": 0.09166666666666667,
+          "drawdown": 4.18
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 45.0,
+          "net": -12.120000000000001,
+          "roi": -0.26933333333333337,
+          "drawdown": 12.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 115,
+        "staked": 319.0,
+        "net": -10.339999999999996,
+        "roi": -0.03241379310344827,
+        "drawdown": 46.22,
+        "balanced": -44.699999999999996
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 217.0,
+        "net": -28.22,
+        "roi": -0.13004608294930875,
+        "drawdown": 39.39000000000001
+      },
+      "test": {
+        "bets": 45,
+        "staked": 93.0,
+        "net": -23.49,
+        "roi": -0.2525806451612903,
+        "drawdown": 28.64
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 195.0,
+          "net": 0.9100000000000037,
+          "roi": 0.004666666666666685,
+          "drawdown": 26.49
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 124.0,
+          "net": -11.249999999999998,
+          "roi": -0.09072580645161289,
+          "drawdown": 24.48
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 118.0,
+          "net": -32.39,
+          "roi": -0.27449152542372884,
+          "drawdown": 36.07
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 99.0,
+          "net": 4.170000000000003,
+          "roi": 0.04212121212121215,
+          "drawdown": 10.169999999999998
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 93.0,
+          "net": -23.49,
+          "roi": -0.2525806451612903,
+          "drawdown": 28.64
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 115,
+        "staked": 195.0,
+        "net": -3.679999999999999,
+        "roi": -0.018871794871794866,
+        "drawdown": 27.719999999999995,
+        "balanced": -22.939999999999994
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 126.0,
+        "net": -16.849999999999998,
+        "roi": -0.13373015873015873,
+        "drawdown": 22.709999999999994
+      },
+      "test": {
+        "bets": 45,
+        "staked": 54.0,
+        "net": -15.669999999999998,
+        "roi": -0.29018518518518516,
+        "drawdown": 16.87
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 125.0,
+          "net": 1.7200000000000006,
+          "roi": 0.013760000000000005,
+          "drawdown": 17.889999999999997
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 70.0,
+          "net": -5.3999999999999995,
+          "roi": -0.07714285714285714,
+          "drawdown": 12.52
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 68.0,
+          "net": -20.15,
+          "roi": -0.2963235294117647,
+          "drawdown": 21.749999999999996
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 58.0,
+          "net": 3.300000000000001,
+          "roi": 0.05689655172413795,
+          "drawdown": 5.35
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 54.0,
+          "net": -15.669999999999998,
+          "roi": -0.29018518518518516,
+          "drawdown": 16.87
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 2,
+        "outcome": "away",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 115,
+        "staked": 135.0,
+        "net": -1.4099999999999993,
+        "roi": -0.010444444444444438,
+        "drawdown": 18.96,
+        "balanced": -12.3
+      },
+      "validation": {
+        "bets": 85,
+        "staked": 97.0,
+        "net": -8.339999999999998,
+        "roi": -0.08597938144329895,
+        "drawdown": 14.53
+      },
+      "test": {
+        "bets": 45,
+        "staked": 46.0,
+        "net": -13.120000000000001,
+        "roi": -0.28521739130434787,
+        "drawdown": 13.57
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 67,
+          "staked": 83.0,
+          "net": -0.6299999999999999,
+          "roi": -0.007590361445783131,
+          "drawdown": 13.649999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 48,
+          "staked": 52.0,
+          "net": -0.7799999999999994,
+          "roi": -0.014999999999999987,
+          "drawdown": 7.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 49,
+          "staked": 54.0,
+          "net": -12.799999999999999,
+          "roi": -0.23703703703703702,
+          "drawdown": 14.53
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 36,
+          "staked": 43.0,
+          "net": 4.460000000000001,
+          "roi": 0.10372093023255816,
+          "drawdown": 3.8499999999999996
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 45,
+          "staked": 46.0,
+          "net": -13.120000000000001,
+          "roi": -0.28521739130434787,
+          "drawdown": 13.57
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 630,
+        "staked": 630.0,
+        "net": 82.40372369263673,
+        "roi": 0.1307995614168837,
+        "drawdown": 40.650000000000006,
+        "balanced": 62.07872369263673
+      },
+      "validation": {
+        "bets": 449,
+        "staked": 449.0,
+        "net": 103.81256504952157,
+        "roi": 0.23120838541096117,
+        "drawdown": 35.400000000000006
+      },
+      "test": {
+        "bets": 244,
+        "staked": 244.0,
+        "net": -39.46000000000001,
+        "roi": -0.16172131147540986,
+        "drawdown": 55.66
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 366,
+          "staked": 366.0,
+          "net": 17.85895143590796,
+          "roi": 0.048794949278437055,
+          "drawdown": 39.73676284980633
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 264,
+          "staked": 264.0,
+          "net": 64.54477225672876,
+          "roi": 0.24448777369973015,
+          "drawdown": 40.650000000000006
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 197,
+          "staked": 197.0,
+          "net": 56.80945945945946,
+          "roi": 0.2883728906571546,
+          "drawdown": 20.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 252,
+          "staked": 252.0,
+          "net": 47.00310559006211,
+          "roi": 0.18652026027802426,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 244,
+          "staked": 244.0,
+          "net": -39.46000000000001,
+          "roi": -0.16172131147540986,
+          "drawdown": 55.66
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 630,
+        "staked": 1693.0,
+        "net": 81.94618603075125,
+        "roi": 0.04840294508609052,
+        "drawdown": 128.45,
+        "balanced": 17.721186030751255
+      },
+      "validation": {
+        "bets": 449,
+        "staked": 1133.0,
+        "net": 195.70568239046497,
+        "roi": 0.17273228807631508,
+        "drawdown": 98.5
+      },
+      "test": {
+        "bets": 244,
+        "staked": 591.0,
+        "net": 1.9500000000000028,
+        "roi": 0.003299492385786807,
+        "drawdown": 84.95
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 366,
+          "staked": 1022.0,
+          "net": 13.622324747107356,
+          "roi": 0.013329084879752795,
+          "drawdown": 97.7032032032032
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 264,
+          "staked": 671.0,
+          "net": 68.3238612836439,
+          "roi": 0.10182393633926065,
+          "drawdown": 128.45
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 197,
+          "staked": 499.0,
+          "net": 123.79729729729729,
+          "roi": 0.24809077614688835,
+          "drawdown": 45.5
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 252,
+          "staked": 634.0,
+          "net": 71.9083850931677,
+          "roi": 0.11342016576209416,
+          "drawdown": 64.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 244,
+          "staked": 591.0,
+          "net": 1.9500000000000028,
+          "roi": 0.003299492385786807,
+          "drawdown": 84.95
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 630,
+        "staked": 919.0,
+        "net": 52.30765398939313,
+        "roi": 0.05691801304612963,
+        "drawdown": 71.55,
+        "balanced": 16.532653989393133
+      },
+      "validation": {
+        "bets": 449,
+        "staked": 624.0,
+        "net": 97.21626657713615,
+        "roi": 0.15579529900182076,
+        "drawdown": 44.349999999999994
+      },
+      "test": {
+        "bets": 244,
+        "staked": 322.0,
+        "net": -17.890000000000004,
+        "roi": -0.05555900621118014,
+        "drawdown": 49.59
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 366,
+          "staked": 547.0,
+          "net": 0.7983372192067861,
+          "roi": 0.001459483033284801,
+          "drawdown": 46.365265265265265
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 264,
+          "staked": 372.0,
+          "net": 51.509316770186345,
+          "roi": 0.13846590529619984,
+          "drawdown": 71.55
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 197,
+          "staked": 275.0,
+          "net": 68.02837837837839,
+          "roi": 0.24737592137592143,
+          "drawdown": 24.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 252,
+          "staked": 349.0,
+          "net": 29.18788819875776,
+          "roi": 0.08363291747495061,
+          "drawdown": 29.25
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 244,
+          "staked": 322.0,
+          "net": -17.890000000000004,
+          "roi": -0.05555900621118014,
+          "drawdown": 49.59
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home loses vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "all",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 630,
+        "staked": 682.0,
+        "net": 73.44551688334298,
+        "roi": 0.1076913737292419,
+        "drawdown": 48.650000000000006,
+        "balanced": 49.12051688334297
+      },
+      "validation": {
+        "bets": 449,
+        "staked": 477.0,
+        "net": 114.93941581332885,
+        "roi": 0.2409631358769997,
+        "drawdown": 27.150000000000006
+      },
+      "test": {
+        "bets": 244,
+        "staked": 253.0,
+        "net": -39.02,
+        "roi": -0.15422924901185772,
+        "drawdown": 54.22
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 366,
+          "staked": 397.0,
+          "net": 14.105972369885418,
+          "roi": 0.03553141654882977,
+          "drawdown": 40.13974191582887
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 264,
+          "staked": 285.0,
+          "net": 59.33954451345756,
+          "roi": 0.20820892811739494,
+          "drawdown": 48.650000000000006
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 197,
+          "staked": 214.0,
+          "net": 73.71891891891892,
+          "roi": 0.34448092952765846,
+          "drawdown": 20.0
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 252,
+          "staked": 263.0,
+          "net": 41.22049689440994,
+          "roi": 0.15673192735517089,
+          "drawdown": 22.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 244,
+          "staked": 253.0,
+          "net": -39.02,
+          "roi": -0.15422924901185772,
+          "drawdown": 54.22
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 151,
+        "staked": 151.0,
+        "net": -2.8800000000000017,
+        "roi": -0.019072847682119216,
+        "drawdown": 17.07,
+        "balanced": -19.675000000000004
+      },
+      "validation": {
+        "bets": 156,
+        "staked": 156.0,
+        "net": -11.420000000000002,
+        "roi": -0.07320512820512821,
+        "drawdown": 15.44
+      },
+      "test": {
+        "bets": 88,
+        "staked": 88.0,
+        "net": 0.5600000000000014,
+        "roi": 0.0063636363636363795,
+        "drawdown": 6.739999999999998
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 90,
+          "staked": 90.0,
+          "net": 5.379999999999998,
+          "roi": 0.059777777777777756,
+          "drawdown": 7.61
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 61,
+          "staked": 61.0,
+          "net": -8.26,
+          "roi": -0.13540983606557377,
+          "drawdown": 17.07
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 81,
+          "staked": 81.0,
+          "net": -5.490000000000001,
+          "roi": -0.0677777777777778,
+          "drawdown": 11.920000000000002
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 75,
+          "staked": 75.0,
+          "net": -5.93,
+          "roi": -0.07906666666666666,
+          "drawdown": 8.210000000000003
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 88,
+          "staked": 88.0,
+          "net": 0.5600000000000014,
+          "roi": 0.0063636363636363795,
+          "drawdown": 6.739999999999998
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 151,
+        "staked": 387.0,
+        "net": 5.159999999999997,
+        "roi": 0.013333333333333324,
+        "drawdown": 43.86,
+        "balanced": -33.15
+      },
+      "validation": {
+        "bets": 156,
+        "staked": 406.0,
+        "net": -61.6,
+        "roi": -0.15172413793103448,
+        "drawdown": 69.7
+      },
+      "test": {
+        "bets": 88,
+        "staked": 228.0,
+        "net": -7.05,
+        "roi": -0.030921052631578946,
+        "drawdown": 34.25
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 90,
+          "staked": 232.0,
+          "net": 21.539999999999992,
+          "roi": 0.09284482758620687,
+          "drawdown": 16.35
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 61,
+          "staked": 155.0,
+          "net": -16.379999999999995,
+          "roi": -0.10567741935483868,
+          "drawdown": 43.86
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 81,
+          "staked": 213.0,
+          "net": -19.42,
+          "roi": -0.09117370892018781,
+          "drawdown": 31.750000000000004
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 75,
+          "staked": 193.0,
+          "net": -42.18,
+          "roi": -0.21854922279792746,
+          "drawdown": 45.36
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 88,
+          "staked": 228.0,
+          "net": -7.05,
+          "roi": -0.030921052631578946,
+          "drawdown": 34.25
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 151,
+        "staked": 221.0,
+        "net": 6.859999999999998,
+        "roi": 0.031040723981900442,
+        "drawdown": 22.97,
+        "balanced": -13.115000000000004
+      },
+      "validation": {
+        "bets": 156,
+        "staked": 231.0,
+        "net": -30.42,
+        "roi": -0.1316883116883117,
+        "drawdown": 35.15
+      },
+      "test": {
+        "bets": 88,
+        "staked": 128.0,
+        "net": -1.6999999999999993,
+        "roi": -0.013281249999999994,
+        "drawdown": 15.86
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 90,
+          "staked": 130.0,
+          "net": 15.35,
+          "roi": 0.11807692307692308,
+          "drawdown": 8.500000000000002
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 61,
+          "staked": 91.0,
+          "net": -8.490000000000002,
+          "roi": -0.09329670329670332,
+          "drawdown": 22.970000000000002
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 81,
+          "staked": 123.0,
+          "net": -13.340000000000002,
+          "roi": -0.10845528455284555,
+          "drawdown": 20.92
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 75,
+          "staked": 108.0,
+          "net": -17.080000000000002,
+          "roi": -0.15814814814814818,
+          "drawdown": 19.36
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 88,
+          "staked": 128.0,
+          "net": -1.6999999999999993,
+          "roi": -0.013281249999999994,
+          "drawdown": 15.86
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (synthetic double chance)",
+        "min_edge": 0,
+        "min_odds": 1.01,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 151,
+        "staked": 170.0,
+        "net": -1.0800000000000027,
+        "roi": -0.006352941176470605,
+        "drawdown": 19.02,
+        "balanced": -19.330000000000005
+      },
+      "validation": {
+        "bets": 156,
+        "staked": 174.0,
+        "net": -17.3,
+        "roi": -0.09942528735632185,
+        "drawdown": 21.289999999999992
+      },
+      "test": {
+        "bets": 88,
+        "staked": 95.0,
+        "net": -0.20999999999999908,
+        "roi": -0.002210526315789464,
+        "drawdown": 8.91
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 90,
+          "staked": 101.0,
+          "net": 7.659999999999999,
+          "roi": 0.07584158415841584,
+          "drawdown": 7.619999999999999
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 61,
+          "staked": 69.0,
+          "net": -8.740000000000002,
+          "roi": -0.1266666666666667,
+          "drawdown": 19.02
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 81,
+          "staked": 91.0,
+          "net": -9.370000000000001,
+          "roi": -0.10296703296703298,
+          "drawdown": 15.77
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 75,
+          "staked": 83.0,
+          "net": -7.9300000000000015,
+          "roi": -0.09554216867469881,
+          "drawdown": 10.210000000000003
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 88,
+          "staked": 95.0,
+          "net": -0.20999999999999908,
+          "roi": -0.002210526315789464,
+          "drawdown": 8.91
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 321,
+        "staked": 321.0,
+        "net": 67.52,
+        "roi": 0.21034267912772583,
+        "drawdown": 41.25,
+        "balanced": 46.894999999999996
+      },
+      "validation": {
+        "bets": 299,
+        "staked": 299.0,
+        "net": -30.48,
+        "roi": -0.10193979933110368,
+        "drawdown": 44.86
+      },
+      "test": {
+        "bets": 126,
+        "staked": 126.0,
+        "net": 21.36,
+        "roi": 0.16952380952380952,
+        "drawdown": 20.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 182,
+          "staked": 182.0,
+          "net": 26.779999999999998,
+          "roi": 0.14714285714285713,
+          "drawdown": 41.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 139.0,
+          "net": 40.739999999999995,
+          "roi": 0.2930935251798561,
+          "drawdown": 16.75
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 171.0,
+          "net": -19.11,
+          "roi": -0.11175438596491227,
+          "drawdown": 38.56
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 128,
+          "staked": 128.0,
+          "net": -11.370000000000001,
+          "roi": -0.08882812500000001,
+          "drawdown": 29.55
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 126.0,
+          "net": 21.36,
+          "roi": 0.16952380952380952,
+          "drawdown": 20.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 321,
+        "staked": 989.0,
+        "net": 183.43,
+        "roi": 0.18547017189079879,
+        "drawdown": 116.75,
+        "balanced": 125.055
+      },
+      "validation": {
+        "bets": 299,
+        "staked": 929.0,
+        "net": -60.17,
+        "roi": -0.06476856835306782,
+        "drawdown": 115.63
+      },
+      "test": {
+        "bets": 126,
+        "staked": 405.0,
+        "net": 130.05,
+        "roi": 0.3211111111111111,
+        "drawdown": 58.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 182,
+          "staked": 570.0,
+          "net": 73.78,
+          "roi": 0.12943859649122808,
+          "drawdown": 116.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 419.0,
+          "net": 109.65,
+          "roi": 0.26169451073985683,
+          "drawdown": 58.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 516.0,
+          "net": -77.22,
+          "roi": -0.14965116279069768,
+          "drawdown": 115.63
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 128,
+          "staked": 413.0,
+          "net": 17.049999999999997,
+          "roi": 0.04128329297820823,
+          "drawdown": 83.7
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 405.0,
+          "net": 130.05,
+          "roi": 0.3211111111111111,
+          "drawdown": 58.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 321,
+        "staked": 551.0,
+        "net": 90.52,
+        "roi": 0.16428312159709618,
+        "drawdown": 64.0,
+        "balanced": 58.519999999999996
+      },
+      "validation": {
+        "bets": 299,
+        "staked": 508.0,
+        "net": 19.319999999999997,
+        "roi": 0.038031496062992116,
+        "drawdown": 58.900000000000006
+      },
+      "test": {
+        "bets": 126,
+        "staked": 230.0,
+        "net": 80.07,
+        "roi": 0.3481304347826087,
+        "drawdown": 34.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 182,
+          "staked": 320.0,
+          "net": 17.029999999999998,
+          "roi": 0.053218749999999995,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 231.0,
+          "net": 73.49,
+          "roi": 0.3181385281385281,
+          "drawdown": 25.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 283.0,
+          "net": 0.2799999999999976,
+          "roi": 0.0009893992932862106,
+          "drawdown": 58.900000000000006
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 128,
+          "staked": 225.0,
+          "net": 19.04,
+          "roi": 0.08462222222222222,
+          "drawdown": 42.85
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 230.0,
+          "net": 80.07,
+          "roi": 0.3481304347826087,
+          "drawdown": 34.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "raw",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.02,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 321,
+        "staked": 374.0,
+        "net": 73.77,
+        "roi": 0.19724598930481282,
+        "drawdown": 43.25,
+        "balanced": 52.144999999999996
+      },
+      "validation": {
+        "bets": 299,
+        "staked": 349.0,
+        "net": -13.120000000000001,
+        "roi": -0.037593123209169056,
+        "drawdown": 42.06
+      },
+      "test": {
+        "bets": 126,
+        "staked": 155.0,
+        "net": 44.05,
+        "roi": 0.28419354838709676,
+        "drawdown": 24.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 182,
+          "staked": 214.0,
+          "net": 20.279999999999998,
+          "roi": 0.0947663551401869,
+          "drawdown": 43.25
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 139,
+          "staked": 160.0,
+          "net": 53.489999999999995,
+          "roi": 0.33431249999999996,
+          "drawdown": 19.25
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 171,
+          "staked": 197.0,
+          "net": -7.580000000000001,
+          "roi": -0.0384771573604061,
+          "drawdown": 42.06
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 128,
+          "staked": 152.0,
+          "net": -5.540000000000001,
+          "roi": -0.03644736842105264,
+          "drawdown": 31.05
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 126,
+          "staked": 155.0,
+          "net": 44.05,
+          "roi": 0.28419354838709676,
+          "drawdown": 24.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": "flat"
+      },
+      "search": {
+        "bets": 126,
+        "staked": 126.0,
+        "net": 34.75,
+        "roi": 0.2757936507936508,
+        "drawdown": 17.75,
+        "balanced": 25.875
+      },
+      "validation": {
+        "bets": 125,
+        "staked": 125.0,
+        "net": 19.689999999999998,
+        "roi": 0.15752,
+        "drawdown": 16.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 56.0,
+        "net": 30.61,
+        "roi": 0.5466071428571428,
+        "drawdown": 12.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 72.0,
+          "net": 3.25,
+          "roi": 0.04513888888888889,
+          "drawdown": 17.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 54.0,
+          "net": 31.5,
+          "roi": 0.5833333333333334,
+          "drawdown": 10.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 69.0,
+          "net": -3.8900000000000006,
+          "roi": -0.05637681159420291,
+          "drawdown": 16.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 56.0,
+          "net": 23.58,
+          "roi": 0.42107142857142854,
+          "drawdown": 11.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 56.0,
+          "net": 30.61,
+          "roi": 0.5466071428571428,
+          "drawdown": 12.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.01
+      },
+      "search": {
+        "bets": 126,
+        "staked": 428.0,
+        "net": 105.0,
+        "roi": 0.24532710280373832,
+        "drawdown": 64.0,
+        "balanced": 73.0
+      },
+      "validation": {
+        "bets": 125,
+        "staked": 421.0,
+        "net": 66.33000000000001,
+        "roi": 0.15755344418052258,
+        "drawdown": 61.94
+      },
+      "test": {
+        "bets": 56,
+        "staked": 206.0,
+        "net": 121.55000000000001,
+        "roi": 0.5900485436893205,
+        "drawdown": 42.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 251.0,
+          "net": 1.0,
+          "roi": 0.00398406374501992,
+          "drawdown": 64.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 177.0,
+          "net": 104.0,
+          "roi": 0.5875706214689266,
+          "drawdown": 21.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 232.0,
+          "net": 8.61,
+          "roi": 0.03711206896551724,
+          "drawdown": 61.94
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 189.0,
+          "net": 57.720000000000006,
+          "roi": 0.30539682539682544,
+          "drawdown": 37.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 206.0,
+          "net": 121.55000000000001,
+          "roi": 0.5900485436893205,
+          "drawdown": 42.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.025
+      },
+      "search": {
+        "bets": 126,
+        "staked": 229.0,
+        "net": 32.75,
+        "roi": 0.14301310043668122,
+        "drawdown": 34.5,
+        "balanced": -1.75
+      },
+      "validation": {
+        "bets": 125,
+        "staked": 224.0,
+        "net": 60.550000000000004,
+        "roi": 0.2703125,
+        "drawdown": 31.759999999999998
+      },
+      "test": {
+        "bets": 56,
+        "staked": 119.0,
+        "net": 73.74000000000001,
+        "roi": 0.6196638655462186,
+        "drawdown": 23.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 134.0,
+          "net": -17.25,
+          "roi": -0.1287313432835821,
+          "drawdown": 33.0
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 95.0,
+          "net": 50.0,
+          "roi": 0.5263157894736842,
+          "drawdown": 11.0
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 120.0,
+          "net": 28.640000000000004,
+          "roi": 0.2386666666666667,
+          "drawdown": 31.759999999999998
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 104.0,
+          "net": 31.91,
+          "roi": 0.30682692307692305,
+          "drawdown": 21.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 119.0,
+          "net": 73.74000000000001,
+          "roi": 0.6196638655462186,
+          "drawdown": 23.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "probabilities": "calibrated",
+        "strategy": "Home wins vs not (sqrt profit)",
+        "min_edge": 0.05,
+        "min_odds": 4,
+        "max_odds": 1000,
+        "outcome": "home",
+        "sizing": 0.05
+      },
+      "search": {
+        "bets": 126,
+        "staked": 150.0,
+        "net": 32.0,
+        "roi": 0.21333333333333335,
+        "drawdown": 24.75,
+        "balanced": 14.875
+      },
+      "validation": {
+        "bets": 125,
+        "staked": 146.0,
+        "net": 38.44,
+        "roi": 0.2632876712328767,
+        "drawdown": 20.67
+      },
+      "test": {
+        "bets": 56,
+        "staked": 76.0,
+        "net": 53.8,
+        "roi": 0.7078947368421052,
+        "drawdown": 15.0
+      },
+      "seasons": [
+        {
+          "season": "2018\u20132019",
+          "bets": 72,
+          "staked": 85.0,
+          "net": -4.75,
+          "roi": -0.05588235294117647,
+          "drawdown": 24.75
+        },
+        {
+          "season": "2019\u20132020",
+          "bets": 54,
+          "staked": 65.0,
+          "net": 36.75,
+          "roi": 0.5653846153846154,
+          "drawdown": 11.5
+        },
+        {
+          "season": "2020\u20132021",
+          "bets": 69,
+          "staked": 78.0,
+          "net": 10.860000000000001,
+          "roi": 0.13923076923076924,
+          "drawdown": 20.67
+        },
+        {
+          "season": "2021\u20132022",
+          "bets": 56,
+          "staked": 68.0,
+          "net": 27.58,
+          "roi": 0.40558823529411764,
+          "drawdown": 14.0
+        },
+        {
+          "season": "2022\u20132023",
+          "bets": 56,
+          "staked": 76.0,
+          "net": 53.8,
+          "roi": 0.7078947368421052,
+          "drawdown": 15.0
+        }
+      ]
+    }
+  ]
+}

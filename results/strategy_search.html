@@ -1,0 +1,142 @@
+<!doctype html><meta charset="utf-8"><title>Strategy search</title><style>body{font:16px system-ui;max-width:1250px;margin:40px auto;padding:24px;background:#0c1420;color:#e5edf6}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:12px;border-bottom:1px solid #40546b;text-align:left}p{line-height:1.6}pre{white-space:pre-wrap;color:#77e2bc}</style><h1>Fixed-model strategy search</h1>
+<p>Exploratory fixed-model study. Earliest 2014-18 OOB seasons fit logistic calibration; 2018-20 select strategies and stake bands; 2020-22 audit the frozen choices; 2022-23 is a previously inspected held-out comparison. Base training probabilities are OOB from a forest trained across 2014-22, so they can use later-season information. This is NOT a leakage-free walk-forward model backtest. One original strategy selection per match, filtered afterward. Synthetic selections qualify only for the all-outcomes filter. Odds bands overlap at 2 and 4 across alternative candidates. Flat search requires 100 total bets and 30 in each search season. Balanced score = search net profit minus half max drawdown minus losses in negative search seasons. Drawdown profile requires positive search profit when available. Five-level bands use Kelly score widths 1%, 2.5%, or 5%, capped at $5; flat stakes are $1. Drawdown uses season/matchweek/source-row order, not exact kickoff order. No fees, bankroll limits, or synthetic cent rounding. Selection across many candidates risks overfitting. No live settings changed.</p>
+<p>2240 flat candidates; 593 eligible; 92 shortlisted rule/staking combinations.</p>
+<h2>Profit profile — selected on 2018–20 only</h2>
+<pre>{
+  &quot;probabilities&quot;: &quot;raw&quot;,
+  &quot;strategy&quot;: &quot;Legacy variance score&quot;,
+  &quot;min_edge&quot;: 0.02,
+  &quot;min_odds&quot;: 4,
+  &quot;max_odds&quot;: 1000,
+  &quot;outcome&quot;: &quot;all&quot;,
+  &quot;sizing&quot;: 0.01
+}</pre>
+<table><tr><th>Period</th><th>Bets</th><th>Staked</th><th>Net profit</th><th>ROI</th><th>Max drawdown</th></tr>
+<tr><td>search</td><td>920</td><td>$2,523.00</td><td>$268.89</td><td>10.66%</td><td>$85.50</td></tr>
+<tr><td>validation</td><td>733</td><td>$1,966.00</td><td>$133.03</td><td>6.77%</td><td>$139.25</td></tr>
+<tr><td>test</td><td>367</td><td>$978.00</td><td>$151.30</td><td>15.47%</td><td>$101.75</td></tr>
+</table>
+<h2>Drawdown profile — selected on 2018–20 only</h2>
+<pre>{
+  &quot;probabilities&quot;: &quot;calibrated&quot;,
+  &quot;strategy&quot;: &quot;Most likely outcome&quot;,
+  &quot;min_edge&quot;: 0,
+  &quot;min_odds&quot;: 1.01,
+  &quot;max_odds&quot;: 2,
+  &quot;outcome&quot;: &quot;away&quot;,
+  &quot;sizing&quot;: &quot;flat&quot;
+}</pre>
+<table><tr><th>Period</th><th>Bets</th><th>Staked</th><th>Net profit</th><th>ROI</th><th>Max drawdown</th></tr>
+<tr><td>search</td><td>115</td><td>$115.00</td><td>$3.16</td><td>2.75%</td><td>$13.46</td></tr>
+<tr><td>validation</td><td>85</td><td>$85.00</td><td>$-4.50</td><td>-5.29%</td><td>$10.98</td></tr>
+<tr><td>test</td><td>45</td><td>$45.00</td><td>$-12.12</td><td>-26.93%</td><td>$12.57</td></tr>
+</table>
+<h2>Balanced profile — selected on 2018–20 only</h2>
+<pre>{
+  &quot;probabilities&quot;: &quot;raw&quot;,
+  &quot;strategy&quot;: &quot;Legacy variance score&quot;,
+  &quot;min_edge&quot;: 0.02,
+  &quot;min_odds&quot;: 4,
+  &quot;max_odds&quot;: 1000,
+  &quot;outcome&quot;: &quot;all&quot;,
+  &quot;sizing&quot;: 0.01
+}</pre>
+<table><tr><th>Period</th><th>Bets</th><th>Staked</th><th>Net profit</th><th>ROI</th><th>Max drawdown</th></tr>
+<tr><td>search</td><td>920</td><td>$2,523.00</td><td>$268.89</td><td>10.66%</td><td>$85.50</td></tr>
+<tr><td>validation</td><td>733</td><td>$1,966.00</td><td>$133.03</td><td>6.77%</td><td>$139.25</td></tr>
+<tr><td>test</td><td>367</td><td>$978.00</td><td>$151.30</td><td>15.47%</td><td>$101.75</td></tr>
+</table>
+<h2>All shortlisted combinations</h2><table><tr><th>Strategy / probabilities / outcome</th><th>Edge / odds / stake width</th><th>Search net</th><th>Validation net</th><th>Test net</th></tr>
+<tr><td>Most likely outcome / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Most likely outcome / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Most likely outcome / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Most likely outcome / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Expected return &gt; 1 / raw / all</td><td>2% / 4–1000 / flat</td><td>$109.03</td><td>$95.22</td><td>$23.71</td></tr>
+<tr><td>Expected return &gt; 1 / raw / all</td><td>2% / 4–1000 / 0.01</td><td>$169.64</td><td>$155.53</td><td>$242.80</td></tr>
+<tr><td>Expected return &gt; 1 / raw / all</td><td>2% / 4–1000 / 0.025</td><td>$103.31</td><td>$137.27</td><td>$105.92</td></tr>
+<tr><td>Expected return &gt; 1 / raw / all</td><td>2% / 4–1000 / 0.05</td><td>$108.68</td><td>$112.58</td><td>$44.40</td></tr>
+<tr><td>Expected return &gt; 1 / calibrated / home</td><td>5% / 4–1000 / flat</td><td>$34.75</td><td>$9.74</td><td>$32.61</td></tr>
+<tr><td>Expected return &gt; 1 / calibrated / home</td><td>5% / 4–1000 / 0.01</td><td>$105.00</td><td>$41.48</td><td>$126.55</td></tr>
+<tr><td>Expected return &gt; 1 / calibrated / home</td><td>5% / 4–1000 / 0.025</td><td>$32.75</td><td>$47.85</td><td>$76.74</td></tr>
+<tr><td>Expected return &gt; 1 / calibrated / home</td><td>5% / 4–1000 / 0.05</td><td>$32.00</td><td>$28.49</td><td>$55.80</td></tr>
+<tr><td>Log odds weighting / raw / home</td><td>2% / 4–1000 / flat</td><td>$58.32</td><td>$-18.98</td><td>$-0.14</td></tr>
+<tr><td>Log odds weighting / raw / home</td><td>2% / 4–1000 / 0.01</td><td>$169.23</td><td>$-19.67</td><td>$48.05</td></tr>
+<tr><td>Log odds weighting / raw / home</td><td>2% / 4–1000 / 0.025</td><td>$88.32</td><td>$25.82</td><td>$46.57</td></tr>
+<tr><td>Log odds weighting / raw / home</td><td>2% / 4–1000 / 0.05</td><td>$65.57</td><td>$-1.62</td><td>$22.55</td></tr>
+<tr><td>Log odds weighting / calibrated / home</td><td>2% / 4–1000 / flat</td><td>$19.58</td><td>$20.24</td><td>$11.86</td></tr>
+<tr><td>Log odds weighting / calibrated / home</td><td>2% / 4–1000 / 0.01</td><td>$40.08</td><td>$72.98</td><td>$95.05</td></tr>
+<tr><td>Log odds weighting / calibrated / home</td><td>2% / 4–1000 / 0.025</td><td>$15.33</td><td>$64.35</td><td>$59.99</td></tr>
+<tr><td>Log odds weighting / calibrated / home</td><td>2% / 4–1000 / 0.05</td><td>$17.83</td><td>$38.99</td><td>$36.05</td></tr>
+<tr><td>Square-root odds weighting / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Square-root odds weighting / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Square-root odds weighting / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Square-root odds weighting / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Square-root profit weighting / raw / all</td><td>20% / 1.01–1000 / flat</td><td>$19.35</td><td>$-21.75</td><td>$14.76</td></tr>
+<tr><td>Square-root profit weighting / raw / all</td><td>20% / 1.01–1000 / 0.01</td><td>$84.75</td><td>$-96.75</td><td>$81.80</td></tr>
+<tr><td>Square-root profit weighting / raw / all</td><td>20% / 1.01–1000 / 0.025</td><td>$45.65</td><td>$-12.75</td><td>$64.62</td></tr>
+<tr><td>Square-root profit weighting / raw / all</td><td>20% / 1.01–1000 / 0.05</td><td>$26.20</td><td>$-10.25</td><td>$37.85</td></tr>
+<tr><td>Square-root profit weighting / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Square-root profit weighting / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Square-root profit weighting / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Square-root profit weighting / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Legacy draw-to-home weighting / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Legacy draw-to-home weighting / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Legacy draw-to-home weighting / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Legacy draw-to-home weighting / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Legacy draw-to-home return weighting / raw / all</td><td>2% / 4–1000 / flat</td><td>$100.52</td><td>$44.02</td><td>$-8.64</td></tr>
+<tr><td>Legacy draw-to-home return weighting / raw / all</td><td>2% / 4–1000 / 0.01</td><td>$244.93</td><td>$116.33</td><td>$83.05</td></tr>
+<tr><td>Legacy draw-to-home return weighting / raw / all</td><td>2% / 4–1000 / 0.025</td><td>$129.52</td><td>$97.82</td><td>$45.07</td></tr>
+<tr><td>Legacy draw-to-home return weighting / raw / all</td><td>2% / 4–1000 / 0.05</td><td>$110.77</td><td>$65.38</td><td>$11.05</td></tr>
+<tr><td>Legacy draw-to-home return weighting / calibrated / all</td><td>5% / 4–1000 / flat</td><td>$33.75</td><td>$16.69</td><td>$30.61</td></tr>
+<tr><td>Legacy draw-to-home return weighting / calibrated / all</td><td>5% / 4–1000 / 0.01</td><td>$101.00</td><td>$61.33</td><td>$121.55</td></tr>
+<tr><td>Legacy draw-to-home return weighting / calibrated / all</td><td>5% / 4–1000 / 0.025</td><td>$30.75</td><td>$57.55</td><td>$73.74</td></tr>
+<tr><td>Legacy draw-to-home return weighting / calibrated / all</td><td>5% / 4–1000 / 0.05</td><td>$31.00</td><td>$35.44</td><td>$53.80</td></tr>
+<tr><td>Legacy market power weighting / calibrated / draw</td><td>0% / 2–4 / flat</td><td>$7.20</td><td>$8.75</td><td>$6.30</td></tr>
+<tr><td>Legacy market power weighting / calibrated / draw</td><td>0% / 2–4 / 0.01</td><td>$13.85</td><td>$5.85</td><td>$0.80</td></tr>
+<tr><td>Legacy market power weighting / calibrated / draw</td><td>0% / 2–4 / 0.025</td><td>$8.90</td><td>$8.75</td><td>$6.30</td></tr>
+<tr><td>Legacy market power weighting / calibrated / draw</td><td>0% / 2–4 / 0.05</td><td>$7.20</td><td>$8.75</td><td>$6.30</td></tr>
+<tr><td>Legacy variance score / raw / all</td><td>2% / 4–1000 / flat</td><td>$151.28</td><td>$69.72</td><td>$-11.04</td></tr>
+<tr><td>Legacy variance score / raw / all</td><td>2% / 4–1000 / 0.01</td><td>$268.89</td><td>$133.03</td><td>$151.30</td></tr>
+<tr><td>Legacy variance score / raw / all</td><td>2% / 4–1000 / 0.025</td><td>$147.56</td><td>$111.77</td><td>$66.67</td></tr>
+<tr><td>Legacy variance score / raw / all</td><td>2% / 4–1000 / 0.05</td><td>$150.93</td><td>$88.08</td><td>$9.65</td></tr>
+<tr><td>Legacy variance score / calibrated / all</td><td>10% / 1.01–1000 / flat</td><td>$11.55</td><td>$-7.51</td><td>$55.54</td></tr>
+<tr><td>Legacy variance score / calibrated / all</td><td>10% / 1.01–1000 / 0.01</td><td>$68.50</td><td>$-3.96</td><td>$195.62</td></tr>
+<tr><td>Legacy variance score / calibrated / all</td><td>10% / 1.01–1000 / 0.025</td><td>$11.35</td><td>$29.48</td><td>$114.95</td></tr>
+<tr><td>Legacy variance score / calibrated / all</td><td>10% / 1.01–1000 / 0.05</td><td>$6.80</td><td>$6.24</td><td>$82.08</td></tr>
+<tr><td>Home win or skip (sqrt profit) / raw / all</td><td>2% / 4–1000 / flat</td><td>$66.52</td><td>$-32.48</td><td>$21.36</td></tr>
+<tr><td>Home win or skip (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.01</td><td>$180.43</td><td>$-67.17</td><td>$130.05</td></tr>
+<tr><td>Home win or skip (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.025</td><td>$88.52</td><td>$15.32</td><td>$80.07</td></tr>
+<tr><td>Home win or skip (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.05</td><td>$72.77</td><td>$-15.12</td><td>$44.05</td></tr>
+<tr><td>Home win or skip (sqrt profit) / calibrated / all</td><td>5% / 4–1000 / flat</td><td>$34.75</td><td>$17.69</td><td>$30.61</td></tr>
+<tr><td>Home win or skip (sqrt profit) / calibrated / all</td><td>5% / 4–1000 / 0.01</td><td>$105.00</td><td>$63.33</td><td>$121.55</td></tr>
+<tr><td>Home win or skip (sqrt profit) / calibrated / all</td><td>5% / 4–1000 / 0.025</td><td>$32.75</td><td>$58.55</td><td>$73.74</td></tr>
+<tr><td>Home win or skip (sqrt profit) / calibrated / all</td><td>5% / 4–1000 / 0.05</td><td>$32.00</td><td>$36.44</td><td>$53.80</td></tr>
+<tr><td>Home loses vs not (synthetic double chance) / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Home loses vs not (synthetic double chance) / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Home loses vs not (synthetic double chance) / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Home loses vs not (synthetic double chance) / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / away</td><td>2% / 4–1000 / flat</td><td>$83.46</td><td>$102.50</td><td>$-39.90</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / away</td><td>2% / 4–1000 / 0.01</td><td>$84.66</td><td>$199.00</td><td>$-3.25</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / away</td><td>2% / 4–1000 / 0.025</td><td>$58.74</td><td>$95.75</td><td>$-25.65</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / away</td><td>2% / 4–1000 / 0.05</td><td>$76.86</td><td>$103.50</td><td>$-41.90</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / calibrated / away</td><td>0% / 1.01–2 / flat</td><td>$3.16</td><td>$-4.50</td><td>$-12.12</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / calibrated / away</td><td>0% / 1.01–2 / 0.01</td><td>$-10.34</td><td>$-28.22</td><td>$-23.49</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / calibrated / away</td><td>0% / 1.01–2 / 0.025</td><td>$-3.68</td><td>$-16.85</td><td>$-15.67</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / calibrated / away</td><td>0% / 1.01–2 / 0.05</td><td>$-1.41</td><td>$-8.34</td><td>$-13.12</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / all</td><td>2% / 4–1000 / flat</td><td>$82.40</td><td>$103.81</td><td>$-39.46</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.01</td><td>$81.95</td><td>$195.71</td><td>$1.95</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.025</td><td>$52.31</td><td>$97.22</td><td>$-17.89</td></tr>
+<tr><td>Home loses vs not (sqrt profit) / raw / all</td><td>2% / 4–1000 / 0.05</td><td>$73.45</td><td>$114.94</td><td>$-39.02</td></tr>
+<tr><td>Home wins vs not (synthetic double chance) / raw / home</td><td>0% / 1.01–1000 / flat</td><td>$-2.88</td><td>$-11.42</td><td>$0.56</td></tr>
+<tr><td>Home wins vs not (synthetic double chance) / raw / home</td><td>0% / 1.01–1000 / 0.01</td><td>$5.16</td><td>$-61.60</td><td>$-7.05</td></tr>
+<tr><td>Home wins vs not (synthetic double chance) / raw / home</td><td>0% / 1.01–1000 / 0.025</td><td>$6.86</td><td>$-30.42</td><td>$-1.70</td></tr>
+<tr><td>Home wins vs not (synthetic double chance) / raw / home</td><td>0% / 1.01–1000 / 0.05</td><td>$-1.08</td><td>$-17.30</td><td>$-0.21</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / raw / home</td><td>2% / 4–1000 / flat</td><td>$67.52</td><td>$-30.48</td><td>$21.36</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / raw / home</td><td>2% / 4–1000 / 0.01</td><td>$183.43</td><td>$-60.17</td><td>$130.05</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / raw / home</td><td>2% / 4–1000 / 0.025</td><td>$90.52</td><td>$19.32</td><td>$80.07</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / raw / home</td><td>2% / 4–1000 / 0.05</td><td>$73.77</td><td>$-13.12</td><td>$44.05</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / calibrated / home</td><td>5% / 4–1000 / flat</td><td>$34.75</td><td>$19.69</td><td>$30.61</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / calibrated / home</td><td>5% / 4–1000 / 0.01</td><td>$105.00</td><td>$66.33</td><td>$121.55</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / calibrated / home</td><td>5% / 4–1000 / 0.025</td><td>$32.75</td><td>$60.55</td><td>$73.74</td></tr>
+<tr><td>Home wins vs not (sqrt profit) / calibrated / home</td><td>5% / 4–1000 / 0.05</td><td>$32.00</td><td>$38.44</td><td>$53.80</td></tr>
+</table>

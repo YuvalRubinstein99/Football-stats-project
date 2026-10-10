@@ -8,6 +8,7 @@ import io
 import math
 import json
 from pathlib import Path
+from stake_levels import size_bet
 
 STANDARD = ['Most likely outcome', 'Expected return > 1', 'Log odds weighting',
             'Square-root odds weighting', 'Square-root profit weighting',
@@ -83,6 +84,8 @@ def recommendations(match):
 def enrich(report):
     for match in report['predictions']:
         match['strategies']=recommendations(match)
+        for bet in match['strategies']:
+            bet.update(size_bet(bet))
     report['strategy_names']=STRATEGIES
     return report
 
@@ -90,7 +93,9 @@ def enrich(report):
 def export_csv(report):
     buf=io.StringIO()
     fields=['date','league','home','away','strategy','action','selection','probability','decimal_odds',
-            'expected_net_per_unit','home_stake','draw_stake','away_stake','synthetic','note']
+            'expected_net_per_unit','home_stake','draw_stake','away_stake','synthetic','note',
+            'stake_level','kelly_score','stake_dollars','staking_action','staking_reason',
+            'home_dollars','draw_dollars','away_dollars']
     writer=csv.DictWriter(buf,fieldnames=fields)
     writer.writeheader()
     for match in report['predictions']:

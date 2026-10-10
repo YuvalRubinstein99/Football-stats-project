@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1250" height="1130" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1250 1130" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1250" height="1130"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1130)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1250" height="1130" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="35" y="1090" style="font-family: Helvetica; font-size: 25px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2180) scale(1,-1)">Training vs test ROI across all 14 strategies</text>
+			<text x="35" y="1063" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2126) scale(1,-1)">Five-level $1-$5 stakes with positive-edge gate | ROI = net profit / total amount staked</text>
+			<text x="35" y="1037" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2074) scale(1,-1)">Blue: training OOB, 2014-22. Green: test, 2022-23. Different exposure and sample sizes.</text>
+			<path d="M 750.347262,1006 L 750.347262,118 Z" style="stroke: rgb(53%,60%,66%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="277.65999999999997" y="990" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1980) scale(1,-1)">Expected return &gt; 1 / Train (OOB)</text>
+			<rect x="684.5191640614595" y="986" width="65.82809783758046" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="647.8391640614595" y="990" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1980) scale(1,-1)">-5.14%</text>
+			<text x="312.65999999999997" y="958" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1916) scale(1,-1)">Expected return &gt; 1 / Test</text>
+			<rect x="750.34726189904" y="954" width="99.44219483081201" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="854.789456729852" y="958" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1916) scale(1,-1)">+7.76%</text>
+			<text x="231.84" y="926" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1852) scale(1,-1)">Home loses vs not (sqrt profit) / Train (OOB)</text>
+			<rect x="673.9760483416691" y="922" width="76.37121355737088" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="637.2960483416691" y="926" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1852) scale(1,-1)">-5.96%</text>
+			<text x="266.84000000000003" y="894" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1788) scale(1,-1)">Home loses vs not (sqrt profit) / Test</text>
+			<rect x="740.9612099314735" y="890" width="9.386051967566459" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="704.2812099314735" y="894" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1788) scale(1,-1)">-0.73%</text>
+			<text x="166.24" y="862" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1724) scale(1,-1)">Home loses vs not (synthetic double chance) / Train (OOB)</text>
+			<rect x="528.0147058823529" y="858" width="222.33255601668702" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="485.7747058823529" y="862" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1724) scale(1,-1)">-17.35%</text>
+			<text x="201.23999999999998" y="830" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1660) scale(1,-1)">Home loses vs not (synthetic double chance) / Test</text>
+			<rect x="592.5616363447639" y="826" width="157.78562555427607" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="550.3216363447639" y="830" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1660) scale(1,-1)">-12.31%</text>
+			<text x="237.41" y="798" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1596) scale(1,-1)">Home win or skip (sqrt profit) / Train (OOB)</text>
+			<rect x="692.3908562641793" y="794" width="57.95640563486063" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="655.7108562641794" y="798" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1596) scale(1,-1)">-4.52%</text>
+			<text x="272.40999999999997" y="766" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1532) scale(1,-1)">Home win or skip (sqrt profit) / Test</text>
+			<rect x="750.34726189904" y="762" width="145.76871790828181" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="901.1159798073218" y="766" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1532) scale(1,-1)">+11.37%</text>
+			<text x="235.18" y="734" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1468) scale(1,-1)">Home wins vs not (sqrt profit) / Train (OOB)</text>
+			<rect x="666.6871357454941" y="730" width="83.66012615354589" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="630.0071357454941" y="734" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1468) scale(1,-1)">-6.53%</text>
+			<text x="270.18" y="702" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1404) scale(1,-1)">Home wins vs not (sqrt profit) / Test</text>
+			<rect x="750.34726189904" y="698" width="117.56161417194176" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="872.9088760709817" y="702" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1404) scale(1,-1)">+9.17%</text>
+			<text x="169.57999999999998" y="670" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1340) scale(1,-1)">Home wins vs not (synthetic double chance) / Train (OOB)</text>
+			<rect x="698.5813273496607" y="666" width="51.76593454937927" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="661.9013273496607" y="670" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1340) scale(1,-1)">-4.04%</text>
+			<text x="204.58" y="638" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1276) scale(1,-1)">Home wins vs not (synthetic double chance) / Test</text>
+			<rect x="733.7032387023585" y="634" width="16.644023196681474" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="697.0232387023585" y="638" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1276) scale(1,-1)">-1.30%</text>
+			<text x="194.58999999999997" y="606" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1212) scale(1,-1)">Legacy draw-to-home return weighting / Train (OOB)</text>
+			<rect x="693.8098597053652" y="602" width="56.53740219367478" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="657.1298597053652" y="606" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1212) scale(1,-1)">-4.41%</text>
+			<text x="229.58999999999997" y="574" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1148) scale(1,-1)">Legacy draw-to-home return weighting / Test</text>
+			<rect x="750.34726189904" y="570" width="73.52705720667484" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="828.8743191057148" y="574" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1148) scale(1,-1)">+5.74%</text>
+			<text x="223.49" y="542" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1084) scale(1,-1)">Legacy draw-to-home weighting / Train (OOB)</text>
+			<rect x="648.2337998795145" y="538" width="102.1134620195254" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="611.5537998795146" y="542" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1084) scale(1,-1)">-7.97%</text>
+			<text x="258.49" y="510" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1020) scale(1,-1)">Legacy draw-to-home weighting / Test</text>
+			<rect x="692.3851373249536" y="506" width="57.962124574086374" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="655.7051373249536" y="510" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1020) scale(1,-1)">-4.52%</text>
+			<text x="224.6" y="478" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,956) scale(1,-1)">Legacy market power weighting / Train (OOB)</text>
+			<rect x="561.2233658222949" y="474" width="189.12389607674504" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="518.9833658222949" y="478" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,956) scale(1,-1)">-14.76%</text>
+			<text x="259.6" y="446" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,892) scale(1,-1)">Legacy market power weighting / Test</text>
+			<rect x="750.34726189904" y="442" width="266.638032218607" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="1021.985294117647" y="446" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,892) scale(1,-1)">+20.81%</text>
+			<text x="265.16999999999996" y="414" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,828) scale(1,-1)">Legacy variance score / Train (OOB)</text>
+			<rect x="698.7150586440686" y="410" width="51.63220325497139" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="662.0350586440686" y="414" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,828) scale(1,-1)">-4.03%</text>
+			<text x="300.17" y="382" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,764) scale(1,-1)">Legacy variance score / Test</text>
+			<rect x="750.34726189904" y="378" width="72.82233160976489" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="828.1695935088048" y="382" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,764) scale(1,-1)">+5.68%</text>
+			<text x="279.05" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">Log odds weighting / Train (OOB)</text>
+			<rect x="688.8154325684382" y="346" width="61.531829330601795" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="652.1354325684382" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">-4.80%</text>
+			<text x="314.05" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">Log odds weighting / Test</text>
+			<rect x="750.34726189904" y="314" width="91.94258865147879" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="847.2898505505187" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">+7.17%</text>
+			<text x="277.40999999999997" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">Most likely outcome / Train (OOB)</text>
+			<rect x="619.3477804907982" y="282" width="130.99948140824176" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="577.1077804907982" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">-10.22%</text>
+			<text x="312.40999999999997" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">Most likely outcome / Test</text>
+			<rect x="750.34726189904" y="250" width="61.8397683081015" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="817.1870302071414" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">+4.83%</text>
+			<text x="242.92999999999998" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">Square-root odds weighting / Train (OOB)</text>
+			<rect x="584.0455537408523" y="218" width="166.3017081581877" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="541.8055537408522" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">-12.98%</text>
+			<text x="277.93" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">Square-root odds weighting / Test</text>
+			<rect x="750.34726189904" y="186" width="104.63343767885476" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="859.9806995778947" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">+8.16%</text>
+			<text x="242.38" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">Square-root profit weighting / Train (OOB)</text>
+			<rect x="678.4856892356408" y="154" width="71.8615726633991" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="641.8056892356409" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">-5.61%</text>
+			<text x="277.38" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">Square-root profit weighting / Test</text>
+			<rect x="750.34726189904" y="122" width="70.47340392596038" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="825.8206658250003" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">+5.50%</text>
+			<text x="35" y="60" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,120) scale(1,-1)">OOB trees exclude the predicted match but may include later seasons; this is not a chronological simulation.</text>
+			<text x="35" y="39" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,78) scale(1,-1)">The test set has been examined in earlier project analyses. Comparing strategies here does not establish a future winner.</text>
+		</g>
+	</g>
+</svg>
