@@ -22,6 +22,7 @@ def stats(profit,stake,mask):
 
 
 def main():
+    raise RuntimeError("OOB strategy search has been retired. Build chronological predictions before running a new search.")
     out=ROOT/'results'
     model=LineupForest()
     train=clean(pd.read_csv(ROOT/'data/train.csv')).replace([np.inf,-np.inf],np.nan).dropna()

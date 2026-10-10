@@ -12,12 +12,13 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     weeks={}
-    for split,filename in [('Train (OOB)','train.csv'),('Test','test.csv')]:
+    for split,filename in [('Test','test.csv')]:
         with (ROOT/'data'/filename).open(encoding='utf-8-sig',newline='') as f:
             weeks[split]=[int(row['Matchweek'].split()[-1]) for row in csv.DictReader(f)]
     buckets=defaultdict(lambda:[[0,0.] for _ in range(5)])
     with (ROOT/'results/stake_level_bet_ledger.csv').open(encoding='utf-8',newline='') as f:
         for row in csv.DictReader(f):
+            if row['split']!='Test':continue
             week=weeks[row['split']][int(row['source_row'])]
             key=(row['strategy'],row['split'],row['season'],week)
             levels=buckets[key];level=int(row['level'])
@@ -36,10 +37,10 @@ def main():
         expected=sum(s['net_profit_dollars'] for s in summaries if s['strategy']==strategy and s['split']==split and s['season']=='All seasons')
         assert abs(actual-expected)<1e-7,(strategy,split,actual,expected)
     chosen='Square-root profit weighting'
-    d=Drawing(1150,760);d.add(Rect(0,0,1150,760,fillColor=HexColor('#ffffff'),strokeColor=None))
-    text(d,35,725,'Cumulative profit as bets are settled',26)
-    text(d,35,698,chosen+' | Five-level $1-$5 stakes | Each split starts at $0',13)
-    for split,top,color in [('Train (OOB)',641,TRAIN),('Test',351,TEST)]:
+    d=Drawing(1150,460);d.add(Rect(0,0,1150,460,fillColor=HexColor('#ffffff'),strokeColor=None))
+    text(d,35,425,'Cumulative profit as bets are settled',26)
+    text(d,35,398,chosen+' | Five-level $1-$5 stakes | Each split starts at $0',13)
+    for split,top,color in [('Test',351,TEST)]:
         points=curves[chosen,split];values=[0.]
         for p in points:values.append(values[-1]+sum((i+1)*v[1] for i,v in enumerate(p['levels'])))
         left,right,bottom=90,1070,top-205
@@ -59,11 +60,11 @@ def main():
             label=points[i-1]['season'].replace('–','-') if split!='Test' else 'Week '+str(points[i-1]['week'])
             text(d,x(i),bottom-18,label,9,textAnchor='middle')
         text(d,580,bottom-39,'Season / matchweek order' if split!='Test' else '2022-2023 matchweek',10,textAnchor='middle')
-    text(d,35,73,'Points aggregate settled bets by matchweek; no exact-date ordering is available. Curves use separate vertical scales.',10)
-    text(d,35,51,'OOB excludes each predicted row from its trees, but may use later-season matches. It is not walk-forward testing.',10)
+    text(d,35,73,'Points aggregate settled bets by matchweek; no exact-date ordering is available. Held-out test only.',10)
+    text(d,35,51,'Training-period profit is unavailable pending a chronological backtest.',10)
     text(d,35,29,'Net profit subtracts stakes. No starting bankroll, compounding, fees or synthetic-leg cent rounding. Historical results only.',10)
     save(d,'stake_cumulative_profit')
-    print('Saved cumulative curves; all 28 endpoints reconcile with historical summaries.')
+    print(f'Saved cumulative curves; all {len(curves)} endpoints reconcile with historical summaries.')
 
 
 if __name__=='__main__':main()

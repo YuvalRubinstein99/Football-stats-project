@@ -3,14 +3,13 @@ let stakeHistory=null;
 let stakeCurves=null;
 const money=n=>n.toLocaleString('en-US',{style:'currency',currency:'USD'});
 const stakeTotals=document.createElement('div');stakeTotals.className='metrics';
+const candidateNotice=document.createElement('p');candidateNotice.className='muted';
+$('stake-method').before(candidateNotice);
 const methodDetails=document.createElement('details'),methodSummary=document.createElement('summary');
 methodSummary.textContent='Backtest method and limitations';
 $('stake-method').before(stakeTotals,methodDetails);methodDetails.append(methodSummary,$('stake-method'));
 const historyChart=document.createElement('div');historyChart.className='scroll';
 methodDetails.after(historyChart);
-const searchLink=document.createElement('p'),searchAnchor=document.createElement('a');
-searchAnchor.href='/strategy-search';searchAnchor.target='_blank';searchAnchor.rel='noopener';
-searchAnchor.textContent='Explore strategy search: edge, odds, outcomes, calibration and stakes';searchLink.append(searchAnchor);methodDetails.after(searchLink);
 const cumulativeChart=document.createElement('div');historyChart.before(cumulativeChart);
 function drawCumulative(){
  cumulativeChart.replaceChildren();if(!stakeCurves)return;
@@ -18,7 +17,7 @@ function drawCumulative(){
  const heading=document.createElement('h3');heading.textContent='Cumulative profit';cumulativeChart.append(heading);
  if(selected==='all'){const note=document.createElement('p');note.textContent='Select one strategy above to see its cumulative training and test profit curves.';cumulativeChart.append(note);return;}
  const note=document.createElement('p');note.className='muted';note.textContent=stakeCurves.ordering+' Each split starts at $0; panels use separate vertical scales.';cumulativeChart.append(note);
- for(const split of ['Train (OOB)','Test']){
+ for(const split of ['Test']){
   const curve=stakeCurves.curves.find(c=>c.strategy===selected&&c.split===split);if(!curve)continue;
   const values=[0];for(const p of curve.points)values.push(values.at(-1)+p.levels.reduce((sum,v,i)=>sum+stakeAmounts[i]*v[1],0));
   const title=document.createElement('p');title.textContent=split+' · Final net profit '+money(values.at(-1));cumulativeChart.append(title);
@@ -37,17 +36,17 @@ function drawCumulative(){
 fetch('/api/stake-curves').then(r=>{if(!r.ok)throw Error('Cumulative backtest data unavailable.');return r.json()}).then(r=>{stakeCurves=r;drawCumulative()}).catch(e=>{cumulativeChart.textContent=e.message});
 function drawHistoryChart(items,all){
  historyChart.replaceChildren();
- const title=document.createElement('h3');title.textContent=all?'Train vs test ROI by strategy':'Net profit by season';historyChart.append(title);
+ const title=document.createElement('h3');title.textContent=all?'Test ROI by strategy':'Net profit by season';historyChart.append(title);
  if(!items.length)return;
  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');
  const width=all?1000:800,left=all?400:220,height=items.length*34+65;
  svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.width='100%';svg.style.minWidth=all?'900px':'650px';
- svg.setAttribute('role','img');svg.setAttribute('aria-label',title.textContent+'. Blue: training OOB; green: held-out test. Exact figures in the tables below.');
+ svg.setAttribute('role','img');svg.setAttribute('aria-label',title.textContent+'. Held-out test only. Exact figures in the tables below.');
  const node=(tag,attrs,content)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(content)e.textContent=content;svg.append(e)};
  const values=items.map(t=>all?(t.stake?100*(t.gross/t.stake-1):0):t.gross-t.stake);
  let low=Math.min(0,...values),high=Math.max(0,...values);const pad=Math.max(1,(high-low)*.20);low-=pad;high+=pad;
  const x=v=>left+(v-low)/(high-low)*(width-left-50);
- node('text',{x:8,y:18,fill:'#aebed0','font-size':12},'Blue: Train (OOB) · Green: Test · '+(all?'ROI (%)':'Net profit ($)'));
+ node('text',{x:8,y:18,fill:'#aebed0','font-size':12},'Held-out Test · '+(all?'ROI (%)':'Net profit ($)'));
  node('line',{x1:x(0),x2:x(0),y1:30,y2:height-10,stroke:'#aebed0'});
  items.forEach((t,i)=>{const y=50+i*34,value=values[i],color=t.split==='Test'?'#77e2bc':'#80acff';
   node('text',{x:left-12,y:y+4,'text-anchor':'end',fill:'#e5edf6','font-size':12},all?t.strategy+' · '+t.split:t.season+' · '+t.split);
@@ -73,6 +72,7 @@ function renderStakeHistory(){
  if(!stakeHistory)return;
  drawCumulative();
  const selected=$('strategy').value,all=selected==='all';
+ candidateNotice.textContent='Training-period results are disabled pending a chronological backtest. The filtered search preset is retained as an exploratory rule; its earlier training-based optimization is not active validation.';
  const rows=stakeHistory.rows.filter(s=>all||s.strategy===selected);
  const seasons=new Map();
  for(const s of rows){

@@ -53,7 +53,7 @@ class StakesTests(unittest.TestCase):
             self.assertAlmostEqual(t[2],s['gross_return_dollars'])
             self.assertAlmostEqual(t[2]-t[1],s['net_profit_dollars'])
         counts={split:sum(s['matches'] for s in report['rows'] if s['split']==split and s['season']=='All seasons' and s['strategy']=='Most likely outcome') for split in ['Train (OOB)','Test']}
-        self.assertEqual(counts,{'Train (OOB)':11561,'Test':1447})
+        self.assertEqual(counts,{'Train (OOB)':0,'Test':1447})
 
 
 if __name__=='__main__':unittest.main()

@@ -14,7 +14,7 @@
 			<text x="35" y="1090" style="font-family: Helvetica; font-size: 25px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2180) scale(1,-1)">Training vs test ROI across all 14 strategies</text>
 			<text x="35" y="1063" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2126) scale(1,-1)">Five-level $1-$5 stakes with positive-edge gate | ROI = net profit / total amount staked</text>
 			<text x="35" y="1037" style="font-family: Helvetica; font-size: 12px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,2074) scale(1,-1)">Blue: training OOB, 2014-22. Green: test, 2022-23. Different exposure and sample sizes.</text>
-			<path d="M 750.347262,1006 L 750.347262,118 Z" style="stroke: rgb(53%,60%,66%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 750.347262,1006 L 750.347262,54 Z" style="stroke: rgb(53%,60%,66%); stroke-linecap: butt; stroke-width: 1;"/>
 			<text x="277.65999999999997" y="990" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1980) scale(1,-1)">Expected return &gt; 1 / Train (OOB)</text>
 			<rect x="684.5191640614595" y="986" width="65.82809783758046" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
 			<text x="647.8391640614595" y="990" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1980) scale(1,-1)">-5.14%</text>
@@ -75,30 +75,36 @@
 			<text x="300.17" y="382" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,764) scale(1,-1)">Legacy variance score / Test</text>
 			<rect x="750.34726189904" y="378" width="72.82233160976489" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
 			<text x="828.1695935088048" y="382" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,764) scale(1,-1)">+5.68%</text>
-			<text x="279.05" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">Log odds weighting / Train (OOB)</text>
-			<rect x="688.8154325684382" y="346" width="61.531829330601795" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="652.1354325684382" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">-4.80%</text>
-			<text x="314.05" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">Log odds weighting / Test</text>
-			<rect x="750.34726189904" y="314" width="91.94258865147879" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
-			<text x="847.2898505505187" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">+7.17%</text>
-			<text x="277.40999999999997" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">Most likely outcome / Train (OOB)</text>
-			<rect x="619.3477804907982" y="282" width="130.99948140824176" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="577.1077804907982" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">-10.22%</text>
-			<text x="312.40999999999997" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">Most likely outcome / Test</text>
-			<rect x="750.34726189904" y="250" width="61.8397683081015" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
-			<text x="817.1870302071414" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">+4.83%</text>
-			<text x="242.92999999999998" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">Square-root odds weighting / Train (OOB)</text>
-			<rect x="584.0455537408523" y="218" width="166.3017081581877" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="541.8055537408522" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">-12.98%</text>
-			<text x="277.93" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">Square-root odds weighting / Test</text>
-			<rect x="750.34726189904" y="186" width="104.63343767885476" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
-			<text x="859.9806995778947" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">+8.16%</text>
-			<text x="242.38" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">Square-root profit weighting / Train (OOB)</text>
-			<rect x="678.4856892356408" y="154" width="71.8615726633991" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="641.8056892356409" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">-5.61%</text>
-			<text x="277.38" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">Square-root profit weighting / Test</text>
-			<rect x="750.34726189904" y="122" width="70.47340392596038" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
-			<text x="825.8206658250003" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">+5.50%</text>
+			<text x="167.89999999999998" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">Legacy variance — filtered search candidate / Train (OOB)</text>
+			<rect x="737.790038443635" y="346" width="12.557223455404937" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="701.1100384436351" y="350" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,700) scale(1,-1)">-0.98%</text>
+			<text x="202.89999999999998" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">Legacy variance — filtered search candidate / Test</text>
+			<rect x="750.34726189904" y="314" width="198.2627525385269" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="953.6100144375669" y="318" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,636) scale(1,-1)">+15.47%</text>
+			<text x="279.05" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">Log odds weighting / Train (OOB)</text>
+			<rect x="688.8154325684382" y="282" width="61.531829330601795" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="652.1354325684382" y="286" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">-4.80%</text>
+			<text x="314.05" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">Log odds weighting / Test</text>
+			<rect x="750.34726189904" y="250" width="91.94258865147879" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="847.2898505505187" y="254" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,508) scale(1,-1)">+7.17%</text>
+			<text x="277.40999999999997" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">Most likely outcome / Train (OOB)</text>
+			<rect x="619.3477804907982" y="218" width="130.99948140824176" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="577.1077804907982" y="222" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">-10.22%</text>
+			<text x="312.40999999999997" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">Most likely outcome / Test</text>
+			<rect x="750.34726189904" y="186" width="61.8397683081015" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="817.1870302071414" y="190" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,380) scale(1,-1)">+4.83%</text>
+			<text x="242.92999999999998" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">Square-root odds weighting / Train (OOB)</text>
+			<rect x="584.0455537408523" y="154" width="166.3017081581877" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="541.8055537408522" y="158" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,316) scale(1,-1)">-12.98%</text>
+			<text x="277.93" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">Square-root odds weighting / Test</text>
+			<rect x="750.34726189904" y="122" width="104.63343767885476" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="859.9806995778947" y="126" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,252) scale(1,-1)">+8.16%</text>
+			<text x="242.38" y="94" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,188) scale(1,-1)">Square-root profit weighting / Train (OOB)</text>
+			<rect x="678.4856892356408" y="90" width="71.8615726633991" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
+			<text x="641.8056892356409" y="94" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,188) scale(1,-1)">-5.61%</text>
+			<text x="277.38" y="62" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,124) scale(1,-1)">Square-root profit weighting / Test</text>
+			<rect x="750.34726189904" y="58" width="70.47340392596038" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="825.8206658250003" y="62" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,124) scale(1,-1)">+5.50%</text>
 			<text x="35" y="60" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,120) scale(1,-1)">OOB trees exclude the predicted match but may include later seasons; this is not a chronological simulation.</text>
 			<text x="35" y="39" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,78) scale(1,-1)">The test set has been examined in earlier project analyses. Comparing strategies here does not establish a future winner.</text>
 		</g>

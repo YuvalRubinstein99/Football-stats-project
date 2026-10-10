@@ -212,3 +212,29 @@ model backtest. Search winners may fail on later periods. The HTML report at
 `/strategy-search`, JSON, full search CSV and finalist CSV are written under
 `results/strategy_search*`. Run `python scripts/test_strategy_search.py` to audit
 selection independence from holdout metrics and reconcile period accounting.
+
+The main selector also includes **Legacy variance — filtered search candidate**,
+selected by default. It preserves the original variance-score choice, then skips
+unless decimal odds are 4–1000 and raw lineup-RF expected return is strictly above
+2%. Stakes use the original 1%-wide Kelly levels and editable dollar amounts.
+Poisson-baseline reports mark this candidate unavailable. The original 14 rules
+remain available. Historical tables, curves and CSVs include the candidate;
+all-training totals cover 2014–22, while the search report separates selection
+(2018–20), audit (2020–22), and test (2022–23). Rebuild both the stake backtest and
+cumulative curves after a model/data change. `scripts/test_filtered_strategy.py`
+checks integration and exact agreement with the frozen search results.
+
+## Manual interface filters
+
+The main interface's **Manual strategy filters** panel accepts any original rule,
+minimum expected return (strict), inclusive minimum/maximum decimal odds, outcome
+filter, flat or five-level staking, Kelly band width and five dollar amounts.
+Click **Apply filters & recalculate** to update live choices, season tables and
+cumulative curves. Downloaded selections include the applied filter values.
+Filters operate on each rule's chosen outcome; they do not reselect a different
+outcome when it fails a filter. Flat stakes use the level-1 amount. Live predictions
+remain unchanged; history always uses the saved lineup RF and historical Bet365
+odds. Both the training OOB limitation and historical strategy-search overfitting
+still apply. Run `python scripts/test_manual_filters.py` for parity and boundary
+checks. Alternative source UI is deferred; the active manual endpoint accepts
+Bet365 only. Winner and Polymarket public reads returned HTTP 403 during research.

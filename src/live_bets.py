@@ -17,6 +17,26 @@ STANDARD = ['Most likely outcome', 'Expected return > 1', 'Log odds weighting',
 BINARY = ['Home loses vs not (synthetic double chance)', 'Home loses vs not (sqrt profit)',
           'Home wins vs not (synthetic double chance)', 'Home wins vs not (sqrt profit)']
 STRATEGIES = STANDARD + BINARY
+SEARCH_CANDIDATE = 'Legacy variance — filtered search candidate'
+
+
+def integrated_recommendations(match, model_kind='lineup_rf'):
+    rows = recommendations(match)
+    candidate = next(dict(b) for b in rows if b['strategy']=='Legacy variance score')
+    candidate['strategy'] = SEARCH_CANDIDATE
+    reason = ''
+    if model_kind != 'lineup_rf':
+        candidate['action'] = 'Unavailable'
+        reason = 'This search candidate requires the saved lineup RF probabilities.'
+    elif candidate['action'] == 'Bet' and not (
+            4 <= candidate['decimal_odds'] <= 1000 and candidate['expected_net_per_unit'] > .02):
+        candidate['action'] = 'Skip'
+        reason = 'Selected outcome must have odds 4.00–1000 and model expected return strictly above 2%.'
+    if candidate['action'] != 'Bet':
+        candidate.update(selection=candidate['action'],probability=None,decimal_odds=None,
+                         expected_net_per_unit=None,home_stake=0.,draw_stake=0.,away_stake=0.)
+    candidate['note'] = (reason or candidate['note']) + ' Fixed exploratory search candidate: raw lineup RF, selected on 2018–20. Not a proven optimum.'
+    return rows + [candidate]
 
 
 def recommendations(match):
@@ -83,10 +103,10 @@ def recommendations(match):
 
 def enrich(report):
     for match in report['predictions']:
-        match['strategies']=recommendations(match)
+        match['strategies']=integrated_recommendations(match,report.get('model_kind','lineup_rf'))
         for bet in match['strategies']:
             bet.update(size_bet(bet))
-    report['strategy_names']=STRATEGIES
+    report['strategy_names']=STRATEGIES + [SEARCH_CANDIDATE]
     return report
 
 
@@ -116,4 +136,4 @@ if __name__=='__main__':
     report=json.loads(path.read_text(encoding='utf-8'))
     save(report,LIVE)
     atomic_write(path,json.dumps(report,indent=2,allow_nan=False))
-    print(f'Added {len(STRATEGIES)} strategies for {len(report["predictions"])} saved predictions.')
+    print(f'Added {len(report["strategy_names"])} strategies for {len(report["predictions"])} saved predictions.')

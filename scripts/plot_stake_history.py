@@ -46,7 +46,7 @@ def main():
     d=Drawing(1120,620);d.add(Rect(0,0,1120,620,fillColor=HexColor('#ffffff'),strokeColor=None))
     text(d,35,580,'Historical net profit by season',26)
     text(d,35,551,chosen+' | Five stake levels: $1 / $2 / $3 / $4 / $5',13)
-    for i,split in enumerate(['Train (OOB)','Test']):
+    for i,split in enumerate(['Test']):
         stake,profit=totals[chosen,split,'All seasons']
         text(d,35+i*555,510,f'{split}: {"-" if profit<0 else "+"}${abs(profit):,.2f} net | {profit/stake*100:+.2f}% ROI',17,TRAIN if i==0 else TEST)
         text(d,35+i*555,488,f'${stake:,.2f} staked; all seasons in this split',11)
@@ -55,21 +55,21 @@ def main():
         if strategy==chosen and season!='All seasons':
             items.append((season.replace('–','-')+'  '+split,totals[strategy,split,season][1],TRAIN if split.startswith('Train') else TEST))
     bars(d,items,445,260,735,38)
-    text(d,35,64,'Blue: training OOB (2014-15 to 2021-22). Green: held-out test (2022-23).',11)
-    text(d,35,44,'Net profit subtracts stakes. OOB is not walk-forward testing. Historical actual lineups differ from live expected lineups.',10)
+    text(d,35,64,'Held-out test only (2022-23). Training-period reporting is disabled.',11)
+    text(d,35,44,'Net profit subtracts stakes. Training results require a chronological backtest. Historical actual lineups differ from live expected lineups.',10)
     text(d,35,24,'Fixed staking thresholds; no compounding, fees or bankroll limit. Hypothetical returns, not guaranteed future winnings.',10)
     save(d,'stake_history_seasons')
     d=Drawing(1250,1130);d.add(Rect(0,0,1250,1130,fillColor=HexColor('#ffffff'),strokeColor=None))
-    text(d,35,1090,'Training vs test ROI across all 14 strategies',25)
+    text(d,35,1090,'Held-out test ROI across strategies',25)
     text(d,35,1063,'Five-level $1-$5 stakes with positive-edge gate | ROI = net profit / total amount staked',12)
-    text(d,35,1037,'Blue: training OOB, 2014-22. Green: test, 2022-23. Different exposure and sample sizes.',12)
+    text(d,35,1037,'Held-out test, 2022-23. Training-period reporting is disabled.',12)
     items=[]
     for strategy in sorted({k[0] for k in totals}):
-        for split in ['Train (OOB)','Test']:
+        for split in ['Test']:
             stake,profit=totals[strategy,split,'All seasons']
             items.append((strategy+' / '+split,100*profit/stake if stake else 0,TRAIN if split.startswith('Train') else TEST))
     bars(d,items,994,440,665,32,percent=True)
-    text(d,35,60,'OOB trees exclude the predicted match but may include later seasons; this is not a chronological simulation.',11)
+    text(d,35,60,'Training-period profit is unavailable pending a chronological backtest.',11)
     text(d,35,39,'The test set has been examined in earlier project analyses. Comparing strategies here does not establish a future winner.',11)
     save(d,'stake_history_strategies')
     print('Saved stake_history_seasons and stake_history_strategies (PNG/SVG).')
