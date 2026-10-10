@@ -13,40 +13,14 @@
 			<rect x="0" y="0" width="1120" height="620" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="35" y="580" style="font-family: Helvetica; font-size: 26px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1160) scale(1,-1)">Historical net profit by season</text>
 			<text x="35" y="551" style="font-family: Helvetica; font-size: 13px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,1102) scale(1,-1)">Square-root profit weighting | Five stake levels: $1 / $2 / $3 / $4 / $5</text>
-			<text x="35" y="510" style="font-family: Helvetica; font-size: 17px;fill: rgb(22%,39%,69%); stroke:none;" transform="translate(0,1020) scale(1,-1)">Train (OOB): -$972.31 net | -5.61% ROI</text>
-			<text x="35" y="488" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,976) scale(1,-1)">$17,340.00 staked; all seasons in this split</text>
-			<text x="590" y="510" style="font-family: Helvetica; font-size: 17px;fill: rgb(0%,60%,50%); stroke:none;" transform="translate(0,1020) scale(1,-1)">Test: +$110.64 net | +5.50% ROI</text>
-			<text x="590" y="488" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,976) scale(1,-1)">$2,012.00 staked; all seasons in this split</text>
-			<path d="M 736.792577,457 L 736.792577,129 Z" style="stroke: rgb(53%,60%,66%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="140.18" y="441" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,882) scale(1,-1)">2014-2015  Train (OOB)</text>
-			<rect x="586.3952856952876" y="437" width="150.39729154661165" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="541.9252856952876" y="441" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,882) scale(1,-1)">-$103.40</text>
-			<text x="140.18" y="403" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,806) scale(1,-1)">2015-2016  Train (OOB)</text>
-			<rect x="736.7925772418993" y="399" width="60.98799259718953" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="802.7805698390888" y="403" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,806) scale(1,-1)">+$41.93</text>
-			<text x="140.18" y="365" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,730) scale(1,-1)">2016-2017  Train (OOB)</text>
-			<rect x="545.2178454275457" y="361" width="191.57473181435353" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="500.7478454275457" y="365" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,730) scale(1,-1)">-$131.71</text>
-			<text x="140.18" y="327" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,654) scale(1,-1)">2017-2018  Train (OOB)</text>
-			<rect x="488.7534077308393" y="323" width="248.03916951105998" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="444.28340773083926" y="327" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,654) scale(1,-1)">-$170.53</text>
-			<text x="140.18" y="289" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,578) scale(1,-1)">2018-2019  Train (OOB)</text>
-			<rect x="385.06072964227144" y="285" width="351.7318475996278" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="340.5907296422714" y="289" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,578) scale(1,-1)">-$241.82</text>
-			<text x="140.18" y="251" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,502) scale(1,-1)">2019-2020  Train (OOB)</text>
-			<rect x="589.9152223059534" y="247" width="146.87735493594585" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="545.4452223059534" y="251" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,502) scale(1,-1)">-$100.98</text>
-			<text x="140.18" y="213" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,426) scale(1,-1)">2020-2021  Train (OOB)</text>
-			<rect x="729.6945232501444" y="209" width="7.0980539917549095" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="696.3445232501443" y="213" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,426) scale(1,-1)">-$4.88</text>
-			<text x="140.18" y="175" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,350) scale(1,-1)">2021-2022  Train (OOB)</text>
-			<rect x="357.27941176470586" y="171" width="379.5131654771934" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,39%,69%); fill-rule: evenodd;"/>
-			<text x="312.8094117647058" y="175" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,350) scale(1,-1)">-$260.92</text>
-			<text x="175.18" y="137" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,274) scale(1,-1)">2022-2023  Test</text>
-			<rect x="736.7925772418993" y="133" width="160.92801099339476" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
-			<text x="902.720588235294" y="137" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,274) scale(1,-1)">+$110.64</text>
-			<text x="35" y="64" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,128) scale(1,-1)">Blue: training OOB (2014-15 to 2021-22). Green: held-out test (2022-23).</text>
-			<text x="35" y="44" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,88) scale(1,-1)">Net profit subtracts stakes. OOB is not walk-forward testing. Historical actual lineups differ from live expected lineups.</text>
+			<text x="35" y="510" style="font-family: Helvetica; font-size: 17px;fill: rgb(22%,39%,69%); stroke:none;" transform="translate(0,1020) scale(1,-1)">Test: +$110.64 net | +5.50% ROI</text>
+			<text x="35" y="488" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,976) scale(1,-1)">$2,012.00 staked; all seasons in this split</text>
+			<path d="M 357.279412,457 L 357.279412,433 Z" style="stroke: rgb(53%,60%,66%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="175.18" y="441" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,882) scale(1,-1)">2022-2023  Test</text>
+			<rect x="357.2794117647059" y="437" width="540.4411764705883" height="16" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,60%,50%); fill-rule: evenodd;"/>
+			<text x="902.7205882352941" y="441" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,882) scale(1,-1)">+$110.64</text>
+			<text x="35" y="64" style="font-family: Helvetica; font-size: 11px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,128) scale(1,-1)">Held-out test only (2022-23). Training-period reporting is disabled.</text>
+			<text x="35" y="44" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,88) scale(1,-1)">Net profit subtracts stakes. Training results require a chronological backtest. Historical actual lineups differ from live expected lineups.</text>
 			<text x="35" y="24" style="font-family: Helvetica; font-size: 10px;fill: rgb(14%,20%,29%); stroke:none;" transform="translate(0,48) scale(1,-1)">Fixed staking thresholds; no compounding, fees or bankroll limit. Hypothetical returns, not guaranteed future winnings.</text>
 		</g>
 	</g>
