@@ -24,7 +24,11 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
     today = now.date()
     year = today.year if today.month >= 7 else today.year-1
     progress('Loading the saved lineup random forest and verifying its feature schema…')
-    forest = LineupForest()
+    if unused.get('expanded'):
+        from expanded_model import ExpandedForest
+        forest = ExpandedForest()
+    else:
+        forest = LineupForest()
     overrides_path = ROOT / 'data/live_overrides.json'
     overrides = json.loads(overrides_path.read_text(encoding='utf-8')) if overrides_path.exists() else {}
     predictions, skipped, sources, warnings, history, lineups = [], [], [], [], [], []

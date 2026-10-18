@@ -1,12 +1,13 @@
 # Football score prediction and betting backtests
 
-**Current evaluation policy:** OOB-based training profit reporting and the old
-strategy-search endpoint are retired. Active ledgers, CSVs, manual-filter results
-and profit curves contain held-out test matches only. Training-period profit is
-unavailable until chronological predictions are built. Earlier search files are
-retained as historical artifacts, not active validation; their reproduction
-command is disabled. Existing model training and live inference are unchanged.
-Older descriptions below of training OOB reports refer to that retired workflow.
+**Current evaluation policy:** Training OOB reports, manual-filter results, CSVs
+and profit curves are restored alongside the held-out test results. Each OOB
+prediction uses trees that omitted that match, but may use later seasons; it is
+a diagnostic, not a chronological backtest. The test set has also been inspected
+during strategy comparisons. Compare net profit, amount staked and ROI; manual
+results include flat-$1 profit on exactly the same selected bets to assess sizing.
+The old automated strategy-search endpoint remains retired, and its archived
+results are exploratory. Model training and live inference are unchanged.
 
 Predict home and away football goals, convert the score predictions into match-outcome probabilities, and compare betting decision rules on recorded odds.
 
@@ -15,6 +16,67 @@ The current experiment compares two separate random forests, a single **2,000-tr
 ## Start here
 
 ### Live predictions and local interface
+
+The unified model/strategy interface starts with `python run.py model-app` at
+**http://127.0.0.1:8767/**. Choose expanded RF, OLS, Poisson, ordered logit or
+ordered probit and any of the 15 fixed strategies. Regression variants retain
+FIFA, all form/prior fields, odds and numeric matchweek, with optional home/away
+club identities. Exact active inputs are visible. Selections are recomputed from
+shared saved feature audits; refresh fetches new inputs into `results/model_strategy/live/`.
+The page pairs each model with its own all-training in-sample and test histories,
+plus separate RF OOB, at fixed $1–$5 stakes. It does not replace the earlier manual-filter interface.
+The unified page now includes manual odds range, minimum expected return, outcome,
+flat/five-level staking, score-step width and editable stake amounts. Apply filters
+recalculates live picks, CSV exports and training/test curves with the same rules.
+The filtered Legacy preset's thresholds are overridden by these explicit controls.
+Historical strategy selections are cached per model/data hash on first custom use.
+
+The expanded RF has a separate interface at **http://127.0.0.1:8766/**:
+
+```bash
+python scripts/build_expanded_interface.py
+python run.py app --expanded --port 8766
+```
+
+It uses the expanded vector forest trained on 19,263 matches from 2008–09
+through 2021–22, including 7,702 eligible older matches with FIFA ratings.
+Manual filters, editable stake levels, and cumulative profit by league use this
+model's own training OOB predictions and the 1,447-match 2022–23 test set.
+OOB is not a chronological backtest. The initial preview recomputes predictions
+from saved live inputs; **Refresh & predict** fetches current inputs and runs
+the expanded model. Its outputs are isolated under `results/expanded_interface/`.
+The original interface remains available on port 8765.
+
+To reproduce ordered-model and training-only feature-selection comparisons:
+
+```bash
+python -u scripts/compare_ordered_models.py
+python -u scripts/select_expanded_features.py
+```
+
+The second experiment selects among nine predefined feature sets separately
+for OLS, Poisson (fixed alpha 0.01), ordered logit and ordered probit. Validation
+seasons are 2019–20, 2020–21 and 2021–22; each fold fits preprocessing and models
+using strictly earlier seasons. A one-standard-error rule favors smaller models.
+Choices are saved before loading the 2022–23 test set, then models are refitted
+on all expanded training rows. Results, feature lists, fold scores, fitted models,
+and strategy comparisons are saved under `results/feature_selection/` and appended
+to the existing `/expanded-comparison/#feature-selection` report. This is an
+exploratory comparison on a previously inspected test season, not a guarantee
+against overfitting or a change to the live RF.
+
+`python -u scripts/compare_team_identity.py` retains FIFA means, all eight
+form/prior fields, odds and matchweek for each regression family, then compares
+with and without separate home/away club identities. Both versions are saved;
+no simplicity rule drops requested inputs. It reuses the matching forward-season
+validation scores and fits all eight models on expanded training data. Results
+are in `results/team_identity/` and `/expanded-comparison/#team-identity`.
+
+`python -u scripts/report_training_gains.py` adds cumulative gains across all
+19,263 training matches and the test season for those eight regressions and RF.
+Use `/expanded-comparison/#training-gains` to switch strategies and team variants.
+Fitted training predictions are explicitly in-sample; RF OOB is a separate curve.
+The report includes ROI and training/forward-validation/test loss diagnostics.
 
 The live workflow downloads expected/confirmed lineups from RotoWire, current EA
 overall ratings, and results/Bet365 odds from Football-Data. It feeds lineup rating
@@ -234,6 +296,88 @@ checks integration and exact agreement with the frozen search results.
 
 ## Manual interface filters
 
+### Direct RF, adjusted form and richer lineups
+
+Run `python scripts/prepare_classifier_features.py` then
+`python scripts/train_classifier_models.py`. The preparation recovers player
+ratings from the original processed season files and older player-rating audit,
+verifies their aggregates against the existing rows, and joins actual fixture
+dates from public Football-Data archives. Original train/test rows and targets
+are preserved, including known data issues recorded in `results/classifier/feature_audit.json`.
+Three training rows have ten rated starter slots on one side; coverage counts
+are explicit. There is one duplicate test fixture with different saved lineups,
+and one training-score discrepancy between the original and dated result sources.
+
+Four fixed 2,000-tree classifier ablations use existing RF features, those features
+plus opponent-adjusted form, plus richer lineup summaries, and both additions.
+The classifier predicts H/D/A directly. Other forest settings follow the existing
+goal-vector RF; the classification split criterion is log loss. Adjusted form
+uses actual points minus expected points from normalized inverse past odds,
+with last-five averages, season averages, expected-point averages and counts.
+All same-day outcomes are excluded; source season labels preserve COVID seasons.
+Lineup additions are top/bottom-three means, median, IQR, coverage counts and
+home/away advantages. These are not verified positional or injury features.
+
+Folds predict 2019–20, 2020–21 and 2021–22 from earlier seasons; final fits use
+all 19,263 training rows. Every variant is reported, with no test-based feature
+selection. Each has a separate forward-prediction temperature calibrator.
+Test 2022–23 remains previously inspected. Select the four **RF classifier**
+entries in port 8767 to use them with each strategy and league filter. Their
+ablation uses equal training weights and has no OOB curve. Live adjusted-form
+inputs require verifiable cached current-season results; missing provenance
+withholds a fixture instead of substituting historical training-era state.
+Run `python scripts/test_classifier_models.py` for causal-feature and inference checks.
+
+### Recent-data weighting
+
+Run `python scripts/train_recent_models.py` after calibration to compare equal
+weights with exponential 3-season and 6-season half-lives for all nine models.
+Weights are normalized to mean one; earlier seasons have less influence. RF,
+linear and Poisson fits receive sample weights; ordered models optimize a
+weighted likelihood with its analytic gradient. Form/prior predictors are retained.
+Weight strength is selected using mean seasonal log loss on forward predictions
+for 2019–20 and 2020–21, then audited on 2021–22. Equal weights can win. Models
+are refitted on all 19,263 training matches only after selection; 2022–23 is
+evaluated afterwards and remains an already-inspected test. Earlier model and
+feature decisions also used these historical seasons, so this is exploratory.
+
+In port 8767, **Training weights** switches between original models and the
+chronologically selected configuration. Every strategy, league filter, export
+and profit curve follows that choice. Weighted models have their own calibration
+parameters fitted to their forward predictions; old temperatures are not reused.
+Training curves are in-sample. Weighted-mode RF OOB is omitted; use the forward
+audit to assess generalization and original equal-weight mode for existing OOB.
+Metrics, selected half-lives and effective sample sizes are in `results/recency`.
+Run `python scripts/test_recent_models.py` for decay, gradient and inference checks.
+
+### Calibration procedure
+
+Run `python scripts/calibrate_models.py` to refit chronological folds and fit
+one temperature per expanded RF / linear / Poisson / ordered model variant.
+Each fold predicts 2019–20, 2020–21 or 2021–22 using only earlier seasons, with
+preprocessing refitted inside that fold. Calibration on the first two folds is
+audited on the third; the final temperature uses all three folds. The existing
+full-training model plus this temperature is evaluated on 2022–23, which has
+already been inspected and is not a fresh holdout. Transfer from earlier fitted
+models to the full-data model is an assumption. Existing model specifications
+were developed in earlier experiments; this is a temporal calibration audit,
+not a fully untouched evaluation of the entire research process.
+
+In port 8767 choose **Probabilities → Calibrated (temperature scaling)**.
+Selections, exports, stake levels and league profit curves use those probabilities.
+Expected goals do not change. Training curves remain in-sample; calibrated RF
+OOB is omitted because the calibrator has seen outcomes within the training era.
+The interface reports raw versus calibrated forward-audit and test log loss,
+multiclass Brier score and AUC. Full metrics and reliability bins are saved in
+`results/calibration/`. Run `python scripts/test_probability_calibration.py`
+to check fitting, temporal fold usage and interface consistency.
+
+The unified `python run.py model-app` interface (port 8767) also supports a league
+filter: all leagues, Premier League, La Liga, Bundesliga or Serie A. It applies to
+fixture selections, CSV exports and historical results for every model/strategy.
+League tables and cumulative profit curves separate in-sample train, RF OOB and
+test results. Prediction-quality diagnostics still cover all leagues.
+
 The main interface's **Manual strategy filters** panel accepts any original rule,
 minimum expected return (strict), inclusive minimum/maximum decimal odds, outcome
 filter, flat or five-level staking, Kelly band width and five dollar amounts.
@@ -246,3 +390,32 @@ odds. Both the training OOB limitation and historical strategy-search overfittin
 still apply. Run `python scripts/test_manual_filters.py` for parity and boundary
 checks. Alternative source UI is deferred; the active manual endpoint accepts
 Bet365 only. Winner and Polymarket public reads returned HTTP 403 during research.
+
+
+### Winner Israel in the model interface
+
+At port 8767, choose **Odds source → Winner Israel** and enter full-time 1/X/2 decimal prices for each matched fixture. Confirm the market, then apply filters. Quotes expire after 15 minutes. Stakes and exports use ILS; values are not converted from USD. The saved models retain their original Bet365 input features; Winner quotes only change strategy selection and payout calculations. Missing or invalid quotes withhold the selection. No Winner historical curves are produced from Bet365 data. Verify minimum stakes and single-bet eligibility on Winner. Automatic retrieval is not implemented: the public website rejected the research request with HTTP 403.
+
+The interface also links research on fractional Kelly, risk-constrained Kelly, robust Kelly, probability uncertainty, and joint portfolio allocation. These are research candidates, not newly implemented strategies.
+
+Validation: `python scripts/test_winner_models.py` checks quote validation, stale quotes, input-odds separation and absence of substituted historical returns.
+
+
+### Bankroll strategy comparisons
+
+Open `/bankroll-backtest/` on port 8767. Run `python scripts/backtest_bankroll_models.py` to rebuild all 44 saved configurations (raw/calibrated, equal/recency, regression team/no-team variants, and four direct classifiers). The page compares flat $1, quarter Kelly and robust quarter Kelly, with train/test cumulative profit graphs and all four leagues.
+
+Each split/league starts with an independent $1,000. All methods select the same highest-positive-EV H/D/A outcome and use a 2% per-match and 10% daily exposure cap. Stakes are reserved before same-date settlement. Robust Kelly uses the worst-case selected-outcome probability in a fixed +/-2 percentage-point interval, followed by quarter Kelly; this radius is a prespecified sensitivity assumption, not a fitted confidence bound. Historical Bet365 prices only. No live bets or Winner backtests. Main-interface manual filters do not affect this separate experiment.
+
+The all-league portfolio is simulated independently; it is not the sum of independent league portfolios. Curves show weekly closing snapshots from a daily simulation, and max drawdown uses daily closes. Train is in-sample, test has previously been examined, original duplicated test fixture retained, and fractional stakes ignore real-world minimums/fees. `results/bankroll_backtest/summary.csv`, `results.json`, `plan.json` and compressed `ledger.csv.gz` contain auditable results. Ledger source_row is the position within its split/league subset.
+
+Run `python scripts/test_bankroll_backtest.py` for formula, robust-abstention, exposure and settlement checks.
+
+
+### Automatic Winner odds
+
+Choose **Odds source → Winner Israel · automatic download** on port 8767. The app requests Winner's public `GetCMobileLine` feed with the public request metadata used by its website; no login or betting endpoints are used. Requests cache for 60 seconds, refresh every five minutes while the interface is visible, and can be triggered with Download Winner odds now. The app must have network access.
+
+Only upcoming, non-live, full-time football 1/X/2 markets from E0/SP1/D1/I1 are accepted. Hebrew team names use explicit aliases. Matching requires league, date, home and away; duplicates or unknown aliases are withheld. Prices expire after five minutes or at kickoff. Missing/download failures never substitute Bet365 prices. Bet365 remains a model input; Winner is the execution-odds source. Refresh shared match inputs when the model fixture cache is out of date.
+
+`python scripts/download_winner_odds.py` downloads independently. Parsed prices are in `results/winner/latest.json`; original responses are archived in `results/winner/snapshots/` to establish a future quote history. These snapshots alone are not a completed historical backtest. `python scripts/test_winner_download.py` verifies market filtering, translation, strict matching, duplicate rejection and expiry. The earlier note that automatic retrieval was unavailable is superseded: verified direct public-feed download on 2026-10-15.

@@ -1,0 +1,27 @@
+{
+  "strategies": [
+    "Most likely outcome",
+    "Expected return > 1",
+    "Log odds weighting",
+    "Square-root odds weighting",
+    "Square-root profit weighting",
+    "Legacy draw-to-home weighting",
+    "Legacy draw-to-home return weighting",
+    "Legacy market power weighting",
+    "Legacy variance score",
+    "Home win or skip (sqrt profit)",
+    "Home loses vs not (synthetic double chance)",
+    "Home loses vs not (sqrt profit)",
+    "Home wins vs not (synthetic double chance)",
+    "Home wins vs not (sqrt profit)",
+    "Legacy variance \u2014 filtered search candidate"
+  ],
+  "sizing": [
+    "Flat $1",
+    "Five levels $1\u2013$5",
+    "Quarter Kelly",
+    "Robust quarter Kelly"
+  ],
+  "checks": 10800,
+  "policy": "Same frozen predictions and original train/test rows. Flat $1 follows each rule even if estimated edge is negative; five levels and Kelly require positive edge. All methods capped at 2% per match, 10% per day from opening bankroll, initially $1000. Synthetic double chance splits one total stake at equal payout; not quoted double-chance odds. Fixed filtered legacy variance applies odds 4\u20131000 and expected return >2% to every model as an exploratory rule, not an optimized claim. No test tuning."
+}

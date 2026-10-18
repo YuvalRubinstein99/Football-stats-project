@@ -1,0 +1,63 @@
+{
+  "variants": {
+    "RF classifier": [],
+    "RF classifier + adjusted form": [
+      "home_adjusted_points_last5",
+      "home_expected_points_last5",
+      "home_adjusted_points_season",
+      "home_adjusted_form_count",
+      "away_adjusted_points_last5",
+      "away_expected_points_last5",
+      "away_adjusted_points_season",
+      "away_adjusted_form_count"
+    ],
+    "RF classifier + lineup": [
+      "home_rating_top3_mean",
+      "home_rating_bottom3_mean",
+      "home_rating_median",
+      "home_rating_iqr",
+      "home_starter_rating_count",
+      "away_rating_top3_mean",
+      "away_rating_bottom3_mean",
+      "away_rating_median",
+      "away_rating_iqr",
+      "away_starter_rating_count",
+      "lineup_top3_advantage",
+      "lineup_bottom3_advantage"
+    ],
+    "RF classifier + both": [
+      "home_adjusted_points_last5",
+      "home_expected_points_last5",
+      "home_adjusted_points_season",
+      "home_adjusted_form_count",
+      "away_adjusted_points_last5",
+      "away_expected_points_last5",
+      "away_adjusted_points_season",
+      "away_adjusted_form_count",
+      "home_rating_top3_mean",
+      "home_rating_bottom3_mean",
+      "home_rating_median",
+      "home_rating_iqr",
+      "home_starter_rating_count",
+      "away_rating_top3_mean",
+      "away_rating_bottom3_mean",
+      "away_rating_median",
+      "away_rating_iqr",
+      "away_starter_rating_count",
+      "lineup_top3_advantage",
+      "lineup_bottom3_advantage"
+    ]
+  },
+  "validation_seasons": [
+    2019,
+    2020
+  ],
+  "audit_season": 2021,
+  "test_season": 2022,
+  "method": "Direct H/D/A RF, same 2000 trees/depth/features/bootstrap settings as goal RF; log-loss split criterion; equal sample weights. Fixed ablations, no test-based feature selection.",
+  "input_hashes": {
+    "results/classifier/train.csv": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "results/classifier/test.csv": "f330efe0d902566782d90dd4e8b2cedf3c0ac810159ebf9c0ddb1c8f3c8f6062",
+    "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9"
+  }
+}

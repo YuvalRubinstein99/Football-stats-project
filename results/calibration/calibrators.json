@@ -1,0 +1,254 @@
+{
+  "method": "Temperature scaling; fixed bounds 0.25\u20134; no method selection",
+  "calibration_seasons": [
+    2019,
+    2020
+  ],
+  "audit_season": 2021,
+  "final_calibration_seasons": [
+    2019,
+    2020,
+    2021
+  ],
+  "test_season": 2022,
+  "input_hashes": {
+    "data/expanded_2008/train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4",
+    "data/expanded_2008/test.csv": "f1aa6f24ff379608eddaabf436ce373732f79dc1ab7f55684afa52df195e78c5",
+    "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+    "results/team_identity/Linear__no_teams.joblib": "9e7682f5bcd20836e0d9a8ca912c8883b549da5c81724d4e6d1d8835cdd99e02",
+    "results/team_identity/Linear__teams.joblib": "975e5d2df33acab905089c32d05951b21508a5a9f17fbdf68eb2a1d5ca559cf1",
+    "results/team_identity/Poisson__no_teams.joblib": "a4f3a3f062087f7c2a420db246a74b8dda464d0fff57cce75797436f4ec86b0c",
+    "results/team_identity/Poisson__teams.joblib": "36f7df88da217fb36b63f4980d19d18542108d33417ead1b17377462d339c231",
+    "results/team_identity/Ordered_logit__no_teams.joblib": "90948f264c5879c18e5495d575b558399ee28a28fe4c102eb20e431c6158b0c5",
+    "results/team_identity/Ordered_logit__teams.joblib": "73fc7736666384c1a6a3b1b844e67ec7af554172332fe8057807983eab0c3fb9",
+    "results/team_identity/Ordered_probit__no_teams.joblib": "c70ab5087efcdead87f131879782037879e246c0c5d742fb907ebb38499b7f07",
+    "results/team_identity/Ordered_probit__teams.joblib": "25df2a0d4233e6cdfb08bbd98a2ee01b2e12042d4998ec287b26a880b3029eeb"
+  },
+  "models": {
+    "Expanded RF": {
+      "temperature": 1.0035482476919833,
+      "audit_temperature": 1.012622001165894,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9747168936120565,
+        "brier": 0.578633815375372,
+        "auc": 0.6852370599248384
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9747725719839975,
+        "brier": 0.5786674314432244,
+        "auc": 0.6852463507473615
+      },
+      "test_raw": {
+        "log_loss": 0.9785063207959493,
+        "brier": 0.5823876913054822,
+        "auc": 0.6631669833424545
+      },
+      "test_calibrated": {
+        "log_loss": 0.9785463431020888,
+        "brier": 0.5824082517471918,
+        "auc": 0.6631659890181111
+      }
+    },
+    "Linear__no_teams": {
+      "temperature": 0.9770217193496945,
+      "audit_temperature": 0.9896051961917232,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9790730661857102,
+        "brier": 0.5816661751811439,
+        "auc": 0.6842154379367203
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9789843937314642,
+        "brier": 0.581595818848803,
+        "auc": 0.6841983104188675
+      },
+      "test_raw": {
+        "log_loss": 0.9841161314376777,
+        "brier": 0.5853611123782456,
+        "auc": 0.6588422886696943
+      },
+      "test_calibrated": {
+        "log_loss": 0.9837167651623918,
+        "brier": 0.5850658304736682,
+        "auc": 0.658805974040991
+      }
+    },
+    "Linear__teams": {
+      "temperature": 1.0568742786476992,
+      "audit_temperature": 1.0708316609959854,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9855384339154994,
+        "brier": 0.5867653656261064,
+        "auc": 0.6752284897874019
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9855943037963986,
+        "brier": 0.5868512040061749,
+        "auc": 0.6753623879997984
+      },
+      "test_raw": {
+        "log_loss": 0.9882147004266016,
+        "brier": 0.5891458993657033,
+        "auc": 0.6532004725599454
+      },
+      "test_calibrated": {
+        "log_loss": 0.9889131631008544,
+        "brier": 0.5895844501125822,
+        "auc": 0.6531612209940311
+      }
+    },
+    "Poisson__no_teams": {
+      "temperature": 0.9908601531478162,
+      "audit_temperature": 1.0058612822819657,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9799591908405166,
+        "brier": 0.5820591958138885,
+        "auc": 0.6842071703112257
+      },
+      "audit_calibrated": {
+        "log_loss": 0.980007052674432,
+        "brier": 0.5821026553703161,
+        "auc": 0.6842197944652063
+      },
+      "test_raw": {
+        "log_loss": 0.983581074910338,
+        "brier": 0.5852779522641733,
+        "auc": 0.6600790565744191
+      },
+      "test_calibrated": {
+        "log_loss": 0.9834158736443843,
+        "brier": 0.5851593696073395,
+        "auc": 0.6600538474782816
+      }
+    },
+    "Poisson__teams": {
+      "temperature": 0.9970180314994913,
+      "audit_temperature": 1.014757777454418,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9787182745378332,
+        "brier": 0.581581023304912,
+        "auc": 0.6842460002902294
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9788483450409261,
+        "brier": 0.5816797619226958,
+        "auc": 0.684247734940592
+      },
+      "test_raw": {
+        "log_loss": 0.9835714614138735,
+        "brier": 0.5854880479985246,
+        "auc": 0.6601400534010319
+      },
+      "test_calibrated": {
+        "log_loss": 0.9835214462952951,
+        "brier": 0.5854534915982437,
+        "auc": 0.6601318890711613
+      }
+    },
+    "Ordered_logit__no_teams": {
+      "temperature": 1.0285537977924892,
+      "audit_temperature": 1.0466762611600628,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9747475518233001,
+        "brier": 0.5792102225403943,
+        "auc": 0.6829607187070416
+      },
+      "audit_calibrated": {
+        "log_loss": 0.97500865700763,
+        "brier": 0.5795014772599182,
+        "auc": 0.6829607187070416
+      },
+      "test_raw": {
+        "log_loss": 0.9819110782277457,
+        "brier": 0.5845417600650064,
+        "auc": 0.6565551015453467
+      },
+      "test_calibrated": {
+        "log_loss": 0.9823262050085925,
+        "brier": 0.5848776515842629,
+        "auc": 0.6565551015453467
+      }
+    },
+    "Ordered_logit__teams": {
+      "temperature": 1.1151809399312989,
+      "audit_temperature": 1.1337528762029083,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.986559382172611,
+        "brier": 0.587610071075679,
+        "auc": 0.6664627629329092
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9862021862780029,
+        "brier": 0.5876736420409419,
+        "auc": 0.6664627629329092
+      },
+      "test_raw": {
+        "log_loss": 0.9872305282280146,
+        "brier": 0.5885526275617579,
+        "auc": 0.6529486699038549
+      },
+      "test_calibrated": {
+        "log_loss": 0.9888323455419142,
+        "brier": 0.5896690622038273,
+        "auc": 0.6529486699038549
+      }
+    },
+    "Ordered_probit__no_teams": {
+      "temperature": 1.0304515440190547,
+      "audit_temperature": 1.0492544865202291,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9767850190208522,
+        "brier": 0.5800588709893091,
+        "auc": 0.6824195040799536
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9770596540146054,
+        "brier": 0.5804297011726874,
+        "auc": 0.6824195040799536
+      },
+      "test_raw": {
+        "log_loss": 0.9821770080091328,
+        "brier": 0.5845982664252849,
+        "auc": 0.6561421719377559
+      },
+      "test_calibrated": {
+        "log_loss": 0.9826669155077903,
+        "brier": 0.585001306735276,
+        "auc": 0.6561421719377559
+      }
+    },
+    "Ordered_probit__teams": {
+      "temperature": 1.1225030115407955,
+      "audit_temperature": 1.139160934519434,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9887135446227402,
+        "brier": 0.5883548456747341,
+        "auc": 0.665653270890949
+      },
+      "audit_calibrated": {
+        "log_loss": 0.988168434916764,
+        "brier": 0.5885585611755806,
+        "auc": 0.665653270890949
+      },
+      "test_raw": {
+        "log_loss": 0.9878125140804751,
+        "brier": 0.5889830118870852,
+        "auc": 0.6524323612434856
+      },
+      "test_calibrated": {
+        "log_loss": 0.9895916587205107,
+        "brier": 0.5902622457528187,
+        "auc": 0.6524323612434856
+      }
+    }
+  }
+}

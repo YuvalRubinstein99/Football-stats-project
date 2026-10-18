@@ -22,6 +22,7 @@ button{background:#77e2bc;color:#0c1420;font-weight:700;cursor:pointer}button:di
 #bets td:first-child{white-space:normal;min-width:170px} #bets td:nth-child(2){white-space:normal;min-width:160px}
 [hidden]{display:none!important}
 </style><h1>Football Forecast</h1><p>Collect match data → build model inputs → predict scheduled matches.</p>
+<p><a href="/expanded-comparison/">2008–22 training expansion · forests vs linear and Poisson regressions</a></p>
 <div class="panel"><div class="controls"><div><label for="model">Model</label><select id="model"><option value="lineup_rf">Lineups + EA ratings (saved RF)</option><option value="poisson">Results-only Poisson baseline</option></select></div><div><label for="league">League</label><select id="league"><option value="all">All five leagues</option>__LEAGUES__</select></div>
 <div><label for="seasons">History (seasons)</label><input id="seasons" type="number" min="1" max="10" value="3"></div>
 <div><label for="days">Next days</label><input id="days" type="number" min="1" max="90" value="14"></div>
@@ -32,7 +33,7 @@ button{background:#77e2bc;color:#0c1420;font-weight:700;cursor:pointer}button:di
 <p class="muted">Five-level staking skips selections with no positive model edge. Kelly score = model EV / (decimal odds − 1). Levels 1–5 cover scores (0,1%], (1%,2%], (2%,3%], (3%,4%], and above 4%. These fixed tiers rank stakes; they are not bankroll percentages or a guarantee of profit.</p>
 <div class="controls" id="stake-inputs"></div><p class="muted" id="stake-message">Dollar amounts apply to the total stake per match. Edits update this view only; CSV exports use $1–$5. Synthetic double chance splits that total across two bets. Saved odds may have changed.</p>
 <div class="scroll"><table><thead><tr><th>Match</th><th id='strategy-heading'>Strategy</th><th>Selection / staking action</th><th>Odds</th><th>Probability</th><th>Model EV / unit</th><th>Dollar stake split</th><th>Level / total</th></tr></thead><tbody id="bets"></tbody></table></div></div>
-<div class="panel"><h2>Historical dollar returns</h2><p class="muted">Uses the saved lineup vector RF and the betting rule selected above. Only held-out test results are shown. Training-period results require a chronological backtest. Changing the live prediction model does not change this historical model.</p><p id="stake-method" class="muted">Loading historical results…</p><p><a href="/stake-results.csv">Download season and level results ($1–$5)</a> · <a href="/stake-ledger.csv">Download every historical bet ($1–$5)</a></p><h3>By season</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Season</th><th>Bets / skips / unavailable</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th><th>Original flat $1 net</th></tr></thead><tbody id="stake-seasons"></tbody></table></div><h3>By stake level · all seasons in each split</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Level</th><th>Bets</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th></tr></thead><tbody id="stake-levels"></tbody></table></div></div>
+<div class="panel"><h2>Historical dollar returns</h2><p class="muted">Uses the saved lineup vector RF and the betting rule selected above. Train (OOB) uses trees that omitted the predicted match; other matches from later seasons may still be included. Test matches were excluded from model fitting. Neither repeated filter tuning nor OOB establishes future profitability. Changing the live prediction model does not change this historical model.</p><p id="stake-method" class="muted">Loading historical results…</p><p><a href="/stake-results.csv">Download season and level results ($1–$5)</a> · <a href="/stake-ledger.csv">Download every historical bet ($1–$5)</a></p><h3>By season</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Season</th><th>Bets / skips / unavailable</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th><th>Original flat $1 net</th></tr></thead><tbody id="stake-seasons"></tbody></table></div><h3>By stake level · all seasons in each split</h3><div class="scroll"><table><thead><tr><th>Strategy</th><th>Split</th><th>Level</th><th>Bets</th><th>Total staked</th><th>Gross returns</th><th>Net profit</th><th>ROI</th></tr></thead><tbody id="stake-levels"></tbody></table></div></div>
 <div class="panel"><h2>Upcoming matches</h2><p id="stamp" class="muted">No run loaded.</p><a id="download" href="/predictions.csv" hidden>Download predictions CSV</a>
 <div class="scroll"><table><thead><tr><th>Date / source time</th><th>League</th><th>Match</th><th>Home</th><th>Draw</th><th>Away</th><th>Expected goals</th><th>Likely score</th></tr></thead><tbody id="rows"></tbody></table></div></div>
 <div class="panel" id="unavailable" hidden><h2>Fixtures needing attention</h2><p class="muted">These fixtures have no lineup-model prediction. Resolve the missing inputs, then refresh.</p><div id="skipped"></div></div>
@@ -83,7 +84,11 @@ $('run').onclick=async()=>{const seasons=Number($('seasons').value),days=Number(
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
+    parser.add_argument('--expanded', action='store_true', help='Use separate expanded RF interface and data')
     args = parser.parse_args(argv)
+    global LIVE
+    if args.expanded:
+        LIVE = LIVE.parent / 'expanded_interface' / 'live'
     token = secrets.token_urlsafe(24)
     state = {'running': False, 'message': 'Ready. Refresh to generate predictions.', 'error': None, 'result': None}
     lock = threading.Lock()
@@ -95,6 +100,10 @@ def main(argv=None):
         except (ValueError, OSError):
             pass
     page = PAGE.replace('__LEAGUES__', ''.join(f'<option value="{k}">{v}</option>' for k, v in LEAGUES.items()))
+    if args.expanded:
+        page=page.replace('Football Forecast','Expanded RF Forecast').replace('Lineups + EA ratings (saved RF)','Expanded 2008–22 FIFA RF')
+        page=page.replace('<option value="poisson">Results-only Poisson baseline</option>','')
+        page=page.replace('Collect match data → build model inputs → predict scheduled matches.','Expanded vector RF: 19,263 training matches, 2008–22. Test: 2022–23. Training curves use OOB predictions and are not chronological validation.')
     page = page.replace('__NAMES__', json.dumps(LEAGUES)).replace('__TOKEN__', token).encode()
 
     def work(options):
@@ -102,7 +111,11 @@ def main(argv=None):
             with lock:
                 state['message'] = message
         try:
-            result = pipeline(**options, progress=progress)
+            if args.expanded:
+                from lineup_pipeline import run
+                result = run(**options, progress=progress, output=LIVE, expanded=True)
+            else:
+                result = pipeline(**options, progress=progress)
             with lock:
                 state['result'] = result
         except Exception as exc:
@@ -138,6 +151,17 @@ def main(argv=None):
                 return self.send(200, Path(__file__).with_name('stake-ui.js').read_bytes(), 'application/javascript')
             if path == '/manual-ui.js':
                 return self.send(200, Path(__file__).with_name('manual-ui.js').read_bytes(), 'application/javascript')
+            comparison_files = {'/expanded-comparison/': ('report.html','text/html'),
+                                '/expanded-comparison/comparison.png': ('comparison.png','image/png'),
+                                '/expanded-comparison/model_metrics.csv': ('model_metrics.csv','text/csv'),
+                                '/expanded-comparison/strategy_results.csv': ('strategy_results.csv','text/csv'),
+                                '/expanded-comparison/paired_differences.csv': ('paired_differences.csv','text/csv')}
+            if path in comparison_files:
+                filename, content_type = comparison_files[path]
+                artifact = Path(__file__).resolve().parents[1] / 'results/expanded_comparison' / filename
+                if artifact.exists():
+                    return self.send(200, artifact.read_bytes(), content_type)
+                return self.send(404, {'error':'The expanded comparison has not finished yet.'})
             stake_files = {'/api/stake-results': ('stake_level_results.json','application/json'),
                            '/strategy-search': ('strategy_search.html','text/html'),
                            '/strategy-search.csv': ('strategy_search_finalists.csv','text/csv'),
@@ -145,7 +169,7 @@ def main(argv=None):
                            '/stake-results.csv': ('stake_level_results.csv','text/csv'),
                            '/stake-ledger.csv': ('stake_level_bet_ledger.csv','text/csv')}
             if path in ('/strategy-search','/strategy-search.csv'):
-                return self.send(410, {'error': 'The earlier OOB-based strategy search is retired. Use manual filters with held-out test results.'})
+                return self.send(410, {'error': 'The earlier OOB-based strategy search is retired. Use manual filters with explained OOB and test results.'})
             if path in stake_files:
                 filename, content_type = stake_files[path]
                 artifact = LIVE.parent / filename
@@ -190,7 +214,7 @@ def main(argv=None):
                         if self.path=='/api/manual':
                             if options.get('source','bet365')!='bet365':raise ValueError('Manual interface currently uses saved Bet365 odds only')
                             from manual_strategies import evaluate
-                            result=evaluate(report,options)
+                            result=evaluate(report,options,LIVE.parent/'stake_level_bet_ledger.csv' if args.expanded else None)
                         else:
                             from odds_sources import fetch_prices,fixture_key
                             fixture=next((m for m in report['predictions'] if fixture_key(m)==options.get('fixture')),None)
@@ -214,7 +238,7 @@ def main(argv=None):
                         or type(options['seasons']) is not int or not 1 <= options['seasons'] <= 10
                         or type(options['days']) is not int or not 1 <= options['days'] <= 90
                         or type(options['offline']) is not bool
-                        or options['model'] not in ('poisson', 'lineup_rf')):
+                        or options['model'] not in (('lineup_rf',) if args.expanded else ('poisson', 'lineup_rf'))):
                     raise ValueError('Invalid league, seasons, days, or cache option')
             except (ValueError, TypeError) as exc:
                 return self.send(400, {'error': str(exc)})

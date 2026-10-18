@@ -1,0 +1,354 @@
+{
+  "train": 19263,
+  "test": 1447,
+  "new_features": 20,
+  "warnings": [
+    {
+      "split": "train",
+      "row": 16755,
+      "reason": "Score differs across sources; original target retained, historical form uses dated source result",
+      "key": "(2020, 'I1', 'hellas verona', 'roma')",
+      "original": [
+        3,
+        0
+      ],
+      "dated_source": [
+        0,
+        0
+      ]
+    }
+  ],
+  "incomplete_starter_rows": 3,
+  "duplicate_test_fixtures": 1,
+  "chronology": "Strictly earlier actual fixture dates; same-day results excluded; source season labels preserve COVID seasons",
+  "lineup": "Top/bottom three means, median, IQR, rating coverage and home-away advantages; three historical rows contain ten rated starters on one side. No positional/absence claims.",
+  "input_hashes": {
+    "data/expanded_2008/train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4",
+    "data/expanded_2008/test.csv": "f1aa6f24ff379608eddaabf436ce373732f79dc1ab7f55684afa52df195e78c5",
+    "data/expanded_2008/added_row_provenance.csv": "3e55e68f08ec65ae5e841358c176a468a4d148ad38e4aaccfa04a19a334d16af",
+    "data/older_seasons/player_rating_audit.csv": "77d4869424eb1788f2851de7355a6f17c8128036ed884816ce71cd533f712c72",
+    "data/season_data/season1415_proccessed.csv": "e7f6a8dd4a10d0b446924bf36960b3d7d50d04fd0346fd1341c0e600ed752c75",
+    "data/season_data/season1516_proccessed.csv": "04438fca2e46f1d825df4ab17941971cbbc1ea1e0a7c4bf525b5384bf1d8a6dd",
+    "data/season_data/season1617_proccessed.csv": "9a5fd1a005f71891ead3346b9f9fc22d8b8d7e9044aab33528b750a5c664d334",
+    "data/season_data/season1718_proccessed.csv": "4189a8c4d380e0d5739663d17812d022f38d69eaa27606fbff052da5e1401d81",
+    "data/season_data/season1819_proccessed.csv": "ff2248bfde7f73c0338e41797523e5ca2bf374a2945843f209a55a6e807117c0",
+    "data/season_data/season1920_proccessed.csv": "d0a60c30ff5d8b7f5a164ceea73341da3943fd85fbb09e42ced0dd73fd2f1c8d",
+    "data/season_data/season2021_proccessed.csv": "f9f977e5b6930eff6ef55cf4b4f67e23ec81223b803634a99086ec93320a92cd",
+    "data/season_data/season2122_proccessed.csv": "db9d9543be8cd6be10995bff0d70b5ccf0835a126a7004f6e38c952bce966273",
+    "data/season_data/season2223_proccessed.csv": "48403a1347e944035a3fbdc380fcfb793bc945d318bb758d43a1d424845b9664",
+    "data/older_seasons/raw/E0_0809.csv": "b78dcd1c522feafb44bcce1c459eb09911618460787cfe9ab478b2957c7ae294",
+    "data/older_seasons/raw/SP1_0809.csv": "e463e61cc73a05cb129fe64de18bc5a2174c851d116615be08469bc111bc8c93",
+    "data/older_seasons/raw/D1_0809.csv": "7480cb2117cf16142b07daa88a5592ef4c1da0c957114903226e1fed76d1f61b",
+    "data/older_seasons/raw/I1_0809.csv": "008dc2a31931bcf9f8dc5215a4b5be1b7a26bedf5af5c2faeb180af0f03a5edf",
+    "data/older_seasons/raw/E0_0910.csv": "e8349af783aa262dddb1dbb84de088c15bf43e4fae85f6da4ec30a5c4d62c324",
+    "data/older_seasons/raw/SP1_0910.csv": "a7893cdd88d66afea2cfa22f1b14b43cd6da0723159070324828fded3d444f17",
+    "data/older_seasons/raw/D1_0910.csv": "a9ba192848c4bd27fa0bdd216d2feb3ded3ae0e1bc8ee6d743efc30c32995a09",
+    "data/older_seasons/raw/I1_0910.csv": "c6f33499663003ee2e25393b4d976b7a22c976c996b89ebd97cf32423732b7f3",
+    "data/older_seasons/raw/E0_1011.csv": "8f5d37651aca8498d8041088835e3a734b79e2fcc34f66ca8516c650970810ce",
+    "data/older_seasons/raw/SP1_1011.csv": "5b62bf130a0a851502b424a79a77900bc3ef3977ca4b9a1e261ca25b79d92454",
+    "data/older_seasons/raw/D1_1011.csv": "c7bce1d15ac317919bf2dda199159f1851594d9ba60eb5a9ad67c81ecf784545",
+    "data/older_seasons/raw/I1_1011.csv": "1a43e865b9a6aa205bbece872ab7c2badb760ccddedacd27a628f14f07c8ab69",
+    "data/older_seasons/raw/E0_1112.csv": "6cdb9963c311ca2e7d07eb429df721a2593cbd9c9fec55b9af82bca1a457b987",
+    "data/older_seasons/raw/SP1_1112.csv": "283709eca574d8d22a7f4ed915dbe0b4c7566b698e6c45562c6c2dc0a3ef01fe",
+    "data/older_seasons/raw/D1_1112.csv": "0db0353831457728f0131bab24e7844a5492c5fec13bda30fbcaca701ac13f62",
+    "data/older_seasons/raw/I1_1112.csv": "ed14582a9bb622c0e41720a5e6032693a26580d7d57f66111500183d113e2b75",
+    "data/older_seasons/raw/E0_1213.csv": "1df561d34a9b79ff8cb1fccd4fd279d183e74cd871063a307ecf18f01e0d622f",
+    "data/older_seasons/raw/SP1_1213.csv": "d06f76e576cde8d6f4dfa51fc70a1fb6bf01e700e5bb2808838cf685a644d1d7",
+    "data/older_seasons/raw/D1_1213.csv": "4b721cb2f866132c05699c737066d3fef975075d331c42a3e84ab7c3f3b428cc",
+    "data/older_seasons/raw/I1_1213.csv": "83eb3f73f43f58aa0b6c23619198912a16bbbc37ebee10adf2e6ba7d8f903365",
+    "data/older_seasons/raw/E0_1314.csv": "3cf16078fde2e0e6c6cb07ebdb20ca98d1a755c9508a18bbeb4ad6837fad2b42",
+    "data/older_seasons/raw/SP1_1314.csv": "d7a71640628bced0fef0d38c4ccf20cb96f6b9cc433df01a1b613b644ca9dc19",
+    "data/older_seasons/raw/D1_1314.csv": "3563a6ce007a17f6a27545c9b6ec32664ef176c5ef98e0cc7076658fd539b133",
+    "data/older_seasons/raw/I1_1314.csv": "ef27733c3875aaf7f6627d571c99e1751e180d678469325ca54028597bc2d450",
+    "results/classifier/cache/mmz4281_1415_E0.csv": "76b7858051ff6b17f46f49f26fdc70c1f29537270492606f5cc63d67fad5d149",
+    "results/classifier/cache/mmz4281_1415_SP1.csv": "28c64013605cde831af022c4192616464550afd0ed9ca96cc59afe67ca5a9009",
+    "results/classifier/cache/mmz4281_1415_D1.csv": "b1804b37586c92d3148084c9eb9759b2d834a210917819d3c8999f2e6a2ad723",
+    "results/classifier/cache/mmz4281_1415_I1.csv": "6fc7f4f4f9da99f15d60487ca64ebddcda98e4b86edd1a1f134cf89b48720f06",
+    "results/classifier/cache/mmz4281_1516_E0.csv": "bd3502a18c38a1597fd9af62e2366b4015006d3528dd4d18b311bd6237bbc085",
+    "results/classifier/cache/mmz4281_1516_SP1.csv": "f8e59217c158bd1bac302bcfc8555b88661dfe065571809bf51c1df69753d977",
+    "results/classifier/cache/mmz4281_1516_D1.csv": "a9d8689660cf7fe0290ab3de3e00d6fc5ec5fcf90683ee5b84fc229c0923d168",
+    "results/classifier/cache/mmz4281_1516_I1.csv": "438649d651be61b4acfbe8feee90256cc5493df431e219ce411086dfad554a81",
+    "results/classifier/cache/mmz4281_1617_E0.csv": "9625a7652b5f98fbd3e2e4d378c851fc246693f3343e34a72428d5b6e864d3e0",
+    "results/classifier/cache/mmz4281_1617_SP1.csv": "6f5794a69decfb863ecb6a0b865ffd3241eb5028035d9f19c48a299c5baa8f9a",
+    "results/classifier/cache/mmz4281_1617_D1.csv": "15b7a41eacde5fcd130d1cd0954c8fe8371fbbfc815c1ce2dd329cf3b27c2d5c",
+    "results/classifier/cache/mmz4281_1617_I1.csv": "39eb2bc1812897e01c280b711b3b8f5c15d3dee111aa09fbdf2e4abd7404bca3",
+    "results/classifier/cache/mmz4281_1718_E0.csv": "4f3389365ef3f7ac966764ed8ba67cf3b79f5aebed18dd224099c4b2c98bc67b",
+    "results/classifier/cache/mmz4281_1718_SP1.csv": "5786719e06d1a5387cb90fac71597c890f496df19e8e1aa868bbc852f7e730fd",
+    "results/classifier/cache/mmz4281_1718_D1.csv": "033227408247769568111af49de2a50f6951c87e6d43f9e1a01e73d647bced3e",
+    "results/classifier/cache/mmz4281_1718_I1.csv": "664a8874d3a33923036120c4162e72f13887e0897b51effe27f89969c79c335d",
+    "results/classifier/cache/mmz4281_1819_E0.csv": "7c096b3c2ecd54c6993d22eeea73450c2bde11e3457238b226b8f43c62dfc35e",
+    "results/classifier/cache/mmz4281_1819_SP1.csv": "9b8cece2c85e90e382b30dc4fc5046534f12c6d2b0efa74cd7d1d52e90a0c201",
+    "results/classifier/cache/mmz4281_1819_D1.csv": "f03ee41b741aca9c43cbafb800bbc6f01ca9d7ed19c1a9dd4c309389280cfe11",
+    "results/classifier/cache/mmz4281_1819_I1.csv": "2baea8a1fb31096960b5f5797d31dbb6b454eb41b00845e6b0b79feb82a0e3d0",
+    "results/classifier/cache/mmz4281_1920_E0.csv": "100037618b94f94057400bb02bf6bac4ef74ddaa58cde4b38370839c39caee61",
+    "results/classifier/cache/mmz4281_1920_SP1.csv": "a05d5d60eee0b1414c56d6d6817f860cdc620e206234069a1886c98a8cb318da",
+    "results/classifier/cache/mmz4281_1920_D1.csv": "0a032b1adc75f7fa018dcfeff7fcdcc0a89014e3fe69f44534f538b6f931aef5",
+    "results/classifier/cache/mmz4281_1920_I1.csv": "f33233e0c428ebe4f7cb854c4a504e0b59c4e009ee8b679269486e26afdc575b",
+    "results/classifier/cache/mmz4281_2021_E0.csv": "5afe63f69401457b8354eaacee24f9a3e520b3c3af6329564a9783e20d789c62",
+    "results/classifier/cache/mmz4281_2021_SP1.csv": "b4137db923101f464e8403c4973acbfaf7d71724ce93b4336fad580e894d9591",
+    "results/classifier/cache/mmz4281_2021_D1.csv": "48ec5d53d2452b6ebdbc07bd78a836d6a4686f99fc020439ee3292e685315e61",
+    "results/classifier/cache/mmz4281_2021_I1.csv": "c09196fa18877547442807d375317299947abdd6d51a5e0df044cc6026e13f36",
+    "results/classifier/cache/mmz4281_2122_E0.csv": "335afcbabeb2939fa10ab39ba3e8215072d0b577cb8d0705c1e44c56e934e703",
+    "results/classifier/cache/mmz4281_2122_SP1.csv": "2d9e619700712823d15716c07715133f8c3b1a09046930dcfc785a38633dee2e",
+    "results/classifier/cache/mmz4281_2122_D1.csv": "034d0e1296e944dddf25e3c91b85ef5bd1ad25661b89d73878f5c73bfea4b9fc",
+    "results/classifier/cache/mmz4281_2122_I1.csv": "6a9555d5a90e652a883fd2862a52545c06e264016cd770347c067a6d7c993170",
+    "results/classifier/cache/mmz4281_2223_E0.csv": "8442792d3b614c94ea3cf381bd2736805889cc1713169035368fff19c3d02380",
+    "results/classifier/cache/mmz4281_2223_SP1.csv": "53348112526b5165539df240be350083989bb258f30c0ff7cacbc0165ca7e4b3",
+    "results/classifier/cache/mmz4281_2223_D1.csv": "b716517b25033ce8e0243e967aa961876425a4c41e97c8aa8fa59f2aca061341",
+    "results/classifier/cache/mmz4281_2223_I1.csv": "9960837f37a97ae700f876c87b85a8b7a2f5a5d05a53077830c21b9db8880c45"
+  },
+  "sources": [
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1415/E0.csv",
+      "sha256": "76b7858051ff6b17f46f49f26fdc70c1f29537270492606f5cc63d67fad5d149",
+      "fetched_at": "2026-10-11T04:21:03.341660+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1415/SP1.csv",
+      "sha256": "28c64013605cde831af022c4192616464550afd0ed9ca96cc59afe67ca5a9009",
+      "fetched_at": "2026-10-11T04:21:04.362325+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1415/D1.csv",
+      "sha256": "b1804b37586c92d3148084c9eb9759b2d834a210917819d3c8999f2e6a2ad723",
+      "fetched_at": "2026-10-11T04:21:05.518737+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1415/I1.csv",
+      "sha256": "6fc7f4f4f9da99f15d60487ca64ebddcda98e4b86edd1a1f134cf89b48720f06",
+      "fetched_at": "2026-10-11T04:21:06.608251+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1516/E0.csv",
+      "sha256": "bd3502a18c38a1597fd9af62e2366b4015006d3528dd4d18b311bd6237bbc085",
+      "fetched_at": "2026-10-11T04:21:07.663610+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1516/SP1.csv",
+      "sha256": "f8e59217c158bd1bac302bcfc8555b88661dfe065571809bf51c1df69753d977",
+      "fetched_at": "2026-10-11T04:21:08.696169+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1516/D1.csv",
+      "sha256": "a9d8689660cf7fe0290ab3de3e00d6fc5ec5fcf90683ee5b84fc229c0923d168",
+      "fetched_at": "2026-10-11T04:21:09.707764+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1516/I1.csv",
+      "sha256": "438649d651be61b4acfbe8feee90256cc5493df431e219ce411086dfad554a81",
+      "fetched_at": "2026-10-11T04:21:10.760288+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1617/E0.csv",
+      "sha256": "9625a7652b5f98fbd3e2e4d378c851fc246693f3343e34a72428d5b6e864d3e0",
+      "fetched_at": "2026-10-11T04:21:11.810973+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1617/SP1.csv",
+      "sha256": "6f5794a69decfb863ecb6a0b865ffd3241eb5028035d9f19c48a299c5baa8f9a",
+      "fetched_at": "2026-10-11T04:21:12.856537+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1617/D1.csv",
+      "sha256": "15b7a41eacde5fcd130d1cd0954c8fe8371fbbfc815c1ce2dd329cf3b27c2d5c",
+      "fetched_at": "2026-10-11T04:21:13.868682+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1617/I1.csv",
+      "sha256": "39eb2bc1812897e01c280b711b3b8f5c15d3dee111aa09fbdf2e4abd7404bca3",
+      "fetched_at": "2026-10-11T04:21:14.914705+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1718/E0.csv",
+      "sha256": "4f3389365ef3f7ac966764ed8ba67cf3b79f5aebed18dd224099c4b2c98bc67b",
+      "fetched_at": "2026-10-11T04:21:16.648684+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1718/SP1.csv",
+      "sha256": "5786719e06d1a5387cb90fac71597c890f496df19e8e1aa868bbc852f7e730fd",
+      "fetched_at": "2026-10-11T04:21:18.330583+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1718/D1.csv",
+      "sha256": "033227408247769568111af49de2a50f6951c87e6d43f9e1a01e73d647bced3e",
+      "fetched_at": "2026-10-11T04:21:19.374598+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1718/I1.csv",
+      "sha256": "664a8874d3a33923036120c4162e72f13887e0897b51effe27f89969c79c335d",
+      "fetched_at": "2026-10-11T04:21:20.429934+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1819/E0.csv",
+      "sha256": "7c096b3c2ecd54c6993d22eeea73450c2bde11e3457238b226b8f43c62dfc35e",
+      "fetched_at": "2026-10-11T04:21:21.476012+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1819/SP1.csv",
+      "sha256": "9b8cece2c85e90e382b30dc4fc5046534f12c6d2b0efa74cd7d1d52e90a0c201",
+      "fetched_at": "2026-10-11T04:21:22.534835+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1819/D1.csv",
+      "sha256": "f03ee41b741aca9c43cbafb800bbc6f01ca9d7ed19c1a9dd4c309389280cfe11",
+      "fetched_at": "2026-10-11T04:21:23.559140+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1819/I1.csv",
+      "sha256": "2baea8a1fb31096960b5f5797d31dbb6b454eb41b00845e6b0b79feb82a0e3d0",
+      "fetched_at": "2026-10-11T04:21:24.569616+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1920/E0.csv",
+      "sha256": "100037618b94f94057400bb02bf6bac4ef74ddaa58cde4b38370839c39caee61",
+      "fetched_at": "2026-10-11T04:21:25.699006+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1920/SP1.csv",
+      "sha256": "a05d5d60eee0b1414c56d6d6817f860cdc620e206234069a1886c98a8cb318da",
+      "fetched_at": "2026-10-11T04:21:26.929660+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1920/D1.csv",
+      "sha256": "0a032b1adc75f7fa018dcfeff7fcdcc0a89014e3fe69f44534f538b6f931aef5",
+      "fetched_at": "2026-10-11T04:21:28.030679+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1920/I1.csv",
+      "sha256": "f33233e0c428ebe4f7cb854c4a504e0b59c4e009ee8b679269486e26afdc575b",
+      "fetched_at": "2026-10-11T04:21:29.152798+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2021/E0.csv",
+      "sha256": "5afe63f69401457b8354eaacee24f9a3e520b3c3af6329564a9783e20d789c62",
+      "fetched_at": "2026-10-11T04:21:30.324363+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2021/SP1.csv",
+      "sha256": "b4137db923101f464e8403c4973acbfaf7d71724ce93b4336fad580e894d9591",
+      "fetched_at": "2026-10-11T04:21:31.455604+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2021/D1.csv",
+      "sha256": "48ec5d53d2452b6ebdbc07bd78a836d6a4686f99fc020439ee3292e685315e61",
+      "fetched_at": "2026-10-11T04:21:32.565950+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2021/I1.csv",
+      "sha256": "c09196fa18877547442807d375317299947abdd6d51a5e0df044cc6026e13f36",
+      "fetched_at": "2026-10-11T04:21:33.708264+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2122/E0.csv",
+      "sha256": "335afcbabeb2939fa10ab39ba3e8215072d0b577cb8d0705c1e44c56e934e703",
+      "fetched_at": "2026-10-11T04:21:34.891251+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2122/SP1.csv",
+      "sha256": "2d9e619700712823d15716c07715133f8c3b1a09046930dcfc785a38633dee2e",
+      "fetched_at": "2026-10-11T04:21:36.024835+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2122/D1.csv",
+      "sha256": "034d0e1296e944dddf25e3c91b85ef5bd1ad25661b89d73878f5c73bfea4b9fc",
+      "fetched_at": "2026-10-11T04:21:37.207038+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2122/I1.csv",
+      "sha256": "6a9555d5a90e652a883fd2862a52545c06e264016cd770347c067a6d7c993170",
+      "fetched_at": "2026-10-11T04:21:38.356146+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2223/E0.csv",
+      "sha256": "8442792d3b614c94ea3cf381bd2736805889cc1713169035368fff19c3d02380",
+      "fetched_at": "2026-10-11T04:21:40.082421+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2223/SP1.csv",
+      "sha256": "53348112526b5165539df240be350083989bb258f30c0ff7cacbc0165ca7e4b3",
+      "fetched_at": "2026-10-11T04:21:41.218854+00:00",
+      "cached": true,
+      "rows": 380
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2223/D1.csv",
+      "sha256": "b716517b25033ce8e0243e967aa961876425a4c41e97c8aa8fa59f2aca061341",
+      "fetched_at": "2026-10-11T04:21:42.345454+00:00",
+      "cached": true,
+      "rows": 306
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/2223/I1.csv",
+      "sha256": "9960837f37a97ae700f876c87b85a8b7a2f5a5d05a53077830c21b9db8880c45",
+      "fetched_at": "2026-10-11T04:21:43.470162+00:00",
+      "cached": true,
+      "rows": 380
+    }
+  ]
+}

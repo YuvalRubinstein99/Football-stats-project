@@ -1,0 +1,27 @@
+{
+  "method": "Temperature scaling; fixed bounds 0.25\u20134; no method selection",
+  "calibration_seasons": [
+    2019,
+    2020
+  ],
+  "audit_season": 2021,
+  "final_calibration_seasons": [
+    2019,
+    2020,
+    2021
+  ],
+  "test_season": 2022,
+  "input_hashes": {
+    "data/expanded_2008/train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4",
+    "data/expanded_2008/test.csv": "f1aa6f24ff379608eddaabf436ce373732f79dc1ab7f55684afa52df195e78c5",
+    "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+    "results/team_identity/Linear__no_teams.joblib": "9e7682f5bcd20836e0d9a8ca912c8883b549da5c81724d4e6d1d8835cdd99e02",
+    "results/team_identity/Linear__teams.joblib": "975e5d2df33acab905089c32d05951b21508a5a9f17fbdf68eb2a1d5ca559cf1",
+    "results/team_identity/Poisson__no_teams.joblib": "a4f3a3f062087f7c2a420db246a74b8dda464d0fff57cce75797436f4ec86b0c",
+    "results/team_identity/Poisson__teams.joblib": "36f7df88da217fb36b63f4980d19d18542108d33417ead1b17377462d339c231",
+    "results/team_identity/Ordered_logit__no_teams.joblib": "90948f264c5879c18e5495d575b558399ee28a28fe4c102eb20e431c6158b0c5",
+    "results/team_identity/Ordered_logit__teams.joblib": "73fc7736666384c1a6a3b1b844e67ec7af554172332fe8057807983eab0c3fb9",
+    "results/team_identity/Ordered_probit__no_teams.joblib": "c70ab5087efcdead87f131879782037879e246c0c5d742fb907ebb38499b7f07",
+    "results/team_identity/Ordered_probit__teams.joblib": "25df2a0d4233e6cdfb08bbd98a2ee01b2e12042d4998ec287b26a880b3029eeb"
+  }
+}

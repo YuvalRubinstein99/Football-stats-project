@@ -22,7 +22,7 @@ def settings(raw):
     outcome=raw.get('outcome','all')
     if outcome not in ('all','home','draw','away'):raise ValueError('Invalid outcome filter')
     source=raw.get('source','bet365')
-    if source not in ('bet365','winner','polymarket'):raise ValueError('Invalid odds source')
+    if source not in ('bet365','winner','winner_auto','polymarket'):raise ValueError('Invalid odds source')
     amounts=raw.get('amounts',[1,2,3,4,5])
     if not isinstance(amounts,list) or len(amounts)!=5:raise ValueError('Five stake amounts required')
     amounts=[number(x,.01,100000) for x in amounts]
@@ -61,43 +61,56 @@ def evaluate_match(match,config,odds=None):
 
 @lru_cache(maxsize=2)
 def load_ledger(path,mtime):
+    from historical_leagues import row_leagues
+    leagues=row_leagues()
     rows=defaultdict(list)
     with open(path,encoding='utf-8',newline='') as f:
         reader=csv.DictReader(f)
         if 'decimal_odds' not in reader.fieldnames:raise ValueError('Rebuild the stake backtest for manual filters')
         for r in reader:
-            if r['strategy'] not in STRATEGIES or r['split']!='Test':continue
+            if r['strategy'] not in STRATEGIES:continue
             rows[r['strategy']].append((r['split'],r['season'],int(r['week']),float(r['decimal_odds']) if r['decimal_odds'] else None,
-                float(r['expected_net_per_unit']) if r['expected_net_per_unit'] else None,r['selected_outcome'],float(r['unit_return'])))
+                float(r['expected_net_per_unit']) if r['expected_net_per_unit'] else None,r['selected_outcome'],float(r['unit_return']),r.get('league') or leagues[r['split'],int(r['source_row'])]))
     return rows
 
 
-def historical(config):
+def historical(config,ledger_path=None):
     if config['source']!='bet365':
         return dict(rows=[],curves=[],note='No historical Winner/Polymarket quotes are available. Bet365 history is not reused for this source.')
-    path=ROOT/'results/stake_level_bet_ledger.csv'
+    path=Path(ledger_path) if ledger_path else ROOT/'results/stake_level_bet_ledger.csv'
     rows=load_ledger(str(path),path.stat().st_mtime_ns)[config['strategy']]
-    totals={};weekly=defaultdict(float)
-    for split,season,week,odds,edge,outcome,ret in rows:
+    totals={};weekly=defaultdict(float);league_weekly=defaultdict(float)
+    for split,season,week,odds,edge,outcome,ret,league in rows:
         level,_=gate(odds,edge,outcome,config);stake=config['amounts'][level-1] if level else 0
         profit=stake*(ret-1)
         weekly[split,season,week]+=profit
+        league_weekly[split,league,season,week]+=profit
         for group in (season,'All seasons'):
             key=split,group
-            if key not in totals:totals[key]=dict(split=split,season=group,bets=0,staked=0.,gross=0.,net=0.)
+            if key not in totals:totals[key]=dict(split=split,season=group,bets=0,staked=0.,gross=0.,net=0.,flat_net=0.)
             t=totals[key];t['bets']+=int(level>0);t['staked']+=stake;t['gross']+=stake*ret;t['net']+=profit
+            t['flat_net']+=(ret-1) if level else 0
     curves=[]
-    for split in ('Test',):
+    for split in ('Train (OOB)','Test'):
         points=[dict(label='Start',net=0.)];net=0
         for (sp,season,week),profit in sorted(weekly.items()):
             if sp==split:net+=profit;points.append(dict(label=f'{season} W{week}',net=net))
         curves.append(dict(split=split,points=points))
     for t in totals.values():t['roi']=t['net']/t['staked'] if t['staked'] else None
-    return dict(rows=list(totals.values()),curves=curves,
-        note='Historical Bet365 prices and the saved lineup RF only, regardless of the current live model choice. Training-period results are unavailable pending a chronological backtest. Changes to filters use already-inspected historical data. Each curve starts at $0; points aggregate season/matchweek profit. No bankroll limits, compounding or fees.')
+    league_curves=[]
+    for split in ('Train (OOB)','Test'):
+        timeline=sorted((season,week) for sp,season,week in weekly if sp==split)
+        for league in sorted({k[1] for k in league_weekly if k[0]==split}):
+            points=[dict(label='Start',net=0.)];net=0.
+            for season,week in timeline:
+                net+=league_weekly[split,league,season,week]
+                points.append(dict(label=f'{season} W{week}',net=net))
+            league_curves.append(dict(split=split,league=league,points=points))
+    return dict(rows=list(totals.values()),curves=curves,league_curves=league_curves,
+        note='Historical Bet365 prices and the saved lineup RF only. Train (OOB) predicts each match with trees that omitted that row, but can use later seasons: this is not a chronological backtest. Test matches were excluded from model fitting, but these results have already been inspected. Flat $1 net uses exactly the same selected bets with $1 total per bet; compare it with your chosen stakes to assess sizing. Larger dollar losses can reflect more bets or larger stakes; ROI divides net profit by total staked. Long odds increase volatility, and estimated positive edges can be wrong. Each curve starts at $0 and aggregates season/matchweek profit. Historical actual lineups differ from live expected lineups. No bankroll limits, compounding or fees.')
 
 
-def evaluate(report,raw):
+def evaluate(report,raw,ledger_path=None):
     from odds_sources import quote_for,fixture_key,check_execution
     config=settings(raw);quotes=raw.get('quotes',{})
     if not isinstance(quotes,dict):raise ValueError('Invalid quotes')
@@ -113,5 +126,5 @@ def evaluate(report,raw):
                      probability=None,amount=0,level=0,home_amount=0,draw_amount=0,away_amount=0)
             meta=dict(source=config['source'],currency='ILS' if config['source']=='winner' else 'USD',fetched_at=None)
         results.append(dict(date=match['date'],home=match['home'],away=match['away'],bet=bet,quote=meta))
-    return dict(settings=config,predictions=results,history=historical(config),
+    return dict(settings=config,predictions=results,history=historical(config,ledger_path),
         note='Uses probabilities and Bet365 odds from the saved prediction run. Filters and stakes change selections and profit accounting; they do not retrain the model. Amounts are in dollars. Historical comparisons use the saved lineup RF.')

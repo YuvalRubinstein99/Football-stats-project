@@ -1,0 +1,90 @@
+{
+  "state": "completed",
+  "train_matches": 19263,
+  "test_matches": 1447,
+  "features": {
+    "compact_fifa_form_odds": [
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "home_GD_prior",
+      "home_Points_prior",
+      "home_GD_form",
+      "home_Points_form",
+      "away_GD_prior",
+      "away_Points_prior",
+      "away_GD_form",
+      "away_Points_form",
+      "B365H",
+      "B365D",
+      "B365A",
+      "Matchweek"
+    ],
+    "compact_with_teams": [
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "home_GD_prior",
+      "home_Points_prior",
+      "home_GD_form",
+      "home_Points_form",
+      "away_GD_prior",
+      "away_Points_prior",
+      "away_GD_form",
+      "away_Points_form",
+      "B365H",
+      "B365D",
+      "B365A",
+      "Matchweek",
+      "home_team_name",
+      "away_team_name"
+    ]
+  },
+  "fits": {
+    "Linear__no_teams": {
+      "converged": true
+    },
+    "Poisson__no_teams": {
+      "converged": true
+    },
+    "Ordered_logit__no_teams": {
+      "converged": true,
+      "iterations": 12,
+      "gradient_max": 9.300357069782187e-08
+    },
+    "Ordered_probit__no_teams": {
+      "converged": true,
+      "iterations": 11,
+      "gradient_max": 6.62728204737576e-09
+    },
+    "Linear__teams": {
+      "converged": true
+    },
+    "Poisson__teams": {
+      "converged": true
+    },
+    "Ordered_logit__teams": {
+      "converged": true,
+      "iterations": 13,
+      "gradient_max": 2.634294467791229e-08
+    },
+    "Ordered_probit__teams": {
+      "converged": true,
+      "iterations": 11,
+      "gradient_max": 1.6203708702313243e-08
+    }
+  },
+  "input_hashes": {
+    "data\\train.csv": "87916289a3b918da6faeadc25dc8c37ebfa5de8964233b4e64419cbed2ea4711",
+    "data\\test.csv": "3b08ed2b56ed814babf09e629037a43f63148a80f1cef94e74898f7c5ebbd39b",
+    "data\\expanded_2008\\train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4"
+  },
+  "checks": [
+    "input hashes",
+    "same predictors except team identity",
+    "saved forward-validation scores reused",
+    "convergence",
+    "serialized inference parity",
+    "test alignment",
+    "probabilities and export parity",
+    "RF strategy reconciliation"
+  ]
+}

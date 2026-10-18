@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="750" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 750" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="750"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-750)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="750" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="30" y="715" style="font-family: Times-Roman; font-size: 25px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1430) scale(1,-1)">Does adding 2008–14 improve the models?</text>
+			<text x="30" y="688" style="font-family: Times-Roman; font-size: 13px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1376) scale(1,-1)">Same 1,447 test matches from 2022–23 | Lower log loss is better</text>
+			<text x="30" y="635" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1270) scale(1,-1)">RF_vector</text>
+			<rect x="220" y="631" width="144.20634042908608" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="369.2063404290861" y="632" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1264) scale(1,-1)">0.97884</text>
+			<rect x="220" y="617" width="142.53160397974636" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="367.53160397974636" y="618" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1236) scale(1,-1)">0.97851</text>
+			<text x="30" y="593" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1186) scale(1,-1)">RF_separate</text>
+			<rect x="220" y="589" width="143.93806496016015" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="368.93806496016015" y="590" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1180) scale(1,-1)">0.97879</text>
+			<rect x="220" y="575" width="141.75739566316622" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="366.7573956631662" y="576" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1152) scale(1,-1)">0.97835</text>
+			<text x="30" y="551" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1102) scale(1,-1)">Linear_vector</text>
+			<rect x="220" y="547" width="214.04398913271615" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="439.04398913271615" y="548" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1096) scale(1,-1)">0.99281</text>
+			<rect x="220" y="533" width="192.51710430022604" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="417.51710430022604" y="534" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1068) scale(1,-1)">0.98850</text>
+			<text x="30" y="509" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1018) scale(1,-1)">Ridge_vector</text>
+			<rect x="220" y="505" width="211.41040683610112" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="436.4104068361011" y="506" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,1012) scale(1,-1)">0.99228</text>
+			<rect x="220" y="491" width="192.15467858155642" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="417.1546785815564" y="492" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,984) scale(1,-1)">0.98843</text>
+			<text x="30" y="467" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,934) scale(1,-1)">Poisson_alpha1</text>
+			<rect x="220" y="463" width="188.91649839319012" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="413.9164983931901" y="464" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,928) scale(1,-1)">0.98778</text>
+			<rect x="220" y="449" width="186.76914067260242" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="411.7691406726024" y="450" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,900) scale(1,-1)">0.98735</text>
+			<text x="30" y="425" style="font-family: Times-Roman; font-size: 12px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,850) scale(1,-1)">Poisson_alpha001</text>
+			<rect x="220" y="421" width="172.0676437284091" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<text x="397.0676437284091" y="422" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,844) scale(1,-1)">0.98441</text>
+			<rect x="220" y="407" width="169.81564560364814" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<text x="394.81564560364814" y="408" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,816) scale(1,-1)">0.98396</text>
+			<text x="30" y="356" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,712) scale(1,-1)">Bars start at 0.95. Grey: original training; green: expanded training.</text>
+			<text x="30" y="325" style="font-family: Times-Roman; font-size: 17px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,650) scale(1,-1)">Fixed filtered Legacy variance: cumulative test profit ($1–$5 stakes)</text>
+			<path d="M 100,100 L 1020,100 Z" style="stroke: rgb(86%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="35" y="100.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,200) scale(1,-1)">$-403</text>
+			<path d="M 100,145 L 1020,145 Z" style="stroke: rgb(86%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="35" y="145.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,290) scale(1,-1)">$-246</text>
+			<path d="M 100,190 L 1020,190 Z" style="stroke: rgb(86%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="35" y="190.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,380) scale(1,-1)">$-90</text>
+			<path d="M 100,235 L 1020,235 Z" style="stroke: rgb(86%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="35" y="235.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,470) scale(1,-1)">$66</text>
+			<path d="M 100,280 L 1020,280 Z" style="stroke: rgb(86%,89%,90%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="35" y="280.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,560) scale(1,-1)">$222</text>
+			<polyline points="100 215.9975, 124.2105 206.7806, 148.4211 208.7968, 172.6316 217.7977, 196.8421 213.0452, 221.0526 209.3009, 245.2632 208.1487, 269.4737 224.7104, 293.6842 220.39, 317.8947 222.1182, 342.1053 214.6294, 366.3158 224.0336, 390.5263 228.066, 414.7368 230.9463, 438.9474 229.7221, 463.1579 226.2658, 487.3684 230.2118, 511.5789 222.147, 535.7895 219.5259, 560 214.0533, 584.2105 225.4305, 608.4211 221.1101, 632.6316 231.8104, 656.8421 230.9463, 681.0526 250.0282, 705.2632 250.5323, 729.4737 251.2524, 753.6842 245.4918, 777.8947 244.6997, 802.1053 241.8194, 826.3158 234.9067, 850.5263 233.1785, 874.7368 234.2586, 898.9474 234.1866, 923.1579 230.8743, 947.3684 245.2037, 971.5789 245.463, 995.7895 261.3046, 1020 259.5764" style="stroke: rgb(59%,67%,75%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="30" y="67" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,134) scale(1,-1)">original__RF_vector</text>
+			<rect x="30" y="81" width="20" height="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(59%,67%,75%); fill-rule: evenodd;"/>
+			<polyline points="100 215.9975, 124.2105 207.9327, 148.4211 210.525, 172.6316 217.2217, 196.8421 212.1812, 221.0526 207.8607, 245.2632 206.7086, 269.4737 227.8788, 293.6842 224.1344, 317.8947 224.7104, 342.1053 217.7977, 366.3158 227.4899, 390.5263 232.2424, 414.7368 236.2748, 438.9474 235.0507, 463.1579 231.3063, 487.3684 233.3888, 511.5789 225.0359, 535.7895 225.2087, 560 219.7362, 584.2105 234.6417, 608.4211 229.7452, 632.6316 239.0053, 656.8421 236.125, 681.0526 253.4788, 705.2632 255.711, 729.4737 254.1269, 753.6842 248.0783, 777.8947 245.054, 802.1053 245.27, 826.3158 236.9171, 850.5263 236.6291, 874.7368 238.2853, 898.9474 239.4374, 923.1579 236.4131, 947.3684 251.3186, 971.5789 249.7344, 995.7895 265, 1020 262.9838" style="stroke: rgb(8%,49%,44%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="300" y="67" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,134) scale(1,-1)">expanded__RF_vector</text>
+			<rect x="300" y="81" width="20" height="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,44%); fill-rule: evenodd;"/>
+			<polyline points="100 215.9975, 124.2105 196.9876, 148.4211 201.1064, 172.6316 214.9318, 196.8421 201.3944, 221.0526 201.4377, 245.2632 204.1739, 269.4737 202.5898, 293.6842 193.3728, 317.8947 181.5636, 342.1053 168.0262, 366.3158 163.7029, 390.5263 144.981, 414.7368 151.9657, 438.9474 153.2618, 463.1579 152.6858, 487.3684 170.3017, 511.5789 157.6284, 535.7895 153.1639, 560 153.884, 584.2105 179.1586, 608.4211 182.2693, 632.6316 184.3287, 656.8421 185.8409, 681.0526 205.1388, 705.2632 203.6267, 729.4737 195.9939, 753.6842 190.9534, 777.8947 195.5618, 802.1053 196.2819, 826.3158 187.209, 850.5263 189.0812, 874.7368 186.4169, 898.9474 192.4655, 923.1579 192.4655, 947.3684 199.8103, 971.5789 190.4205, 995.7895 202.3017, 1020 195.9651" style="stroke: rgb(70%,36%,18%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="570" y="67" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,134) scale(1,-1)">expanded__Linear_vector</text>
+			<rect x="570" y="81" width="20" height="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,36%,18%); fill-rule: evenodd;"/>
+			<polyline points="100 215.9975, 124.2105 198.4998, 148.4211 204.4015, 172.6316 216.6427, 196.8421 202.0972, 221.0526 201.1179, 245.2632 203.5662, 269.4737 205.1504, 293.6842 193.3411, 317.8947 179.5157, 342.1053 163.6741, 366.3158 156.6606, 390.5263 145.8595, 414.7368 141.611, 438.9474 133.3302, 463.1579 132.1205, 487.3684 137.2071, 511.5789 121.0774, 535.7895 115.5761, 560 115, 584.2105 142.1468, 608.4211 146.352, 632.6316 149.5635, 656.8421 137.2503, 681.0526 158.0604, 705.2632 161.8768, 729.4737 156.5483, 753.6842 141.8588, 777.8947 145.8192, 802.1053 152.5158, 826.3158 143.2989, 850.5263 147.1873, 874.7368 143.6589, 898.9474 150.3556, 923.1579 146.8993, 947.3684 163.893, 971.5789 154.1, 995.7895 161.3727, 1020 155.0361" style="stroke: rgb(45%,32%,63%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="840" y="67" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,134) scale(1,-1)">expanded__Poisson_alpha001</text>
+			<rect x="840" y="81" width="20" height="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,32%,63%); fill-rule: evenodd;"/>
+			<text x="100" y="85" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,170) scale(1,-1)">Start</text>
+			<text x="950" y="85" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,170) scale(1,-1)">Matchweek 38</text>
+			<text x="30" y="32" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,16%,22%); stroke:none;" transform="translate(0,64) scale(1,-1)">Historical exploratory comparison; independent Poisson outcome conversion. Test set already inspected.</text>
+		</g>
+	</g>
+</svg>

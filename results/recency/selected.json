@@ -1,0 +1,56 @@
+{
+  "Expanded RF": {
+    "half_life": 3,
+    "cv_log_loss": 0.9774787832330248,
+    "equal_cv_log_loss": 0.9777016287546554,
+    "effective_matches": 11366.586649423733
+  },
+  "Linear__no_teams": {
+    "half_life": 3,
+    "cv_log_loss": 0.9842284143428924,
+    "equal_cv_log_loss": 0.9846634368610354,
+    "effective_matches": 11366.586649423733
+  },
+  "Linear__teams": {
+    "half_life": 6,
+    "cv_log_loss": 0.9935987568430666,
+    "equal_cv_log_loss": 0.9942359321976355,
+    "effective_matches": 16095.830475291148
+  },
+  "Poisson__no_teams": {
+    "half_life": 3,
+    "cv_log_loss": 0.9837360069949252,
+    "equal_cv_log_loss": 0.984260859094866,
+    "effective_matches": 11366.586649423733
+  },
+  "Poisson__teams": {
+    "half_life": 6,
+    "cv_log_loss": 0.9856608793197885,
+    "equal_cv_log_loss": 0.9856949491921693,
+    "effective_matches": 16095.830475291148
+  },
+  "Ordered_logit__no_teams": {
+    "half_life": 3,
+    "cv_log_loss": 0.9816871762501373,
+    "equal_cv_log_loss": 0.983060122096532,
+    "effective_matches": 11366.586649423733
+  },
+  "Ordered_logit__teams": {
+    "half_life": null,
+    "cv_log_loss": 0.9965996078908459,
+    "equal_cv_log_loss": 0.9965996078908459,
+    "effective_matches": 19263.0
+  },
+  "Ordered_probit__no_teams": {
+    "half_life": 3,
+    "cv_log_loss": 0.9834224055727896,
+    "equal_cv_log_loss": 0.9847720163789113,
+    "effective_matches": 11366.586649423733
+  },
+  "Ordered_probit__teams": {
+    "half_life": null,
+    "cv_log_loss": 0.997535835239425,
+    "equal_cv_log_loss": 0.997535835239425,
+    "effective_matches": 19263.0
+  }
+}

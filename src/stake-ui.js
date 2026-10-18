@@ -2,6 +2,27 @@ const stakeAmounts=[1,2,3,4,5];
 let stakeHistory=null;
 let stakeCurves=null;
 const money=n=>n.toLocaleString('en-US',{style:'currency',currency:'USD'});
+function drawLeagueCurves(parent,curves){
+ if(!curves?.length)return;
+ const heading=document.createElement('h3');heading.textContent='Cumulative profit by league';parent.append(heading);
+ const note=document.createElement('p');note.className='muted';note.textContent='Each league starts at $0. Lines share a dollar scale within each split; train and test use separate scales. Season / matchweek ordering. OOB can use later seasons.';parent.append(note);
+ const colors={'Premier League':'#77e2bc','La Liga':'#ffcf77','Bundesliga':'#80acff','Serie A':'#f19bcc'};
+ for(const split of ['Train (OOB)','Test']){
+  const subset=curves.filter(c=>c.split===split);if(!subset.length)continue;
+  const h=document.createElement('h4');h.textContent=split+' · by league';parent.append(h);
+  const labels=['Start',...[...new Set(subset.flatMap(c=>c.points.map(p=>p.label)))].filter(x=>x!=='Start').sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}))];
+  const lines=subset.map(c=>{const map=new Map(c.points.map(p=>[p.label,p.net]));let net=0;return {...c,values:labels.map(label=>{if(map.has(label))net=map.get(label);return net})}});
+  const values=lines.flatMap(c=>c.values);let lo=Math.min(...values),hi=Math.max(...values);const pad=Math.max(5,(hi-lo)*.12);lo-=pad;hi+=pad;
+  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 800 280');svg.style.width='100%';svg.setAttribute('role','img');svg.setAttribute('aria-label',split+' cumulative profit by league');
+  const node=(tag,attrs,text)=>{const n=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text)n.textContent=text;svg.append(n);return n};
+  const x=i=>90+650*i/Math.max(1,labels.length-1),y=v=>220-185*(v-lo)/(hi-lo);
+  for(let i=0;i<5;i++){const v=lo+(hi-lo)*i/4;node('line',{x1:90,x2:740,y1:y(v),y2:y(v),stroke:'#40546b'});node('text',{x:80,y:y(v)+4,'text-anchor':'end',fill:'#aebed0','font-size':13},'$'+v.toFixed(0))}
+  node('line',{x1:90,x2:740,y1:y(0),y2:y(0),stroke:'#aebed0'});
+  for(const c of lines){const path=node('polyline',{points:c.values.map((v,i)=>x(i)+','+y(v)).join(' '),fill:'none',stroke:colors[c.league]??'#ffffff','stroke-width':2.5});const title=document.createElementNS(ns,'title');title.textContent=c.league+' · '+money(c.values.at(-1));path.append(title)}
+  for(let i=0;i<=4;i++){const j=Math.round((labels.length-1)*i/4);node('text',{x:x(j),y:250,'text-anchor':'middle',fill:'#aebed0','font-size':12},labels[j])}parent.append(svg);
+  const legend=document.createElement('div');legend.className='metrics';for(const c of lines){const item=document.createElement('p');item.style.color=colors[c.league];item.textContent=c.league+': '+money(c.values.at(-1));legend.append(item)}parent.append(legend);
+ }
+}
 const stakeTotals=document.createElement('div');stakeTotals.className='metrics';
 const candidateNotice=document.createElement('p');candidateNotice.className='muted';
 $('stake-method').before(candidateNotice);
@@ -17,7 +38,7 @@ function drawCumulative(){
  const heading=document.createElement('h3');heading.textContent='Cumulative profit';cumulativeChart.append(heading);
  if(selected==='all'){const note=document.createElement('p');note.textContent='Select one strategy above to see its cumulative training and test profit curves.';cumulativeChart.append(note);return;}
  const note=document.createElement('p');note.className='muted';note.textContent=stakeCurves.ordering+' Each split starts at $0; panels use separate vertical scales.';cumulativeChart.append(note);
- for(const split of ['Test']){
+ for(const split of ['Train (OOB)','Test']){
   const curve=stakeCurves.curves.find(c=>c.strategy===selected&&c.split===split);if(!curve)continue;
   const values=[0];for(const p of curve.points)values.push(values.at(-1)+p.levels.reduce((sum,v,i)=>sum+stakeAmounts[i]*v[1],0));
   const title=document.createElement('p');title.textContent=split+' · Final net profit '+money(values.at(-1));cumulativeChart.append(title);
@@ -32,21 +53,23 @@ function drawCumulative(){
   for(let i=0;i<=4;i++){const position=Math.round(i*curve.points.length/4),p=curve.points[Math.max(0,position-1)];node('text',{x:x(position),y:241,'text-anchor':'middle',fill:'#aebed0','font-size':12},position===0?'Start':p.season+' W'+p.week)}
   cumulativeChart.append(svg);
  }
+ const leagues=(stakeCurves.league_curves??[]).filter(c=>c.strategy===selected).map(c=>{let net=0;return {split:c.split,league:c.league,points:[{label:'Start',net:0},...c.points.map(p=>({label:p.season+' W'+p.week,net:(net+=p.levels.reduce((s,v,i)=>s+stakeAmounts[i]*v[1],0))}))]}});
+ drawLeagueCurves(cumulativeChart,leagues);
 }
 fetch('/api/stake-curves').then(r=>{if(!r.ok)throw Error('Cumulative backtest data unavailable.');return r.json()}).then(r=>{stakeCurves=r;drawCumulative()}).catch(e=>{cumulativeChart.textContent=e.message});
 function drawHistoryChart(items,all){
  historyChart.replaceChildren();
- const title=document.createElement('h3');title.textContent=all?'Test ROI by strategy':'Net profit by season';historyChart.append(title);
+ const title=document.createElement('h3');title.textContent=all?'OOB and test ROI by strategy':'Net profit by season';historyChart.append(title);
  if(!items.length)return;
  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');
  const width=all?1000:800,left=all?400:220,height=items.length*34+65;
  svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.width='100%';svg.style.minWidth=all?'900px':'650px';
- svg.setAttribute('role','img');svg.setAttribute('aria-label',title.textContent+'. Held-out test only. Exact figures in the tables below.');
+ svg.setAttribute('role','img');svg.setAttribute('aria-label',title.textContent+'. Training OOB and held-out test. Exact figures in the tables below.');
  const node=(tag,attrs,content)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(content)e.textContent=content;svg.append(e)};
  const values=items.map(t=>all?(t.stake?100*(t.gross/t.stake-1):0):t.gross-t.stake);
  let low=Math.min(0,...values),high=Math.max(0,...values);const pad=Math.max(1,(high-low)*.20);low-=pad;high+=pad;
  const x=v=>left+(v-low)/(high-low)*(width-left-50);
- node('text',{x:8,y:18,fill:'#aebed0','font-size':12},'Held-out Test · '+(all?'ROI (%)':'Net profit ($)'));
+ node('text',{x:8,y:18,fill:'#aebed0','font-size':12},'Train (OOB) / Test · '+(all?'ROI (%)':'Net profit ($)'));
  node('line',{x1:x(0),x2:x(0),y1:30,y2:height-10,stroke:'#aebed0'});
  items.forEach((t,i)=>{const y=50+i*34,value=values[i],color=t.split==='Test'?'#77e2bc':'#80acff';
   node('text',{x:left-12,y:y+4,'text-anchor':'end',fill:'#e5edf6','font-size':12},all?t.strategy+' · '+t.split:t.season+' · '+t.split);
@@ -72,7 +95,7 @@ function renderStakeHistory(){
  if(!stakeHistory)return;
  drawCumulative();
  const selected=$('strategy').value,all=selected==='all';
- candidateNotice.textContent='Training-period results are disabled pending a chronological backtest. The filtered search preset is retained as an exploratory rule; its earlier training-based optimization is not active validation.';
+ candidateNotice.textContent='OOB excludes each match from the trees predicting it, but those trees may use later seasons. It is a diagnostic, not a chronological backtest. Losses are possible even with higher AUC: probability errors and long odds can erase estimated edges, while larger stakes amplify results. Compare ROI and amount staked across seasons. The filtered search preset remains exploratory; its old optimization is not independent validation.';
  const rows=stakeHistory.rows.filter(s=>all||s.strategy===selected);
  const seasons=new Map();
  for(const s of rows){

@@ -1,0 +1,29 @@
+{
+  "state": "completed",
+  "fits": {
+    "expanded__Linear_FS": {
+      "converged": true
+    },
+    "expanded__Poisson_FS": {
+      "converged": true
+    },
+    "expanded__Ordered_logit_FS": {
+      "converged": true,
+      "iterations": 12,
+      "gradient_max": 4.4540629287611447e-10
+    },
+    "expanded__Ordered_probit_FS": {
+      "converged": true,
+      "iterations": 10,
+      "gradient_max": 1.7593120854435816e-08
+    }
+  },
+  "checks": [
+    "forward season splits",
+    "selection frozen before test load",
+    "convergence",
+    "serialized inference parity",
+    "baseline strategy reconciliation",
+    "probability and export parity"
+  ]
+}

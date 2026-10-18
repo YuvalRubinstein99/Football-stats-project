@@ -1,0 +1,58 @@
+OLDER-SEASON COLLECTION — started October 10, 2026 (New York)
+
+Run with the project's Python runtime:
+  python -u scripts/scrape_older_seasons.py
+  python -u scripts/evaluate_older_seasons.py --wait
+  python scripts/test_older_scraper.py
+
+New outputs are isolated in data/older_seasons and results/older_seasons.
+Existing data/train.csv, data/test.csv, active models and interface reports are
+not changed. run.lock directories prevent overlapping jobs. After an abnormal
+exit, check for an active process before removing a stale lock directory.
+
+Sources:
+  https://www.kaggle.com/datasets/hugomathien/soccer
+  https://www.football-data.co.uk/downloadm.php
+
+Collection requests 2008/09 through 2013/14 from Football-Data for E0, SP1,
+D1, I1 and F1. Availability varies by league and year. Missing Bet365 odds
+are recorded, not replaced with another bookmaker. Downloads are cached with
+SHA-256 hashes and retrieval timestamps, validated before promotion, and paced
+at least three seconds apart by default. Access blocks halt that provider.
+Failures receive bounded retries; successful source files are reused on resume.
+
+The European Soccer Database supplies 2008/09 through 2013/14 match lineups
+and dated FIFA attributes. Only rows with all 22 distinct starters, valid
+Bet365 odds and a strictly earlier calendar-day overall rating for every player
+enter lineup_features.csv. Ratings are never filled from future snapshots.
+The player_rating_audit.csv links each rating to its match and snapshot date.
+excluded_lineup_matches.csv records omission reasons. Reasons can overlap.
+
+Historical lineups are actual starters, not expected XIs. Dated ratings may be
+stale and their timestamps are not independently verified publication dates.
+Source coverage is not a guarantee of accuracy. No unsupported reconstruction
+of pre-2008 lineups or ratings is made. Pre-2008 collection is cancelled;
+any previously cached older files are unused. The older results archive alone cannot
+be used as complete input to the lineup RF.
+
+Pre-match form resets each season and uses prior calendar dates only; same-day
+results are settled together. In separate experiments, entire league-seasons
+whose match counts disagree with the Football-Data reference are excluded to
+avoid form built from known incomplete season records. Count matching is only
+a coverage check, not a complete cross-provider fixture identity audit.
+
+Chronological experiments start with 2008/09 training and 2009/10 testing,
+then expand the training window through the 2013/14 test. They use fixed
+2000-tree, depth-5 RF settings and four worker threads, with encoders fitted
+on earlier seasons only. No strategy threshold search is performed. Summary
+results compare all existing strategies, including the fixed legacy filtered
+candidate, and flat $1 returns on the same gated selections. This candidate
+was historically chosen elsewhere in the project, so its evaluation here
+should not be advertised as a newly independent strategy discovery.
+
+Monitor data/older_seasons/status.json for collection and
+results/older_seasons/status.json for experimental fold completion. See
+lineup_coverage.csv, results_coverage.csv and season_audit.csv for omissions.
+An hourly thread heartbeat supervises work until October 11, 2026 12:00 UTC,
+or completion. Local jobs require the machine and Codex session to remain
+available. The heartbeat should pause when finished rather than run forever.

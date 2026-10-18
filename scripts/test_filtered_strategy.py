@@ -31,7 +31,7 @@ class FilteredTests(unittest.TestCase):
         search=json.loads((ROOT/'results/strategy_search.json').read_text(encoding='utf-8'))['chosen']['profit']
         self.assertEqual(search['config'],dict(probabilities='raw',strategy='Legacy variance score',min_edge=.02,min_odds=4,max_odds=1000,outcome='all',sizing=.01))
         rows=json.loads((ROOT/'results/stake_level_results.json').read_text(encoding='utf-8'))['rows']
-        for period,years in [('test',{2022})]:
+        for period,years in [('search',{2018,2019}),('validation',{2020,2021}),('test',{2022})]:
             selected=[s for s in rows if s['strategy']==SEARCH_CANDIDATE and s['season']!='All seasons' and int(s['season'][:4]) in years]
             self.assertEqual(sum(s['bets'] for s in selected),search[period]['bets'])
             self.assertAlmostEqual(sum(s['stake_dollars'] for s in selected),search[period]['staked'])

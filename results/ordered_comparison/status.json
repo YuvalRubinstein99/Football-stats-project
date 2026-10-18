@@ -1,0 +1,30 @@
+{
+  "train_matches": 19263,
+  "test_matches": 1447,
+  "rank": 317,
+  "raw_features": 322,
+  "input_hashes": {
+    "data\\train.csv": "87916289a3b918da6faeadc25dc8c37ebfa5de8964233b4e64419cbed2ea4711",
+    "data\\test.csv": "3b08ed2b56ed814babf09e629037a43f63148a80f1cef94e74898f7c5ebbd39b",
+    "data\\expanded_2008\\train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4"
+  },
+  "fits": {
+    "expanded__Ordered_logit": {
+      "converged": true,
+      "iterations": 13,
+      "train_nll": 0.9581366470633814,
+      "gradient_max": 3.600809928111588e-08,
+      "finite_difference_error": 1.7818622324121129e-07,
+      "two_start_difference": 2.2515322939398175e-13
+    },
+    "expanded__Ordered_probit": {
+      "converged": true,
+      "iterations": 11,
+      "train_nll": 0.958698503666633,
+      "gradient_max": 1.0072366087069576e-08,
+      "finite_difference_error": 3.979901366974353e-07,
+      "two_start_difference": 2.7755575615628914e-15
+    }
+  },
+  "verification": "Gradients, convergence, two starts, test alignment, probability normalization, saved predictions and baseline strategy reconciliation passed."
+}

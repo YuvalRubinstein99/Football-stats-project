@@ -1,0 +1,763 @@
+match_id,date,league,season,home_team_name,away_team_name,home_score,away_score,Matchweek,B365H,B365D,B365A,reasons
+483129,2008-08-09,F1,2008/2009,AJ Auxerre,FC Nantes,2,1,1,2.1,3.1,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483132,2008-08-09,F1,2008/2009,Le Mans FC,FC Lorient,0,1,1,2.1,3.1,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+483136,2008-08-09,F1,2008/2009,Stade Rennais FC,Olympique de Marseille,4,4,1,2.7,3,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+483139,2008-08-16,F1,2008/2009,SM Caen,Valenciennes FC,3,1,2,2.1,3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+483141,2008-08-16,F1,2008/2009,LOSC Lille,Le Mans FC,1,3,2,1.8,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483148,2008-08-16,F1,2008/2009,Toulouse FC,Le Havre AC,2,1,2,2.15,3.1,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+499319,2008-08-16,D1,2008/2009,FC Schalke 04,Hannover 96,3,0,1,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+499323,2008-08-16,D1,2008/2009,FC Energie Cottbus,TSG 1899 Hoffenheim,0,3,1,2.4,3.3,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+499325,2008-08-16,D1,2008/2009,Karlsruher SC,VfL Bochum,1,0,1,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+489046,2008-08-17,E0,2008/2009,Aston Villa,Manchester City,4,2,1,1.91,3.4,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+499324,2008-08-17,D1,2008/2009,Borussia Mönchengladbach,VfB Stuttgart,1,3,1,2.75,3.3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499333,2008-08-22,D1,2008/2009,Hannover 96,FC Energie Cottbus,0,0,2,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+483152,2008-08-23,F1,2008/2009,Le Mans FC,AS Saint-Étienne,1,0,3,2.45,3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+483155,2008-08-23,F1,2008/2009,AS Nancy-Lorraine,Toulouse FC,0,0,3,1.85,3.1,5,incomplete_or_duplicate_lineup;missing_prior_rating
+483157,2008-08-23,F1,2008/2009,FC Sochaux-Montbéliard,Paris Saint-Germain,1,1,3,2.7,2.9,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+499326,2008-08-23,D1,2008/2009,Hamburger SV,Karlsruher SC,2,1,2,1.4,4.33,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499334,2008-08-23,D1,2008/2009,TSG 1899 Hoffenheim,Borussia Mönchengladbach,1,0,2,2.05,3.3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+489055,2008-08-24,E0,2008/2009,Manchester City,West Ham United,3,0,2,2.3,3.25,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+499343,2008-08-29,D1,2008/2009,Karlsruher SC,1. FC Köln,0,2,3,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483163,2008-08-30,F1,2008/2009,Olympique de Marseille,FC Sochaux-Montbéliard,2,1,4,1.44,4,8,incomplete_or_duplicate_lineup;missing_prior_rating
+483165,2008-08-30,F1,2008/2009,FC Nantes,Le Mans FC,1,4,4,2,3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+530090,2008-08-30,SP1,2008/2009,RCD Espanyol,Real Valladolid,1,0,1,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+483168,2008-08-31,F1,2008/2009,Toulouse FC,Stade Rennais FC,0,0,4,2.45,3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+489064,2008-08-31,E0,2008/2009,Sunderland,Manchester City,0,3,3,2.2,3.3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+499337,2008-08-31,D1,2008/2009,VfB Stuttgart,Hannover 96,2,0,3,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530086,2008-08-31,SP1,2008/2009,CD Numancia,FC Barcelona,1,0,1,7,4,1.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530088,2008-08-31,SP1,2008/2009,Real Sporting de Gijón,Getafe CF,1,2,1,2.62,3.3,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530091,2008-08-31,SP1,2008/2009,Athletic Club de Bilbao,UD Almería,1,3,1,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530092,2008-08-31,SP1,2008/2009,Atlético Madrid,Málaga CF,4,0,1,1.44,4.2,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+537634,2008-08-31,I1,2008/2009,Catania,Genoa,1,0,1,2.4,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+483172,2008-09-13,F1,2008/2009,Le Mans FC,Toulouse FC,1,2,5,1.83,3.25,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483176,2008-09-13,F1,2008/2009,Stade Rennais FC,Le Havre AC,1,1,5,1.67,3.4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+530096,2008-09-13,SP1,2008/2009,Sevilla FC,Real Sporting de Gijón,4,3,2,,,,missing_bet365_odds
+499351,2008-09-14,D1,2008/2009,Hannover 96,Borussia Mönchengladbach,5,1,4,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530093,2008-09-14,SP1,2008/2009,Villarreal CF,RC Deportivo de La Coruña,1,0,2,2,3.25,4,incomplete_or_duplicate_lineup;missing_prior_rating
+530094,2008-09-14,SP1,2008/2009,Real Madrid CF,CD Numancia,4,3,2,1.25,5.5,12,incomplete_or_duplicate_lineup;missing_prior_rating
+499354,2008-09-19,D1,2008/2009,Bayer 04 Leverkusen,Hannover 96,4,0,5,1.67,3.6,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+483180,2008-09-20,F1,2008/2009,Le Havre AC,Olympique Lyonnais,0,1,6,5,3.5,1.73,incomplete_or_duplicate_lineup;missing_prior_rating
+483186,2008-09-20,F1,2008/2009,OGC Nice,Le Mans FC,2,2,6,2.1,2.9,4,incomplete_or_duplicate_lineup;missing_prior_rating
+499360,2008-09-20,D1,2008/2009,Borussia Mönchengladbach,Hertha BSC Berlin,0,1,5,2.4,3.3,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+530112,2008-09-20,SP1,2008/2009,Atlético Madrid,RC Recreativo,4,0,3,1.5,3.8,7.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530104,2008-09-21,SP1,2008/2009,CD Numancia,Villarreal CF,1,2,3,3,3.4,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+530109,2008-09-21,SP1,2008/2009,Racing Santander,Real Madrid CF,0,2,3,3.4,3.4,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+539577,2008-09-21,I1,2008/2009,Palermo,Genoa,2,1,3,2.1,3.1,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530116,2008-09-24,SP1,2008/2009,Real Madrid CF,Real Sporting de Gijón,7,1,4,1.17,6.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+530114,2008-09-25,SP1,2008/2009,RCD Mallorca,CD Numancia,2,0,4,1.85,3.4,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+530120,2008-09-25,SP1,2008/2009,RC Recreativo,Athletic Club de Bilbao,1,1,4,2.35,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530122,2008-09-25,SP1,2008/2009,Málaga CF,Valencia CF,0,2,4,3.75,3.3,2,incomplete_or_duplicate_lineup;missing_prior_rating
+483192,2008-09-27,F1,2008/2009,Le Mans FC,Olympique de Marseille,1,1,7,3,3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+489097,2008-09-27,E0,2008/2009,Newcastle United,Blackburn Rovers,1,2,6,2.6,3.3,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+499368,2008-09-27,D1,2008/2009,VfL Bochum,Bayer 04 Leverkusen,2,3,6,3.5,3.3,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+499369,2008-09-27,D1,2008/2009,Hannover 96,FC Bayern Munich,1,0,6,7,3.8,1.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530126,2008-09-27,SP1,2008/2009,Real Sporting de Gijón,Villarreal CF,0,1,5,5.5,3.75,1.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530127,2008-09-27,SP1,2008/2009,Real Betis Balompié,Real Madrid CF,1,2,5,4.33,3.6,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+539601,2008-09-27,I1,2008/2009,Fiorentina,Genoa,1,0,5,1.75,3.3,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530124,2008-09-28,SP1,2008/2009,CD Numancia,CA Osasuna,0,0,5,2.38,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530131,2008-09-28,SP1,2008/2009,UD Almería,RC Recreativo,1,0,5,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+489102,2008-10-04,E0,2008/2009,Sunderland,Arsenal,1,1,7,6,3.75,1.62,incomplete_or_duplicate_lineup;missing_prior_rating
+499373,2008-10-05,D1,2008/2009,Borussia Dortmund,Hannover 96,1,1,7,1.85,3.5,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+530134,2008-10-05,SP1,2008/2009,Real Madrid CF,RCD Espanyol,2,2,6,1.33,5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+530135,2008-10-05,SP1,2008/2009,RC Deportivo de La Coruña,CD Numancia,1,0,6,1.73,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+530140,2008-10-05,SP1,2008/2009,Real Valladolid,Valencia CF,0,1,6,3.3,3.25,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+530142,2008-10-05,SP1,2008/2009,RC Recreativo,Málaga CF,0,4,6,2.1,3.25,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+539605,2008-10-05,I1,2008/2009,Reggio Calabria,Catania,1,1,6,2.5,2.88,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+499386,2008-10-17,D1,2008/2009,VfL Bochum,Borussia Mönchengladbach,2,2,8,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+483217,2008-10-18,F1,2008/2009,FC Sochaux-Montbéliard,Le Havre AC,1,1,9,1.83,3.2,5,incomplete_or_duplicate_lineup;missing_prior_rating
+489118,2008-10-18,E0,2008/2009,Fulham,Sunderland,0,0,8,2.25,3.25,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+489119,2008-10-18,E0,2008/2009,Bolton Wanderers,Blackburn Rovers,0,0,8,2.4,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+499385,2008-10-18,D1,2008/2009,1. FC Köln,FC Energie Cottbus,1,0,8,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+499387,2008-10-18,D1,2008/2009,Hannover 96,TSG 1899 Hoffenheim,2,5,8,2.35,3.4,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+530205,2008-10-18,SP1,2008/2009,Atlético Madrid,Real Madrid CF,1,2,7,2.9,3.3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530207,2008-10-19,SP1,2008/2009,Valencia CF,CD Numancia,4,0,7,1.33,4.6,10,incomplete_or_duplicate_lineup;missing_prior_rating
+530209,2008-10-19,SP1,2008/2009,Real Valladolid,RC Recreativo,1,1,7,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483220,2008-10-25,F1,2008/2009,Le Havre AC,Valenciennes FC,2,1,10,2.2,3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+483226,2008-10-25,F1,2008/2009,Stade Rennais FC,Le Mans FC,2,2,10,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+489122,2008-10-25,E0,2008/2009,Sunderland,Newcastle United,2,1,9,2.2,3.3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+489127,2008-10-25,E0,2008/2009,Blackburn Rovers,Middlesbrough,1,1,9,2.1,3.25,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+499395,2008-10-25,D1,2008/2009,Hannover 96,SV Werder Bremen,1,1,9,3.4,3.4,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+499396,2008-10-25,D1,2008/2009,Borussia Mönchengladbach,Karlsruher SC,1,0,9,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530218,2008-10-26,SP1,2008/2009,Real Madrid CF,Athletic Club de Bilbao,3,2,8,1.25,5.5,11,incomplete_or_duplicate_lineup;missing_prior_rating
+530220,2008-10-26,SP1,2008/2009,CD Numancia,Racing Santander,2,1,8,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530221,2008-10-26,SP1,2008/2009,RC Recreativo,Valencia CF,1,1,8,4,3.4,1.91,incomplete_or_duplicate_lineup;missing_prior_rating
+530222,2008-10-26,SP1,2008/2009,Getafe CF,Real Valladolid,1,0,8,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+539628,2008-10-26,I1,2008/2009,Lazio,Napoli,0,1,8,2.1,3.1,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483229,2008-10-28,F1,2008/2009,Girondins de Bordeaux,Le Havre AC,4,0,11,1.36,4.5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+499401,2008-10-28,D1,2008/2009,VfL Wolfsburg,Borussia Mönchengladbach,3,0,10,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+483232,2008-10-29,F1,2008/2009,Le Mans FC,AJ Auxerre,0,2,11,1.91,3.25,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+483237,2008-10-29,F1,2008/2009,FC Sochaux-Montbéliard,Olympique Lyonnais,0,2,11,5.25,3.3,1.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483238,2008-10-29,F1,2008/2009,Valenciennes FC,Stade Rennais FC,0,0,11,2.75,3,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+489137,2008-10-29,E0,2008/2009,Stoke City,Sunderland,1,0,10,2.6,3.3,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+489139,2008-10-29,E0,2008/2009,Aston Villa,Blackburn Rovers,3,2,10,1.67,3.75,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539637,2008-10-29,I1,2008/2009,Napoli,Reggio Calabria,3,0,9,1.44,4,9,incomplete_or_duplicate_lineup;missing_prior_rating
+539638,2008-10-29,I1,2008/2009,Milan,Siena,2,1,9,1.22,6,13,incomplete_or_duplicate_lineup;missing_prior_rating
+539642,2008-10-29,I1,2008/2009,Chievo Verona,Lazio,1,2,9,3.25,3.1,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+483239,2008-11-01,F1,2008/2009,AJ Auxerre,Valenciennes FC,0,0,12,1.83,3.1,5,incomplete_or_duplicate_lineup;missing_prior_rating
+499411,2008-11-01,D1,2008/2009,SV Werder Bremen,Hertha BSC Berlin,5,1,11,1.75,3.5,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+499415,2008-11-01,D1,2008/2009,TSG 1899 Hoffenheim,Karlsruher SC,4,1,11,1.5,4,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530223,2008-11-01,SP1,2008/2009,Athletic Club de Bilbao,Villarreal CF,1,4,9,3.25,3.3,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+483243,2008-11-02,F1,2008/2009,Olympique Lyonnais,Le Mans FC,2,0,12,1.5,3.75,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499409,2008-11-02,D1,2008/2009,Borussia Dortmund,VfL Bochum,1,1,11,1.55,3.8,6.25,incomplete_or_duplicate_lineup;missing_prior_rating
+499414,2008-11-02,D1,2008/2009,Borussia Mönchengladbach,Eintracht Frankfurt,1,2,11,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530226,2008-11-02,SP1,2008/2009,RC Recreativo,Getafe CF,1,1,9,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530227,2008-11-02,SP1,2008/2009,Real Sporting de Gijón,CD Numancia,3,1,9,2.1,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+539649,2008-11-02,I1,2008/2009,Palermo,Chievo Verona,3,0,10,1.65,3.4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+483254,2008-11-08,F1,2008/2009,FC Nantes,Toulouse FC,1,1,13,2.4,3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+483257,2008-11-08,F1,2008/2009,FC Sochaux-Montbéliard,Le Mans FC,2,1,13,2.38,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+499421,2008-11-08,D1,2008/2009,DSC Arminia Bielefeld,Borussia Mönchengladbach,0,2,12,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499423,2008-11-08,D1,2008/2009,VfL Bochum,SV Werder Bremen,0,0,12,4.33,3.6,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+499424,2008-11-08,D1,2008/2009,Karlsruher SC,Bayer 04 Leverkusen,3,3,12,5,3.5,1.73,incomplete_or_duplicate_lineup;missing_prior_rating
+489158,2008-11-09,E0,2008/2009,Blackburn Rovers,Chelsea,0,2,12,8,4.33,1.44,incomplete_or_duplicate_lineup;missing_prior_rating
+530233,2008-11-09,SP1,2008/2009,Sevilla FC,RC Recreativo,1,0,10,1.36,4.5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+530235,2008-11-09,SP1,2008/2009,CD Numancia,Real Betis Balompié,2,4,10,2.6,3.25,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530236,2008-11-09,SP1,2008/2009,RC Deportivo de La Coruña,RCD Espanyol,1,0,10,2.15,3.3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530242,2008-11-09,SP1,2008/2009,RCD Mallorca,Athletic Club de Bilbao,3,3,10,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499431,2008-11-14,D1,2008/2009,Hannover 96,VfL Bochum,1,1,13,1.91,3.3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+483268,2008-11-15,F1,2008/2009,Toulouse FC,Grenoble Foot 38,2,0,14,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+499426,2008-11-15,D1,2008/2009,Borussia Dortmund,Eintracht Frankfurt,4,0,13,1.65,3.75,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499430,2008-11-15,D1,2008/2009,FC Energie Cottbus,Karlsruher SC,1,0,13,2.3,3.3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+499432,2008-11-15,D1,2008/2009,Borussia Mönchengladbach,FC Bayern Munich,2,2,13,6.5,4,1.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539665,2008-11-15,I1,2008/2009,Palermo,Inter,0,2,12,4.33,3.2,1.91,incomplete_or_duplicate_lineup;missing_prior_rating
+530245,2008-11-16,SP1,2008/2009,RCD Espanyol,CD Numancia,3,4,11,1.73,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+530247,2008-11-16,SP1,2008/2009,Athletic Club de Bilbao,CA Osasuna,2,0,11,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530248,2008-11-16,SP1,2008/2009,UD Almería,RCD Mallorca,2,1,11,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530251,2008-11-16,SP1,2008/2009,Getafe CF,Sevilla FC,0,2,11,2.88,3.3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530252,2008-11-16,SP1,2008/2009,RC Recreativo,FC Barcelona,0,2,11,9,5,1.33,incomplete_or_duplicate_lineup;missing_prior_rating
+539669,2008-11-16,I1,2008/2009,Udinese,Reggio Calabria,0,1,12,1.4,4,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483272,2008-11-22,F1,2008/2009,FC Lorient,Toulouse FC,1,0,15,2.38,3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+499436,2008-11-22,D1,2008/2009,FC Schalke 04,Borussia Mönchengladbach,3,1,14,1.36,4.75,9,incomplete_or_duplicate_lineup;missing_prior_rating
+499441,2008-11-22,D1,2008/2009,VfL Bochum,Hertha BSC Berlin,2,3,14,2.62,3.3,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530260,2008-11-22,SP1,2008/2009,Real Madrid CF,RC Recreativo,1,0,12,1.3,5.5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+483273,2008-11-23,F1,2008/2009,Olympique de Marseille,LOSC Lille,2,2,15,1.8,3.25,5,incomplete_or_duplicate_lineup;missing_prior_rating
+530253,2008-11-23,SP1,2008/2009,Racing Santander,RCD Espanyol,3,0,12,2.1,3.25,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530255,2008-11-23,SP1,2008/2009,FC Barcelona,Getafe CF,1,1,12,1.18,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+530257,2008-11-23,SP1,2008/2009,CA Osasuna,UD Almería,3,1,12,2.25,3.2,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530261,2008-11-23,SP1,2008/2009,CD Numancia,Atlético Madrid,1,1,12,3.6,3.5,2,incomplete_or_duplicate_lineup;missing_prior_rating
+499446,2008-11-29,D1,2008/2009,SV Werder Bremen,Eintracht Frankfurt,5,0,15,1.4,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+499450,2008-11-29,D1,2008/2009,Borussia Mönchengladbach,FC Energie Cottbus,1,3,15,1.85,3.4,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+539690,2008-11-29,I1,2008/2009,Juventus,Reggio Calabria,4,0,14,1.29,5,12,incomplete_or_duplicate_lineup;missing_prior_rating
+499448,2008-11-30,D1,2008/2009,VfL Bochum,Hamburger SV,1,1,15,3.3,3.25,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+530263,2008-11-30,SP1,2008/2009,UD Almería,RC Deportivo de La Coruña,0,1,13,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530324,2008-11-30,SP1,2008/2009,RC Recreativo,Villarreal CF,1,2,13,3.5,3.3,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+530325,2008-11-30,SP1,2008/2009,RCD Espanyol,Real Sporting de Gijón,0,1,13,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539685,2008-11-30,I1,2008/2009,Udinese,Chievo Verona,0,1,14,1.44,4,8,incomplete_or_duplicate_lineup;missing_prior_rating
+539689,2008-11-30,I1,2008/2009,Inter,Napoli,2,1,14,1.5,3.8,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539696,2008-11-30,I1,2008/2009,Atalanta,Lazio,2,0,14,2.5,3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+483297,2008-12-06,F1,2008/2009,AS Saint-Étienne,Le Havre AC,2,0,17,1.75,3.3,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+483298,2008-12-06,F1,2008/2009,FC Nantes,Olympique Lyonnais,2,1,17,,,,missing_bet365_odds
+489192,2008-12-06,E0,2008/2009,Manchester United,Sunderland,1,0,16,1.14,7.5,23,incomplete_or_duplicate_lineup;missing_prior_rating
+499455,2008-12-06,D1,2008/2009,Eintracht Frankfurt,VfL Bochum,4,0,16,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530342,2008-12-06,SP1,2008/2009,Real Sporting de Gijón,Atlético Madrid,2,5,14,3.4,3.2,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+539697,2008-12-06,I1,2008/2009,Chievo Verona,Roma,0,1,15,5.5,3.4,1.73,incomplete_or_duplicate_lineup;missing_prior_rating
+539703,2008-12-06,I1,2008/2009,Lazio,Inter,0,3,15,3.75,3.1,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+539704,2008-12-07,I1,2008/2009,Milan,Catania,1,0,15,1.29,5,12,incomplete_or_duplicate_lineup;missing_prior_rating
+499462,2008-12-13,D1,2008/2009,Hamburger SV,Eintracht Frankfurt,1,0,17,1.44,4.2,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530351,2008-12-13,SP1,2008/2009,Valencia CF,RCD Espanyol,2,1,15,1.53,4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+530344,2008-12-14,SP1,2008/2009,Athletic Club de Bilbao,Real Sporting de Gijón,3,0,15,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+539707,2008-12-14,I1,2008/2009,Palermo,Siena,2,0,16,1.75,3.2,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+539710,2008-12-14,I1,2008/2009,Juventus,Milan,4,2,16,2.2,3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+539712,2008-12-14,I1,2008/2009,Udinese,Lazio,3,3,16,2.3,3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+539720,2008-12-20,I1,2008/2009,Lazio,Palermo,1,0,17,1.9,3.1,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539724,2008-12-21,I1,2008/2009,Chievo Verona,Genoa,0,1,17,2.5,3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530364,2009-01-04,SP1,2008/2009,Málaga CF,Real Sporting de Gijón,1,0,17,1.95,3.25,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+539732,2009-01-10,I1,2008/2009,Inter,Cagliari,1,1,18,1.25,5.5,12,incomplete_or_duplicate_lineup;missing_prior_rating
+539736,2009-01-10,I1,2008/2009,Genoa,Torino,3,0,18,1.75,3.2,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+539733,2009-01-11,I1,2008/2009,Bologna,Chievo Verona,1,1,18,1.8,3.2,5,incomplete_or_duplicate_lineup;missing_prior_rating
+483332,2009-01-17,F1,2008/2009,FC Lorient,Valenciennes FC,1,1,21,1.85,3.2,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483337,2009-01-17,F1,2008/2009,AS Saint-Étienne,Le Mans FC,1,1,21,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+530383,2009-01-18,SP1,2008/2009,Athletic Club de Bilbao,Valencia CF,3,2,19,3,3.4,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+530445,2009-01-18,SP1,2008/2009,Málaga CF,RCD Espanyol,4,0,19,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530452,2009-01-18,SP1,2008/2009,Villarreal CF,RCD Mallorca,2,0,19,1.44,4.2,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539741,2009-01-18,I1,2008/2009,Lecce,Genoa,0,2,19,2.7,2.88,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+530453,2009-01-24,SP1,2008/2009,FC Barcelona,CD Numancia,4,1,20,1.14,7.5,18,incomplete_or_duplicate_lineup;missing_prior_rating
+530455,2009-01-24,SP1,2008/2009,Villarreal CF,CA Osasuna,1,1,20,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+530458,2009-01-25,SP1,2008/2009,Getafe CF,Real Sporting de Gijón,5,1,20,1.9,3.3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+530462,2009-01-25,SP1,2008/2009,UD Almería,Athletic Club de Bilbao,2,1,20,2.4,3.3,2.87,incomplete_or_duplicate_lineup;missing_prior_rating
+539758,2009-01-25,I1,2008/2009,Palermo,Udinese,3,2,20,1.95,3.1,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+539761,2009-01-28,I1,2008/2009,Chievo Verona,Lecce,1,1,21,2.15,2.87,4,incomplete_or_duplicate_lineup;missing_prior_rating
+539765,2009-01-28,I1,2008/2009,Catania,Inter,0,2,21,5.25,3.3,1.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483342,2009-01-31,F1,2008/2009,Le Mans FC,FC Nantes,0,2,22,2.1,3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+499474,2009-01-31,D1,2008/2009,Hertha BSC Berlin,Eintracht Frankfurt,2,1,18,1.72,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+483343,2009-02-01,F1,2008/2009,Olympique Lyonnais,AS Saint-Étienne,1,1,22,1.4,4.33,9,incomplete_or_duplicate_lineup;missing_prior_rating
+530465,2009-02-01,SP1,2008/2009,RC Deportivo de La Coruña,Villarreal CF,3,0,21,2.5,3.4,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530467,2009-02-01,SP1,2008/2009,Real Sporting de Gijón,Sevilla FC,1,0,21,3.75,3.25,2.05,incomplete_or_duplicate_lineup;missing_prior_rating
+530469,2009-02-01,SP1,2008/2009,RCD Espanyol,RC Recreativo,1,1,21,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+539773,2009-02-01,I1,2008/2009,Inter,Torino,1,1,22,1.22,6,13,incomplete_or_duplicate_lineup;missing_prior_rating
+483358,2009-02-07,F1,2008/2009,Toulouse FC,Le Mans FC,2,0,23,1.8,3.2,5,incomplete_or_duplicate_lineup;missing_prior_rating
+499483,2009-02-07,D1,2008/2009,Eintracht Frankfurt,1. FC Köln,2,2,19,2.15,3.3,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+483356,2009-02-08,F1,2008/2009,OGC Nice,Olympique Lyonnais,1,3,23,3.8,3,2,incomplete_or_duplicate_lineup;missing_prior_rating
+530474,2009-02-08,SP1,2008/2009,Villarreal CF,CD Numancia,2,1,22,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+530476,2009-02-08,SP1,2008/2009,FC Barcelona,Real Sporting de Gijón,3,1,22,1.16,6.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+530482,2009-02-08,SP1,2008/2009,CA Osasuna,Valencia CF,1,0,22,2.62,3.3,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+499496,2009-02-13,D1,2008/2009,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,1,4,20,2.37,3.4,2.87,incomplete_or_duplicate_lineup;missing_prior_rating
+483362,2009-02-14,F1,2008/2009,Le Mans FC,OGC Nice,1,2,24,2.5,3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+483368,2009-02-14,F1,2008/2009,Valenciennes FC,FC Nantes,1,1,24,2.1,3.1,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+499492,2009-02-14,D1,2008/2009,Eintracht Frankfurt,VfL Wolfsburg,0,2,20,3,3.4,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+530492,2009-02-14,SP1,2008/2009,RC Deportivo de La Coruña,CA Osasuna,0,0,23,2.05,3.25,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530484,2009-02-15,SP1,2008/2009,Athletic Club de Bilbao,RC Recreativo,1,1,23,1.8,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530485,2009-02-15,SP1,2008/2009,Real Sporting de Gijón,Real Madrid CF,0,4,23,5.5,3.75,1.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530490,2009-02-15,SP1,2008/2009,Racing Santander,Villarreal CF,1,1,23,2.4,3.3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+483322,2009-02-17,F1,2008/2009,Le Mans FC,LOSC Lille,0,0,20,2.87,3,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+483375,2009-02-21,F1,2008/2009,FC Nantes,SM Caen,1,1,25,2.1,3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+483378,2009-02-21,F1,2008/2009,Toulouse FC,Valenciennes FC,0,0,25,1.7,3.25,6,incomplete_or_duplicate_lineup;missing_prior_rating
+499503,2009-02-21,D1,2008/2009,FC Energie Cottbus,SV Werder Bremen,2,1,21,4.33,3.5,1.83,incomplete_or_duplicate_lineup;missing_prior_rating
+499505,2009-02-21,D1,2008/2009,Karlsruher SC,Eintracht Frankfurt,0,1,21,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530498,2009-02-21,SP1,2008/2009,Villarreal CF,Real Sporting de Gijón,2,1,24,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+489299,2009-02-22,E0,2008/2009,Fulham,West Bromwich Albion,2,0,26,1.8,3.5,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530496,2009-02-22,SP1,2008/2009,CA Osasuna,CD Numancia,2,0,24,1.72,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+530500,2009-02-22,SP1,2008/2009,RC Recreativo,UD Almería,1,1,24,2.1,3.25,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+499510,2009-02-28,D1,2008/2009,Eintracht Frankfurt,FC Schalke 04,1,2,22,3.8,3.4,2,incomplete_or_duplicate_lineup;missing_prior_rating
+530546,2009-02-28,SP1,2008/2009,Athletic Club de Bilbao,Sevilla FC,1,2,25,2.75,3.25,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530547,2009-03-01,SP1,2008/2009,Atlético Madrid,FC Barcelona,4,3,25,3.75,3.6,1.9,incomplete_or_duplicate_lineup;missing_prior_rating
+530549,2009-03-01,SP1,2008/2009,Real Betis Balompié,Villarreal CF,2,2,25,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530550,2009-03-01,SP1,2008/2009,Real Sporting de Gijón,RCD Mallorca,0,1,25,2.3,3.25,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+530551,2009-03-01,SP1,2008/2009,Racing Santander,CA Osasuna,1,1,25,2.4,3.2,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+530552,2009-03-01,SP1,2008/2009,CD Numancia,RC Deportivo de La Coruña,0,1,25,2.62,3.25,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+489318,2009-03-03,E0,2008/2009,Liverpool,Sunderland,2,0,28,1.4,4.33,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530557,2009-03-07,SP1,2008/2009,Villarreal CF,RCD Espanyol,1,0,26,1.8,3.4,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530559,2009-03-07,SP1,2008/2009,FC Barcelona,Athletic Club de Bilbao,2,0,26,1.28,5.5,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530554,2009-03-08,SP1,2008/2009,CD Numancia,Valencia CF,2,1,26,3.4,3.4,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+530555,2009-03-08,SP1,2008/2009,CA Osasuna,Real Sporting de Gijón,1,2,26,1.66,3.4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+530561,2009-03-08,SP1,2008/2009,Getafe CF,Málaga CF,1,2,26,2.2,3.3,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+489325,2009-03-14,E0,2008/2009,Sunderland,Wigan Athletic,1,2,29,2.2,3.2,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499524,2009-03-15,D1,2008/2009,Hamburger SV,FC Energie Cottbus,2,0,24,1.4,4.33,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530564,2009-03-15,SP1,2008/2009,Real Sporting de Gijón,RC Deportivo de La Coruña,3,2,27,2.62,3.2,2.7,incomplete_or_duplicate_lineup;missing_prior_rating
+530567,2009-03-15,SP1,2008/2009,Atlético Madrid,Villarreal CF,3,2,27,2.05,3.4,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530568,2009-03-15,SP1,2008/2009,UD Almería,FC Barcelona,0,2,27,5.75,3.8,1.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530570,2009-03-15,SP1,2008/2009,Real Valladolid,Getafe CF,1,0,27,2.05,3.4,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530573,2009-03-15,SP1,2008/2009,Racing Santander,CD Numancia,5,0,27,1.8,3.4,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+489337,2009-03-21,E0,2008/2009,Blackburn Rovers,West Ham United,1,1,30,1.9,3.4,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+499534,2009-03-21,D1,2008/2009,Bayer 04 Leverkusen,Eintracht Frankfurt,1,1,25,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+530582,2009-03-21,SP1,2008/2009,Villarreal CF,Athletic Club de Bilbao,2,0,28,1.72,3.6,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+539842,2009-03-21,I1,2008/2009,Catania,Lazio,1,0,29,2.62,3,2.87,incomplete_or_duplicate_lineup;missing_prior_rating
+489336,2009-03-22,E0,2008/2009,Manchester City,Sunderland,1,0,30,1.66,3.6,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530576,2009-03-22,SP1,2008/2009,Getafe CF,RC Recreativo,2,1,28,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530577,2009-03-22,SP1,2008/2009,CD Numancia,Real Sporting de Gijón,2,1,28,2.35,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530580,2009-03-22,SP1,2008/2009,FC Barcelona,Málaga CF,6,0,28,1.22,6,13,incomplete_or_duplicate_lineup;missing_prior_rating
+539839,2009-03-22,I1,2008/2009,Chievo Verona,Palermo,1,0,29,2.6,3,2.87,incomplete_or_duplicate_lineup;missing_prior_rating
+539840,2009-03-22,I1,2008/2009,Inter,Reggio Calabria,3,0,29,1.2,6,15,incomplete_or_duplicate_lineup;missing_prior_rating
+483451,2009-04-04,F1,2008/2009,Valenciennes FC,AJ Auxerre,2,0,30,2.3,3,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+489345,2009-04-04,E0,2008/2009,West Ham United,Sunderland,2,0,31,2.1,3.2,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530589,2009-04-04,SP1,2008/2009,UD Almería,Villarreal CF,3,0,29,2.4,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530591,2009-04-04,SP1,2008/2009,Real Valladolid,FC Barcelona,0,1,29,6,4,1.53,incomplete_or_duplicate_lineup;missing_prior_rating
+499548,2009-04-05,D1,2008/2009,1. FC Köln,Bayer 04 Leverkusen,0,2,26,3.4,3.4,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+530585,2009-04-05,SP1,2008/2009,Real Sporting de Gijón,Racing Santander,0,2,29,2.62,3.25,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530588,2009-04-05,SP1,2008/2009,Valencia CF,Getafe CF,4,1,29,1.85,3.5,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+539850,2009-04-05,I1,2008/2009,Palermo,Torino,1,0,30,1.85,3.2,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+539855,2009-04-05,I1,2008/2009,Reggio Calabria,Genoa,0,1,30,3.1,3,2.45,incomplete_or_duplicate_lineup;missing_prior_rating
+483458,2009-04-11,F1,2008/2009,AS Nancy-Lorraine,Valenciennes FC,2,0,31,2.25,3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483459,2009-04-11,F1,2008/2009,OGC Nice,FC Lorient,2,0,31,2.38,3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+489354,2009-04-11,E0,2008/2009,Sunderland,Manchester United,1,2,32,7.5,4,1.5,incomplete_or_duplicate_lineup;missing_prior_rating
+489355,2009-04-11,E0,2008/2009,Tottenham Hotspur,West Ham United,1,0,32,1.73,3.5,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530602,2009-04-11,SP1,2008/2009,FC Barcelona,RC Recreativo,2,0,30,1.14,7.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+539865,2009-04-11,I1,2008/2009,Torino,Catania,2,1,31,2,3,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+499552,2009-04-12,D1,2008/2009,Bayer 04 Leverkusen,SV Werder Bremen,1,1,27,2.38,3.4,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+530594,2009-04-12,SP1,2008/2009,CD Numancia,RCD Espanyol,0,0,30,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530595,2009-04-12,SP1,2008/2009,Racing Santander,Real Betis Balompié,2,3,30,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530596,2009-04-12,SP1,2008/2009,Real Sporting de Gijón,Valencia CF,2,3,30,3.6,3.2,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+483475,2009-04-18,F1,2008/2009,FC Nantes,OGC Nice,2,0,32,2.15,3,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483479,2009-04-18,F1,2008/2009,Valenciennes FC,Le Mans FC,0,2,32,2.05,3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+489364,2009-04-18,E0,2008/2009,Sunderland,Hull City,1,0,33,1.91,3.4,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+489366,2009-04-18,E0,2008/2009,Aston Villa,West Ham United,1,1,33,1.67,3.6,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499564,2009-04-18,D1,2008/2009,Eintracht Frankfurt,Borussia Mönchengladbach,4,1,28,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530604,2009-04-19,SP1,2008/2009,Real Betis Balompié,Real Sporting de Gijón,2,0,31,1.67,3.6,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530605,2009-04-19,SP1,2008/2009,RCD Espanyol,Racing Santander,1,0,31,2.15,3.25,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+539873,2009-04-19,I1,2008/2009,Palermo,Bologna,4,1,32,1.73,3.4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+539875,2009-04-19,I1,2008/2009,Milan,Torino,5,1,32,1.33,5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+530615,2009-04-22,SP1,2008/2009,Real Betis Balompié,Valencia CF,1,2,32,2.9,3.25,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530614,2009-04-23,SP1,2008/2009,Real Sporting de Gijón,RCD Espanyol,0,3,32,2.65,3.3,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+489375,2009-04-25,E0,2008/2009,West Ham United,Chelsea,0,1,34,4.75,3.3,1.85,incomplete_or_duplicate_lineup;missing_prior_rating
+499572,2009-04-25,D1,2008/2009,VfB Stuttgart,Eintracht Frankfurt,2,0,29,1.36,4.75,9,incomplete_or_duplicate_lineup;missing_prior_rating
+530630,2009-04-25,SP1,2008/2009,UD Almería,CD Numancia,2,1,33,1.66,3.6,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483488,2009-04-26,F1,2008/2009,FC Sochaux-Montbéliard,Valenciennes FC,1,1,33,1.9,3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+499574,2009-04-26,D1,2008/2009,FC Energie Cottbus,VfL Wolfsburg,2,0,29,5.75,3.8,1.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530625,2009-04-26,SP1,2008/2009,RC Recreativo,RCD Mallorca,2,4,33,2.37,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530626,2009-04-26,SP1,2008/2009,Getafe CF,Villarreal CF,1,2,33,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+530632,2009-04-26,SP1,2008/2009,Atlético Madrid,Real Sporting de Gijón,3,1,33,1.4,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+530633,2009-04-26,SP1,2008/2009,RCD Espanyol,Real Betis Balompié,2,0,33,2.2,3.25,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+539886,2009-04-26,I1,2008/2009,Reggio Calabria,Juventus,2,2,33,4.5,3.4,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+539887,2009-04-26,I1,2008/2009,Torino,Siena,1,0,33,1.8,3.2,5,incomplete_or_duplicate_lineup;missing_prior_rating
+483487,2009-04-29,F1,2008/2009,Stade Rennais FC,Girondins de Bordeaux,2,3,33,3,3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483499,2009-05-02,F1,2008/2009,Valenciennes FC,Olympique Lyonnais,2,0,34,4.75,3.3,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+489390,2009-05-02,E0,2008/2009,Stoke City,West Ham United,0,1,35,2.37,3.25,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+499582,2009-05-02,D1,2008/2009,Eintracht Frankfurt,Borussia Dortmund,0,2,30,3.2,3.5,2.15,incomplete_or_duplicate_lineup;missing_prior_rating
+499586,2009-05-02,D1,2008/2009,Karlsruher SC,FC Energie Cottbus,0,0,30,2.1,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530638,2009-05-02,SP1,2008/2009,CD Numancia,Málaga CF,2,0,34,3.1,3.4,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+539893,2009-05-02,I1,2008/2009,Inter,Lazio,2,0,34,1.5,3.8,7.25,incomplete_or_duplicate_lineup;missing_prior_rating
+539898,2009-05-02,I1,2008/2009,Bologna,Reggio Calabria,1,2,34,1.8,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+489384,2009-05-03,E0,2008/2009,Sunderland,Everton,0,2,35,2.5,3.25,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+539891,2009-05-03,I1,2008/2009,Palermo,Cagliari,5,1,34,2,3.25,4,incomplete_or_duplicate_lineup;missing_prior_rating
+539897,2009-05-03,I1,2008/2009,Fiorentina,Torino,1,0,34,1.44,4,8,incomplete_or_duplicate_lineup;missing_prior_rating
+489395,2009-05-09,E0,2008/2009,West Ham United,Liverpool,0,3,36,6.5,3.8,1.57,incomplete_or_duplicate_lineup;missing_prior_rating
+489400,2009-05-09,E0,2008/2009,Bolton Wanderers,Sunderland,0,0,36,2.2,3.25,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499592,2009-05-09,D1,2008/2009,FC Energie Cottbus,FC Bayern Munich,1,3,31,6.5,4.5,1.44,incomplete_or_duplicate_lineup;missing_prior_rating
+499593,2009-05-09,D1,2008/2009,Hannover 96,Eintracht Frankfurt,1,1,31,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+530650,2009-05-09,SP1,2008/2009,Athletic Club de Bilbao,Real Betis Balompié,1,0,35,3,3.2,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+539901,2009-05-09,I1,2008/2009,Lazio,Udinese,1,3,35,2.88,3,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+539908,2009-05-09,I1,2008/2009,Sampdoria,Reggio Calabria,5,0,35,2.9,3.3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530647,2009-05-10,SP1,2008/2009,Real Valladolid,CD Numancia,0,0,35,1.8,3.6,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+539900,2009-05-10,I1,2008/2009,Torino,Bologna,1,1,35,1.91,3.25,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+539904,2009-05-10,I1,2008/2009,Siena,Palermo,1,0,35,3.1,3.1,2.38,incomplete_or_duplicate_lineup;missing_prior_rating
+483508,2009-05-13,F1,2008/2009,Toulouse FC,LOSC Lille,0,0,35,2.2,2.9,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+483509,2009-05-13,F1,2008/2009,Valenciennes FC,Girondins de Bordeaux,1,2,35,5.5,3.3,1.72,incomplete_or_duplicate_lineup;missing_prior_rating
+499600,2009-05-13,D1,2008/2009,Eintracht Frankfurt,SV Werder Bremen,0,5,32,2.62,3.3,2.62,incomplete_or_duplicate_lineup;missing_prior_rating
+499603,2009-05-13,D1,2008/2009,FC Energie Cottbus,Borussia Mönchengladbach,0,1,32,2.3,3.3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+483516,2009-05-16,F1,2008/2009,AS Monaco,Valenciennes FC,1,1,36,2.15,2.88,4,incomplete_or_duplicate_lineup;missing_prior_rating
+483519,2009-05-16,F1,2008/2009,AS Saint-Étienne,Toulouse FC,2,2,36,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+489405,2009-05-16,E0,2008/2009,Everton,West Ham United,3,1,37,1.73,3.6,5,incomplete_or_duplicate_lineup;missing_prior_rating
+499611,2009-05-16,D1,2008/2009,VfL Bochum,Eintracht Frankfurt,2,0,33,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499612,2009-05-16,D1,2008/2009,Hannover 96,VfL Wolfsburg,0,5,33,5.5,3.75,1.62,incomplete_or_duplicate_lineup;missing_prior_rating
+530663,2009-05-16,SP1,2008/2009,CA Osasuna,Sevilla FC,0,0,36,2.88,3.3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+489412,2009-05-17,E0,2008/2009,Chelsea,Blackburn Rovers,2,0,37,1.3,5,11,incomplete_or_duplicate_lineup;missing_prior_rating
+530654,2009-05-17,SP1,2008/2009,Real Sporting de Gijón,Málaga CF,2,1,36,2.4,3.3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+530657,2009-05-17,SP1,2008/2009,Real Betis Balompié,UD Almería,2,0,36,1.6,4,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+530658,2009-05-17,SP1,2008/2009,RCD Mallorca,FC Barcelona,2,1,36,5.25,3.75,1.6,incomplete_or_duplicate_lineup;missing_prior_rating
+530660,2009-05-17,SP1,2008/2009,CD Numancia,RC Recreativo,1,0,36,2.38,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+539911,2009-05-17,I1,2008/2009,Napoli,Torino,1,2,36,3.1,3.2,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+539916,2009-05-17,I1,2008/2009,Palermo,Lazio,2,0,36,1.57,3.5,7,incomplete_or_duplicate_lineup;missing_prior_rating
+489410,2009-05-18,E0,2008/2009,Portsmouth,Sunderland,3,1,37,2.1,3.2,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+483523,2009-05-23,F1,2008/2009,Le Mans FC,Grenoble Foot 38,1,1,37,1.6,3.5,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+499617,2009-05-23,D1,2008/2009,Eintracht Frankfurt,Hamburger SV,2,3,34,5,4.2,1.6,incomplete_or_duplicate_lineup;missing_prior_rating
+499618,2009-05-23,D1,2008/2009,DSC Arminia Bielefeld,Hannover 96,2,2,34,1.62,4.33,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+499619,2009-05-23,D1,2008/2009,1. FC Köln,VfL Bochum,1,1,34,2.1,3.4,3.4,incomplete_or_duplicate_lineup
+530666,2009-05-23,SP1,2008/2009,Málaga CF,Real Betis Balompié,1,1,37,2.5,3.3,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+530667,2009-05-23,SP1,2008/2009,Real Valladolid,Real Sporting de Gijón,1,2,37,2.38,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+530668,2009-05-23,SP1,2008/2009,RC Recreativo,Racing Santander,0,1,37,2.1,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530669,2009-05-23,SP1,2008/2009,Getafe CF,CD Numancia,1,0,37,1.67,3.75,5,incomplete_or_duplicate_lineup;missing_prior_rating
+530670,2009-05-23,SP1,2008/2009,FC Barcelona,CA Osasuna,0,1,37,2,3.5,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+489415,2009-05-24,E0,2008/2009,Sunderland,Chelsea,2,3,38,4,3.6,1.91,incomplete_or_duplicate_lineup;missing_prior_rating
+539923,2009-05-24,I1,2008/2009,Atalanta,Palermo,2,2,37,3.25,3.2,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+539926,2009-05-24,I1,2008/2009,Cagliari,Inter,2,1,37,3.2,3.2,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+539927,2009-05-24,I1,2008/2009,Torino,Genoa,2,3,37,1.4,4.5,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+483536,2009-05-30,F1,2008/2009,OGC Nice,Le Havre AC,0,0,38,1.62,3.4,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530681,2009-05-30,SP1,2008/2009,RC Deportivo de La Coruña,FC Barcelona,1,1,38,2,3.6,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+530677,2009-05-31,SP1,2008/2009,Real Sporting de Gijón,RC Recreativo,2,1,38,1.33,5,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+530679,2009-05-31,SP1,2008/2009,Racing Santander,Getafe CF,1,1,38,3.3,3.3,2.15,incomplete_or_duplicate_lineup;missing_prior_rating
+530680,2009-05-31,SP1,2008/2009,CD Numancia,Sevilla FC,0,2,38,4.2,3.6,1.83,incomplete_or_duplicate_lineup;missing_prior_rating
+530682,2009-05-31,SP1,2008/2009,CA Osasuna,Real Madrid CF,2,1,38,1.7,4,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+530684,2009-05-31,SP1,2008/2009,Real Betis Balompié,Real Valladolid,1,1,38,1.83,3.6,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+539932,2009-05-31,I1,2008/2009,Palermo,Sampdoria,2,2,38,1.8,3.1,5,incomplete_or_duplicate_lineup;missing_prior_rating
+539934,2009-05-31,I1,2008/2009,Bologna,Catania,3,1,38,1.3,4.75,12,incomplete_or_duplicate_lineup;missing_prior_rating
+539935,2009-05-31,I1,2008/2009,Juventus,Lazio,2,0,38,1.36,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+539937,2009-05-31,I1,2008/2009,Reggio Calabria,Siena,1,1,38,2.25,3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+539938,2009-05-31,I1,2008/2009,Roma,Torino,3,2,38,1.65,4.2,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+653876,2009-08-08,F1,2009/2010,Le Mans FC,Olympique Lyonnais,2,2,1,3.75,3.1,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+653905,2009-08-15,F1,2009/2010,Paris Saint-Germain,Le Mans FC,3,1,2,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+653921,2009-08-23,F1,2009/2010,LOSC Lille,Toulouse FC,1,1,3,2,3.1,4.2,incomplete_or_duplicate_lineup
+674287,2009-08-23,D1,2009/2010,VfL Bochum,Hertha BSC Berlin,1,0,3,2.4,3.3,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+704373,2009-08-30,I1,2009/2010,Atalanta,Genoa,0,1,2,2.4,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+704377,2009-08-30,I1,2009/2010,Chievo Verona,Lazio,1,2,2,3,3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684605,2009-09-12,SP1,2009/2010,Getafe CF,FC Barcelona,0,2,2,6.5,4.2,1.5,incomplete_or_duplicate_lineup;missing_prior_rating
+704400,2009-09-12,I1,2009/2010,Lazio,Juventus,0,2,3,4,3.2,2,incomplete_or_duplicate_lineup;missing_prior_rating
+684614,2009-09-19,SP1,2009/2010,CA Osasuna,Sevilla FC,0,2,3,3.25,3.25,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+684620,2009-09-19,SP1,2009/2010,FC Barcelona,Atlético Madrid,5,2,3,1.33,5,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684609,2009-09-20,SP1,2009/2010,Real Madrid CF,Xerez Club Deportivo,5,0,3,1.13,8,21,incomplete_or_duplicate_lineup;missing_prior_rating
+684626,2009-09-23,SP1,2009/2010,CD Tenerife,Athletic Club de Bilbao,1,0,4,2.6,3.25,2.7,incomplete_or_duplicate_lineup;missing_prior_rating
+684629,2009-09-23,SP1,2009/2010,Real Valladolid,CA Osasuna,1,2,4,2.15,3.3,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+704454,2009-09-23,I1,2009/2010,Lazio,Parma,1,2,5,1.91,3.2,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+704461,2009-09-23,I1,2009/2010,Siena,Chievo Verona,0,0,5,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+654012,2009-09-26,F1,2009/2010,Montpellier Hérault SC,US Boulogne Cote D'Opale,1,0,7,1.7,3.4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+658670,2009-09-26,E0,2009/2010,Tottenham Hotspur,Burnley,5,0,7,1.33,5,10,incomplete_or_duplicate_lineup;missing_prior_rating
+684656,2009-09-26,SP1,2009/2010,Málaga CF,FC Barcelona,0,2,5,11,5,1.29,incomplete_or_duplicate_lineup;missing_prior_rating
+684651,2009-09-27,SP1,2009/2010,RCD Mallorca,Real Valladolid,3,0,5,1.85,3.4,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684652,2009-09-27,SP1,2009/2010,CA Osasuna,Real Sporting de Gijón,1,0,5,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+704468,2009-09-27,I1,2009/2010,Chievo Verona,Atalanta,1,1,6,2.2,3.2,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+704472,2009-09-27,I1,2009/2010,Lazio,Palermo,1,1,6,2.1,3.2,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+654015,2009-10-04,F1,2009/2010,US Boulogne Cote D'Opale,LOSC Lille,2,3,8,3.75,3.1,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+704499,2009-10-04,I1,2009/2010,Cagliari,Chievo Verona,1,2,7,2.1,3.1,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+704500,2009-10-04,I1,2009/2010,Fiorentina,Lazio,0,0,7,1.85,3.3,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+654037,2009-10-17,F1,2009/2010,Le Mans FC,US Boulogne Cote D'Opale,1,1,9,1.7,3.4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684677,2009-10-18,SP1,2009/2010,Xerez Club Deportivo,Villarreal CF,2,1,7,3.8,3.3,2,incomplete_or_duplicate_lineup;missing_prior_rating
+684679,2009-10-18,SP1,2009/2010,RCD Espanyol,CD Tenerife,2,1,7,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+704512,2009-10-18,I1,2009/2010,Chievo Verona,Bari,1,2,8,2,3.1,4.1,incomplete_or_duplicate_lineup;missing_prior_rating
+654067,2009-10-24,F1,2009/2010,US Boulogne Cote D'Opale,AS Monaco,1,3,10,4.33,3,2,incomplete_or_duplicate_lineup;missing_prior_rating
+684694,2009-10-25,SP1,2009/2010,CD Tenerife,Xerez Club Deportivo,1,0,8,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684707,2009-10-25,SP1,2009/2010,FC Barcelona,Real Zaragoza,6,1,8,1.1,9,21,incomplete_or_duplicate_lineup;missing_prior_rating
+704524,2009-10-25,I1,2009/2010,Chievo Verona,Milan,1,2,9,4,3.1,2,incomplete_or_duplicate_lineup;missing_prior_rating
+704532,2009-10-28,I1,2009/2010,Catania,Chievo Verona,1,2,10,2.25,3.1,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+704534,2009-10-29,I1,2009/2010,Inter,Palermo,5,3,10,1.44,4,8,incomplete_or_duplicate_lineup;missing_prior_rating
+684716,2009-10-31,SP1,2009/2010,CA Osasuna,FC Barcelona,1,1,9,7.5,4.5,1.4,incomplete_or_duplicate_lineup;missing_prior_rating
+684717,2009-11-01,SP1,2009/2010,Real Zaragoza,UD Almería,2,1,9,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+704542,2009-11-01,I1,2009/2010,Chievo Verona,Udinese,1,1,11,2.5,3.1,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+704549,2009-11-01,I1,2009/2010,Siena,Lazio,1,1,11,2.75,3.1,2.63,incomplete_or_duplicate_lineup;missing_prior_rating
+654128,2009-11-07,F1,2009/2010,FC Lorient,US Boulogne Cote D'Opale,5,0,13,1.53,3.8,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684736,2009-11-07,SP1,2009/2010,FC Barcelona,RCD Mallorca,4,2,10,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+674368,2009-11-08,D1,2009/2010,Hertha BSC Berlin,1. FC Köln,0,1,12,2.05,3.4,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684743,2009-11-08,SP1,2009/2010,Valencia CF,Real Zaragoza,3,1,10,1.5,4,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+704559,2009-11-08,I1,2009/2010,Parma,Chievo Verona,2,0,12,2.05,3.2,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+674377,2009-11-21,D1,2009/2010,VfB Stuttgart,Hertha BSC Berlin,1,1,13,1.62,3.75,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684756,2009-11-21,SP1,2009/2010,Athletic Club de Bilbao,FC Barcelona,1,1,11,6.5,4,1.53,incomplete_or_duplicate_lineup;missing_prior_rating
+684750,2009-11-22,SP1,2009/2010,Xerez Club Deportivo,Real Sporting de Gijón,0,0,11,2.8,3.25,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684759,2009-11-22,SP1,2009/2010,Málaga CF,Real Zaragoza,1,1,11,2.3,3.4,3,incomplete_or_duplicate_lineup;missing_prior_rating
+704566,2009-11-22,I1,2009/2010,Napoli,Lazio,0,0,13,1.83,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+704569,2009-11-22,I1,2009/2010,Sampdoria,Chievo Verona,2,1,13,1.73,3.4,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+654180,2009-11-28,F1,2009/2010,Toulouse FC,US Boulogne Cote D'Opale,1,0,15,1.4,4.2,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+674385,2009-11-28,D1,2009/2010,Hertha BSC Berlin,Eintracht Frankfurt,1,3,14,2,3.4,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+684769,2009-11-29,SP1,2009/2010,Real Zaragoza,CA Osasuna,0,1,12,2,3.4,3.7,incomplete_or_duplicate_lineup;missing_prior_rating
+654148,2009-12-02,F1,2009/2010,US Boulogne Cote D'Opale,Paris Saint-Germain,2,5,14,5,3.3,1.75,incomplete_or_duplicate_lineup;missing_prior_rating
+684797,2009-12-02,SP1,2009/2010,Xerez Club Deportivo,FC Barcelona,0,2,15,12,5.5,1.25,incomplete_or_duplicate_lineup;missing_prior_rating
+654188,2009-12-06,F1,2009/2010,US Boulogne Cote D'Opale,RC Lens,2,1,16,2.88,3.1,2.55,incomplete_or_duplicate_lineup;missing_prior_rating
+684778,2009-12-06,SP1,2009/2010,RCD Mallorca,Real Zaragoza,4,1,13,1.85,3.5,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684779,2009-12-06,SP1,2009/2010,Málaga CF,CA Osasuna,1,1,13,2.3,3.3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+658827,2009-12-12,E0,2009/2010,Bolton Wanderers,Manchester City,3,3,16,4.5,3.6,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+684788,2009-12-12,SP1,2009/2010,Real Zaragoza,Athletic Club de Bilbao,1,2,14,2.2,3.3,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+684781,2009-12-13,SP1,2009/2010,Real Sporting de Gijón,Sevilla FC,0,1,14,3.5,3.3,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+684789,2009-12-13,SP1,2009/2010,CA Osasuna,RCD Mallorca,0,1,14,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+654088,2009-12-16,F1,2009/2010,Olympique Lyonnais,US Boulogne Cote D'Opale,2,0,11,1.17,6.5,19,incomplete_or_duplicate_lineup;missing_prior_rating
+658829,2009-12-16,E0,2009/2010,Tottenham Hotspur,Manchester City,3,0,17,2.25,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+654236,2009-12-19,F1,2009/2010,Montpellier Hérault SC,AS Nancy-Lorraine,0,2,18,1.83,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+658844,2009-12-19,E0,2009/2010,Manchester City,Sunderland,4,3,18,1.53,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+684804,2009-12-19,SP1,2009/2010,Real Madrid CF,Real Zaragoza,6,0,15,1.2,6.5,13,incomplete_or_duplicate_lineup;missing_prior_rating
+704637,2009-12-20,I1,2009/2010,Inter,Lazio,1,0,17,1.4,4.33,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+654256,2009-12-23,F1,2009/2010,OGC Nice,US Boulogne Cote D'Opale,2,2,19,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+658859,2009-12-26,E0,2009/2010,Manchester City,Stoke City,2,0,19,1.44,4.33,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684826,2010-01-03,SP1,2009/2010,Real Zaragoza,RC Deportivo de La Coruña,0,0,16,2.6,3.25,2.7,incomplete_or_duplicate_lineup;missing_prior_rating
+684839,2010-01-10,SP1,2009/2010,Xerez Club Deportivo,Valencia CF,1,3,17,6,3.75,1.57,incomplete_or_duplicate_lineup;missing_prior_rating
+684841,2010-01-10,SP1,2009/2010,RCD Espanyol,Real Zaragoza,2,1,17,2,3.3,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+654272,2010-01-16,F1,2009/2010,Le Mans FC,FC Lorient,0,3,20,2.38,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684862,2010-01-16,SP1,2009/2010,CA Osasuna,RCD Espanyol,2,0,18,2.05,3.25,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+684860,2010-01-17,SP1,2009/2010,Real Zaragoza,Xerez Club Deportivo,0,0,18,1.67,3.6,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+704732,2010-01-17,I1,2009/2010,Atalanta,Lazio,3,0,20,2.5,3.1,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+654303,2010-01-20,F1,2009/2010,Olympique de Marseille,Le Mans FC,2,1,21,1.33,4.75,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684877,2010-01-24,SP1,2009/2010,Xerez Club Deportivo,CA Osasuna,1,2,19,3.25,3.2,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+684878,2010-01-24,SP1,2009/2010,RCD Espanyol,RCD Mallorca,1,1,19,2.4,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+684881,2010-01-24,SP1,2009/2010,Real Madrid CF,Málaga CF,2,0,19,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+704756,2010-01-24,I1,2009/2010,Lazio,Chievo Verona,1,1,21,1.95,3.2,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684889,2010-01-31,SP1,2009/2010,Xerez Club Deportivo,RCD Mallorca,2,1,20,3.5,3.3,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+684903,2010-01-31,SP1,2009/2010,Atlético Madrid,Málaga CF,0,2,20,1.5,4.2,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+704783,2010-01-31,I1,2009/2010,Chievo Verona,Bologna,1,1,22,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+704793,2010-01-31,I1,2009/2010,Juventus,Lazio,1,1,22,1.7,3.4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+674460,2010-02-06,D1,2009/2010,TSG 1899 Hoffenheim,Hannover 96,2,1,21,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+684906,2010-02-07,SP1,2009/2010,Málaga CF,RC Deportivo de La Coruña,0,0,21,2.3,3.25,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+684909,2010-02-07,SP1,2009/2010,Athletic Club de Bilbao,Xerez Club Deportivo,3,2,21,1.5,3.75,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684916,2010-02-07,SP1,2009/2010,CA Osasuna,CD Tenerife,1,0,21,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684920,2010-02-07,SP1,2009/2010,UD Almería,Real Sporting de Gijón,3,1,21,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684924,2010-02-13,SP1,2009/2010,Xerez Club Deportivo,Real Madrid CF,0,3,22,13,5.5,1.25,incomplete_or_duplicate_lineup;missing_prior_rating
+684938,2010-02-14,SP1,2009/2010,Racing Santander,Málaga CF,0,3,22,2,3.3,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+704978,2010-02-14,I1,2009/2010,Livorno,Bologna,0,1,24,2.4,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+684928,2010-02-15,SP1,2009/2010,CD Tenerife,RCD Mallorca,1,0,22,2.5,3.2,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+684941,2010-02-21,SP1,2009/2010,Málaga CF,RCD Espanyol,2,1,23,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+684947,2010-02-21,SP1,2009/2010,Athletic Club de Bilbao,CD Tenerife,4,1,23,1.73,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+684956,2010-02-21,SP1,2009/2010,UD Almería,Atlético Madrid,1,0,23,2.7,3.4,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+684989,2010-02-27,SP1,2009/2010,FC Barcelona,Málaga CF,2,1,24,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+705247,2010-02-28,I1,2009/2010,Chievo Verona,Cagliari,2,1,26,2.4,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+684994,2010-03-06,SP1,2009/2010,RC Deportivo de La Coruña,CD Tenerife,3,1,25,1.62,3.6,5.75,incomplete_or_duplicate_lineup;missing_prior_rating
+684990,2010-03-07,SP1,2009/2010,Málaga CF,Xerez Club Deportivo,2,4,25,1.62,3.6,5.75,incomplete_or_duplicate_lineup;missing_prior_rating
+685004,2010-03-07,SP1,2009/2010,CA Osasuna,Getafe CF,0,0,25,2.2,3.25,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+705275,2010-03-07,I1,2009/2010,Bari,Chievo Verona,1,0,27,2,3.25,3.9,incomplete_or_duplicate_lineup;missing_prior_rating
+685016,2010-03-13,SP1,2009/2010,Getafe CF,RCD Mallorca,3,0,26,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685008,2010-03-14,SP1,2009/2010,Villarreal CF,Xerez Club Deportivo,2,0,26,1.36,4.5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+685010,2010-03-14,SP1,2009/2010,CD Tenerife,RCD Espanyol,4,1,26,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+685024,2010-03-14,SP1,2009/2010,UD Almería,Málaga CF,1,0,26,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685030,2010-03-20,SP1,2009/2010,Xerez Club Deportivo,CD Tenerife,2,1,27,2.4,3.3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+685028,2010-03-21,SP1,2009/2010,Málaga CF,Villarreal CF,2,0,27,2.88,3.2,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685048,2010-03-23,SP1,2009/2010,Sevilla FC,Xerez Club Deportivo,1,1,28,1.29,5.25,11,incomplete_or_duplicate_lineup;missing_prior_rating
+685045,2010-03-24,SP1,2009/2010,CD Tenerife,Villarreal CF,2,2,28,2.88,3.3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+685062,2010-03-24,SP1,2009/2010,Valencia CF,Málaga CF,1,0,28,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+654514,2010-03-27,F1,2009/2010,Olympique Lyonnais,Grenoble Foot 38,2,0,30,,,,missing_bet365_odds
+685063,2010-03-27,SP1,2009/2010,Málaga CF,CD Tenerife,1,1,29,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+685066,2010-03-28,SP1,2009/2010,Xerez Club Deportivo,Real Valladolid,3,0,29,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+685070,2010-03-28,SP1,2009/2010,RC Deportivo de La Coruña,Getafe CF,1,3,29,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+659145,2010-04-03,E0,2009/2010,Burnley,Manchester City,1,6,33,5,3.8,1.7,incomplete_or_duplicate_lineup;missing_prior_rating
+685090,2010-04-03,SP1,2009/2010,FC Barcelona,Athletic Club de Bilbao,4,1,30,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+685094,2010-04-03,SP1,2009/2010,Real Zaragoza,Málaga CF,2,0,30,1.85,3.4,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+685083,2010-04-04,SP1,2009/2010,Real Sporting de Gijón,Xerez Club Deportivo,2,2,30,1.73,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+685085,2010-04-04,SP1,2009/2010,Getafe CF,RCD Espanyol,1,1,30,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685097,2010-04-10,SP1,2009/2010,Málaga CF,Sevilla FC,1,2,31,3.25,3.25,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+685098,2010-04-10,SP1,2009/2010,CD Tenerife,Real Valladolid,0,0,31,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+685101,2010-04-10,SP1,2009/2010,Xerez Club Deportivo,Getafe CF,0,1,31,2.8,3.25,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685103,2010-04-11,SP1,2009/2010,RC Deportivo de La Coruña,Racing Santander,1,1,31,2,3.4,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+705388,2010-04-11,I1,2009/2010,Palermo,Chievo Verona,3,1,33,1.44,4,8,incomplete_or_duplicate_lineup;missing_prior_rating
+685112,2010-04-13,SP1,2009/2010,Real Sporting de Gijón,CD Tenerife,0,2,32,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+685124,2010-04-14,SP1,2009/2010,CA Osasuna,Málaga CF,2,2,32,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+685128,2010-04-17,SP1,2009/2010,Sevilla FC,Real Sporting de Gijón,3,0,33,1.4,4.33,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685126,2010-04-18,SP1,2009/2010,Málaga CF,Real Valladolid,0,0,33,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+685130,2010-04-18,SP1,2009/2010,CD Tenerife,Getafe CF,3,2,33,2.4,3.3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+685133,2010-04-18,SP1,2009/2010,Xerez Club Deportivo,Racing Santander,2,2,33,2.4,3.3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+685138,2010-04-18,SP1,2009/2010,RC Deportivo de La Coruña,UD Almería,0,0,33,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+685150,2010-04-24,SP1,2009/2010,FC Barcelona,Xerez Club Deportivo,3,1,34,1.1,8.5,29,incomplete_or_duplicate_lineup;missing_prior_rating
+685148,2010-04-25,SP1,2009/2010,Atlético Madrid,CD Tenerife,3,1,34,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+705303,2010-04-25,I1,2009/2010,Genoa,Lazio,1,2,35,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+685154,2010-04-26,SP1,2009/2010,CA Osasuna,Athletic Club de Bilbao,0,0,34,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+685156,2010-05-01,SP1,2009/2010,Málaga CF,Real Sporting de Gijón,1,1,35,1.83,3.5,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+685159,2010-05-01,SP1,2009/2010,CD Tenerife,Racing Santander,2,1,35,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685163,2010-05-01,SP1,2009/2010,RC Deportivo de La Coruña,Real Zaragoza,0,1,35,2.4,3.3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+685158,2010-05-02,SP1,2009/2010,Sevilla FC,Atlético Madrid,3,1,35,1.36,5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+685164,2010-05-02,SP1,2009/2010,Real Madrid CF,CA Osasuna,3,2,35,1.13,8,19,incomplete_or_duplicate_lineup;missing_prior_rating
+685169,2010-05-04,SP1,2009/2010,FC Barcelona,CD Tenerife,4,1,36,1.06,11,29,incomplete_or_duplicate_lineup;missing_prior_rating
+685173,2010-05-04,SP1,2009/2010,Valencia CF,Xerez Club Deportivo,3,1,36,1.25,5.75,11,incomplete_or_duplicate_lineup;missing_prior_rating
+654744,2010-05-05,F1,2009/2010,FC Sochaux-Montbéliard,Montpellier Hérault SC,0,1,36,2.8,2.75,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+685167,2010-05-05,SP1,2009/2010,Atlético Madrid,Real Valladolid,3,1,36,2,3.5,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+685182,2010-05-08,SP1,2009/2010,Getafe CF,Málaga CF,2,1,37,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685184,2010-05-08,SP1,2009/2010,Real Sporting de Gijón,Atlético Madrid,1,1,37,1.67,3.8,5,incomplete_or_duplicate_lineup;missing_prior_rating
+685189,2010-05-08,SP1,2009/2010,CD Tenerife,UD Almería,2,2,37,1.67,3.75,5,incomplete_or_duplicate_lineup;missing_prior_rating
+685193,2010-05-08,SP1,2009/2010,RCD Espanyol,CA Osasuna,2,1,37,2.1,3.2,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+685195,2010-05-08,SP1,2009/2010,RC Deportivo de La Coruña,RCD Mallorca,1,0,37,3.75,3.4,2,incomplete_or_duplicate_lineup;missing_prior_rating
+659377,2010-05-09,E0,2009/2010,West Ham United,Manchester City,1,1,38,4,3.6,1.91,incomplete_or_duplicate_lineup;missing_prior_rating
+705070,2010-05-09,I1,2009/2010,Bologna,Catania,1,1,37,,,,missing_bet365_odds
+654763,2010-05-15,F1,2009/2010,Paris Saint-Germain,Montpellier Hérault SC,1,3,38,2.5,3.1,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+685200,2010-05-15,SP1,2009/2010,Atlético Madrid,Getafe CF,0,3,38,4.75,4.2,1.65,incomplete_or_duplicate_lineup;missing_prior_rating
+685204,2010-05-15,SP1,2009/2010,UD Almería,Sevilla FC,2,3,38,6.5,4.5,1.44,incomplete_or_duplicate_lineup;missing_prior_rating
+685207,2010-05-15,SP1,2009/2010,Real Zaragoza,Villarreal CF,3,3,38,4,3.6,1.85,incomplete_or_duplicate_lineup;missing_prior_rating
+685210,2010-05-15,SP1,2009/2010,Athletic Club de Bilbao,RC Deportivo de La Coruña,2,0,38,1.8,3.6,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+704898,2010-05-15,I1,2009/2010,Lazio,Udinese,3,1,38,2.1,2.8,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+685201,2010-05-16,SP1,2009/2010,Racing Santander,Real Sporting de Gijón,2,0,38,1.3,5.25,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+685205,2010-05-16,SP1,2009/2010,Valencia CF,CD Tenerife,1,0,38,2.2,3.6,3,incomplete_or_duplicate_lineup;missing_prior_rating
+685208,2010-05-16,SP1,2009/2010,CA Osasuna,Xerez Club Deportivo,1,1,38,2.35,3.4,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+704803,2010-05-16,I1,2009/2010,Cagliari,Bologna,1,1,38,1.62,3.25,7,incomplete_or_duplicate_lineup;missing_prior_rating
+704826,2010-05-16,I1,2009/2010,Parma,Livorno,4,1,38,1.4,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+704894,2010-05-16,I1,2009/2010,Chievo Verona,Roma,0,2,38,7.5,4.5,1.4,incomplete_or_duplicate_lineup;missing_prior_rating
+829876,2010-08-07,F1,2010/2011,FC Sochaux-Montbéliard,AC Arles-Avignon,2,1,1,1.8,3.25,5,incomplete_or_duplicate_lineup;missing_prior_rating
+829877,2010-08-07,F1,2010/2011,Toulouse FC,Stade Brestois 29,2,0,1,1.62,3.5,6,incomplete_or_duplicate_lineup;missing_prior_rating
+829878,2010-08-14,F1,2010/2011,AC Arles-Avignon,RC Lens,0,1,2,3,3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+829880,2010-08-14,F1,2010/2011,Stade Brestois 29,AJ Auxerre,1,1,2,3.1,2.9,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+829898,2010-08-21,F1,2010/2011,Toulouse FC,AC Arles-Avignon,2,1,3,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+875451,2010-08-28,SP1,2010/2011,Hércules Club de Fútbol,Athletic Club de Bilbao,0,1,1,2.5,3.25,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+875463,2010-08-28,SP1,2010/2011,Levante UD,Sevilla FC,1,4,1,3.6,3.5,2,incomplete_or_duplicate_lineup;missing_prior_rating
+888163,2010-08-29,I1,2010/2011,Sampdoria,Lazio,2,0,1,2.1,3.1,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+888179,2010-09-12,I1,2010/2011,Brescia,Palermo,3,2,2,3.25,3.1,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+829921,2010-09-18,F1,2010/2011,AC Arles-Avignon,Olympique de Marseille,0,3,6,5.25,3.6,1.67,incomplete_or_duplicate_lineup;missing_prior_rating
+856902,2010-09-19,D1,2010/2011,FC Schalke 04,Borussia Dortmund,1,3,4,2.25,3.3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+888187,2010-09-19,I1,2010/2011,Chievo Verona,Brescia,0,1,3,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+875557,2010-09-22,SP1,2010/2011,Real Zaragoza,Hércules Club de Fútbol,0,0,4,1.95,3.3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+888198,2010-09-22,I1,2010/2011,Brescia,Roma,2,1,4,3.6,3.2,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+875576,2010-09-25,SP1,2010/2011,Levante UD,Real Madrid CF,0,0,5,12,5.5,1.25,incomplete_or_duplicate_lineup;missing_prior_rating
+875567,2010-09-26,SP1,2010/2011,Atlético Madrid,Real Zaragoza,1,0,5,1.53,4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+875580,2010-09-26,SP1,2010/2011,RCD Mallorca,Real Sociedad,2,0,5,2.05,3.3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+888209,2010-09-26,I1,2010/2011,Bari,Brescia,2,1,5,1.91,3.2,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+875583,2010-10-03,SP1,2010/2011,FC Barcelona,RCD Mallorca,1,1,6,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+888214,2010-10-03,I1,2010/2011,Lazio,Brescia,1,0,6,1.67,3.5,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875614,2010-10-17,SP1,2010/2011,RCD Mallorca,RCD Espanyol,0,1,7,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+888228,2010-10-17,I1,2010/2011,Brescia,Udinese,0,1,7,2.7,3,2.8,incomplete_or_duplicate_lineup;missing_prior_rating
+875607,2010-10-18,SP1,2010/2011,Hércules Club de Fútbol,Villarreal CF,2,2,7,2.8,3.25,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875616,2010-10-23,SP1,2010/2011,Valencia CF,RCD Mallorca,1,2,8,1.57,3.75,6,incomplete_or_duplicate_lineup;missing_prior_rating
+888234,2010-10-24,I1,2010/2011,Lecce,Brescia,2,1,8,2.38,2.88,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+856962,2010-10-30,D1,2010/2011,1. FC Kaiserslautern,Borussia Mönchengladbach,3,0,10,2.1,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+888248,2010-10-31,I1,2010/2011,Brescia,Napoli,0,1,9,3.2,3,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+839913,2010-11-01,E0,2010/2011,Blackpool,West Bromwich Albion,2,1,10,2.9,3.25,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875654,2010-11-01,SP1,2010/2011,RCD Mallorca,Levante UD,2,1,9,1.62,3.8,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+830044,2010-11-06,F1,2010/2011,AC Arles-Avignon,SM Caen,3,2,12,3.25,3,2.38,incomplete_or_duplicate_lineup;missing_prior_rating
+839922,2010-11-07,E0,2010/2011,West Bromwich Albion,Manchester City,0,2,11,3.6,3.3,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+839929,2010-11-10,E0,2010/2011,Aston Villa,Blackpool,3,2,12,1.62,3.75,6,incomplete_or_duplicate_lineup;missing_prior_rating
+888269,2010-11-10,I1,2010/2011,Brescia,Juventus,1,1,11,4.75,3.3,1.8,incomplete_or_duplicate_lineup;missing_prior_rating
+830068,2010-11-13,F1,2010/2011,AS Monaco,AC Arles-Avignon,0,0,13,1.53,3.6,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875685,2010-11-14,SP1,2010/2011,RCD Mallorca,RC Deportivo de La Coruña,0,0,11,1.8,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888276,2010-11-14,I1,2010/2011,Bologna,Brescia,1,0,12,2.05,3.25,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+830071,2010-11-21,F1,2010/2011,AC Arles-Avignon,Girondins de Bordeaux,2,4,14,5.5,3.5,1.67,incomplete_or_duplicate_lineup;missing_prior_rating
+875696,2010-11-21,SP1,2010/2011,RCD Espanyol,Hércules Club de Fútbol,3,0,12,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+888281,2010-11-21,I1,2010/2011,Brescia,Cagliari,1,2,13,2.2,3.1,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875709,2010-11-28,SP1,2010/2011,Hércules Club de Fútbol,Levante UD,3,1,13,1.83,3.5,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+888294,2010-11-28,I1,2010/2011,Brescia,Genoa,0,0,14,3,3,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888299,2010-11-28,I1,2010/2011,Bari,Cesena,1,1,14,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+830083,2010-11-30,F1,2010/2011,Stade Brestois 29,RC Lens,4,1,15,2.05,3.1,4,incomplete_or_duplicate_lineup;missing_prior_rating
+830091,2010-12-04,F1,2010/2011,AC Arles-Avignon,AS Nancy-Lorraine,1,1,16,3.5,3.1,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+830093,2010-12-05,F1,2010/2011,LOSC Lille,FC Lorient,6,3,16,,,,missing_bet365_odds
+888307,2010-12-05,I1,2010/2011,Sampdoria,Bari,3,0,15,1.73,3.25,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875725,2010-12-06,SP1,2010/2011,RC Deportivo de La Coruña,Hércules Club de Fútbol,1,0,14,2.2,3.2,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+830108,2010-12-11,F1,2010/2011,FC Lorient,RC Lens,3,0,17,1.91,3.3,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+857063,2010-12-11,D1,2010/2011,1. FC Kaiserslautern,VfL Wolfsburg,0,0,16,2.5,3.3,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+839980,2010-12-12,E0,2010/2011,Wolverhampton Wanderers,Birmingham City,1,0,17,2.4,3.25,3,incomplete_or_duplicate_lineup;missing_prior_rating
+875738,2010-12-12,SP1,2010/2011,Hércules Club de Fútbol,Málaga CF,4,1,15,2.1,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+888320,2010-12-19,I1,2010/2011,Catania,Brescia,1,0,17,1.91,3.2,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+875754,2010-12-20,SP1,2010/2011,Racing Santander,Hércules Club de Fútbol,0,0,16,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+875763,2011-01-02,SP1,2010/2011,FC Barcelona,Levante UD,2,1,17,1.06,11,29,incomplete_or_duplicate_lineup;missing_prior_rating
+875771,2011-01-03,SP1,2010/2011,RCD Mallorca,Hércules Club de Fútbol,3,0,17,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+840074,2011-01-04,E0,2010/2011,Fulham,West Bromwich Albion,3,0,22,2.2,3.25,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+888334,2011-01-06,I1,2010/2011,Brescia,Cesena,1,2,18,1.91,3.2,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+875794,2011-01-09,SP1,2010/2011,Levante UD,Valencia CF,0,1,18,4.33,3.4,1.85,incomplete_or_duplicate_lineup;missing_prior_rating
+888349,2011-01-09,I1,2010/2011,Fiorentina,Brescia,3,2,19,1.5,3.9,7,incomplete_or_duplicate_lineup;missing_prior_rating
+875798,2011-01-10,SP1,2010/2011,Hércules Club de Fútbol,Atlético Madrid,4,1,18,2.9,3.25,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+875819,2011-01-15,SP1,2010/2011,Real Sporting de Gijón,Hércules Club de Fútbol,2,0,19,2.2,3.3,3.25,incomplete_or_duplicate_lineup;missing_prior_rating
+840080,2011-01-16,E0,2010/2011,Birmingham City,Aston Villa,1,1,23,2.4,3.2,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+888359,2011-01-16,I1,2010/2011,Brescia,Parma,2,0,20,2.5,3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+840085,2011-01-22,E0,2010/2011,Manchester United,Birmingham City,5,0,24,1.2,6.5,15,incomplete_or_duplicate_lineup;missing_prior_rating
+875842,2011-01-23,SP1,2010/2011,Real Madrid CF,RCD Mallorca,1,0,20,1.17,7,15,incomplete_or_duplicate_lineup;missing_prior_rating
+888360,2011-01-23,I1,2010/2011,Chievo Verona,Genoa,0,0,21,,,,missing_bet365_odds
+857150,2011-01-29,D1,2010/2011,FC Schalke 04,TSG 1899 Hoffenheim,0,1,20,1.73,3.5,5,incomplete_or_duplicate_lineup;missing_prior_rating
+875853,2011-01-29,SP1,2010/2011,Hércules Club de Fútbol,FC Barcelona,0,3,21,15,7,1.17,incomplete_or_duplicate_lineup;missing_prior_rating
+888376,2011-01-30,I1,2010/2011,Brescia,Chievo Verona,0,3,22,2.4,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+840100,2011-02-01,E0,2010/2011,West Bromwich Albion,Wigan Athletic,2,2,25,1.73,3.6,5,incomplete_or_duplicate_lineup;missing_prior_rating
+888382,2011-02-02,I1,2010/2011,Roma,Brescia,1,1,23,1.25,5.25,12,incomplete_or_duplicate_lineup;missing_prior_rating
+875876,2011-02-06,SP1,2010/2011,Valencia CF,Hércules Club de Fútbol,2,0,22,1.44,4.2,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888399,2011-02-06,I1,2010/2011,Brescia,Bari,2,0,24,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+830181,2011-02-12,F1,2010/2011,AS Monaco,FC Lorient,3,1,23,2.2,3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+830182,2011-02-12,F1,2010/2011,AS Nancy-Lorraine,AJ Auxerre,3,1,23,2.25,3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875903,2011-02-13,SP1,2010/2011,Hércules Club de Fútbol,Real Zaragoza,2,1,23,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+888406,2011-02-13,I1,2010/2011,Brescia,Lazio,0,2,25,3.25,3,2.38,incomplete_or_duplicate_lineup;missing_prior_rating
+830196,2011-02-19,F1,2010/2011,AJ Auxerre,AC Arles-Avignon,1,1,24,1.36,4.33,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+830197,2011-02-19,F1,2010/2011,Stade Brestois 29,AS Monaco,2,0,24,2.5,3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+875935,2011-02-19,SP1,2010/2011,Real Madrid CF,Levante UD,2,0,24,1.14,7.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+875929,2011-02-20,SP1,2010/2011,Sevilla FC,Hércules Club de Fútbol,1,0,24,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+875705,2011-02-27,SP1,2010/2011,Hércules Club de Fútbol,Getafe CF,0,0,25,2.3,3.3,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+875746,2011-03-02,SP1,2010/2011,Villarreal CF,Hércules Club de Fútbol,1,0,26,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+875783,2011-03-06,SP1,2010/2011,Hércules Club de Fútbol,UD Almería,1,2,27,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+875840,2011-03-12,SP1,2010/2011,Real Madrid CF,Hércules Club de Fútbol,2,0,28,1.14,7.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+875884,2011-03-20,SP1,2010/2011,Hércules Club de Fútbol,CA Osasuna,0,4,29,2.15,3.25,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+888453,2011-03-20,I1,2010/2011,Juventus,Brescia,2,1,30,1.44,4.2,8,incomplete_or_duplicate_lineup;missing_prior_rating
+840162,2011-04-02,E0,2010/2011,West Bromwich Albion,Liverpool,2,1,31,3,3.3,2.38,incomplete_or_duplicate_lineup;missing_prior_rating
+888468,2011-04-02,I1,2010/2011,Brescia,Bologna,3,1,31,1.45,4.2,6,incomplete_or_duplicate_lineup;missing_prior_rating
+840167,2011-04-09,E0,2010/2011,Sunderland,West Bromwich Albion,2,3,32,2.2,3.2,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888478,2011-04-10,I1,2010/2011,Cagliari,Brescia,1,1,32,3.1,1.91,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+857362,2011-04-15,D1,2010/2011,1. FSV Mainz 05,Borussia Mönchengladbach,1,0,30,1.91,3.6,3.75,incomplete_or_duplicate_lineup
+875979,2011-04-16,SP1,2010/2011,Málaga CF,RCD Mallorca,3,0,32,1.91,3.4,4,incomplete_or_duplicate_lineup
+875976,2011-04-17,SP1,2010/2011,Levante UD,Hércules Club de Fútbol,2,1,32,2.1,3.25,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888482,2011-04-17,I1,2010/2011,Genoa,Brescia,3,0,33,,,,missing_bet365_odds
+888485,2011-04-17,I1,2010/2011,Chievo Verona,Bologna,2,0,33,,,,missing_bet365_odds
+888492,2011-04-23,I1,2010/2011,Brescia,Milan,0,1,34,5.75,3.1,1.75,incomplete_or_duplicate_lineup;missing_prior_rating
+840201,2011-04-30,E0,2010/2011,West Bromwich Albion,Aston Villa,2,1,35,2.38,3.3,3,incomplete_or_duplicate_lineup;missing_prior_rating
+830469,2011-05-01,F1,2010/2011,AS Saint-Étienne,AS Monaco,1,1,33,2.1,3.1,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+888504,2011-05-01,I1,2010/2011,Sampdoria,Brescia,3,3,35,1.85,3.3,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+830483,2011-05-07,F1,2010/2011,AS Monaco,Paris Saint-Germain,1,1,34,3.25,3,2.38,incomplete_or_duplicate_lineup;missing_prior_rating
+840211,2011-05-08,E0,2010/2011,Wolverhampton Wanderers,West Bromwich Albion,3,1,36,2.1,3.4,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+888518,2011-05-08,I1,2010/2011,Brescia,Catania,1,2,36,1.85,3.3,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+840221,2011-05-14,E0,2010/2011,West Bromwich Albion,Everton,1,0,37,2.63,3.25,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+830506,2011-05-15,F1,2010/2011,AC Arles-Avignon,Toulouse FC,1,0,36,4.5,3.4,1.83,incomplete_or_duplicate_lineup;missing_prior_rating
+875487,2011-05-15,SP1,2010/2011,Real Sporting de Gijón,Racing Santander,2,1,37,1.33,5,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+875453,2011-05-21,SP1,2010/2011,Levante UD,Real Zaragoza,1,2,38,5.5,4.33,1.53,incomplete_or_duplicate_lineup;missing_prior_rating
+888538,2011-05-22,I1,2010/2011,Brescia,Fiorentina,2,2,38,3,3.2,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+830539,2011-05-29,F1,2010/2011,AC Arles-Avignon,FC Sochaux-Montbéliard,1,3,38,4.75,3.5,1.75,incomplete_or_duplicate_lineup;missing_prior_rating
+830545,2011-05-29,F1,2010/2011,AS Monaco,Olympique Lyonnais,0,2,38,3,3.2,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+1019340,2011-08-07,F1,2011/2012,Dijon FCO,Stade Rennais FC,1,5,1,2.88,3,2.63,incomplete_or_duplicate_lineup;missing_prior_rating
+1019404,2011-09-10,F1,2011/2012,SM Caen,Toulouse FC,0,1,5,2.6,3,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+1082946,2011-09-10,I1,2011/2012,Cesena,Napoli,1,3,2,3.25,3.3,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1082948,2011-09-11,I1,2011/2012,Chievo Verona,Novara,2,2,2,1.91,3.25,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+1082964,2011-09-18,I1,2011/2012,Catania,Cesena,1,0,3,2.1,3.1,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1082975,2011-09-21,I1,2011/2012,Cesena,Lazio,1,2,4,3.4,3.2,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1082977,2011-09-21,I1,2011/2012,Fiorentina,Parma,3,0,4,1.8,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1083000,2011-10-02,I1,2011/2012,Cesena,Chievo Verona,0,0,6,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1083006,2011-10-02,I1,2011/2012,Novara,Catania,3,3,6,2.3,3.2,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1083017,2011-10-16,I1,2011/2012,Cesena,Fiorentina,0,0,7,3,3.2,2.4,incomplete_or_duplicate_lineup;missing_prior_rating
+1083025,2011-10-16,I1,2011/2012,Novara,Bologna,0,2,7,2,3.3,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1083033,2011-10-22,I1,2011/2012,Fiorentina,Catania,2,2,8,1.67,3.5,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083041,2011-10-23,I1,2011/2012,Siena,Cesena,2,0,8,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083045,2011-10-26,I1,2011/2012,Cesena,Cagliari,1,1,9,2.7,3.1,2.7,incomplete_or_duplicate_lineup;missing_prior_rating
+1083057,2011-10-26,I1,2011/2012,Novara,Siena,1,1,9,2.4,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+1024726,2011-11-05,E0,2011/2012,Arsenal,West Bromwich Albion,3,0,11,1.4,4.5,8.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083091,2011-11-06,I1,2011/2012,Cesena,Lecce,0,1,11,2,3.2,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1051816,2011-11-29,SP1,2011/2012,FC Barcelona,Rayo Vallecano,4,0,17,1.06,11,29,incomplete_or_duplicate_lineup;missing_prior_rating
+1024888,2011-12-03,E0,2011/2012,Blackburn Rovers,Swansea City,4,2,14,2.1,3.4,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083213,2011-12-05,I1,2011/2012,Lazio,Novara,3,0,14,1.36,4.5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+1019679,2011-12-10,F1,2011/2012,AS Saint-Étienne,SM Caen,2,0,17,1.8,3.3,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1024962,2011-12-10,E0,2011/2012,Swansea City,Fulham,2,0,15,2.63,3.25,2.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1083245,2011-12-10,I1,2011/2012,Palermo,Cesena,0,1,15,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+1083243,2011-12-11,I1,2011/2012,Novara,Napoli,1,1,15,4,3.4,1.91,incomplete_or_duplicate_lineup;missing_prior_rating
+1024996,2011-12-17,E0,2011/2012,Newcastle United,Swansea City,0,0,16,1.8,3.6,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083256,2011-12-18,I1,2011/2012,Cesena,Inter,0,1,16,4.75,3.25,1.83,incomplete_or_duplicate_lineup;missing_prior_rating
+1083266,2011-12-18,I1,2011/2012,Juventus,Novara,2,0,16,1.22,6,13,incomplete_or_duplicate_lineup;missing_prior_rating
+1025051,2011-12-21,E0,2011/2012,Everton,Swansea City,1,0,17,1.57,3.75,6.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1082898,2011-12-21,I1,2011/2012,Atalanta,Cesena,4,1,1,1.91,3.25,4.33,incomplete_or_duplicate_lineup;missing_prior_rating
+1082904,2011-12-21,I1,2011/2012,Novara,Palermo,2,2,1,2.38,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1025111,2011-12-27,E0,2011/2012,Swansea City,Queens Park Rangers,1,1,18,2,3.4,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1025164,2011-12-31,E0,2011/2012,Swansea City,Tottenham Hotspur,1,1,19,5.5,3.6,1.67,incomplete_or_duplicate_lineup;missing_prior_rating
+1025220,2012-01-03,E0,2011/2012,Tottenham Hotspur,West Bromwich Albion,1,0,20,1.33,5,10,incomplete_or_duplicate_lineup;missing_prior_rating
+1083295,2012-01-08,I1,2011/2012,Udinese,Cesena,4,1,17,1.44,3.8,9,incomplete_or_duplicate_lineup;missing_prior_rating
+1019770,2012-01-14,F1,2011/2012,SM Caen,Stade Rennais FC,0,2,20,2.9,3.1,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1025262,2012-01-14,E0,2011/2012,West Bromwich Albion,Norwich City,1,2,21,2,3.4,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1083297,2012-01-15,I1,2011/2012,Cesena,Novara,3,1,18,2,3.2,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1025305,2012-01-21,E0,2011/2012,Stoke City,West Bromwich Albion,1,2,22,1.91,3.4,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1083322,2012-01-21,I1,2011/2012,Roma,Cesena,5,1,19,1.4,4.2,9,incomplete_or_duplicate_lineup;missing_prior_rating
+1019819,2012-01-28,F1,2011/2012,Toulouse FC,SM Caen,1,0,21,1.8,3.25,5,incomplete_or_duplicate_lineup;missing_prior_rating
+1025453,2012-02-01,E0,2011/2012,Fulham,West Bromwich Albion,1,1,23,1.83,3.5,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1051849,2012-02-05,SP1,2011/2012,Real Zaragoza,Rayo Vallecano,1,2,22,2.38,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+1083371,2012-02-05,I1,2011/2012,Roma,Inter,4,0,22,,,,missing_bet365_odds
+1083355,2012-02-15,I1,2011/2012,Atalanta,Genoa,1,0,21,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1083314,2012-03-19,I1,2011/2012,Roma,Genoa,1,0,28,1.5,4,7,incomplete_or_duplicate_lineup;missing_prior_rating
+1083276,2012-03-25,I1,2011/2012,Genoa,Fiorentina,2,2,29,2.4,3,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1083279,2012-03-25,I1,2011/2012,Cesena,Parma,2,2,29,3.8,3.3,2,incomplete_or_duplicate_lineup;missing_prior_rating
+1083258,2012-04-01,I1,2011/2012,Inter,Genoa,5,4,30,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+1083236,2012-04-07,I1,2011/2012,Cesena,Bologna,0,0,31,3.6,3,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1025929,2012-04-11,E0,2011/2012,Manchester City,West Bromwich Albion,4,0,33,1.25,5.5,13,incomplete_or_duplicate_lineup;missing_prior_rating
+1083205,2012-04-25,I1,2011/2012,Cesena,Juventus,0,1,33,13,6,1.22,incomplete_or_duplicate_lineup;missing_prior_rating
+1083139,2012-05-06,I1,2011/2012,Udinese,Genoa,2,0,37,1.62,3.75,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1026206,2012-05-13,E0,2011/2012,West Bromwich Albion,Arsenal,2,3,38,5,4,1.67,incomplete_or_duplicate_lineup;missing_prior_rating
+1083107,2012-05-13,I1,2011/2012,Cesena,Roma,2,3,38,4.5,3.75,1.73,incomplete_or_duplicate_lineup;missing_prior_rating
+1239460,2012-08-25,D1,2012/2013,VfB Stuttgart,VfL Wolfsburg,0,1,1,,,,missing_bet365_odds
+1259975,2012-08-25,SP1,2012/2013,RCD Espanyol,Real Zaragoza,1,2,2,1.67,3.6,5.25,incomplete_or_duplicate_lineup;missing_prior_rating
+1286967,2012-08-26,I1,2012/2013,Chievo Verona,Bologna,2,0,1,2.1,3.2,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1259997,2012-09-01,SP1,2012/2013,Real Zaragoza,Málaga CF,0,1,3,2.7,3.25,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1286977,2012-09-01,I1,2012/2013,Bologna,Milan,1,3,2,3.6,3.2,2.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1287019,2012-09-30,I1,2012/2013,Cagliari,Pescara,1,2,6,1.73,3.5,5,incomplete_or_duplicate_lineup
+1287029,2012-10-07,I1,2012/2013,Fiorentina,Bologna,1,0,7,1.62,3.6,6,incomplete_or_duplicate_lineup;missing_prior_rating
+1260207,2012-11-17,SP1,2012/2013,FC Barcelona,Real Zaragoza,3,1,12,1.08,10,26,incomplete_or_duplicate_lineup;missing_prior_rating
+1216946,2012-11-24,F1,2012/2013,Stade Rennais FC,Évian Thonon Gaillard FC,0,1,14,1.67,3.6,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1260296,2012-12-16,SP1,2012/2013,Real Zaragoza,Levante UD,0,1,16,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1217003,2013-01-12,F1,2012/2013,AS Nancy-Lorraine,LOSC Lille,2,2,20,4,3.2,2,incomplete_or_duplicate_lineup;missing_prior_rating
+1217020,2013-01-19,F1,2012/2013,Toulouse FC,AS Nancy-Lorraine,2,1,21,1.57,3.8,6,incomplete_or_duplicate_lineup;missing_prior_rating
+1259970,2013-01-20,SP1,2012/2013,Real Valladolid,Real Zaragoza,2,0,20,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1287167,2013-01-20,I1,2012/2013,Milan,Bologna,2,1,21,,,,missing_bet365_odds
+1217021,2013-01-26,F1,2012/2013,Évian Thonon Gaillard FC,AC Ajaccio,1,1,22,2,3.2,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1217023,2013-01-26,F1,2012/2013,AS Nancy-Lorraine,FC Lorient,2,1,22,2.63,3,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+1217032,2013-02-02,F1,2012/2013,SC Bastia,Évian Thonon Gaillard FC,0,0,23,2.75,3.1,2.63,incomplete_or_duplicate_lineup;missing_prior_rating
+1260017,2013-02-03,SP1,2012/2013,Málaga CF,Real Zaragoza,1,1,22,1.53,4,6,incomplete_or_duplicate_lineup;missing_prior_rating
+1217042,2013-02-10,F1,2012/2013,Évian Thonon Gaillard FC,Olympique de Marseille,1,1,24,3.5,3.2,2.15,incomplete_or_duplicate_lineup;missing_prior_rating
+1217055,2013-02-16,F1,2012/2013,FC Lorient,Évian Thonon Gaillard FC,2,1,25,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217063,2013-02-23,F1,2012/2013,Évian Thonon Gaillard FC,Montpellier Hérault SC,0,1,26,2.9,3.1,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217065,2013-02-23,F1,2012/2013,AS Nancy-Lorraine,AS Saint-Étienne,0,3,26,3.5,3.1,2.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1260083,2013-02-23,SP1,2012/2013,Real Zaragoza,Valencia CF,2,2,25,3.2,3.2,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+1217080,2013-03-02,F1,2012/2013,Toulouse FC,Évian Thonon Gaillard FC,0,0,27,1.8,3.4,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1217084,2013-03-09,F1,2012/2013,Évian Thonon Gaillard FC,FC Sochaux-Montbéliard,5,1,28,2.1,3.2,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1217092,2013-03-16,F1,2012/2013,LOSC Lille,Évian Thonon Gaillard FC,1,2,29,1.44,4.1,8,incomplete_or_duplicate_lineup;missing_prior_rating
+1217104,2013-03-30,F1,2012/2013,Évian Thonon Gaillard FC,Stade de Reims,2,2,30,2,3.1,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1217118,2013-04-07,F1,2012/2013,AS Saint-Étienne,Évian Thonon Gaillard FC,1,0,31,1.45,4.1,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217124,2013-04-13,F1,2012/2013,Évian Thonon Gaillard FC,Stade Rennais FC,4,2,32,2.5,3.1,2.9,incomplete_or_duplicate_lineup;missing_prior_rating
+1217134,2013-04-21,F1,2012/2013,AS Nancy-Lorraine,Évian Thonon Gaillard FC,3,1,33,2.15,3.1,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1260214,2013-04-27,SP1,2012/2013,Real Zaragoza,RCD Mallorca,3,2,33,2.1,3.3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217160,2013-05-04,F1,2012/2013,ES Troyes AC,Évian Thonon Gaillard FC,1,0,35,2.38,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+1217153,2013-05-05,F1,2012/2013,AS Nancy-Lorraine,Olympique Lyonnais,0,3,35,2.8,3.1,2.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1287324,2013-05-08,I1,2012/2013,Bologna,Napoli,0,3,36,4.5,3.8,1.73,incomplete_or_duplicate_lineup;missing_prior_rating
+1217166,2013-05-10,F1,2012/2013,LOSC Lille,Stade de Reims,3,0,36,1.36,4.5,9.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1260293,2013-05-10,SP1,2012/2013,Levante UD,Real Zaragoza,0,0,35,2.75,3.3,2.55,incomplete_or_duplicate_lineup;missing_prior_rating
+1217163,2013-05-11,F1,2012/2013,Girondins de Bordeaux,AS Nancy-Lorraine,3,2,36,2.2,3.1,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217165,2013-05-12,F1,2012/2013,Évian Thonon Gaillard FC,OGC Nice,4,0,36,2.55,3.1,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+1217171,2013-05-18,F1,2012/2013,Évian Thonon Gaillard FC,Valenciennes FC,2,0,37,1.67,3.75,5,incomplete_or_duplicate_lineup;missing_prior_rating
+1217172,2013-05-18,F1,2012/2013,Montpellier Hérault SC,LOSC Lille,0,0,37,3.75,3.5,1.95,incomplete_or_duplicate_lineup;missing_prior_rating
+1260261,2013-05-19,SP1,2012/2013,Real Zaragoza,Athletic Club de Bilbao,1,2,36,1.85,3.5,4.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1217183,2013-05-26,F1,2012/2013,Girondins de Bordeaux,Évian Thonon Gaillard FC,2,1,38,1.95,3.3,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1217185,2013-05-26,F1,2012/2013,LOSC Lille,AS Saint-Étienne,1,1,38,1.91,3.4,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1260334,2013-06-01,SP1,2012/2013,Real Zaragoza,Atlético Madrid,1,3,38,2.2,3.5,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1536522,2013-08-24,I1,2013/2014,Sampdoria,Juventus,0,1,1,8,4,1.45,incomplete_or_duplicate_lineup;missing_prior_rating
+1468187,2013-08-25,F1,2013/2014,FC Nantes,Paris Saint-Germain,1,2,3,6,3.8,1.57,incomplete_or_duplicate_lineup;missing_prior_rating
+1468195,2013-08-31,F1,2013/2014,Stade de Reims,FC Nantes,0,0,4,2.25,3.1,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+1536531,2013-09-01,I1,2013/2014,Bologna,Sampdoria,2,2,2,2.2,3.25,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+1536547,2013-09-15,I1,2013/2014,Sampdoria,Genoa,0,3,3,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1505900,2013-10-20,SP1,2013/2014,UD Almería,Rayo Vallecano,0,1,9,1.91,3.6,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1536595,2013-10-20,I1,2013/2014,Livorno,Sampdoria,1,2,8,2.3,3.2,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1536608,2013-10-26,I1,2013/2014,Sampdoria,Atalanta,1,0,9,2.3,3.2,3.2,incomplete_or_duplicate_lineup;missing_prior_rating
+1505911,2013-10-27,SP1,2013/2014,Real Sociedad,UD Almería,3,0,10,1.57,4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536614,2013-10-30,I1,2013/2014,Hellas Verona,Sampdoria,2,0,10,2,3.4,3.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1536627,2013-11-03,I1,2013/2014,Sampdoria,Sassuolo,3,4,11,1.95,3.5,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1536634,2013-11-10,I1,2013/2014,Fiorentina,Sampdoria,2,1,12,1.4,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+1468294,2013-11-24,F1,2013/2014,FC Nantes,AS Monaco,0,1,14,3.4,3.1,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+1536656,2013-12-01,I1,2013/2014,Inter,Sampdoria,1,1,14,1.4,4.5,8,incomplete_or_duplicate_lineup;missing_prior_rating
+1536667,2013-12-08,I1,2013/2014,Sampdoria,Catania,2,0,15,1.73,3.6,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1468326,2013-12-14,F1,2013/2014,FC Nantes,Toulouse FC,1,2,18,2.05,3.1,4,incomplete_or_duplicate_lineup;missing_prior_rating
+1536671,2013-12-15,I1,2013/2014,Chievo Verona,Sampdoria,0,1,16,2.25,3,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536687,2013-12-22,I1,2013/2014,Sampdoria,Parma,1,1,17,2.5,3.2,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+1536697,2014-01-06,I1,2013/2014,Napoli,Sampdoria,2,0,18,1.36,4.75,8,incomplete_or_duplicate_lineup;missing_prior_rating
+1536707,2014-01-13,I1,2013/2014,Sampdoria,Udinese,3,0,19,2.38,3.2,3,incomplete_or_duplicate_lineup;missing_prior_rating
+1536718,2014-01-18,I1,2013/2014,Juventus,Sampdoria,4,2,20,1.17,6.5,17,incomplete_or_duplicate_lineup;missing_prior_rating
+1506014,2014-01-25,SP1,2013/2014,Real Madrid CF,Granada CF,2,0,21,1.05,15,26,incomplete_or_duplicate_lineup;missing_prior_rating
+1536721,2014-01-26,I1,2013/2014,Sampdoria,Bologna,1,1,21,1.75,3.4,5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536737,2014-02-03,I1,2013/2014,Genoa,Sampdoria,0,1,22,2.5,3.2,2.88,incomplete_or_duplicate_lineup;missing_prior_rating
+1536742,2014-02-09,I1,2013/2014,Sampdoria,Cagliari,1,0,23,2.1,3.25,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1506042,2014-02-16,SP1,2013/2014,Granada CF,Real Betis Balompié,1,0,24,2.1,3.2,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1536757,2014-02-16,I1,2013/2014,Roma,Sampdoria,3,0,24,1.33,5,9,incomplete_or_duplicate_lineup;missing_prior_rating
+1536766,2014-02-23,I1,2013/2014,Sampdoria,Milan,0,2,25,3.2,3.2,2.3,incomplete_or_duplicate_lineup;missing_prior_rating
+1506062,2014-02-28,SP1,2013/2014,Athletic Club de Bilbao,Granada CF,4,0,26,1.4,4.5,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536778,2014-03-02,I1,2013/2014,Torino,Sampdoria,0,2,26,1.83,3.25,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1536785,2014-03-09,I1,2013/2014,Sampdoria,Livorno,4,2,27,1.75,3.4,5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536789,2014-03-09,I1,2013/2014,Inter,Torino,1,0,27,1.57,4,5.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1506083,2014-03-14,SP1,2013/2014,Getafe CF,Granada CF,3,3,28,2.1,3.25,3.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536798,2014-03-16,I1,2013/2014,Atalanta,Sampdoria,3,0,28,2.25,3.2,3.3,incomplete_or_duplicate_lineup;missing_prior_rating
+1506094,2014-03-22,SP1,2013/2014,Granada CF,Elche CF,1,0,29,2.05,3.2,3.8,incomplete_or_duplicate_lineup;missing_prior_rating
+1536824,2014-03-30,I1,2013/2014,Sampdoria,Fiorentina,0,0,31,2.88,3.2,2.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1506125,2014-04-06,SP1,2013/2014,Málaga CF,Granada CF,4,1,32,2.05,3.3,3.6,incomplete_or_duplicate_lineup;missing_prior_rating
+1536836,2014-04-06,I1,2013/2014,Lazio,Sampdoria,2,0,32,1.75,3.5,4.75,incomplete_or_duplicate_lineup;missing_prior_rating
+1536845,2014-04-13,I1,2013/2014,Torino,Genoa,2,1,33,1.83,3.4,4.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1536846,2014-04-13,I1,2013/2014,Sampdoria,Inter,0,4,33,3.2,3.3,2.25,incomplete_or_duplicate_lineup;missing_prior_rating
+1536861,2014-04-27,I1,2013/2014,Sampdoria,Chievo Verona,2,1,35,2.4,3.1,3.1,incomplete_or_duplicate_lineup;missing_prior_rating
+1536877,2014-05-04,I1,2013/2014,Parma,Sampdoria,2,0,36,1.5,3.75,7.5,incomplete_or_duplicate_lineup;missing_prior_rating
+1475118,2014-05-11,E0,2013/2014,Sunderland,Swansea City,1,3,38,2.3,3.4,3.4,incomplete_or_duplicate_lineup;missing_prior_rating
+1536887,2014-05-11,I1,2013/2014,Sampdoria,Napoli,2,5,37,3.3,3.4,2.15,incomplete_or_duplicate_lineup;missing_prior_rating
+1536897,2014-05-17,I1,2013/2014,Udinese,Sampdoria,3,3,38,1.73,3.8,4.5,incomplete_or_duplicate_lineup;missing_prior_rating

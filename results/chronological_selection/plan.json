@@ -1,0 +1,36 @@
+{
+  "folds": [
+    2019,
+    2020,
+    2021
+  ],
+  "selection_seasons": [
+    2020,
+    2021
+  ],
+  "calibration_seed": 2019,
+  "candidates": 44,
+  "recency": "Fixed three-season half-life, not full-training-selected half-life",
+  "regression_features": [
+    "HomePlayer_Overall_mean",
+    "AwayPlayer_Overall_mean",
+    "home_GD_prior",
+    "home_Points_prior",
+    "home_GD_form",
+    "home_Points_form",
+    "away_GD_prior",
+    "away_Points_prior",
+    "away_GD_form",
+    "away_Points_form",
+    "B365H",
+    "B365D",
+    "B365A",
+    "Matchweek"
+  ],
+  "teams": "Two fixed variants for each regression family, with and without one-hot team identity",
+  "objective": "OOF CAGR / max(daily maximum drawdown, 0.01); 5% weight grid plus equal thirds",
+  "calibration": "Each OOF season uses only earlier OOF seasons for temperature; 2019 seeds calibration and is excluded from selection for every candidate",
+  "limits": "Previously examined test season; previously developed fixed forest settings/features. Historical actual lineups and Bet365 odds, no fees. This is a two-season OOF selection experiment, not untouched prospective evidence.",
+  "train_sha256": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+  "code_sha256": "12dbb35a3df1e274bbbca1a306f64cde4d3604a5f4df5e8f0cdc3ce94d2b8164"
+}

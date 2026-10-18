@@ -1,0 +1,113 @@
+{
+  "models": {
+    "RF classifier": {
+      "temperature": 1.0421587202433642,
+      "audit_temperature": 1.0546086482099326,
+      "audit_raw": {
+        "log_loss": 0.9730174738175608,
+        "brier": 0.5774736863015768,
+        "auc": 0.6850455726312555
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9731157420676624,
+        "brier": 0.5776174600465741,
+        "auc": 0.6850760366050265
+      },
+      "calibration_matches": 4335,
+      "test_raw": {
+        "log_loss": 0.9777046883859899,
+        "brier": 0.5820101312518039,
+        "auc": 0.6637767123093776
+      },
+      "test_calibrated": {
+        "log_loss": 0.9781153742458014,
+        "brier": 0.582260982525716,
+        "auc": 0.6638060206965123
+      }
+    },
+    "RF classifier + adjusted form": {
+      "temperature": 1.0406605075321076,
+      "audit_temperature": 1.0506592161279582,
+      "audit_raw": {
+        "log_loss": 0.9737891709846386,
+        "brier": 0.5779019858432726,
+        "auc": 0.6839896456328928
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9738277833745745,
+        "brier": 0.5780204809590391,
+        "auc": 0.6839710262719646
+      },
+      "calibration_matches": 4335,
+      "test_raw": {
+        "log_loss": 0.97826104823225,
+        "brier": 0.582444160047197,
+        "auc": 0.6624601725446192
+      },
+      "test_calibrated": {
+        "log_loss": 0.97863205860888,
+        "brier": 0.5826676436665915,
+        "auc": 0.6624648241350796
+      }
+    },
+    "RF classifier + lineup": {
+      "temperature": 1.0415483826155787,
+      "audit_temperature": 1.0545310706878837,
+      "audit_raw": {
+        "log_loss": 0.9726464951126709,
+        "brier": 0.5771581130369242,
+        "auc": 0.6857311280655418
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9727628029429706,
+        "brier": 0.57731842565412,
+        "auc": 0.6857389749847268
+      },
+      "calibration_matches": 4335,
+      "test_raw": {
+        "log_loss": 0.9777918676393986,
+        "brier": 0.5821365307087968,
+        "auc": 0.6636115118576372
+      },
+      "test_calibrated": {
+        "log_loss": 0.9782215876244779,
+        "brier": 0.5823961557563796,
+        "auc": 0.6636442794732546
+      }
+    },
+    "RF classifier + both": {
+      "temperature": 1.0392090671452792,
+      "audit_temperature": 1.04998591389378,
+      "audit_raw": {
+        "log_loss": 0.9732849848587626,
+        "brier": 0.5775395634344405,
+        "auc": 0.6845164183581761
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9733505214155681,
+        "brier": 0.5776733533085344,
+        "auc": 0.6845158883260224
+      },
+      "calibration_matches": 4335,
+      "test_raw": {
+        "log_loss": 0.9777333695116119,
+        "brier": 0.5821707763619992,
+        "auc": 0.6636216114330261
+      },
+      "test_calibrated": {
+        "log_loss": 0.9781455914374139,
+        "brier": 0.5824165039066532,
+        "auc": 0.6636784107545716
+      }
+    }
+  },
+  "input_hashes": {
+    "results/classifier/train.csv": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "results/classifier/test.csv": "f330efe0d902566782d90dd4e8b2cedf3c0ac810159ebf9c0ddb1c8f3c8f6062",
+    "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+    "results/classifier/RF classifier.joblib": "a2b5aefafe6e81a2549d538cf4bdd507d382f87bbf03cd2f01edcb7185e4a93c",
+    "results/classifier/RF classifier + adjusted form.joblib": "5d43dad164c52dc27a50ae1322c6bbd30db02347f2f67a1df8599a05c456b676",
+    "results/classifier/RF classifier + lineup.joblib": "f1d0e79670b1b5d033e3b5fc117f7675a6708ba3e87f152e7b4dc56916ea66f5",
+    "results/classifier/RF classifier + both.joblib": "2f208da6543357a38610ac49fa7ea109e3dac0bc20b6aeea025bef2f6ddb9026"
+  }
+}

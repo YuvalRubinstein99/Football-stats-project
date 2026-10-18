@@ -1,0 +1,110 @@
+[
+  {
+    "season": "2023",
+    "league": "E0",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2023",
+    "league": "SP1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2023",
+    "league": "D1",
+    "results_matches": 306,
+    "bet365_matches": 306,
+    "lineup_source_matches": 306,
+    "complete_unique_starter_sets": 306,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2023",
+    "league": "I1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2024",
+    "league": "E0",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2024",
+    "league": "SP1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2024",
+    "league": "D1",
+    "results_matches": 306,
+    "bet365_matches": 306,
+    "lineup_source_matches": 306,
+    "complete_unique_starter_sets": 306,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2024",
+    "league": "I1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2025",
+    "league": "E0",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2025",
+    "league": "SP1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 380,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2025",
+    "league": "D1",
+    "results_matches": 306,
+    "bet365_matches": 306,
+    "lineup_source_matches": 306,
+    "complete_unique_starter_sets": 306,
+    "model_ready_matches": 0
+  },
+  {
+    "season": "2025",
+    "league": "I1",
+    "results_matches": 380,
+    "bet365_matches": 380,
+    "lineup_source_matches": 380,
+    "complete_unique_starter_sets": 379,
+    "model_ready_matches": 0
+  }
+]

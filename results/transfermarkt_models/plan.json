@@ -1,0 +1,47 @@
+{
+  "models": [
+    "Expanded RF",
+    "RF classifier + both",
+    "Linear",
+    "Poisson",
+    "Ordered_logit",
+    "Ordered_probit"
+  ],
+  "extra_features": [
+    "tm_home_log_value",
+    "tm_away_log_value",
+    "tm_home_missing",
+    "tm_away_missing"
+  ],
+  "regression_features": [
+    "HomePlayer_Overall_mean",
+    "AwayPlayer_Overall_mean",
+    "home_GD_prior",
+    "home_Points_prior",
+    "home_GD_form",
+    "home_Points_form",
+    "away_GD_prior",
+    "away_Points_prior",
+    "away_GD_form",
+    "away_Points_form",
+    "B365H",
+    "B365D",
+    "B365A",
+    "Matchweek",
+    "home_team_name",
+    "away_team_name"
+  ],
+  "folds": [
+    2020,
+    2021
+  ],
+  "test_season": 2022,
+  "policy": "All original 19,263 train and 1,447 test rows preserved, including original test duplicate. Missing XI values imputed to training-fold median with missing indicators; no future valuations. Fixed existing parameters; equal sample weights; raw probabilities; no test selection.",
+  "hashes": {
+    "results\\classifier\\train.csv": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "results\\classifier\\test.csv": "f330efe0d902566782d90dd4e8b2cedf3c0ac810159ebf9c0ddb1c8f3c8f6062",
+    "data\\transfermarkt_values\\match_features.csv": "8ab56a4050afb4128c649b57ae43162934a0ffa944fce8770b6f4fcaa0b744d6",
+    "results\\expanded_comparison\\expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+    "scripts\\evaluate_transfermarkt_models.py": "76a32772d2210a559654d8227cf6f48527f2de6c8fc2b1654cbedc5e220edbce"
+  }
+}

@@ -1,0 +1,1004 @@
+<!doctype html><meta charset="utf-8"><title>Ordered models vs expanded RF</title><style>body{font:15px system-ui;margin:30px;color:#182532}table{border-collapse:collapse;font-size:12px}td,th{padding:8px;border-bottom:1px solid #ddd}svg{width:100%;max-width:1000px}pre{white-space:pre-wrap}</style><h1>Expanded data: ordered logit and ordered probit</h1><p>19,263 training matches (2008–22); identical 1,447 test matches (2022–23). Same FIFA, team, form, matchweek and Bet365 predictors.</p><h2>Test prediction quality</h2><p>Lower log loss/Brier is better; higher AUC/accuracy is better.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>log_loss</th>
+      <th>auc_macro</th>
+      <th>brier</th>
+      <th>accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>0.98867</td>
+      <td>0.65166</td>
+      <td>0.58950</td>
+      <td>0.52177</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>0.98936</td>
+      <td>0.65096</td>
+      <td>0.58999</td>
+      <td>0.52108</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>0.97851</td>
+      <td>0.66317</td>
+      <td>0.58239</td>
+      <td>0.53766</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>0.98850</td>
+      <td>0.65207</td>
+      <td>0.58958</td>
+      <td>0.52661</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>0.98396</td>
+      <td>0.66015</td>
+      <td>0.58574</td>
+      <td>0.53836</td>
+    </tr>
+    <tr>
+      <td>Market</td>
+      <td>0.98067</td>
+      <td>0.65736</td>
+      <td>0.58397</td>
+      <td>0.54043</td>
+    </tr>
+  </tbody>
+</table><h2>Fixed filtered Legacy variance strategy</h2><p>Odds ≥ 4, expected return &gt; 2%, existing $1–$5 stake levels.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>strategy</th>
+      <th>bets</th>
+      <th>staked</th>
+      <th>net</th>
+      <th>flat_net</th>
+      <th>roi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>331</td>
+      <td>1,214.00000</td>
+      <td>-0.68000</td>
+      <td>-14.51000</td>
+      <td>-0.00056</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>344</td>
+      <td>1,277.00000</td>
+      <td>-36.58000</td>
+      <td>-22.81000</td>
+      <td>-0.02865</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>372</td>
+      <td>992.00000</td>
+      <td>163.13000</td>
+      <td>-2.16000</td>
+      <td>0.16445</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>458</td>
+      <td>1,829.00000</td>
+      <td>-69.55000</td>
+      <td>-16.36000</td>
+      <td>-0.03803</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>531</td>
+      <td>1,935.00000</td>
+      <td>-211.65000</td>
+      <td>-101.78000</td>
+      <td>-0.10938</td>
+    </tr>
+  </tbody>
+</table><h2>Cumulative test profit</h2><p>Fixed filtered Legacy variance, by matchweek; all curves start at $0.</p><svg viewBox="0 0 1000 360" role="img" aria-label="Cumulative test profit by model"><line x1="80" x2="950" y1="300.0" y2="300.0" stroke="#ccd5df"/><text x="5" y="300.0">$-371</text><line x1="80" x2="950" y1="235.0" y2="235.0" stroke="#ccd5df"/><text x="5" y="235.0">$-230</text><line x1="80" x2="950" y1="170.0" y2="170.0" stroke="#ccd5df"/><text x="5" y="170.0">$-90</text><line x1="80" x2="950" y1="105.0" y2="105.0" stroke="#ccd5df"/><text x="5" y="105.0">$50</text><line x1="80" x2="950" y1="40.0" y2="40.0" stroke="#ccd5df"/><text x="5" y="40.0">$190</text><polyline points="80.00,128.15 102.89,158.75 125.79,152.12 148.68,129.87 171.58,151.66 194.47,151.59 217.37,147.18 240.26,149.73 263.16,164.57 286.05,183.58 308.95,205.37 331.84,212.33 354.74,242.47 377.63,231.22 400.53,229.14 423.42,230.06 446.32,201.71 469.21,222.11 492.11,229.29 515.00,228.14 537.89,187.45 560.79,182.44 583.68,179.13 606.58,176.69 629.47,145.63 652.37,148.07 675.26,160.35 698.16,168.47 721.05,161.05 743.95,159.89 766.84,174.49 789.74,171.48 812.63,175.77 835.53,166.03 858.42,166.03 881.32,154.21 904.21,169.32 927.11,150.20 950.00,160.40" fill="none" stroke="#287b63" stroke-width="2.5"><title>expanded__Linear_vector: $-69.55</title></polyline><text x="15" y="345" fill="#287b63" font-size="12">Linear_vector</text><polyline points="80.00,128.15 102.89,145.31 125.79,143.92 148.68,144.73 171.58,162.58 194.47,171.85 217.37,165.13 240.26,156.55 263.16,169.53 286.05,171.50 308.95,187.27 331.84,184.95 354.74,208.59 377.63,220.18 400.53,210.91 423.42,214.44 446.32,192.34 469.21,203.93 492.11,205.23 515.00,206.85 537.89,165.01 560.79,156.85 583.68,148.90 606.58,142.29 629.47,121.78 652.37,133.37 675.26,138.47 698.16,151.68 721.05,137.89 743.95,131.51 766.84,143.57 789.74,148.20 812.63,146.93 835.53,138.00 858.42,132.56 881.32,116.33 904.21,132.09 927.11,121.51 950.00,128.47" fill="none" stroke="#4267c5" stroke-width="2.5"><title>expanded__Ordered_logit: $-0.68</title></polyline><text x="210" y="345" fill="#4267c5" font-size="12">Ordered_logit</text><polyline points="80.00,128.15 102.89,145.77 125.79,137.47 148.68,139.21 171.58,153.58 194.47,163.32 217.37,155.67 240.26,148.95 263.16,161.93 286.05,164.36 308.95,181.52 331.84,181.61 354.74,205.72 377.63,217.31 400.53,208.50 423.42,210.54 446.32,190.77 469.21,202.82 492.11,199.16 515.00,203.33 537.89,164.04 560.79,156.80 583.68,149.32 606.58,143.17 629.47,128.80 652.37,141.32 675.26,146.88 698.16,161.95 721.05,142.59 743.95,137.61 766.84,150.59 789.74,154.07 812.63,153.26 835.53,141.78 858.42,147.81 881.32,133.44 904.21,148.74 927.11,137.69 950.00,145.11" fill="none" stroke="#b34c47" stroke-width="2.5"><title>expanded__Ordered_probit: $-36.58</title></polyline><text x="405" y="345" fill="#b34c47" font-size="12">Ordered_probit</text><polyline points="80.00,128.15 102.89,156.32 125.79,146.82 148.68,127.11 171.58,150.53 194.47,152.10 217.37,148.16 240.26,145.61 263.16,164.62 286.05,186.88 308.95,212.38 331.84,223.67 354.74,241.05 377.63,247.89 400.53,261.22 423.42,263.17 446.32,254.98 469.21,280.94 492.11,289.80 515.00,290.73 537.89,247.03 560.79,240.26 583.68,235.09 606.58,254.91 629.47,221.41 652.37,215.27 675.26,223.85 698.16,247.49 721.05,241.12 743.95,230.34 766.84,245.17 789.74,238.92 812.63,244.60 835.53,233.82 858.42,239.38 881.32,212.02 904.21,227.79 927.11,216.08 950.00,226.28" fill="none" stroke="#8b599c" stroke-width="2.5"><title>expanded__Poisson_alpha001: $-211.65</title></polyline><text x="600" y="345" fill="#8b599c" font-size="12">Poisson_alpha001</text><polyline points="80.00,128.15 102.89,141.13 125.79,136.96 148.68,126.18 171.58,134.30 194.47,141.25 217.37,143.10 240.26,109.03 263.16,115.05 286.05,114.13 308.95,125.25 331.84,109.65 354.74,102.00 377.63,95.51 400.53,97.48 423.42,103.51 446.32,100.16 469.21,113.60 492.11,113.32 515.00,122.13 537.89,98.14 560.79,106.02 583.68,91.12 606.58,95.75 629.47,67.82 652.37,64.23 675.26,66.78 698.16,76.51 721.05,81.38 743.95,81.03 766.84,94.48 789.74,94.94 812.63,92.28 835.53,90.42 858.42,95.29 881.32,71.30 904.21,73.85 927.11,49.27 950.00,52.52" fill="none" stroke="#a86f20" stroke-width="2.5"><title>expanded__RF_vector: $163.13</title></polyline><text x="795" y="345" fill="#a86f20" font-size="12">RF_vector</text><text x="80" y="320">Start</text><text x="850" y="320">Matchweek 38</text></svg><h2>All 15 fixed strategies: net dollars</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>strategy</th>
+      <th>expanded__Linear_vector</th>
+      <th>expanded__Ordered_logit</th>
+      <th>expanded__Ordered_probit</th>
+      <th>expanded__Poisson_alpha001</th>
+      <th>expanded__RF_vector</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td>Expected return &gt; 1</td>
+      <td>-95.23000</td>
+      <td>-282.39000</td>
+      <td>-217.92000</td>
+      <td>-140.15000</td>
+      <td>188.44000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>-210.52597</td>
+      <td>-242.99074</td>
+      <td>-284.08691</td>
+      <td>-230.93453</td>
+      <td>-5.64672</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>-61.11507</td>
+      <td>-36.94934</td>
+      <td>-41.46833</td>
+      <td>-28.39400</td>
+      <td>-25.71380</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>187.15000</td>
+      <td>90.39000</td>
+      <td>95.81000</td>
+      <td>113.48000</td>
+      <td>149.54000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>-25.24367</td>
+      <td>-2.61992</td>
+      <td>-33.32508</td>
+      <td>-11.80519</td>
+      <td>131.03321</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>-139.03297</td>
+      <td>6.62027</td>
+      <td>-17.23374</td>
+      <td>-43.48713</td>
+      <td>-18.40678</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>78.15000</td>
+      <td>46.39000</td>
+      <td>43.81000</td>
+      <td>10.98000</td>
+      <td>98.54000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Legacy draw-to-home weighting</td>
+      <td>42.40000</td>
+      <td>10.59000</td>
+      <td>7.85000</td>
+      <td>44.05000</td>
+      <td>-13.49000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Legacy market power weighting</td>
+      <td>-64.80000</td>
+      <td>-150.13000</td>
+      <td>-131.01000</td>
+      <td>58.95000</td>
+      <td>77.47000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Legacy variance score</td>
+      <td>-69.52000</td>
+      <td>-163.50000</td>
+      <td>-123.44000</td>
+      <td>-189.85000</td>
+      <td>112.57000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>-69.55000</td>
+      <td>-0.68000</td>
+      <td>-36.58000</td>
+      <td>-211.65000</td>
+      <td>163.13000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Log odds weighting</td>
+      <td>-60.63000</td>
+      <td>-236.81000</td>
+      <td>-201.85000</td>
+      <td>89.49000</td>
+      <td>157.76000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Most likely outcome</td>
+      <td>34.05000</td>
+      <td>-85.34000</td>
+      <td>-83.99000</td>
+      <td>123.63000</td>
+      <td>27.48000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Square-root odds weighting</td>
+      <td>-32.64000</td>
+      <td>-69.53000</td>
+      <td>-158.09000</td>
+      <td>117.90000</td>
+      <td>61.14000</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Square-root profit weighting</td>
+      <td>-163.84000</td>
+      <td>-151.49000</td>
+      <td>-117.21000</td>
+      <td>131.02000</td>
+      <td>177.77000</td>
+    </tr>
+  </tbody>
+</table><h2>Full strategy accounting</h2><p>Flat net uses $1 on exactly the same selected bets. ROI is net / total staked.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>strategy</th>
+      <th>bets</th>
+      <th>staked</th>
+      <th>net</th>
+      <th>flat_net</th>
+      <th>roi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Most likely outcome</td>
+      <td>566</td>
+      <td>2,486.00000</td>
+      <td>-85.34000</td>
+      <td>-17.09000</td>
+      <td>-0.03433</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Expected return &gt; 1</td>
+      <td>1206</td>
+      <td>4,538.00000</td>
+      <td>-282.39000</td>
+      <td>-101.10000</td>
+      <td>-0.06223</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Log odds weighting</td>
+      <td>1098</td>
+      <td>4,148.00000</td>
+      <td>-236.81000</td>
+      <td>-72.39000</td>
+      <td>-0.05709</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Square-root odds weighting</td>
+      <td>710</td>
+      <td>3,156.00000</td>
+      <td>-69.53000</td>
+      <td>-14.30000</td>
+      <td>-0.02203</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Square-root profit weighting</td>
+      <td>1065</td>
+      <td>4,260.00000</td>
+      <td>-151.49000</td>
+      <td>-33.27000</td>
+      <td>-0.03556</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy draw-to-home weighting</td>
+      <td>504</td>
+      <td>2,199.00000</td>
+      <td>10.59000</td>
+      <td>1.72000</td>
+      <td>0.00482</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>564</td>
+      <td>2,439.00000</td>
+      <td>46.39000</td>
+      <td>7.16000</td>
+      <td>0.01902</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy market power weighting</td>
+      <td>560</td>
+      <td>1,849.00000</td>
+      <td>-150.13000</td>
+      <td>-49.11000</td>
+      <td>-0.08120</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy variance score</td>
+      <td>779</td>
+      <td>2,648.00000</td>
+      <td>-163.50000</td>
+      <td>-40.88000</td>
+      <td>-0.06174</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>460</td>
+      <td>1,949.00000</td>
+      <td>90.39000</td>
+      <td>18.56000</td>
+      <td>0.04638</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>401</td>
+      <td>1,799.00000</td>
+      <td>-36.94934</td>
+      <td>-6.72252</td>
+      <td>-0.02054</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>882</td>
+      <td>3,562.00000</td>
+      <td>-242.99074</td>
+      <td>-47.68520</td>
+      <td>-0.06822</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>527</td>
+      <td>2,385.00000</td>
+      <td>6.62027</td>
+      <td>4.97145</td>
+      <td>0.00278</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>928</td>
+      <td>3,972.00000</td>
+      <td>-2.61992</td>
+      <td>2.24660</td>
+      <td>-0.00066</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>331</td>
+      <td>1,214.00000</td>
+      <td>-0.68000</td>
+      <td>-14.51000</td>
+      <td>-0.00056</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Most likely outcome</td>
+      <td>577</td>
+      <td>2,555.00000</td>
+      <td>-83.99000</td>
+      <td>-17.53000</td>
+      <td>-0.03287</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Expected return &gt; 1</td>
+      <td>1226</td>
+      <td>4,656.00000</td>
+      <td>-217.92000</td>
+      <td>-54.12000</td>
+      <td>-0.04680</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Log odds weighting</td>
+      <td>1127</td>
+      <td>4,295.00000</td>
+      <td>-201.85000</td>
+      <td>-46.19000</td>
+      <td>-0.04700</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Square-root odds weighting</td>
+      <td>718</td>
+      <td>3,215.00000</td>
+      <td>-158.09000</td>
+      <td>-39.55000</td>
+      <td>-0.04917</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Square-root profit weighting</td>
+      <td>1064</td>
+      <td>4,394.00000</td>
+      <td>-117.21000</td>
+      <td>-28.54000</td>
+      <td>-0.02668</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy draw-to-home weighting</td>
+      <td>519</td>
+      <td>2,269.00000</td>
+      <td>7.85000</td>
+      <td>1.17000</td>
+      <td>0.00346</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>584</td>
+      <td>2,526.00000</td>
+      <td>43.81000</td>
+      <td>8.23000</td>
+      <td>0.01734</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy market power weighting</td>
+      <td>603</td>
+      <td>1,985.00000</td>
+      <td>-131.01000</td>
+      <td>-46.13000</td>
+      <td>-0.06600</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy variance score</td>
+      <td>753</td>
+      <td>2,635.00000</td>
+      <td>-123.44000</td>
+      <td>0.58000</td>
+      <td>-0.04685</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>478</td>
+      <td>2,021.00000</td>
+      <td>95.81000</td>
+      <td>23.63000</td>
+      <td>0.04741</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>404</td>
+      <td>1,826.00000</td>
+      <td>-41.46833</td>
+      <td>-10.41137</td>
+      <td>-0.02271</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>894</td>
+      <td>3,686.00000</td>
+      <td>-284.08691</td>
+      <td>-66.72405</td>
+      <td>-0.07707</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>519</td>
+      <td>2,373.00000</td>
+      <td>-17.23374</td>
+      <td>4.57205</td>
+      <td>-0.00726</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>961</td>
+      <td>4,117.00000</td>
+      <td>-33.32508</td>
+      <td>3.28943</td>
+      <td>-0.00809</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>344</td>
+      <td>1,277.00000</td>
+      <td>-36.58000</td>
+      <td>-22.81000</td>
+      <td>-0.02865</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Most likely outcome</td>
+      <td>351</td>
+      <td>910.00000</td>
+      <td>27.48000</td>
+      <td>20.82000</td>
+      <td>0.03020</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Expected return &gt; 1</td>
+      <td>1004</td>
+      <td>2,479.00000</td>
+      <td>188.44000</td>
+      <td>12.09000</td>
+      <td>0.07601</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Log odds weighting</td>
+      <td>904</td>
+      <td>2,242.00000</td>
+      <td>157.76000</td>
+      <td>8.71000</td>
+      <td>0.07037</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Square-root odds weighting</td>
+      <td>380</td>
+      <td>995.00000</td>
+      <td>61.14000</td>
+      <td>25.88000</td>
+      <td>0.06145</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Square-root profit weighting</td>
+      <td>620</td>
+      <td>1,708.00000</td>
+      <td>177.77000</td>
+      <td>53.56000</td>
+      <td>0.10408</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy draw-to-home weighting</td>
+      <td>403</td>
+      <td>1,052.00000</td>
+      <td>-13.49000</td>
+      <td>-2.27000</td>
+      <td>-0.01282</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>550</td>
+      <td>1,454.00000</td>
+      <td>98.54000</td>
+      <td>6.57000</td>
+      <td>0.06777</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy market power weighting</td>
+      <td>253</td>
+      <td>511.00000</td>
+      <td>77.47000</td>
+      <td>34.71000</td>
+      <td>0.15160</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy variance score</td>
+      <td>641</td>
+      <td>1,565.00000</td>
+      <td>112.57000</td>
+      <td>-45.25000</td>
+      <td>0.07193</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>492</td>
+      <td>1,286.00000</td>
+      <td>149.54000</td>
+      <td>27.57000</td>
+      <td>0.11628</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>50</td>
+      <td>145.00000</td>
+      <td>-25.71380</td>
+      <td>-8.71288</td>
+      <td>-0.17734</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>587</td>
+      <td>1,413.00000</td>
+      <td>-5.64672</td>
+      <td>-63.47877</td>
+      <td>-0.00400</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>110</td>
+      <td>328.00000</td>
+      <td>-18.40678</td>
+      <td>2.69322</td>
+      <td>-0.05612</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>591</td>
+      <td>1,602.00000</td>
+      <td>131.03321</td>
+      <td>19.73140</td>
+      <td>0.08179</td>
+    </tr>
+    <tr>
+      <td>expanded__RF_vector</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>372</td>
+      <td>992.00000</td>
+      <td>163.13000</td>
+      <td>-2.16000</td>
+      <td>0.16445</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Most likely outcome</td>
+      <td>584</td>
+      <td>2,514.00000</td>
+      <td>34.05000</td>
+      <td>-1.28000</td>
+      <td>0.01354</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Expected return &gt; 1</td>
+      <td>1258</td>
+      <td>5,070.00000</td>
+      <td>-95.23000</td>
+      <td>-43.64000</td>
+      <td>-0.01878</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Log odds weighting</td>
+      <td>1186</td>
+      <td>4,836.00000</td>
+      <td>-60.63000</td>
+      <td>-13.77000</td>
+      <td>-0.01254</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Square-root odds weighting</td>
+      <td>759</td>
+      <td>3,354.00000</td>
+      <td>-32.64000</td>
+      <td>-14.48000</td>
+      <td>-0.00973</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Square-root profit weighting</td>
+      <td>1095</td>
+      <td>4,706.00000</td>
+      <td>-163.84000</td>
+      <td>-38.13000</td>
+      <td>-0.03482</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy draw-to-home weighting</td>
+      <td>545</td>
+      <td>2,304.00000</td>
+      <td>42.40000</td>
+      <td>1.80000</td>
+      <td>0.01840</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>751</td>
+      <td>3,173.00000</td>
+      <td>78.15000</td>
+      <td>17.37000</td>
+      <td>0.02463</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy market power weighting</td>
+      <td>411</td>
+      <td>1,382.00000</td>
+      <td>-64.80000</td>
+      <td>-13.49000</td>
+      <td>-0.04689</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy variance score</td>
+      <td>837</td>
+      <td>3,355.00000</td>
+      <td>-69.52000</td>
+      <td>-19.70000</td>
+      <td>-0.02072</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>560</td>
+      <td>2,285.00000</td>
+      <td>187.15000</td>
+      <td>40.17000</td>
+      <td>0.08190</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>298</td>
+      <td>1,315.00000</td>
+      <td>-61.11507</td>
+      <td>-17.87778</td>
+      <td>-0.04648</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>978</td>
+      <td>3,981.00000</td>
+      <td>-210.52597</td>
+      <td>-80.07801</td>
+      <td>-0.05288</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>393</td>
+      <td>1,751.00000</td>
+      <td>-139.03297</td>
+      <td>-29.26121</td>
+      <td>-0.07940</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>960</td>
+      <td>3,961.00000</td>
+      <td>-25.24367</td>
+      <td>-2.46675</td>
+      <td>-0.00637</td>
+    </tr>
+    <tr>
+      <td>expanded__Linear_vector</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>458</td>
+      <td>1,829.00000</td>
+      <td>-69.55000</td>
+      <td>-16.36000</td>
+      <td>-0.03803</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Most likely outcome</td>
+      <td>438</td>
+      <td>1,687.00000</td>
+      <td>123.63000</td>
+      <td>20.30000</td>
+      <td>0.07328</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Expected return &gt; 1</td>
+      <td>1258</td>
+      <td>4,536.00000</td>
+      <td>-140.15000</td>
+      <td>-111.48000</td>
+      <td>-0.03090</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Log odds weighting</td>
+      <td>1164</td>
+      <td>4,316.00000</td>
+      <td>89.49000</td>
+      <td>-23.39000</td>
+      <td>0.02073</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Square-root odds weighting</td>
+      <td>586</td>
+      <td>2,377.00000</td>
+      <td>117.90000</td>
+      <td>15.35000</td>
+      <td>0.04960</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Square-root profit weighting</td>
+      <td>1002</td>
+      <td>4,009.00000</td>
+      <td>131.02000</td>
+      <td>18.22000</td>
+      <td>0.03268</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy draw-to-home weighting</td>
+      <td>545</td>
+      <td>2,166.00000</td>
+      <td>44.05000</td>
+      <td>11.63000</td>
+      <td>0.02034</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy draw-to-home return weighting</td>
+      <td>765</td>
+      <td>3,014.00000</td>
+      <td>10.98000</td>
+      <td>-14.39000</td>
+      <td>0.00364</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy market power weighting</td>
+      <td>389</td>
+      <td>1,230.00000</td>
+      <td>58.95000</td>
+      <td>10.93000</td>
+      <td>0.04793</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy variance score</td>
+      <td>895</td>
+      <td>3,264.00000</td>
+      <td>-189.85000</td>
+      <td>-106.84000</td>
+      <td>-0.05816</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Home win or skip (sqrt profit)</td>
+      <td>621</td>
+      <td>2,407.00000</td>
+      <td>113.48000</td>
+      <td>22.81000</td>
+      <td>0.04715</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Home loses vs not (synthetic double chance)</td>
+      <td>218</td>
+      <td>925.00000</td>
+      <td>-28.39400</td>
+      <td>-2.16924</td>
+      <td>-0.03070</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Home loses vs not (sqrt profit)</td>
+      <td>906</td>
+      <td>3,217.00000</td>
+      <td>-230.93453</td>
+      <td>-118.88058</td>
+      <td>-0.07179</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Home wins vs not (synthetic double chance)</td>
+      <td>226</td>
+      <td>921.00000</td>
+      <td>-43.48713</td>
+      <td>-17.52689</td>
+      <td>-0.04722</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Home wins vs not (sqrt profit)</td>
+      <td>939</td>
+      <td>3,645.00000</td>
+      <td>-11.80519</td>
+      <td>-24.65384</td>
+      <td>-0.00324</td>
+    </tr>
+    <tr>
+      <td>expanded__Poisson_alpha001</td>
+      <td>Legacy variance — filtered search candidate</td>
+      <td>531</td>
+      <td>1,935.00000</td>
+      <td>-211.65000</td>
+      <td>-101.78000</td>
+      <td>-0.10938</td>
+    </tr>
+  </tbody>
+</table><h2>Paired log-loss differences versus expanded RF</h2><p>Negative favors the ordered model. Approximate 95% intervals from 2,000 paired matchweek resamples; these do not cover all team/time dependence or selection uncertainty.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>difference</th>
+      <th>ci_low</th>
+      <th>ci_high</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expanded__Ordered_logit</td>
+      <td>0.01016</td>
+      <td>0.00195</td>
+      <td>0.01858</td>
+    </tr>
+    <tr>
+      <td>expanded__Ordered_probit</td>
+      <td>0.01086</td>
+      <td>0.00232</td>
+      <td>0.01954</td>
+    </tr>
+  </tbody>
+</table><h2>Method and limitations</h2><p>Unpenalized maximum likelihood, trained on away win &lt; draw &lt; home win. Logistic or normal cumulative link with two ordered cutpoints and shared coefficients across cutpoints. Probabilities are direct; no Poisson goal conversion. These models do not predict goal counts. Training-only scaling and rank reduction remove constants and exact collinearity; no feature selection or tuning on test results. Unknown teams have zero dummy features. Train in-sample results are not OOB and are omitted. No strategy optimization; the test season has already been inspected, so these are exploratory comparisons. Historical odds and actual lineups, no fees, compounding or bankroll constraints.</p><p><a href="https://www.statsmodels.org/stable/examples/notebooks/generated/ordinal_regression.html">Ordered model reference and parameterization</a>. The local implementation uses an analytic likelihood gradient, finite-difference checks, two starts, convergence checks and prediction/export reconciliation.</p><details><summary>Fit diagnostics</summary><pre>{
+  &quot;train_matches&quot;: 19263,
+  &quot;test_matches&quot;: 1447,
+  &quot;rank&quot;: 317,
+  &quot;raw_features&quot;: 322,
+  &quot;input_hashes&quot;: {
+    &quot;data\\train.csv&quot;: &quot;87916289a3b918da6faeadc25dc8c37ebfa5de8964233b4e64419cbed2ea4711&quot;,
+    &quot;data\\test.csv&quot;: &quot;3b08ed2b56ed814babf09e629037a43f63148a80f1cef94e74898f7c5ebbd39b&quot;,
+    &quot;data\\expanded_2008\\train.csv&quot;: &quot;070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4&quot;
+  },
+  &quot;fits&quot;: {
+    &quot;expanded__Ordered_logit&quot;: {
+      &quot;converged&quot;: true,
+      &quot;iterations&quot;: 13,
+      &quot;train_nll&quot;: 0.9581366470633814,
+      &quot;gradient_max&quot;: 3.600809928111588e-08,
+      &quot;finite_difference_error&quot;: 1.7818622324121129e-07,
+      &quot;two_start_difference&quot;: 2.2515322939398175e-13
+    },
+    &quot;expanded__Ordered_probit&quot;: {
+      &quot;converged&quot;: true,
+      &quot;iterations&quot;: 11,
+      &quot;train_nll&quot;: 0.958698503666633,
+      &quot;gradient_max&quot;: 1.0072366087069576e-08,
+      &quot;finite_difference_error&quot;: 3.979901366974353e-07,
+      &quot;two_start_difference&quot;: 2.7755575615628914e-15
+    }
+  },
+  &quot;verification&quot;: &quot;Gradients, convergence, two starts, test alignment, probability normalization, saved predictions and baseline strategy reconciliation passed.&quot;
+}</pre></details>

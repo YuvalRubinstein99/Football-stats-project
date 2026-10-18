@@ -1,0 +1,53 @@
+{
+  "state": "completed",
+  "started_at": "2026-10-11T01:55:49.913462+00:00",
+  "config": {
+    "n_estimators": 2000,
+    "max_depth": 5,
+    "max_features": 0.3,
+    "max_samples": 0.5,
+    "bootstrap": true,
+    "random_state": 20261011,
+    "n_jobs": 4
+  },
+  "input_sha256": "8ad065282143fe3c1e55c160ae29556afc07362185fd7e59ca6684ffe80fc6ff",
+  "folds": [
+    {
+      "season": "2009/2010",
+      "train_matches": 1483,
+      "test_matches": 1660,
+      "log_loss": 0.9801757439654638,
+      "market_log_loss": 0.9734488308896495
+    },
+    {
+      "season": "2010/2011",
+      "train_matches": 3143,
+      "test_matches": 1716,
+      "log_loss": 1.0088013013632275,
+      "market_log_loss": 1.0037731604994726
+    },
+    {
+      "season": "2011/2012",
+      "train_matches": 4859,
+      "test_matches": 1426,
+      "log_loss": 0.987474588102886,
+      "market_log_loss": 0.984146453116143
+    },
+    {
+      "season": "2012/2013",
+      "train_matches": 6285,
+      "test_matches": 1408,
+      "log_loss": 0.979038357838439,
+      "market_log_loss": 0.9751446358855016
+    },
+    {
+      "season": "2013/2014",
+      "train_matches": 7693,
+      "test_matches": 1405,
+      "log_loss": 0.9428864475628533,
+      "market_log_loss": 0.9430368008754687
+    }
+  ],
+  "limitations": "Chronological expanding windows within newly sourced 2008\u201314 data only. Actual lineups; dated rating snapshots may be stale. Entire league-seasons failing reference match-count checks excluded; counts alone do not verify fixture identity. Fixed strategies, no tuning. Different training data from active model, not comparable as a direct model upgrade.",
+  "finished_at": "2026-10-11T01:56:49.958037+00:00"
+}

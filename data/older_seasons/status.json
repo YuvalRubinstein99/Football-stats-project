@@ -1,0 +1,468 @@
+{
+  "started_at": "2026-10-11T01:55:21.379565+00:00",
+  "state": "completed",
+  "sources": [
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1314/E0.csv",
+      "fetched_at": "2026-10-11T01:50:18.611915+00:00",
+      "bytes": 103642,
+      "sha256": "3cf16078fde2e0e6c6cb07ebdb20ca98d1a755c9508a18bbeb4ad6837fad2b42"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1314/SP1.csv",
+      "fetched_at": "2026-10-11T01:50:22.683043+00:00",
+      "bytes": 100249,
+      "sha256": "d7a71640628bced0fef0d38c4ccf20cb96f6b9cc433df01a1b613b644ca9dc19"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1314/D1.csv",
+      "fetched_at": "2026-10-11T01:50:26.792703+00:00",
+      "bytes": 81743,
+      "sha256": "3563a6ce007a17f6a27545c9b6ec32664ef176c5ef98e0cc7076658fd539b133"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1314/I1.csv",
+      "fetched_at": "2026-10-11T01:50:30.879103+00:00",
+      "bytes": 99710,
+      "sha256": "ef27733c3875aaf7f6627d571c99e1751e180d678469325ca54028597bc2d450"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1314/F1.csv",
+      "fetched_at": "2026-10-11T01:50:34.955149+00:00",
+      "bytes": 100451,
+      "sha256": "5463359066969333dcf00a415325f65190ca79a52076d6bf297f303014ee9ace"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1213/E0.csv",
+      "fetched_at": "2026-10-11T01:50:39.108223+00:00",
+      "bytes": 113085,
+      "sha256": "1df561d34a9b79ff8cb1fccd4fd279d183e74cd871063a307ecf18f01e0d622f"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1213/SP1.csv",
+      "fetched_at": "2026-10-11T01:50:43.230178+00:00",
+      "bytes": 110545,
+      "sha256": "d06f76e576cde8d6f4dfa51fc70a1fb6bf01e700e5bb2808838cf685a644d1d7"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1213/D1.csv",
+      "fetched_at": "2026-10-11T01:50:47.295013+00:00",
+      "bytes": 89983,
+      "sha256": "4b721cb2f866132c05699c737066d3fef975075d331c42a3e84ab7c3f3b428cc"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1213/I1.csv",
+      "fetched_at": "2026-10-11T01:50:51.445563+00:00",
+      "bytes": 109491,
+      "sha256": "83eb3f73f43f58aa0b6c23619198912a16bbbc37ebee10adf2e6ba7d8f903365"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1213/F1.csv",
+      "fetched_at": "2026-10-11T01:50:55.531799+00:00",
+      "bytes": 110075,
+      "sha256": "ad0b860861f6f6c98fad129b1ec2d8a6cd342a107180030fdf863ec3c250ceaf"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1112/E0.csv",
+      "fetched_at": "2026-10-11T01:50:59.611530+00:00",
+      "bytes": 106303,
+      "sha256": "6cdb9963c311ca2e7d07eb429df721a2593cbd9c9fec55b9af82bca1a457b987"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1112/SP1.csv",
+      "fetched_at": "2026-10-11T01:51:03.681478+00:00",
+      "bytes": 103977,
+      "sha256": "283709eca574d8d22a7f4ed915dbe0b4c7566b698e6c45562c6c2dc0a3ef01fe"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1112/D1.csv",
+      "fetched_at": "2026-10-11T01:51:07.730076+00:00",
+      "bytes": 85125,
+      "sha256": "0db0353831457728f0131bab24e7844a5492c5fec13bda30fbcaca701ac13f62"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1112/I1.csv",
+      "fetched_at": "2026-10-11T01:51:12.013578+00:00",
+      "bytes": 102400,
+      "sha256": "ed14582a9bb622c0e41720a5e6032693a26580d7d57f66111500183d113e2b75"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1112/F1.csv",
+      "fetched_at": "2026-10-11T01:51:16.063104+00:00",
+      "bytes": 102658,
+      "sha256": "44694ed0ab21a382536575723a9254a260259b23b78bb41a2d0e22e9c4d5b93e"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1011/E0.csv",
+      "fetched_at": "2026-10-11T01:51:20.168315+00:00",
+      "bytes": 106586,
+      "sha256": "8f5d37651aca8498d8041088835e3a734b79e2fcc34f66ca8516c650970810ce"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1011/SP1.csv",
+      "fetched_at": "2026-10-11T01:51:24.273301+00:00",
+      "bytes": 103698,
+      "sha256": "5b62bf130a0a851502b424a79a77900bc3ef3977ca4b9a1e261ca25b79d92454"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1011/D1.csv",
+      "fetched_at": "2026-10-11T01:51:28.521594+00:00",
+      "bytes": 84990,
+      "sha256": "c7bce1d15ac317919bf2dda199159f1851594d9ba60eb5a9ad67c81ecf784545"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1011/I1.csv",
+      "fetched_at": "2026-10-11T01:51:32.618898+00:00",
+      "bytes": 102028,
+      "sha256": "1a43e865b9a6aa205bbece872ab7c2badb760ccddedacd27a628f14f07c8ab69"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/1011/F1.csv",
+      "fetched_at": "2026-10-11T01:51:36.671894+00:00",
+      "bytes": 100690,
+      "sha256": "6204aeea389e0328f1322b547d35ba5fba71f8e75ddb72859f4462a4dafd85da"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0910/E0.csv",
+      "fetched_at": "2026-10-11T01:51:40.790166+00:00",
+      "bytes": 105752,
+      "sha256": "e8349af783aa262dddb1dbb84de088c15bf43e4fae85f6da4ec30a5c4d62c324"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0910/SP1.csv",
+      "fetched_at": "2026-10-11T01:51:44.851217+00:00",
+      "bytes": 103451,
+      "sha256": "a7893cdd88d66afea2cfa22f1b14b43cd6da0723159070324828fded3d444f17"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0910/D1.csv",
+      "fetched_at": "2026-10-11T01:51:48.911473+00:00",
+      "bytes": 83642,
+      "sha256": "a9ba192848c4bd27fa0bdd216d2feb3ded3ae0e1bc8ee6d743efc30c32995a09"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0910/I1.csv",
+      "fetched_at": "2026-10-11T01:51:52.996773+00:00",
+      "bytes": 100607,
+      "sha256": "c6f33499663003ee2e25393b4d976b7a22c976c996b89ebd97cf32423732b7f3"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0910/F1.csv",
+      "fetched_at": "2026-10-11T01:51:57.157118+00:00",
+      "bytes": 100639,
+      "sha256": "7021d41c5e3baff0232dd634ee2b40a572a6e07f5ecdd5a9fa8e79591976842c"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0809/E0.csv",
+      "fetched_at": "2026-10-11T01:52:01.280608+00:00",
+      "bytes": 106205,
+      "sha256": "b78dcd1c522feafb44bcce1c459eb09911618460787cfe9ab478b2957c7ae294"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0809/SP1.csv",
+      "fetched_at": "2026-10-11T01:52:05.437163+00:00",
+      "bytes": 103886,
+      "sha256": "e463e61cc73a05cb129fe64de18bc5a2174c851d116615be08469bc111bc8c93"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0809/D1.csv",
+      "fetched_at": "2026-10-11T01:52:09.510137+00:00",
+      "bytes": 84127,
+      "sha256": "7480cb2117cf16142b07daa88a5592ef4c1da0c957114903226e1fed76d1f61b"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0809/I1.csv",
+      "fetched_at": "2026-10-11T01:52:13.692881+00:00",
+      "bytes": 100586,
+      "sha256": "008dc2a31931bcf9f8dc5215a4b5be1b7a26bedf5af5c2faeb180af0f03a5edf"
+    },
+    {
+      "url": "https://www.football-data.co.uk/mmz4281/0809/F1.csv",
+      "fetched_at": "2026-10-11T01:52:17.849414+00:00",
+      "bytes": 101205,
+      "sha256": "29ae1dd85e689c007d9aecdd7649702ced921ac5db3c52eb455bde5cecb9f41f"
+    }
+  ],
+  "errors": [],
+  "lineups": {
+    "eligible": 10172,
+    "earliest_eligible": "2008-08-09",
+    "coverage": [
+      {
+        "league": "D1",
+        "season": "2008/2009",
+        "matches": 306,
+        "eligible": 242,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 64,
+        "missing_prior_rating": 63
+      },
+      {
+        "league": "D1",
+        "season": "2009/2010",
+        "matches": 306,
+        "eligible": 301,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 5,
+        "missing_prior_rating": 5
+      },
+      {
+        "league": "D1",
+        "season": "2010/2011",
+        "matches": 306,
+        "eligible": 301,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 5,
+        "missing_prior_rating": 4
+      },
+      {
+        "league": "D1",
+        "season": "2011/2012",
+        "matches": 306,
+        "eligible": 306,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 0,
+        "missing_prior_rating": 0
+      },
+      {
+        "league": "D1",
+        "season": "2012/2013",
+        "matches": 306,
+        "eligible": 305,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 0,
+        "missing_prior_rating": 0
+      },
+      {
+        "league": "D1",
+        "season": "2013/2014",
+        "matches": 306,
+        "eligible": 306,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 0,
+        "missing_prior_rating": 0
+      },
+      {
+        "league": "E0",
+        "season": "2008/2009",
+        "matches": 380,
+        "eligible": 348,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 32,
+        "missing_prior_rating": 32
+      },
+      {
+        "league": "E0",
+        "season": "2009/2010",
+        "matches": 380,
+        "eligible": 373,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 7,
+        "missing_prior_rating": 7
+      },
+      {
+        "league": "E0",
+        "season": "2010/2011",
+        "matches": 380,
+        "eligible": 367,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 13,
+        "missing_prior_rating": 13
+      },
+      {
+        "league": "E0",
+        "season": "2011/2012",
+        "matches": 380,
+        "eligible": 367,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 13,
+        "missing_prior_rating": 13
+      },
+      {
+        "league": "E0",
+        "season": "2012/2013",
+        "matches": 380,
+        "eligible": 380,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 0,
+        "missing_prior_rating": 0
+      },
+      {
+        "league": "E0",
+        "season": "2013/2014",
+        "matches": 380,
+        "eligible": 379,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 1,
+        "missing_prior_rating": 1
+      },
+      {
+        "league": "F1",
+        "season": "2008/2009",
+        "matches": 380,
+        "eligible": 322,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 57,
+        "missing_prior_rating": 57
+      },
+      {
+        "league": "F1",
+        "season": "2009/2010",
+        "matches": 380,
+        "eligible": 361,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 18,
+        "missing_prior_rating": 17
+      },
+      {
+        "league": "F1",
+        "season": "2010/2011",
+        "matches": 380,
+        "eligible": 358,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 21,
+        "missing_prior_rating": 21
+      },
+      {
+        "league": "F1",
+        "season": "2011/2012",
+        "matches": 380,
+        "eligible": 375,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 5,
+        "missing_prior_rating": 5
+      },
+      {
+        "league": "F1",
+        "season": "2012/2013",
+        "matches": 380,
+        "eligible": 354,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 26,
+        "missing_prior_rating": 26
+      },
+      {
+        "league": "F1",
+        "season": "2013/2014",
+        "matches": 380,
+        "eligible": 376,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 4,
+        "missing_prior_rating": 4
+      },
+      {
+        "league": "I1",
+        "season": "2008/2009",
+        "matches": 380,
+        "eligible": 321,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 59,
+        "missing_prior_rating": 59
+      },
+      {
+        "league": "I1",
+        "season": "2009/2010",
+        "matches": 380,
+        "eligible": 347,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 32,
+        "missing_prior_rating": 32
+      },
+      {
+        "league": "I1",
+        "season": "2010/2011",
+        "matches": 380,
+        "eligible": 347,
+        "missing_bet365_odds": 3,
+        "incomplete_or_duplicate_lineup": 30,
+        "missing_prior_rating": 30
+      },
+      {
+        "league": "I1",
+        "season": "2011/2012",
+        "matches": 358,
+        "eligible": 324,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 33,
+        "missing_prior_rating": 33
+      },
+      {
+        "league": "I1",
+        "season": "2012/2013",
+        "matches": 380,
+        "eligible": 374,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 5,
+        "missing_prior_rating": 4
+      },
+      {
+        "league": "I1",
+        "season": "2013/2014",
+        "matches": 380,
+        "eligible": 348,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 32,
+        "missing_prior_rating": 32
+      },
+      {
+        "league": "SP1",
+        "season": "2008/2009",
+        "matches": 380,
+        "eligible": 250,
+        "missing_bet365_odds": 1,
+        "incomplete_or_duplicate_lineup": 129,
+        "missing_prior_rating": 129
+      },
+      {
+        "league": "SP1",
+        "season": "2009/2010",
+        "matches": 380,
+        "eligible": 278,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 102,
+        "missing_prior_rating": 102
+      },
+      {
+        "league": "SP1",
+        "season": "2010/2011",
+        "matches": 380,
+        "eligible": 343,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 37,
+        "missing_prior_rating": 36
+      },
+      {
+        "league": "SP1",
+        "season": "2011/2012",
+        "matches": 380,
+        "eligible": 378,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 2,
+        "missing_prior_rating": 2
+      },
+      {
+        "league": "SP1",
+        "season": "2012/2013",
+        "matches": 380,
+        "eligible": 369,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 11,
+        "missing_prior_rating": 11
+      },
+      {
+        "league": "SP1",
+        "season": "2013/2014",
+        "matches": 380,
+        "eligible": 372,
+        "missing_bet365_odds": 0,
+        "incomplete_or_duplicate_lineup": 8,
+        "missing_prior_rating": 8
+      }
+    ],
+    "limitations": "Actual historical starting lineups, not expected XIs. Ratings use strictly earlier dates, may be stale, and source timestamps are not independently verified publication times. Existing model not retrained. Form resets each season. No future-rating backfill."
+  },
+  "updated_at": "2026-10-11T01:55:44.413871+00:00",
+  "finished_at": "2026-10-11T01:55:44.422107+00:00",
+  "results_matches": 10956,
+  "result_seasons": 30
+}

@@ -1,0 +1,4796 @@
+{
+  "plan": {
+    "folds": [
+      2019,
+      2020,
+      2021
+    ],
+    "selection_seasons": [
+      2020,
+      2021
+    ],
+    "calibration_seed": 2019,
+    "candidates": 44,
+    "recency": "Fixed three-season half-life, not full-training-selected half-life",
+    "regression_features": [
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "home_GD_prior",
+      "home_Points_prior",
+      "home_GD_form",
+      "home_Points_form",
+      "away_GD_prior",
+      "away_Points_prior",
+      "away_GD_form",
+      "away_Points_form",
+      "B365H",
+      "B365D",
+      "B365A",
+      "Matchweek"
+    ],
+    "teams": "Two fixed variants for each regression family, with and without one-hot team identity",
+    "objective": "OOF CAGR / max(daily maximum drawdown, 0.01); 5% weight grid plus equal thirds",
+    "calibration": "Each OOF season uses only earlier OOF seasons for temperature; 2019 seeds calibration and is excluded from selection for every candidate",
+    "limits": "Previously examined test season; previously developed fixed forest settings/features. Historical actual lineups and Bet365 odds, no fees. This is a two-season OOF selection experiment, not untouched prospective evidence.",
+    "train_sha256": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "code_sha256": "12dbb35a3df1e274bbbca1a306f64cde4d3604a5f4df5e8f0cdc3ce94d2b8164"
+  },
+  "choices": [
+    {
+      "model": "Expanded RF",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 195.25609685398285,
+        "max_drawdown": 0.11433883902656972,
+        "cagr": 0.11136095603928364,
+        "score": 0.9739556303646385
+      },
+      "robust_oof": {
+        "net": 195.25609685398285,
+        "max_drawdown": 0.11433883902656972,
+        "cagr": 0.11136095603928364,
+        "score": 0.9739556303646385
+      },
+      "robust_selected_model": "Expanded RF"
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 75.80999999999995,
+        "max_drawdown": 0.025975554549570012,
+        "cagr": 0.04420733942673616,
+        "score": 1.7018824118797473
+      },
+      "robust_oof": {
+        "net": -190.3294336761403,
+        "max_drawdown": 0.4575859425761175,
+        "cagr": -0.11748798912500724,
+        "score": -0.25675611550384025
+      },
+      "robust_selected_model": "Ordered_probit__no_teams"
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 4.3799999999999955,
+        "max_drawdown": 0.05998928250177027,
+        "cagr": 0.002590548464585174,
+        "score": 0.0431835213983219
+      },
+      "robust_oof": {
+        "net": -193.54292286707823,
+        "max_drawdown": 0.4518524355447625,
+        "cagr": -0.11956312404144664,
+        "score": -0.2646065720489011
+      },
+      "robust_selected_model": "RF classifier"
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 337.1481106336573,
+        "max_drawdown": 0.04893489381055838,
+        "cagr": 0.19242104316363307,
+        "score": 3.9321847495685294
+      },
+      "robust_oof": {
+        "net": 337.1481106336573,
+        "max_drawdown": 0.04893489381055838,
+        "cagr": 0.19242104316363307,
+        "score": 3.9321847495685294
+      },
+      "robust_selected_model": "Expanded RF__half3__calibrated"
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 362.3292548183899,
+        "max_drawdown": 0.07335118173225141,
+        "cagr": 0.20338376691492455,
+        "score": 2.7727401537622365
+      },
+      "robust_oof": {
+        "net": 362.3292548183899,
+        "max_drawdown": 0.07335118173225141,
+        "cagr": 0.20338376691492455,
+        "score": 2.7727401537622365
+      },
+      "robust_selected_model": "Ordered_logit__no_teams__half3__calibrated"
+    }
+  ],
+  "temperatures": {
+    "Expanded RF": 1.0035482440142287,
+    "Linear__no_teams": 0.9770217193496945,
+    "Linear__teams": 1.0568742786476992,
+    "Poisson__no_teams": 0.9908601531478162,
+    "Poisson__teams": 0.9970180314994913,
+    "Ordered_logit__no_teams": 1.0285537730845988,
+    "Ordered_logit__teams": 1.11518094489433,
+    "Ordered_probit__no_teams": 1.0304515308571363,
+    "Ordered_probit__teams": 1.1225030117217512,
+    "Expanded RF__half3": 0.9913659660121003,
+    "Linear__no_teams__half3": 0.9620980386535725,
+    "Linear__teams__half3": 1.0762366914460602,
+    "Poisson__no_teams__half3": 0.9710992344556645,
+    "Poisson__teams__half3": 0.9918797388401188,
+    "Ordered_logit__no_teams__half3": 1.0175740980657653,
+    "Ordered_logit__teams__half3": 1.1567782783762453,
+    "Ordered_probit__no_teams__half3": 1.0168446044393469,
+    "Ordered_probit__teams__half3": 1.1659599772013027,
+    "RF classifier": 1.0421587202433642,
+    "RF classifier + adjusted form": 1.0406605075321076,
+    "RF classifier + lineup": 1.0415483826155787,
+    "RF classifier + both": 1.0392090671452792
+  },
+  "candidates": [
+    {
+      "model": "Expanded RF",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 195.25609685398285,
+        "max_drawdown": 0.11433883902656972,
+        "cagr": 0.11136095603928364,
+        "score": 0.9739556303646385
+      },
+      "robust_oof": {
+        "net": 195.25609685398285,
+        "max_drawdown": 0.11433883902656972,
+        "cagr": 0.11136095603928364,
+        "score": 0.9739556303646385
+      }
+    },
+    {
+      "model": "Expanded RF",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 68.50999999999999,
+        "max_drawdown": 0.028194377495429745,
+        "cagr": 0.04000702502899989,
+        "score": 1.4189717448269588
+      },
+      "robust_oof": {
+        "net": 14.62438774361351,
+        "max_drawdown": 0.1255532487869797,
+        "cagr": 0.008631652026951597,
+        "score": 0.06874893410043507
+      }
+    },
+    {
+      "model": "Expanded RF",
+      "league": "SP1",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": -89.62924498715245,
+        "max_drawdown": 0.33206799234591267,
+        "cagr": -0.05407183297429141,
+        "score": -0.16283361907992988
+      },
+      "robust_oof": {
+        "net": -137.23412135876333,
+        "max_drawdown": 0.16048176956696314,
+        "cagr": -0.08367383541645057,
+        "score": -0.5213915302793104
+      }
+    },
+    {
+      "model": "Expanded RF",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 330.680031643421,
+        "max_drawdown": 0.049583320540267484,
+        "cagr": 0.18892390149821447,
+        "score": 3.8102309292655394
+      },
+      "robust_oof": {
+        "net": 330.680031643421,
+        "max_drawdown": 0.049583320540267484,
+        "cagr": 0.18892390149821447,
+        "score": 3.8102309292655394
+      }
+    },
+    {
+      "model": "Expanded RF",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 29.224142612591777,
+        "max_drawdown": 0.07707075459740043,
+        "cagr": 0.017397340083825208,
+        "score": 0.22573205847931344
+      },
+      "robust_oof": {
+        "net": 29.224142612591777,
+        "max_drawdown": 0.07707075459740043,
+        "cagr": 0.017397340083825208,
+        "score": 0.22573205847931344
+      }
+    },
+    {
+      "model": "Expanded RF__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 196.65734948786485,
+        "max_drawdown": 0.11588377639036163,
+        "cagr": 0.11213205806463367,
+        "score": 0.9676251633956934
+      },
+      "robust_oof": {
+        "net": 196.65734948786485,
+        "max_drawdown": 0.11588377639036163,
+        "cagr": 0.11213205806463367,
+        "score": 0.9676251633956934
+      }
+    },
+    {
+      "model": "Expanded RF__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 56.48000000000002,
+        "max_drawdown": 0.03120558270900764,
+        "cagr": 0.033059501117992385,
+        "score": 1.0594098314481915
+      },
+      "robust_oof": {
+        "net": 12.831832594964908,
+        "max_drawdown": 0.1265953511511616,
+        "cagr": 0.007576387069009982,
+        "score": 0.05984727717184
+      }
+    },
+    {
+      "model": "Expanded RF__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.6,
+        0.4,
+        0.0
+      ],
+      "oof": {
+        "net": -72.4210870548568,
+        "max_drawdown": 0.21249170918613636,
+        "cagr": -0.043527574447354334,
+        "score": -0.20484363655442897
+      },
+      "robust_oof": {
+        "net": -131.1148735759998,
+        "max_drawdown": 0.1663595457185768,
+        "cagr": -0.0798320469685232,
+        "score": -0.4798765626805184
+      }
+    },
+    {
+      "model": "Expanded RF__calibrated",
+      "league": "D1",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "oof": {
+        "net": 207.16837877584248,
+        "max_drawdown": 0.03140725634175534,
+        "cagr": 0.12080106893354392,
+        "score": 3.8462789496496463
+      },
+      "robust_oof": {
+        "net": 332.4739646264047,
+        "max_drawdown": 0.04985287436882202,
+        "cagr": 0.1898945101985854,
+        "score": 3.8090985244643263
+      }
+    },
+    {
+      "model": "Expanded RF__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 24.00155851790828,
+        "max_drawdown": 0.08471288151170997,
+        "cagr": 0.014302990392876858,
+        "score": 0.16884079655465076
+      },
+      "robust_oof": {
+        "net": 24.00155851790828,
+        "max_drawdown": 0.08471288151170997,
+        "cagr": 0.014302990392876858,
+        "score": 0.16884079655465076
+      }
+    },
+    {
+      "model": "Linear__no_teams",
+      "league": "All",
+      "weights": [
+        0.55,
+        0.0,
+        0.45
+      ],
+      "oof": {
+        "net": -385.77890060554387,
+        "max_drawdown": 0.48191069394032304,
+        "cagr": -0.2506356232701238,
+        "score": -0.5200872826058536
+      },
+      "robust_oof": {
+        "net": -625.3942235678747,
+        "max_drawdown": 0.7778620543116693,
+        "cagr": -0.44080180362399646,
+        "score": -0.566683772759763
+      }
+    },
+    {
+      "model": "Linear__no_teams",
+      "league": "E0",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -40.80941767247646,
+        "max_drawdown": 0.3842412383970837,
+        "cagr": -0.024363330553078155,
+        "score": -0.06340633986792571
+      },
+      "robust_oof": {
+        "net": -40.80941767247646,
+        "max_drawdown": 0.3842412383970837,
+        "cagr": -0.024363330553078155,
+        "score": -0.06340633986792571
+      }
+    },
+    {
+      "model": "Linear__no_teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -117.15000000000009,
+        "max_drawdown": 0.1441551463045283,
+        "cagr": -0.07110572700165851,
+        "score": -0.49325833190476176
+      },
+      "robust_oof": {
+        "net": -455.0021494259514,
+        "max_drawdown": 0.5345723362522997,
+        "cagr": -0.3018452507654449,
+        "score": -0.5646480939915012
+      }
+    },
+    {
+      "model": "Linear__no_teams",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 459.61948889106725,
+        "max_drawdown": 0.3002414583831867,
+        "cagr": 0.2574289983881659,
+        "score": 0.8574065679484514
+      },
+      "robust_oof": {
+        "net": 459.61948889106725,
+        "max_drawdown": 0.3002414583831867,
+        "cagr": 0.2574289983881659,
+        "score": 0.8574065679484514
+      }
+    },
+    {
+      "model": "Linear__no_teams",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -54.69999999999993,
+        "max_drawdown": 0.07970537814456014,
+        "cagr": -0.03312165830303637,
+        "score": -0.41555110927350786
+      },
+      "robust_oof": {
+        "net": -483.0507481330485,
+        "max_drawdown": 0.5119581050776996,
+        "cagr": -0.3263705511391163,
+        "score": -0.6374946463433433
+      }
+    },
+    {
+      "model": "Linear__no_teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.55,
+        0.0,
+        0.45
+      ],
+      "oof": {
+        "net": -382.2930539662309,
+        "max_drawdown": 0.4813965278640955,
+        "cagr": -0.2481209598547719,
+        "score": -0.5154190890317757
+      },
+      "robust_oof": {
+        "net": -613.6756754805125,
+        "max_drawdown": 0.7704966697132687,
+        "cagr": -0.4305114611781703,
+        "score": -0.5587453886573969
+      }
+    },
+    {
+      "model": "Linear__no_teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -0.2699999999999818,
+        "max_drawdown": 0.0675946944824869,
+        "cagr": -0.00015984267883706327,
+        "score": -0.0023647222620183143
+      },
+      "robust_oof": {
+        "net": -36.678915920854934,
+        "max_drawdown": 0.3832968789863427,
+        "cagr": -0.021878423519384738,
+        "score": -0.057079576481926665
+      }
+    },
+    {
+      "model": "Linear__no_teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.95,
+        0.05,
+        0.0
+      ],
+      "oof": {
+        "net": -151.72820267366296,
+        "max_drawdown": 0.18706198828768428,
+        "cagr": -0.09281813842267095,
+        "score": -0.4961892005548723
+      },
+      "robust_oof": {
+        "net": -449.07536995871465,
+        "max_drawdown": 0.5286922834788909,
+        "cagr": -0.2973606783880042,
+        "score": -0.5624456563491284
+      }
+    },
+    {
+      "model": "Linear__no_teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 469.3566752578449,
+        "max_drawdown": 0.29749404839879157,
+        "cagr": 0.2625033487690509,
+        "score": 0.8823818499291941
+      },
+      "robust_oof": {
+        "net": 469.3566752578449,
+        "max_drawdown": 0.29749404839879157,
+        "cagr": 0.2625033487690509,
+        "score": 0.8823818499291941
+      }
+    },
+    {
+      "model": "Linear__no_teams__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -62.52999999999997,
+        "max_drawdown": 0.08106087788542049,
+        "cagr": -0.037925052170172835,
+        "score": -0.4678588877828325
+      },
+      "robust_oof": {
+        "net": -478.66697822949277,
+        "max_drawdown": 0.5074176548126679,
+        "cagr": -0.3229559125256739,
+        "score": -0.6364696014467709
+      }
+    },
+    {
+      "model": "Linear__teams",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -193.77999999999997,
+        "max_drawdown": 0.24775468431674508,
+        "cagr": -0.11971635190380692,
+        "score": -0.483205200474652
+      },
+      "robust_oof": {
+        "net": -766.4818665906816,
+        "max_drawdown": 0.8380550256964796,
+        "cagr": -0.5772728569414486,
+        "score": -0.6888245273175188
+      }
+    },
+    {
+      "model": "Linear__teams",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 11.700000000000045,
+        "max_drawdown": 0.03584719153389937,
+        "cagr": 0.006909692453436644,
+        "score": 0.19275408080162718
+      },
+      "robust_oof": {
+        "net": -561.3420084730741,
+        "max_drawdown": 0.6473890017107806,
+        "cagr": -0.38603058187659556,
+        "score": -0.5962884461374488
+      }
+    },
+    {
+      "model": "Linear__teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -77.59000000000003,
+        "max_drawdown": 0.12996700481219214,
+        "cagr": -0.04668636336981713,
+        "score": -0.35921704464360715
+      },
+      "robust_oof": {
+        "net": -450.5899147959856,
+        "max_drawdown": 0.6114439939477021,
+        "cagr": -0.2985047975945503,
+        "score": -0.4881964669687833
+      }
+    },
+    {
+      "model": "Linear__teams",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -45.889999999999986,
+        "max_drawdown": 0.07531001605484255,
+        "cagr": -0.0280535377734894,
+        "score": -0.3725073933467249
+      },
+      "robust_oof": {
+        "net": -223.78120833016374,
+        "max_drawdown": 0.35626128473958596,
+        "cagr": -0.14224936630479001,
+        "score": -0.39928381892174764
+      }
+    },
+    {
+      "model": "Linear__teams",
+      "league": "I1",
+      "weights": [
+        0.75,
+        0.0,
+        0.25
+      ],
+      "oof": {
+        "net": -161.41673977182973,
+        "max_drawdown": 0.20734048433500696,
+        "cagr": -0.10004309420715041,
+        "score": -0.48250632059635506
+      },
+      "robust_oof": {
+        "net": -399.666959087318,
+        "max_drawdown": 0.5247419373400275,
+        "cagr": -0.26327091335289465,
+        "score": -0.5017150233645186
+      }
+    },
+    {
+      "model": "Linear__teams__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -216.69999999999993,
+        "max_drawdown": 0.24816318638824442,
+        "cagr": -0.13461799974828814,
+        "score": -0.5424575728072818
+      },
+      "robust_oof": {
+        "net": -752.525051777698,
+        "max_drawdown": 0.855702089110636,
+        "cagr": -0.5624937552184336,
+        "score": -0.6573476474774707
+      }
+    },
+    {
+      "model": "Linear__teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 56.84999999999991,
+        "max_drawdown": 0.038525700697702225,
+        "cagr": 0.03327366183647751,
+        "score": 0.86367441042966
+      },
+      "robust_oof": {
+        "net": -585.1320590137612,
+        "max_drawdown": 0.661516662934474,
+        "cagr": -0.40596598158764174,
+        "score": -0.6136897289733946
+      }
+    },
+    {
+      "model": "Linear__teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "oof": {
+        "net": -165.50933101400256,
+        "max_drawdown": 0.25714476162452116,
+        "cagr": -0.10157195128062124,
+        "score": -0.39499910726913834
+      },
+      "robust_oof": {
+        "net": -490.25173720756777,
+        "max_drawdown": 0.6422087442617366,
+        "cagr": -0.32894016330948417,
+        "score": -0.5122013149908503
+      }
+    },
+    {
+      "model": "Linear__teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -130.30087904323955,
+        "max_drawdown": 0.364671060061296,
+        "cagr": -0.08108672606465728,
+        "score": -0.2223558021056778
+      },
+      "robust_oof": {
+        "net": -130.30087904323955,
+        "max_drawdown": 0.364671060061296,
+        "cagr": -0.08108672606465728,
+        "score": -0.2223558021056778
+      }
+    },
+    {
+      "model": "Linear__teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.1,
+        0.0,
+        0.9
+      ],
+      "oof": {
+        "net": -343.6356138224353,
+        "max_drawdown": 0.5246984048125856,
+        "cagr": -0.2228375175791082,
+        "score": -0.4246963885066554
+      },
+      "robust_oof": {
+        "net": -369.9784598027054,
+        "max_drawdown": 0.568816005347317,
+        "cagr": -0.24166703902508269,
+        "score": -0.4248597732012158
+      }
+    },
+    {
+      "model": "Poisson__no_teams",
+      "league": "All",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "oof": {
+        "net": -373.23117483595934,
+        "max_drawdown": 0.4648587930538354,
+        "cagr": -0.24161073521777332,
+        "score": -0.5197508121348848
+      },
+      "robust_oof": {
+        "net": -638.8679370898994,
+        "max_drawdown": 0.7910395625714397,
+        "cagr": -0.452797166449567,
+        "score": -0.5724077377086616
+      }
+    },
+    {
+      "model": "Poisson__no_teams",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 19.110000000000014,
+        "max_drawdown": 0.03413704374344795,
+        "cagr": 0.011268973187487985,
+        "score": 0.33010981478590634
+      },
+      "robust_oof": {
+        "net": 37.342957565296956,
+        "max_drawdown": 0.4081603306574154,
+        "cagr": 0.021940657088078686,
+        "score": 0.05375499635826765
+      }
+    },
+    {
+      "model": "Poisson__no_teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -116.67000000000007,
+        "max_drawdown": 0.15287896592244432,
+        "cagr": -0.0708067914967867,
+        "score": -0.4631558767391655
+      },
+      "robust_oof": {
+        "net": -453.4977581310086,
+        "max_drawdown": 0.5458931982783928,
+        "cagr": -0.30070505753988375,
+        "score": -0.5508496139688687
+      }
+    },
+    {
+      "model": "Poisson__no_teams",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 180.6404913056008,
+        "max_drawdown": 0.23025898666618294,
+        "cagr": 0.10581688699927128,
+        "score": 0.459555948418547
+      },
+      "robust_oof": {
+        "net": 180.6404913056008,
+        "max_drawdown": 0.23025898666618294,
+        "cagr": 0.10581688699927128,
+        "score": 0.459555948418547
+      }
+    },
+    {
+      "model": "Poisson__no_teams",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -50.440000000000055,
+        "max_drawdown": 0.06706793635583241,
+        "cagr": -0.030515023575685807,
+        "score": -0.4549867676528284
+      },
+      "robust_oof": {
+        "net": -422.0511049363448,
+        "max_drawdown": 0.4731662422675129,
+        "cagr": -0.27984426833920595,
+        "score": -0.5914290651804172
+      }
+    },
+    {
+      "model": "Poisson__no_teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "oof": {
+        "net": -367.25390490642576,
+        "max_drawdown": 0.457728755215833,
+        "cagr": -0.2373375599337415,
+        "score": -0.5185113612139785
+      },
+      "robust_oof": {
+        "net": -643.1847622660646,
+        "max_drawdown": 0.794422597877382,
+        "cagr": -0.45667880946142303,
+        "score": -0.5748562675352178
+      }
+    },
+    {
+      "model": "Poisson__no_teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 26.930000000000064,
+        "max_drawdown": 0.0331031873640405,
+        "cagr": 0.015855452871520237,
+        "score": 0.4789705806016668
+      },
+      "robust_oof": {
+        "net": 44.45713636069945,
+        "max_drawdown": 0.4093131586114326,
+        "cagr": 0.026083772616205758,
+        "score": 0.06372571237312089
+      }
+    },
+    {
+      "model": "Poisson__no_teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -116.19000000000005,
+        "max_drawdown": 0.15240893066980032,
+        "cagr": -0.07050792226420122,
+        "score": -0.46262329874198305
+      },
+      "robust_oof": {
+        "net": -458.09959529464777,
+        "max_drawdown": 0.5501119107116839,
+        "cagr": -0.30419688786727106,
+        "score": -0.5529727350817205
+      }
+    },
+    {
+      "model": "Poisson__no_teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 178.14417253587317,
+        "max_drawdown": 0.23562725797056117,
+        "cagr": 0.10440005073368774,
+        "score": 0.4430728924695601
+      },
+      "robust_oof": {
+        "net": 178.14417253587317,
+        "max_drawdown": 0.23562725797056117,
+        "cagr": 0.10440005073368774,
+        "score": 0.4430728924695601
+      }
+    },
+    {
+      "model": "Poisson__no_teams__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -57.89999999999998,
+        "max_drawdown": 0.07191910722485084,
+        "cagr": -0.03508279490252941,
+        "score": -0.4878090990874668
+      },
+      "robust_oof": {
+        "net": -427.12496769146287,
+        "max_drawdown": 0.47738223058828466,
+        "cagr": -0.28363657500391115,
+        "score": -0.594149838074999
+      }
+    },
+    {
+      "model": "Poisson__teams",
+      "league": "All",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "oof": {
+        "net": -354.86887447508684,
+        "max_drawdown": 0.44387335255460103,
+        "cagr": -0.2285355240882394,
+        "score": -0.5148665103975287
+      },
+      "robust_oof": {
+        "net": -633.3871861877168,
+        "max_drawdown": 0.7907757518073545,
+        "cagr": -0.4478961045483485,
+        "score": -0.5664009088855612
+      }
+    },
+    {
+      "model": "Poisson__teams",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 54.680000000000064,
+        "max_drawdown": 0.035057893769527726,
+        "cagr": 0.03201720127481078,
+        "score": 0.9132665380668159
+      },
+      "robust_oof": {
+        "net": -186.4421476582604,
+        "max_drawdown": 0.4538445368556828,
+        "cagr": -0.11498223070534308,
+        "score": -0.2533515804816354
+      }
+    },
+    {
+      "model": "Poisson__teams",
+      "league": "SP1",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "oof": {
+        "net": -168.20861398302725,
+        "max_drawdown": 0.22195712049966232,
+        "cagr": -0.10329343225140108,
+        "score": -0.4653756185828615
+      },
+      "robust_oof": {
+        "net": -530.9629693483884,
+        "max_drawdown": 0.6407122638191187,
+        "cagr": -0.36120415525005023,
+        "score": -0.5637540837707811
+      }
+    },
+    {
+      "model": "Poisson__teams",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 167.73068633899902,
+        "max_drawdown": 0.2800000961421004,
+        "cagr": 0.09847685270131756,
+        "score": 0.3517029245994988
+      },
+      "robust_oof": {
+        "net": 167.73068633899902,
+        "max_drawdown": 0.2800000961421004,
+        "cagr": 0.09847685270131756,
+        "score": 0.3517029245994988
+      }
+    },
+    {
+      "model": "Poisson__teams",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -227.0559850581667,
+        "max_drawdown": 0.30441440372471174,
+        "cagr": -0.14291016168321147,
+        "score": -0.46945926321031806
+      },
+      "robust_oof": {
+        "net": -227.0559850581667,
+        "max_drawdown": 0.30441440372471174,
+        "cagr": -0.14291016168321147,
+        "score": -0.46945926321031806
+      }
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "oof": {
+        "net": -345.392108606188,
+        "max_drawdown": 0.4375627714065614,
+        "cagr": -0.2218468721627166,
+        "score": -0.5070058210153066
+      },
+      "robust_oof": {
+        "net": -633.5752715154691,
+        "max_drawdown": 0.7933539468726859,
+        "cagr": -0.44806379896916193,
+        "score": -0.5647716265046392
+      }
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 75.80999999999995,
+        "max_drawdown": 0.025975554549570012,
+        "cagr": 0.04420733942673616,
+        "score": 1.7018824118797473
+      },
+      "robust_oof": {
+        "net": -190.3294336761403,
+        "max_drawdown": 0.4575859425761175,
+        "cagr": -0.11748798912500724,
+        "score": -0.25675611550384025
+      }
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "oof": {
+        "net": -170.12282355910622,
+        "max_drawdown": 0.22838993588407708,
+        "cagr": -0.10451561049424007,
+        "score": -0.45761915948559406
+      },
+      "robust_oof": {
+        "net": -535.8293792100133,
+        "max_drawdown": 0.6488270524426701,
+        "cagr": -0.3651359558278381,
+        "score": -0.5627631499845658
+      }
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 186.53227612811384,
+        "max_drawdown": 0.2797466576787271,
+        "cagr": 0.10915621329931491,
+        "score": 0.3901966665305954
+      },
+      "robust_oof": {
+        "net": 186.53227612811384,
+        "max_drawdown": 0.2797466576787271,
+        "cagr": 0.10915621329931491,
+        "score": 0.3901966665305954
+      }
+    },
+    {
+      "model": "Poisson__teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -222.80615430651244,
+        "max_drawdown": 0.3036199931923529,
+        "cagr": -0.14009156941675815,
+        "score": -0.4614042966795197
+      },
+      "robust_oof": {
+        "net": -222.80615430651244,
+        "max_drawdown": 0.3036199931923529,
+        "cagr": -0.14009156941675815,
+        "score": -0.4614042966795197
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 297.35626332141464,
+        "max_drawdown": 0.26824137334125087,
+        "cagr": 0.16661756844791853,
+        "score": 0.621147910080043
+      },
+      "robust_oof": {
+        "net": 297.35626332141464,
+        "max_drawdown": 0.26824137334125087,
+        "cagr": 0.16661756844791853,
+        "score": 0.621147910080043
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "league": "E0",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 133.58735040173678,
+        "max_drawdown": 0.23391969142982338,
+        "cagr": 0.07705062994575607,
+        "score": 0.3293892424138713
+      },
+      "robust_oof": {
+        "net": 133.58735040173678,
+        "max_drawdown": 0.23391969142982338,
+        "cagr": 0.07705062994575607,
+        "score": 0.3293892424138713
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -56.82000000000005,
+        "max_drawdown": 0.08728477593377126,
+        "cagr": -0.034036826544481924,
+        "score": -0.38995146840163647
+      },
+      "robust_oof": {
+        "net": -144.6323838171761,
+        "max_drawdown": 0.1714527593632471,
+        "cagr": -0.08833349386202527,
+        "score": -0.5152060205393264
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "league": "D1",
+      "weights": [
+        0.55,
+        0.0,
+        0.45
+      ],
+      "oof": {
+        "net": 80.25129280998385,
+        "max_drawdown": 0.04313766732029223,
+        "cagr": 0.04786825908198811,
+        "score": 1.1096626696703782
+      },
+      "robust_oof": {
+        "net": 160.38176179996412,
+        "max_drawdown": 0.09222208511598518,
+        "cagr": 0.09428423776770578,
+        "score": 1.0223607246477575
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 168.48658002087313,
+        "max_drawdown": 0.09080322828682807,
+        "cagr": 0.09771877785681848,
+        "score": 1.0761597324287377
+      },
+      "robust_oof": {
+        "net": 168.48658002087313,
+        "max_drawdown": 0.09080322828682807,
+        "cagr": 0.09771877785681848,
+        "score": 1.0761597324287377
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 313.3323633288171,
+        "max_drawdown": 0.27034782840858984,
+        "cagr": 0.17510075327350405,
+        "score": 0.6476869235615451
+      },
+      "robust_oof": {
+        "net": 313.3323633288171,
+        "max_drawdown": 0.27034782840858984,
+        "cagr": 0.17510075327350405,
+        "score": 0.6476869235615451
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__calibrated",
+      "league": "E0",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "oof": {
+        "net": 36.43089592233878,
+        "max_drawdown": 0.050032132724774914,
+        "cagr": 0.021408658484110665,
+        "score": 0.4278981789938674
+      },
+      "robust_oof": {
+        "net": 126.11447961169438,
+        "max_drawdown": 0.2353787776598938,
+        "cagr": 0.07284182150642948,
+        "score": 0.3094663938296125
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -44.02999999999997,
+        "max_drawdown": 0.08747095069573685,
+        "cagr": -0.026303861305769893,
+        "score": -0.30071539289959826
+      },
+      "robust_oof": {
+        "net": -189.91727465401925,
+        "max_drawdown": 0.2307124973228486,
+        "cagr": -0.11722207766717063,
+        "score": -0.5080872472336658
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "oof": {
+        "net": 62.059365154899524,
+        "max_drawdown": 0.031062252590307815,
+        "cagr": 0.03714357967604465,
+        "score": 1.1957786888782933
+      },
+      "robust_oof": {
+        "net": 161.33682577449736,
+        "max_drawdown": 0.09967635134388564,
+        "cagr": 0.09482969936406271,
+        "score": 0.9513761096340508
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 241.04256532640875,
+        "max_drawdown": 0.08244274965742493,
+        "cagr": 0.13803781943139848,
+        "score": 1.6743475927839406
+      },
+      "robust_oof": {
+        "net": 241.04256532640875,
+        "max_drawdown": 0.08244274965742493,
+        "cagr": 0.13803781943139848,
+        "score": 1.6743475927839406
+      }
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -52.190000000000055,
+        "max_drawdown": 0.11392248002825156,
+        "cagr": -0.031232569079280736,
+        "score": -0.27415633044097526
+      },
+      "robust_oof": {
+        "net": -483.9864148529699,
+        "max_drawdown": 0.7561910630647323,
+        "cagr": -0.32406970464805696,
+        "score": -0.42855532216243025
+      }
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -40.0,
+        "max_drawdown": 0.06895267953365336,
+        "cagr": -0.02387604200094695,
+        "score": -0.3462670655067712
+      },
+      "robust_oof": {
+        "net": -353.66052186778074,
+        "max_drawdown": 0.5146958842575813,
+        "cagr": -0.22768045571685913,
+        "score": -0.44235919244871147
+      }
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 4.3799999999999955,
+        "max_drawdown": 0.05998928250177027,
+        "cagr": 0.002590548464585174,
+        "score": 0.0431835213983219
+      },
+      "robust_oof": {
+        "net": -193.54292286707823,
+        "max_drawdown": 0.4518524355447625,
+        "cagr": -0.11956312404144664,
+        "score": -0.2646065720489011
+      }
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 8.419999999999959,
+        "max_drawdown": 0.02315999999999996,
+        "cagr": 0.005091741247504444,
+        "score": 0.21985065835511458
+      },
+      "robust_oof": {
+        "net": -56.31816568180034,
+        "max_drawdown": 0.3288422272289143,
+        "cagr": -0.03450212032526956,
+        "score": -0.10491998128102895
+      }
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -24.99000000000001,
+        "max_drawdown": 0.0505891656009293,
+        "cagr": -0.015039179884668852,
+        "score": -0.2972806470718424
+      },
+      "robust_oof": {
+        "net": -227.67142346783316,
+        "max_drawdown": 0.35949678413198494,
+        "cagr": -0.14331885043638237,
+        "score": -0.3986651807816021
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.8,
+        0.2,
+        0.0
+      ],
+      "oof": {
+        "net": -172.8015138941381,
+        "max_drawdown": 0.34400294341396165,
+        "cagr": -0.10622782470589909,
+        "score": -0.3087991737851733
+      },
+      "robust_oof": {
+        "net": -422.76129828933404,
+        "max_drawdown": 0.7470769042737848,
+        "cagr": -0.2776830001762033,
+        "score": -0.37169265786115036
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -35.66999999999996,
+        "max_drawdown": 0.06578767591200996,
+        "cagr": -0.021272121450145898,
+        "score": -0.32334508181436666
+      },
+      "robust_oof": {
+        "net": -434.86367749694296,
+        "max_drawdown": 0.522003642883371,
+        "cagr": -0.28668668517014184,
+        "score": -0.5492043764035475
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -25.420000000000073,
+        "max_drawdown": 0.09392971851402698,
+        "cagr": -0.01512704754177796,
+        "score": -0.16104644814323557
+      },
+      "robust_oof": {
+        "net": -237.90311525323546,
+        "max_drawdown": 0.5304228792408656,
+        "cagr": -0.14856263019008675,
+        "score": -0.2800833749907388
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 203.3694378582186,
+        "max_drawdown": 0.2868253517164926,
+        "cagr": 0.1186632747929095,
+        "score": 0.4137126445858946
+      },
+      "robust_oof": {
+        "net": 203.3694378582186,
+        "max_drawdown": 0.2868253517164926,
+        "cagr": 0.1186632747929095,
+        "score": 0.4137126445858946
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.3,
+        0.0,
+        0.7
+      ],
+      "oof": {
+        "net": -76.57213963866366,
+        "max_drawdown": 0.24308961099136284,
+        "cagr": -0.04657986082480681,
+        "score": -0.19161600791924352
+      },
+      "robust_oof": {
+        "net": -95.944485198091,
+        "max_drawdown": 0.30377078838145544,
+        "cagr": -0.05860710040794603,
+        "score": -0.19293198243391027
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 232.16248283102505,
+        "max_drawdown": 0.3449793275622528,
+        "cagr": 0.1315490583462684,
+        "score": 0.38132446739878895
+      },
+      "robust_oof": {
+        "net": 232.16248283102505,
+        "max_drawdown": 0.3449793275622528,
+        "cagr": 0.1315490583462684,
+        "score": 0.38132446739878895
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "league": "E0",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 160.04539414056057,
+        "max_drawdown": 0.24518494877574415,
+        "cagr": 0.0918619398692706,
+        "score": 0.37466386223116477
+      },
+      "robust_oof": {
+        "net": 160.04539414056057,
+        "max_drawdown": 0.24518494877574415,
+        "cagr": 0.0918619398692706,
+        "score": 0.37466386223116477
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -64.63,
+        "max_drawdown": 0.09023253996933323,
+        "cagr": -0.038779879605514544,
+        "score": -0.4297771027912372
+      },
+      "robust_oof": {
+        "net": -175.9434886319018,
+        "max_drawdown": 0.23751046512404528,
+        "cagr": -0.108239055247067,
+        "score": -0.45572330966779373
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "league": "D1",
+      "weights": [
+        0.05,
+        0.0,
+        0.95
+      ],
+      "oof": {
+        "net": 318.0376973515438,
+        "max_drawdown": 0.12382377488384677,
+        "cagr": 0.18206906882368412,
+        "score": 1.470388614742803
+      },
+      "robust_oof": {
+        "net": 335.9854708963619,
+        "max_drawdown": 0.13047239461457572,
+        "cagr": 0.1917929231114941,
+        "score": 1.4699885265236632
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -13.446064819213689,
+        "max_drawdown": 0.13340330352694962,
+        "cagr": -0.008072962041779985,
+        "score": -0.06051545822588356
+      },
+      "robust_oof": {
+        "net": -13.446064819213689,
+        "max_drawdown": 0.13340330352694962,
+        "cagr": -0.008072962041779985,
+        "score": -0.06051545822588356
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 144.99814104167513,
+        "max_drawdown": 0.4509072422020476,
+        "cagr": 0.08345554449605785,
+        "score": 0.18508361961208455
+      },
+      "robust_oof": {
+        "net": 144.99814104167513,
+        "max_drawdown": 0.4509072422020476,
+        "cagr": 0.08345554449605785,
+        "score": 0.18508361961208455
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 114.03458841974339,
+        "max_drawdown": 0.25919698962470394,
+        "cagr": 0.06601410579162192,
+        "score": 0.25468700808294475
+      },
+      "robust_oof": {
+        "net": 114.03458841974339,
+        "max_drawdown": 0.25919698962470394,
+        "cagr": 0.06601410579162192,
+        "score": 0.25468700808294475
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.85,
+        0.15,
+        0.0
+      ],
+      "oof": {
+        "net": -142.5814699482671,
+        "max_drawdown": 0.19793995546265974,
+        "cagr": -0.08704012194677879,
+        "score": -0.43972992589259435
+      },
+      "robust_oof": {
+        "net": -223.84686671196835,
+        "max_drawdown": 0.29467224072458675,
+        "cagr": -0.13930086430934552,
+        "score": -0.47273154731782846
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.45,
+        0.0,
+        0.55
+      ],
+      "oof": {
+        "net": 203.30574482342013,
+        "max_drawdown": 0.07033782789753007,
+        "cagr": 0.1186274098792528,
+        "score": 1.6865378619890312
+      },
+      "robust_oof": {
+        "net": 351.72044513349124,
+        "max_drawdown": 0.12541547386278584,
+        "cagr": 0.20027562027313905,
+        "score": 1.5968972097674006
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -18.501705746409925,
+        "max_drawdown": 0.1675928409755505,
+        "cagr": -0.01111975419085709,
+        "score": -0.0663498161743037
+      },
+      "robust_oof": {
+        "net": -18.501705746409925,
+        "max_drawdown": 0.1675928409755505,
+        "cagr": -0.01111975419085709,
+        "score": -0.0663498161743037
+      }
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -133.56000000000006,
+        "max_drawdown": 0.2002283648127885,
+        "cagr": -0.08136581863353087,
+        "score": -0.406365095722612
+      },
+      "robust_oof": {
+        "net": -518.7087085801439,
+        "max_drawdown": 0.7574777047224013,
+        "cagr": -0.35137640286712435,
+        "score": -0.46387689126229265
+      }
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "league": "E0",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "oof": {
+        "net": -287.9562943172509,
+        "max_drawdown": 0.36376823327997365,
+        "cagr": -0.18212433861107546,
+        "score": -0.5006603709425714
+      },
+      "robust_oof": {
+        "net": -426.7271571954183,
+        "max_drawdown": 0.5520670554666227,
+        "cagr": -0.2806248803590986,
+        "score": -0.5083166575152841
+      }
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -5.990000000000009,
+        "max_drawdown": 0.06262630114004641,
+        "cagr": -0.0035502895534671453,
+        "score": -0.056690072522851125
+      },
+      "robust_oof": {
+        "net": -121.22882041865455,
+        "max_drawdown": 0.4247586533871175,
+        "cagr": -0.0736486256308081,
+        "score": -0.17338934720580265
+      }
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "league": "D1",
+      "weights": [
+        0.15,
+        0.0,
+        0.85
+      ],
+      "oof": {
+        "net": -37.44804239688165,
+        "max_drawdown": 0.2700979488833416,
+        "cagr": -0.02285351933852975,
+        "score": -0.08461196922454396
+      },
+      "robust_oof": {
+        "net": -42.86710870221373,
+        "max_drawdown": 0.30914547647194945,
+        "cagr": -0.026189441255537904,
+        "score": -0.08471558941899712
+      }
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -41.02999999999997,
+        "max_drawdown": 0.07378159944624807,
+        "cagr": -0.0247737478911344,
+        "score": -0.33577135867300845
+      },
+      "robust_oof": {
+        "net": -292.39848009169964,
+        "max_drawdown": 0.41320849132378845,
+        "cagr": -0.187061035044352,
+        "score": -0.4527037536064857
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__calibrated",
+      "league": "All",
+      "weights": [
+        0.05,
+        0.0,
+        0.95
+      ],
+      "oof": {
+        "net": -354.83345366977824,
+        "max_drawdown": 0.7203453761662821,
+        "cagr": -0.22851044991836567,
+        "score": -0.3172234562461009
+      },
+      "robust_oof": {
+        "net": -366.26521438924055,
+        "max_drawdown": 0.7454929490435291,
+        "cagr": -0.2366323312774723,
+        "score": -0.3174172627401408
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -46.870000000000005,
+        "max_drawdown": 0.0851737740792996,
+        "cagr": -0.028017290209742973,
+        "score": -0.3289426881995149
+      },
+      "robust_oof": {
+        "net": -468.75895547904634,
+        "max_drawdown": 0.5583815941566743,
+        "cagr": -0.3123319079704556,
+        "score": -0.5593520833045573
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.45,
+        0.0,
+        0.55
+      ],
+      "oof": {
+        "net": -116.82546937306574,
+        "max_drawdown": 0.3441136294720466,
+        "cagr": -0.07090360781197613,
+        "score": -0.20604707788168516
+      },
+      "robust_oof": {
+        "net": -177.52267158739244,
+        "max_drawdown": 0.5104316663079097,
+        "cagr": -0.10925109802901878,
+        "score": -0.2140366776600314
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 245.13147346134429,
+        "max_drawdown": 0.3294578236277581,
+        "cagr": 0.14202047478597235,
+        "score": 0.4310733107568752
+      },
+      "robust_oof": {
+        "net": 245.13147346134429,
+        "max_drawdown": 0.3294578236277581,
+        "cagr": 0.14202047478597235,
+        "score": 0.4310733107568752
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -105.72806018101403,
+        "max_drawdown": 0.31110594258328206,
+        "cagr": -0.06472046667105191,
+        "score": -0.2080335275296982
+      },
+      "robust_oof": {
+        "net": -105.72806018101403,
+        "max_drawdown": 0.31110594258328206,
+        "cagr": -0.06472046667105191,
+        "score": -0.2080335275296982
+      }
+    },
+    {
+      "model": "Expanded RF__half3",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 198.6763498717694,
+        "max_drawdown": 0.13527240927044648,
+        "cagr": 0.11324245592020477,
+        "score": 0.8371437792151848
+      },
+      "robust_oof": {
+        "net": 198.6763498717694,
+        "max_drawdown": 0.13527240927044648,
+        "cagr": 0.11324245592020477,
+        "score": 0.8371437792151848
+      }
+    },
+    {
+      "model": "Expanded RF__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 16.639999999999986,
+        "max_drawdown": 0.03799241098042183,
+        "cagr": 0.009817321023786407,
+        "score": 0.2584021590218491
+      },
+      "robust_oof": {
+        "net": -21.75412566778084,
+        "max_drawdown": 0.1334214647830857,
+        "cagr": -0.012935693560393369,
+        "score": -0.09695361673194036
+      }
+    },
+    {
+      "model": "Expanded RF__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -13.200000000000045,
+        "max_drawdown": 0.07452326395213948,
+        "cagr": -0.007835274879173681,
+        "score": -0.10513864347387779
+      },
+      "robust_oof": {
+        "net": -79.55560729674346,
+        "max_drawdown": 0.17071908185892426,
+        "cagr": -0.04788946570882535,
+        "score": -0.2805161859316897
+      }
+    },
+    {
+      "model": "Expanded RF__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 330.5524614039148,
+        "max_drawdown": 0.049858043563404175,
+        "cagr": 0.18885485988830464,
+        "score": 3.7878513954952733
+      },
+      "robust_oof": {
+        "net": 330.5524614039148,
+        "max_drawdown": 0.049858043563404175,
+        "cagr": 0.18885485988830464,
+        "score": 3.7878513954952733
+      }
+    },
+    {
+      "model": "Expanded RF__half3",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 3.3122112428378614,
+        "max_drawdown": 0.0747264454558828,
+        "cagr": 0.0019819385597745764,
+        "score": 0.026522585781825772
+      },
+      "robust_oof": {
+        "net": 3.3122112428378614,
+        "max_drawdown": 0.0747264454558828,
+        "cagr": 0.0019819385597745764,
+        "score": 0.026522585781825772
+      }
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 224.66680995586967,
+        "max_drawdown": 0.13456012328861067,
+        "cagr": 0.1274690477498721,
+        "score": 0.9473018055763126
+      },
+      "robust_oof": {
+        "net": 224.66680995586967,
+        "max_drawdown": 0.13456012328861067,
+        "cagr": 0.1274690477498721,
+        "score": 0.9473018055763126
+      }
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 26.65000000000009,
+        "max_drawdown": 0.0379966266866566,
+        "cagr": 0.015691477611983418,
+        "score": 0.41297028131957425
+      },
+      "robust_oof": {
+        "net": -11.474796833626556,
+        "max_drawdown": 0.1322434154285883,
+        "cagr": -0.006808807508437598,
+        "score": -0.05148693026696945
+      }
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -14.080000000000041,
+        "max_drawdown": 0.07447962150801801,
+        "cagr": -0.008359142325710889,
+        "score": -0.11223395281098462
+      },
+      "robust_oof": {
+        "net": -78.4884060597816,
+        "max_drawdown": 0.17498654955804627,
+        "cagr": -0.04723612681858269,
+        "score": -0.2699414722896379
+      }
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 337.1481106336573,
+        "max_drawdown": 0.04893489381055838,
+        "cagr": 0.19242104316363307,
+        "score": 3.9321847495685294
+      },
+      "robust_oof": {
+        "net": 337.1481106336573,
+        "max_drawdown": 0.04893489381055838,
+        "cagr": 0.19242104316363307,
+        "score": 3.9321847495685294
+      }
+    },
+    {
+      "model": "Expanded RF__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 8.374656183846241,
+        "max_drawdown": 0.07276087302624545,
+        "cagr": 0.005006105037388853,
+        "score": 0.068802157384548
+      },
+      "robust_oof": {
+        "net": 8.374656183846241,
+        "max_drawdown": 0.07276087302624545,
+        "cagr": 0.005006105037388853,
+        "score": 0.068802157384548
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3",
+      "league": "All",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "oof": {
+        "net": -276.5670528816994,
+        "max_drawdown": 0.3462597790437938,
+        "cagr": -0.17440515161367487,
+        "score": -0.503682963396152
+      },
+      "robust_oof": {
+        "net": -632.7952644084966,
+        "max_drawdown": 0.7965307466935933,
+        "cagr": -0.4473685837540856,
+        "score": -0.561646346498383
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 5.159999999999968,
+        "max_drawdown": 0.06754089773928351,
+        "cagr": 0.003051395104679555,
+        "score": 0.0451784801033935
+      },
+      "robust_oof": {
+        "net": -50.11377509754777,
+        "max_drawdown": 0.3939203039758038,
+        "cagr": -0.02997687521921899,
+        "score": -0.07609883247109875
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -115.49000000000001,
+        "max_drawdown": 0.14872891654109766,
+        "cagr": -0.07007218999069365,
+        "score": -0.47114032442595577
+      },
+      "robust_oof": {
+        "net": -472.9757663380144,
+        "max_drawdown": 0.5493388421108916,
+        "cagr": -0.3155684539255681,
+        "score": -0.5744513763362582
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 266.68662455438835,
+        "max_drawdown": 0.27064333843474764,
+        "cagr": 0.153955128355159,
+        "score": 0.568848763267372
+      },
+      "robust_oof": {
+        "net": 266.68662455438835,
+        "max_drawdown": 0.27064333843474764,
+        "cagr": 0.153955128355159,
+        "score": 0.568848763267372
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -64.29999999999995,
+        "max_drawdown": 0.08597375380470029,
+        "cagr": -0.03901310453208695,
+        "score": -0.453779238495389
+      },
+      "robust_oof": {
+        "net": -423.13779026647944,
+        "max_drawdown": 0.46297889597319997,
+        "cagr": -0.2806553509841191,
+        "score": -0.6061946957521043
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.85,
+        0.0,
+        0.15
+      ],
+      "oof": {
+        "net": -232.33790392217122,
+        "max_drawdown": 0.29191276719794923,
+        "cagr": -0.14488740493253494,
+        "score": -0.496338020167118
+      },
+      "robust_oof": {
+        "net": -614.2026928144761,
+        "max_drawdown": 0.781561911223939,
+        "cagr": -0.43097148870888446,
+        "score": -0.5514233517776933
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 13.049999999999955,
+        "max_drawdown": 0.060787109118535354,
+        "cagr": 0.007704861434586929,
+        "score": 0.126751568651873
+      },
+      "robust_oof": {
+        "net": -65.52353382503998,
+        "max_drawdown": 0.40394501703248853,
+        "cagr": -0.03932355558076217,
+        "score": -0.09734878243986224
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -92.70000000000005,
+        "max_drawdown": 0.1258088056433957,
+        "cagr": -0.05596195272070115,
+        "score": -0.4448174548236708
+      },
+      "robust_oof": {
+        "net": -450.78635390426666,
+        "max_drawdown": 0.5155289306868275,
+        "cagr": -0.2986532860793244,
+        "score": -0.5793143086682554
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 300.9586208159301,
+        "max_drawdown": 0.253319675624353,
+        "cagr": 0.1727672680056831,
+        "score": 0.6820128265989065
+      },
+      "robust_oof": {
+        "net": 300.9586208159301,
+        "max_drawdown": 0.253319675624353,
+        "cagr": 0.1727672680056831,
+        "score": 0.6820128265989065
+      }
+    },
+    {
+      "model": "Linear__no_teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -61.539999999999964,
+        "max_drawdown": 0.07949703108627315,
+        "cagr": -0.037316839953718484,
+        "score": -0.4694117433545519
+      },
+      "robust_oof": {
+        "net": -416.2199667326379,
+        "max_drawdown": 0.45643736780504085,
+        "cagr": -0.2755024175126537,
+        "score": -0.6035930380492635
+      }
+    },
+    {
+      "model": "Linear__teams__half3",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -124.27999999999997,
+        "max_drawdown": 0.17205549317753632,
+        "cagr": -0.07555400210813035,
+        "score": -0.43912577688042526
+      },
+      "robust_oof": {
+        "net": -803.3578163822768,
+        "max_drawdown": 0.8963060317416094,
+        "cagr": -0.6181677327919546,
+        "score": -0.6896837808742565
+      }
+    },
+    {
+      "model": "Linear__teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -4.309999999999945,
+        "max_drawdown": 0.033850109068245704,
+        "cagr": -0.002553670191399293,
+        "score": -0.07544053067157926
+      },
+      "robust_oof": {
+        "net": -476.82683721172816,
+        "max_drawdown": 0.6059847849061828,
+        "cagr": -0.3185335254547559,
+        "score": -0.5256460779028809
+      }
+    },
+    {
+      "model": "Linear__teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -64.42000000000007,
+        "max_drawdown": 0.11864004481282109,
+        "cagr": -0.03865213461413408,
+        "score": -0.32579332446406034
+      },
+      "robust_oof": {
+        "net": -567.4733294214594,
+        "max_drawdown": 0.6953271444609674,
+        "cagr": -0.39112535240795665,
+        "score": -0.5625055134459988
+      }
+    },
+    {
+      "model": "Linear__teams__half3",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -30.350000000000023,
+        "max_drawdown": 0.05569498164496545,
+        "cagr": -0.018495217166882405,
+        "score": -0.3320804966735146
+      },
+      "robust_oof": {
+        "net": -293.22495128200535,
+        "max_drawdown": 0.4232302249858355,
+        "cagr": -0.18958699054057848,
+        "score": -0.4479523893807998
+      }
+    },
+    {
+      "model": "Linear__teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -25.200000000000045,
+        "max_drawdown": 0.05479261066573715,
+        "cagr": -0.015166210480941578,
+        "score": -0.2767929889937749
+      },
+      "robust_oof": {
+        "net": -391.4133578501578,
+        "max_drawdown": 0.539059955674452,
+        "cagr": -0.2572226930958633,
+        "score": -0.4771689872122587
+      }
+    },
+    {
+      "model": "Linear__teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -138.72000000000003,
+        "max_drawdown": 0.1828782899492113,
+        "cagr": -0.08460837610517924,
+        "score": -0.46264855237150654
+      },
+      "robust_oof": {
+        "net": -794.5999336642127,
+        "max_drawdown": 0.906673812613812,
+        "cagr": -0.6081903388965342,
+        "score": -0.670792881006685
+      }
+    },
+    {
+      "model": "Linear__teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 3.17999999999995,
+        "max_drawdown": 0.04069408541996211,
+        "cagr": 0.0018812683882545311,
+        "score": 0.046229528660980596
+      },
+      "robust_oof": {
+        "net": -430.3440726069505,
+        "max_drawdown": 0.5881371540291132,
+        "cagr": -0.283315162087305,
+        "score": -0.481716144178983
+      }
+    },
+    {
+      "model": "Linear__teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -74.10000000000002,
+        "max_drawdown": 0.12493320100771055,
+        "cagr": -0.044552790268082676,
+        "score": -0.3566128931998868
+      },
+      "robust_oof": {
+        "net": -598.671218984262,
+        "max_drawdown": 0.7149734932605294,
+        "cagr": -0.41751978561094505,
+        "score": -0.5839654050766395
+      }
+    },
+    {
+      "model": "Linear__teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -10.080000000000041,
+        "max_drawdown": 0.043067898865235765,
+        "cagr": -0.006117861799339042,
+        "score": -0.14205155023890323
+      },
+      "robust_oof": {
+        "net": -319.8865915434277,
+        "max_drawdown": 0.4878899280406156,
+        "cagr": -0.20824478195090057,
+        "score": -0.4268273845849196
+      }
+    },
+    {
+      "model": "Linear__teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.55,
+        0.0,
+        0.45
+      ],
+      "oof": {
+        "net": -194.9276060146783,
+        "max_drawdown": 0.3025475966042114,
+        "cagr": -0.12175287321645911,
+        "score": -0.4024255177797183
+      },
+      "robust_oof": {
+        "net": -362.625791143729,
+        "max_drawdown": 0.5735212517364252,
+        "cagr": -0.23638018350889112,
+        "score": -0.4121559276020081
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3",
+      "league": "All",
+      "weights": [
+        0.75,
+        0.0,
+        0.25
+      ],
+      "oof": {
+        "net": -324.0746314512869,
+        "max_drawdown": 0.393779638001448,
+        "cagr": -0.206943886047237,
+        "score": -0.5255322166924132
+      },
+      "robust_oof": {
+        "net": -675.958525805148,
+        "max_drawdown": 0.818393119609663,
+        "cagr": -0.48679998610325326,
+        "score": -0.5948241431152734
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 39.75,
+        "max_drawdown": 0.04035278482541993,
+        "cagr": 0.023343750895490567,
+        "score": 0.5784916950957335
+      },
+      "robust_oof": {
+        "net": 21.179873150774483,
+        "max_drawdown": 0.40348571301269665,
+        "cagr": 0.01248436020116861,
+        "score": 0.03094126953827423
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -112.86000000000001,
+        "max_drawdown": 0.1476792009400706,
+        "cagr": -0.06843633750300993,
+        "score": -0.4634121600561879
+      },
+      "robust_oof": {
+        "net": -493.7970000841897,
+        "max_drawdown": 0.5735499187397999,
+        "cagr": -0.33170695708552544,
+        "score": -0.578340169264342
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 15.125854347481095,
+        "max_drawdown": 0.21563181135358767,
+        "cagr": 0.009134923572660103,
+        "score": 0.04236352472910819
+      },
+      "robust_oof": {
+        "net": 15.125854347481095,
+        "max_drawdown": 0.21563181135358767,
+        "cagr": 0.009134923572660103,
+        "score": 0.04236352472910819
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -77.82000000000005,
+        "max_drawdown": 0.10280009982530569,
+        "cagr": -0.04735151999514253,
+        "score": -0.46061745149673766
+      },
+      "robust_oof": {
+        "net": -361.91884558389756,
+        "max_drawdown": 0.425110039016083,
+        "cagr": -0.23587315489607552,
+        "score": -0.5548519988895201
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.65,
+        0.0,
+        0.35
+      ],
+      "oof": {
+        "net": -371.30997647826234,
+        "max_drawdown": 0.4482697535707847,
+        "cagr": -0.24023545632118726,
+        "score": -0.5359171668566581
+      },
+      "robust_oof": {
+        "net": -667.1899327950363,
+        "max_drawdown": 0.8119645772255959,
+        "cagr": -0.4786238715434785,
+        "score": -0.589463980287034
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 35.559999999999945,
+        "max_drawdown": 0.0440137723824543,
+        "cagr": 0.020900493220458616,
+        "score": 0.47486257344281657
+      },
+      "robust_oof": {
+        "net": 18.148973944734735,
+        "max_drawdown": 0.3990693569352114,
+        "cagr": 0.010704336071410525,
+        "score": 0.02682324735133288
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "oof": {
+        "net": -186.8797841478014,
+        "max_drawdown": 0.23062017170953697,
+        "cagr": -0.1152640883420023,
+        "score": -0.499800548614524
+      },
+      "robust_oof": {
+        "net": -487.8292065275298,
+        "max_drawdown": 0.565897442251206,
+        "cagr": -0.32705408594005714,
+        "score": -0.5779387951269012
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 23.984622316800483,
+        "max_drawdown": 0.21424076764515287,
+        "cagr": 0.014460060841957612,
+        "score": 0.06749444095489715
+      },
+      "robust_oof": {
+        "net": 23.984622316800483,
+        "max_drawdown": 0.21424076764515287,
+        "cagr": 0.014460060841957612,
+        "score": 0.06749444095489715
+      }
+    },
+    {
+      "model": "Poisson__no_teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -80.38999999999999,
+        "max_drawdown": 0.09589218866982785,
+        "cagr": -0.04894209279043449,
+        "score": -0.510386648478219
+      },
+      "robust_oof": {
+        "net": -355.13052782712225,
+        "max_drawdown": 0.4190146955401648,
+        "cagr": -0.23101592357423284,
+        "score": -0.5513313161401727
+      }
+    },
+    {
+      "model": "Poisson__teams__half3",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -139.65999999999997,
+        "max_drawdown": 0.1944362989462982,
+        "cagr": -0.08519992714719993,
+        "score": -0.4381894101508869
+      },
+      "robust_oof": {
+        "net": -652.1916630896181,
+        "max_drawdown": 0.8075792704824073,
+        "cagr": -0.4648399570122077,
+        "score": -0.57559669248882
+      }
+    },
+    {
+      "model": "Poisson__teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 15.279999999999973,
+        "max_drawdown": 0.045480527398826465,
+        "cagr": 0.00901741645948917,
+        "score": 0.19826983052359778
+      },
+      "robust_oof": {
+        "net": -215.76054956349503,
+        "max_drawdown": 0.47829763908337697,
+        "cagr": -0.1340037394482777,
+        "score": -0.28016809722307273
+      }
+    },
+    {
+      "model": "Poisson__teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -84.23000000000002,
+        "max_drawdown": 0.13599200668671385,
+        "cagr": -0.05075477074851731,
+        "score": -0.3732187794348942
+      },
+      "robust_oof": {
+        "net": -489.925070032156,
+        "max_drawdown": 0.619710219046933,
+        "cagr": -0.32868562140767177,
+        "score": -0.5303859954305178
+      }
+    },
+    {
+      "model": "Poisson__teams__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 101.52513864878733,
+        "max_drawdown": 0.28556480537781037,
+        "cagr": 0.0603199049070664,
+        "score": 0.21123017882845
+      },
+      "robust_oof": {
+        "net": 101.52513864878733,
+        "max_drawdown": 0.28556480537781037,
+        "cagr": 0.0603199049070664,
+        "score": 0.21123017882845
+      }
+    },
+    {
+      "model": "Poisson__teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -47.520000000000095,
+        "max_drawdown": 0.08299999999999996,
+        "cagr": -0.02873102586451748,
+        "score": -0.3461569381267168
+      },
+      "robust_oof": {
+        "net": -257.82229659539325,
+        "max_drawdown": 0.3451712998200993,
+        "cagr": -0.16350383652995804,
+        "score": -0.47368896723213955
+      }
+    },
+    {
+      "model": "Poisson__teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.95,
+        0.0,
+        0.05
+      ],
+      "oof": {
+        "net": -181.2883073600434,
+        "max_drawdown": 0.24488398992847815,
+        "cagr": -0.11166756613349638,
+        "score": -0.45600190590699896
+      },
+      "robust_oof": {
+        "net": -646.3761472008692,
+        "max_drawdown": 0.8058685344483387,
+        "cagr": -0.45956080014988687,
+        "score": -0.5702677055935451
+      }
+    },
+    {
+      "model": "Poisson__teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 21.850000000000023,
+        "max_drawdown": 0.03852527715341536,
+        "cagr": 0.012877629485341213,
+        "score": 0.3342644216175244
+      },
+      "robust_oof": {
+        "net": -209.75543845595269,
+        "max_drawdown": 0.47066365303424185,
+        "cagr": -0.13008436370716348,
+        "score": -0.27638497867541845
+      }
+    },
+    {
+      "model": "Poisson__teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -95.0,
+        "max_drawdown": 0.14652633194853537,
+        "cagr": -0.05737936534344068,
+        "score": -0.3915976369598477
+      },
+      "robust_oof": {
+        "net": -491.38268160565997,
+        "max_drawdown": 0.6221451316109583,
+        "cagr": -0.3298219195464437,
+        "score": -0.5301366237366765
+      }
+    },
+    {
+      "model": "Poisson__teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 107.72357250118512,
+        "max_drawdown": 0.2865241248747936,
+        "cagr": 0.0639299830159814,
+        "score": 0.2231225138334085
+      },
+      "robust_oof": {
+        "net": 107.72357250118512,
+        "max_drawdown": 0.2865241248747936,
+        "cagr": 0.0639299830159814,
+        "score": 0.2231225138334085
+      }
+    },
+    {
+      "model": "Poisson__teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -53.76999999999998,
+        "max_drawdown": 0.08495000000000008,
+        "cagr": -0.03255220275633541,
+        "score": -0.383192498603124
+      },
+      "robust_oof": {
+        "net": -248.6176696893051,
+        "max_drawdown": 0.3395088559988819,
+        "cagr": -0.15730732930473534,
+        "score": -0.46333792631687165
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 110.38653870367625,
+        "max_drawdown": 0.3522879613122797,
+        "cagr": 0.06394624846794206,
+        "score": 0.1815169846557941
+      },
+      "robust_oof": {
+        "net": 110.38653870367625,
+        "max_drawdown": 0.3522879613122797,
+        "cagr": 0.06394624846794206,
+        "score": 0.1815169846557941
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 37.32999999999993,
+        "max_drawdown": 0.03730850565033916,
+        "cagr": 0.02193310037577878,
+        "score": 0.5878847194079292
+      },
+      "robust_oof": {
+        "net": 43.32817000500563,
+        "max_drawdown": 0.2561099594404769,
+        "cagr": 0.025427061956223573,
+        "score": 0.09928181634081722
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -51.60000000000002,
+        "max_drawdown": 0.09289528272894898,
+        "cagr": -0.030875625006152707,
+        "score": -0.3323702140639584
+      },
+      "robust_oof": {
+        "net": -236.7356669843357,
+        "max_drawdown": 0.25581030482771283,
+        "cagr": -0.1477907505659869,
+        "score": -0.5777357196987172
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 43.02315963726073,
+        "max_drawdown": 0.1418932321113534,
+        "cagr": 0.02584332742891937,
+        "score": 0.18213220633834268
+      },
+      "robust_oof": {
+        "net": 43.02315963726073,
+        "max_drawdown": 0.1418932321113534,
+        "cagr": 0.02584332742891937,
+        "score": 0.18213220633834268
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 355.095992949171,
+        "max_drawdown": 0.07306034156653163,
+        "cagr": 0.19955393123725718,
+        "score": 2.731357764807813
+      },
+      "robust_oof": {
+        "net": 355.095992949171,
+        "max_drawdown": 0.07306034156653163,
+        "cagr": 0.19955393123725718,
+        "score": 2.731357764807813
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 129.26802112583073,
+        "max_drawdown": 0.34580842177459026,
+        "cagr": 0.07461931862011273,
+        "score": 0.2157822479776162
+      },
+      "robust_oof": {
+        "net": 129.26802112583073,
+        "max_drawdown": 0.34580842177459026,
+        "cagr": 0.07461931862011273,
+        "score": 0.2157822479776162
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": 275.9127623206127,
+        "max_drawdown": 0.3508792410940105,
+        "cagr": 0.15516393086776348,
+        "score": 0.44221462171422865
+      },
+      "robust_oof": {
+        "net": 33.46913250533498,
+        "max_drawdown": 0.28323251355077705,
+        "cagr": 0.01967976567977381,
+        "score": 0.06948272086794047
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -66.23000000000002,
+        "max_drawdown": 0.1044192640043351,
+        "cagr": -0.03975355929625457,
+        "score": -0.38071097010034616
+      },
+      "robust_oof": {
+        "net": -246.0226930448681,
+        "max_drawdown": 0.2805008801733859,
+        "cagr": -0.15394444467133694,
+        "score": -0.5488198275034977
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 65.44408152290089,
+        "max_drawdown": 0.1404147832144872,
+        "cagr": 0.03914442145819441,
+        "score": 0.2787770672152112
+      },
+      "robust_oof": {
+        "net": 65.44408152290089,
+        "max_drawdown": 0.1404147832144872,
+        "cagr": 0.03914442145819441,
+        "score": 0.2787770672152112
+      }
+    },
+    {
+      "model": "Ordered_logit__no_teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 362.3292548183899,
+        "max_drawdown": 0.07335118173225141,
+        "cagr": 0.20338376691492455,
+        "score": 2.7727401537622365
+      },
+      "robust_oof": {
+        "net": 362.3292548183899,
+        "max_drawdown": 0.07335118173225141,
+        "cagr": 0.20338376691492455,
+        "score": 2.7727401537622365
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -9.740000000000009,
+        "max_drawdown": 0.08323246296616527,
+        "cagr": -0.0057773688476987495,
+        "score": -0.06941244607944981
+      },
+      "robust_oof": {
+        "net": -726.4073190440203,
+        "max_drawdown": 0.7974744037131404,
+        "cagr": -0.5357214476411121,
+        "score": -0.6717725925079553
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -7.919999999999959,
+        "max_drawdown": 0.027783306133821517,
+        "cagr": -0.004696064058920868,
+        "score": -0.16902466669379557
+      },
+      "robust_oof": {
+        "net": -567.4238558515992,
+        "max_drawdown": 0.5910722956975,
+        "cagr": -0.39108412527115,
+        "score": -0.6616519300902909
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -7.830000000000041,
+        "max_drawdown": 0.059270545844832934,
+        "cagr": -0.004642613954309649,
+        "score": -0.07832919181246888
+      },
+      "robust_oof": {
+        "net": -287.852785232286,
+        "max_drawdown": 0.4993288730917925,
+        "cagr": -0.18205395828354565,
+        "score": -0.36459729868270274
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 1.0900000000000318,
+        "max_drawdown": 0.028958907914839682,
+        "cagr": 0.000660094517436649,
+        "score": 0.022794178543535156
+      },
+      "robust_oof": {
+        "net": -116.4254640854549,
+        "max_drawdown": 0.2799543003880828,
+        "cagr": -0.07223421763389226,
+        "score": -0.25802146112332824
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 4.919999999999959,
+        "max_drawdown": 0.04688775861560113,
+        "cagr": 0.0029430497561040436,
+        "score": 0.06276797703707664
+      },
+      "robust_oof": {
+        "net": -372.0667484112628,
+        "max_drawdown": 0.48374663526621264,
+        "cagr": -0.2431731070417854,
+        "score": -0.5026869218593403
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -37.82000000000005,
+        "max_drawdown": 0.13384130873864475,
+        "cagr": -0.02256446357950881,
+        "score": -0.16859117556576644
+      },
+      "robust_oof": {
+        "net": -567.3836697920693,
+        "max_drawdown": 0.7455588017505759,
+        "cagr": -0.3910506389849724,
+        "score": -0.5245067700452111
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -30.460000000000036,
+        "max_drawdown": 0.044863459037711384,
+        "cagr": -0.018145312642984468,
+        "score": -0.40445638905666764
+      },
+      "robust_oof": {
+        "net": -407.69100225038324,
+        "max_drawdown": 0.4835133978101377,
+        "cagr": -0.26657827140812185,
+        "score": -0.5513358525647303
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -18.879999999999995,
+        "max_drawdown": 0.09234953069819263,
+        "cagr": -0.011219966489949385,
+        "score": -0.12149456965425565
+      },
+      "robust_oof": {
+        "net": -275.4691330801287,
+        "max_drawdown": 0.5566989521939569,
+        "cagr": -0.17366365362328617,
+        "score": -0.3119525426424385
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 7.2999999999999545,
+        "max_drawdown": 0.028180000000000094,
+        "cagr": 0.004415424226314135,
+        "score": 0.15668645231774736
+      },
+      "robust_oof": {
+        "net": -183.53687909268547,
+        "max_drawdown": 0.3618650085100005,
+        "cagr": -0.1155809303798162,
+        "score": -0.31940344510160623
+      }
+    },
+    {
+      "model": "Ordered_logit__teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 4.220000000000027,
+        "max_drawdown": 0.0624600717479975,
+        "cagr": 0.0025246764971282865,
+        "score": 0.04042064676637565
+      },
+      "robust_oof": {
+        "net": -166.59716386333503,
+        "max_drawdown": 0.399841939100383,
+        "cagr": -0.10337613539684753,
+        "score": -0.2585425021433138
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -95.18796355373047,
+        "max_drawdown": 0.4801902095310303,
+        "cagr": -0.0574952658875133,
+        "score": -0.11973435681594818
+      },
+      "robust_oof": {
+        "net": -95.18796355373047,
+        "max_drawdown": 0.4801902095310303,
+        "cagr": -0.0574952658875133,
+        "score": -0.11973435681594818
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3",
+      "league": "E0",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": -30.21389102694104,
+        "max_drawdown": 0.4875900810331488,
+        "cagr": -0.01799777885039311,
+        "score": -0.036911700115510614
+      },
+      "robust_oof": {
+        "net": -24.494677330433092,
+        "max_drawdown": 0.30814637249151644,
+        "cagr": -0.014573599461968678,
+        "score": -0.04729440539615602
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -63.60000000000002,
+        "max_drawdown": 0.09783491989784088,
+        "cagr": -0.03815343283267114,
+        "score": -0.3899776569808706
+      },
+      "robust_oof": {
+        "net": -238.9369703580105,
+        "max_drawdown": 0.28102905649873444,
+        "cagr": -0.14924658516629852,
+        "score": -0.531071722709821
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 59.67819696894139,
+        "max_drawdown": 0.1302900862405001,
+        "cagr": 0.035734468735629576,
+        "score": 0.2742685170203048
+      },
+      "robust_oof": {
+        "net": 59.67819696894139,
+        "max_drawdown": 0.1302900862405001,
+        "cagr": 0.035734468735629576,
+        "score": 0.2742685170203048
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 166.6020715043594,
+        "max_drawdown": 0.13388898486139933,
+        "cagr": 0.09665838582313335,
+        "score": 0.7219293351368168
+      },
+      "robust_oof": {
+        "net": 166.6020715043594,
+        "max_drawdown": 0.13388898486139933,
+        "cagr": 0.09665838582313335,
+        "score": 0.7219293351368168
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -29.436474383850964,
+        "max_drawdown": 0.47887068260331467,
+        "cagr": -0.017531844852875067,
+        "score": -0.03661081266776576
+      },
+      "robust_oof": {
+        "net": -29.436474383850964,
+        "max_drawdown": 0.47887068260331467,
+        "cagr": -0.017531844852875067,
+        "score": -0.03661081266776576
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": -37.272993629377766,
+        "max_drawdown": 0.49959106286880595,
+        "cagr": -0.022235552211354093,
+        "score": -0.04450750596632112
+      },
+      "robust_oof": {
+        "net": -28.739143448682967,
+        "max_drawdown": 0.3196584131950695,
+        "cagr": -0.017114038665350217,
+        "score": -0.053538520992740105
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.95,
+        0.05,
+        0.0
+      ],
+      "oof": {
+        "net": -80.67269071158307,
+        "max_drawdown": 0.11871362302089183,
+        "cagr": -0.04857367356369091,
+        "score": -0.40916680266040456
+      },
+      "robust_oof": {
+        "net": -240.08650861740534,
+        "max_drawdown": 0.30030985311179703,
+        "cagr": -0.1500075164980086,
+        "score": -0.4995091401219025
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 53.944757089779614,
+        "max_drawdown": 0.14702397647602272,
+        "cagr": 0.032336442255382014,
+        "score": 0.21993992429293038
+      },
+      "robust_oof": {
+        "net": 53.944757089779614,
+        "max_drawdown": 0.14702397647602272,
+        "cagr": 0.032336442255382014,
+        "score": 0.21993992429293038
+      }
+    },
+    {
+      "model": "Ordered_probit__no_teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 248.94924655093064,
+        "max_drawdown": 0.1386825561203585,
+        "cagr": 0.14237363549922843,
+        "score": 1.0266153111258387
+      },
+      "robust_oof": {
+        "net": 248.94924655093064,
+        "max_drawdown": 0.1386825561203585,
+        "cagr": 0.14237363549922843,
+        "score": 1.0266153111258387
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -72.31000000000006,
+        "max_drawdown": 0.13761980445985655,
+        "cagr": -0.043459766672953926,
+        "score": -0.3157958757718702
+      },
+      "robust_oof": {
+        "net": -709.4075540138354,
+        "max_drawdown": 0.791141706229766,
+        "cagr": -0.5188544249576068,
+        "score": -0.6558299491379859
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -35.139999999999986,
+        "max_drawdown": 0.05608178181638612,
+        "cagr": -0.020953724773578042,
+        "score": -0.3736280142129102
+      },
+      "robust_oof": {
+        "net": -555.2742033784313,
+        "max_drawdown": 0.5755375971793094,
+        "cagr": -0.3810171170757972,
+        "score": -0.6620195082704404
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -24.850000000000023,
+        "max_drawdown": 0.07206549312014754,
+        "cagr": -0.01478609744076742,
+        "score": -0.20517583104740642
+      },
+      "robust_oof": {
+        "net": -223.75840337737532,
+        "max_drawdown": 0.4757847915645771,
+        "cagr": -0.13924279291950448,
+        "score": -0.2926591925345419
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -11.809999999999945,
+        "max_drawdown": 0.05462757046427558,
+        "cagr": -0.0071703167690160274,
+        "score": -0.1312582036520396
+      },
+      "robust_oof": {
+        "net": -157.0762905379247,
+        "max_drawdown": 0.3185978732299245,
+        "cagr": -0.09832844890518433,
+        "score": -0.3086287046060192
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -0.5099999999999909,
+        "max_drawdown": 0.0323216319255335,
+        "cagr": -0.00030540420204738794,
+        "score": -0.009448910338160376
+      },
+      "robust_oof": {
+        "net": -350.1660266782999,
+        "max_drawdown": 0.4889005936416856,
+        "cagr": -0.22747666180617176,
+        "score": -0.4652820323079604
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -113.17000000000007,
+        "max_drawdown": 0.1601819589624468,
+        "cagr": -0.06862905364687277,
+        "score": -0.428444339745915
+      },
+      "robust_oof": {
+        "net": -541.9011694953188,
+        "max_drawdown": 0.7303331577756476,
+        "cagr": -0.3700653040625792,
+        "score": -0.5067075212491725
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -28.07000000000005,
+        "max_drawdown": 0.0563511558589086,
+        "cagr": -0.016713236082976812,
+        "score": -0.29659082991701585
+      },
+      "robust_oof": {
+        "net": -498.31472569947437,
+        "max_drawdown": 0.5327363587430333,
+        "cagr": -0.3352441641329853,
+        "score": -0.6292871861120543
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3__calibrated",
+      "league": "SP1",
+      "weights": [
+        0.35,
+        0.0,
+        0.65
+      ],
+      "oof": {
+        "net": -98.62804569346554,
+        "max_drawdown": 0.37449284350177525,
+        "cagr": -0.059618199313957176,
+        "score": -0.15919716584296906
+      },
+      "robust_oof": {
+        "net": -135.11314722071631,
+        "max_drawdown": 0.5045867030923639,
+        "cagr": -0.08234098950243207,
+        "score": -0.16318501656465503
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3__calibrated",
+      "league": "D1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -9.019999999999982,
+        "max_drawdown": 0.03991093350828534,
+        "cagr": -0.005473363281393362,
+        "score": -0.13713944526647354
+      },
+      "robust_oof": {
+        "net": -165.58535564560123,
+        "max_drawdown": 0.3718341789387317,
+        "cagr": -0.10385281361994603,
+        "score": -0.27929872911725573
+      }
+    },
+    {
+      "model": "Ordered_probit__teams__half3__calibrated",
+      "league": "I1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -135.8790429079072,
+        "max_drawdown": 0.3490564869818281,
+        "cagr": -0.08373160861141427,
+        "score": -0.23987982385147116
+      },
+      "robust_oof": {
+        "net": -135.8790429079072,
+        "max_drawdown": 0.3490564869818281,
+        "cagr": -0.08373160861141427,
+        "score": -0.23987982385147116
+      }
+    },
+    {
+      "model": "RF classifier",
+      "league": "All",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "oof": {
+        "net": 36.55538731624051,
+        "max_drawdown": 0.051269374605394824,
+        "cagr": 0.021481284619113472,
+        "score": 0.4189886220467589
+      },
+      "robust_oof": {
+        "net": 51.63387316240414,
+        "max_drawdown": 0.18516130213545945,
+        "cagr": 0.03025166990549555,
+        "score": 0.16338008836945947
+      }
+    },
+    {
+      "model": "RF classifier",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 15.120000000000005,
+        "max_drawdown": 0.030484260308389577,
+        "cagr": 0.00892328130529485,
+        "score": 0.29271765872039457
+      },
+      "robust_oof": {
+        "net": -5.151546452214461,
+        "max_drawdown": 0.10170144296279615,
+        "cagr": -0.0030528114308616683,
+        "score": -0.030017385613480732
+      }
+    },
+    {
+      "model": "RF classifier",
+      "league": "SP1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -15.031807053840112,
+        "max_drawdown": 0.10045434377052287,
+        "cagr": -0.0089259716122988,
+        "score": -0.08885600440225085
+      },
+      "robust_oof": {
+        "net": -15.031807053840112,
+        "max_drawdown": 0.10045434377052287,
+        "cagr": -0.0089259716122988,
+        "score": -0.08885600440225085
+      }
+    },
+    {
+      "model": "RF classifier",
+      "league": "D1",
+      "weights": [
+        0.65,
+        0.35,
+        0.0
+      ],
+      "oof": {
+        "net": 167.58949433302996,
+        "max_drawdown": 0.0388701043462244,
+        "cagr": 0.09839639982226167,
+        "score": 2.5314158908816844
+      },
+      "robust_oof": {
+        "net": 229.80558047326576,
+        "max_drawdown": 0.07475709031986355,
+        "cagr": 0.1334852298893956,
+        "score": 1.7855862142072632
+      }
+    },
+    {
+      "model": "RF classifier",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -2.090000000000032,
+        "max_drawdown": 0.034995918126469294,
+        "cagr": -0.0012519555464847176,
+        "score": -0.03577433065080228
+      },
+      "robust_oof": {
+        "net": -130.21959542601041,
+        "max_drawdown": 0.1707309415753666,
+        "cagr": -0.08014310541930025,
+        "score": -0.46941172279497023
+      }
+    },
+    {
+      "model": "RF classifier__calibrated",
+      "league": "All",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": 19.556692657969847,
+        "max_drawdown": 0.35746077900100326,
+        "cagr": 0.011531347108464374,
+        "score": 0.03225905549887477
+      },
+      "robust_oof": {
+        "net": -8.52216083495739,
+        "max_drawdown": 0.18369429400118742,
+        "cagr": -0.00505373230313344,
+        "score": -0.027511645533751704
+      }
+    },
+    {
+      "model": "RF classifier__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -8.803803101826134,
+        "max_drawdown": 0.12521801367170926,
+        "cagr": -0.00522105107889459,
+        "score": -0.0416956867929793
+      },
+      "robust_oof": {
+        "net": -8.803803101826134,
+        "max_drawdown": 0.12521801367170926,
+        "cagr": -0.00522105107889459,
+        "score": -0.0416956867929793
+      }
+    },
+    {
+      "model": "RF classifier__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -13.509999999999991,
+        "max_drawdown": 0.05918690961446793,
+        "cagr": -0.008019797337882828,
+        "score": -0.13549951146498837
+      },
+      "robust_oof": {
+        "net": -42.89607915321244,
+        "max_drawdown": 0.09459426785024372,
+        "cagr": -0.025620324449829424,
+        "score": -0.2708443654364984
+      }
+    },
+    {
+      "model": "RF classifier__calibrated",
+      "league": "D1",
+      "weights": [
+        0.75,
+        0.25,
+        0.0
+      ],
+      "oof": {
+        "net": 170.67001327585876,
+        "max_drawdown": 0.03769069885698306,
+        "cagr": 0.1001508459982825,
+        "score": 2.657176678477196
+      },
+      "robust_oof": {
+        "net": 250.6518242393597,
+        "max_drawdown": 0.08881885320333516,
+        "cagr": 0.1450846902246068,
+        "score": 1.6334897940244837
+      }
+    },
+    {
+      "model": "RF classifier__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 0.08000000000004093,
+        "max_drawdown": 0.04489016236867238,
+        "cagr": 4.7900870590922295e-05,
+        "score": 0.001067068329972248
+      },
+      "robust_oof": {
+        "net": -167.8413084327724,
+        "max_drawdown": 0.21729542414218905,
+        "cagr": -0.10417784427816834,
+        "score": -0.4794295355708858
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form",
+      "league": "All",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "oof": {
+        "net": 26.45207260825464,
+        "max_drawdown": 0.05546344035098594,
+        "cagr": 0.015575555191236434,
+        "score": 0.2808256230170828
+      },
+      "robust_oof": {
+        "net": 50.660363041273285,
+        "max_drawdown": 0.16963258646726698,
+        "cagr": 0.02968698479127818,
+        "score": 0.17500755845049093
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 26.569999999999936,
+        "max_drawdown": 0.02803987630047522,
+        "cagr": 0.015644624186407663,
+        "score": 0.5579419830087666
+      },
+      "robust_oof": {
+        "net": -2.1231852544157164,
+        "max_drawdown": 0.12390242159862919,
+        "cagr": -0.0012574224591839211,
+        "score": -0.010148489778974852
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form",
+      "league": "SP1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -26.743419020895203,
+        "max_drawdown": 0.0934674429560165,
+        "cagr": -0.015918975222619203,
+        "score": -0.17031572405495551
+      },
+      "robust_oof": {
+        "net": -26.743419020895203,
+        "max_drawdown": 0.0934674429560165,
+        "cagr": -0.015918975222619203,
+        "score": -0.17031572405495551
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form",
+      "league": "D1",
+      "weights": [
+        0.75,
+        0.05,
+        0.2
+      ],
+      "oof": {
+        "net": 75.00868056858917,
+        "max_drawdown": 0.024130835841446152,
+        "cagr": 0.04478493773463854,
+        "score": 1.8559215283259163
+      },
+      "robust_oof": {
+        "net": 216.09173282483812,
+        "max_drawdown": 0.0822012328201166,
+        "cagr": 0.12581213991224893,
+        "score": 1.5305383580750835
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 21.17999999999995,
+        "max_drawdown": 0.030546879662601722,
+        "cagr": 0.012628599507034988,
+        "score": 0.413417005158012
+      },
+      "robust_oof": {
+        "net": -112.51210107588633,
+        "max_drawdown": 0.1505677005867332,
+        "cagr": -0.0689753089549402,
+        "score": -0.45810162927478315
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 26.49000000000001,
+        "max_drawdown": 0.05841973339409823,
+        "cagr": 0.015597769271011419,
+        "score": 0.2669948725337244
+      },
+      "robust_oof": {
+        "net": -52.47933869298777,
+        "max_drawdown": 0.16623222503774804,
+        "cagr": -0.031407649212962796,
+        "score": -0.18893839149317013
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": -8.511575459732171,
+        "max_drawdown": 0.2221180374678371,
+        "cagr": -0.0050474440938481635,
+        "score": -0.022724152218295365
+      },
+      "robust_oof": {
+        "net": -17.282979795520873,
+        "max_drawdown": 0.14277706993762962,
+        "cagr": -0.01026750177421576,
+        "score": -0.07191282030581654
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -20.769999999999982,
+        "max_drawdown": 0.06513147086961146,
+        "cagr": -0.012347982394891655,
+        "score": -0.18958549883836387
+      },
+      "robust_oof": {
+        "net": -52.996589623880595,
+        "max_drawdown": 0.09648461610762948,
+        "cagr": -0.03172069442419967,
+        "score": -0.32876427044923867
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form__calibrated",
+      "league": "D1",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "oof": {
+        "net": 69.01756392139214,
+        "max_drawdown": 0.017103957444307705,
+        "cagr": 0.04125413263952171,
+        "score": 2.4119641769368014
+      },
+      "robust_oof": {
+        "net": 189.77563921392084,
+        "max_drawdown": 0.09760605564084845,
+        "cagr": 0.11099168564165796,
+        "score": 1.1371393394899934
+      }
+    },
+    {
+      "model": "RF classifier + adjusted form__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 2.8500000000000227,
+        "max_drawdown": 0.038388804841149815,
+        "cagr": 0.0017055215057035777,
+        "score": 0.04442757498601236
+      },
+      "robust_oof": {
+        "net": -145.767120872335,
+        "max_drawdown": 0.18635645947018886,
+        "cagr": -0.09002408543582296,
+        "score": -0.483074671475093
+      }
+    },
+    {
+      "model": "RF classifier + lineup",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 37.6817465403326,
+        "max_drawdown": 0.18620428841665737,
+        "cagr": 0.022138221497776556,
+        "score": 0.11889211406473776
+      },
+      "robust_oof": {
+        "net": 37.6817465403326,
+        "max_drawdown": 0.18620428841665737,
+        "cagr": 0.022138221497776556,
+        "score": 0.11889211406473776
+      }
+    },
+    {
+      "model": "RF classifier + lineup",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -6.159999999999968,
+        "max_drawdown": 0.03310963297303715,
+        "cagr": -0.0036511762188754515,
+        "score": -0.11027534560255588
+      },
+      "robust_oof": {
+        "net": -58.55295384575129,
+        "max_drawdown": 0.15228394636386378,
+        "cagr": -0.03508787065877261,
+        "score": -0.23041083119119107
+      }
+    },
+    {
+      "model": "RF classifier + lineup",
+      "league": "SP1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -51.48720020064809,
+        "max_drawdown": 0.11698843169465578,
+        "cagr": -0.03080739257874754,
+        "score": -0.26333708497910285
+      },
+      "robust_oof": {
+        "net": -51.48720020064809,
+        "max_drawdown": 0.11698843169465578,
+        "cagr": -0.03080739257874754,
+        "score": -0.26333708497910285
+      }
+    },
+    {
+      "model": "RF classifier + lineup",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 273.31733512301844,
+        "max_drawdown": 0.07338504614339503,
+        "cagr": 0.15761028001554744,
+        "score": 2.147716575766343
+      },
+      "robust_oof": {
+        "net": 273.31733512301844,
+        "max_drawdown": 0.07338504614339503,
+        "cagr": 0.15761028001554744,
+        "score": 2.147716575766343
+      }
+    },
+    {
+      "model": "RF classifier + lineup",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 15.009999999999991,
+        "max_drawdown": 0.026222209088132997,
+        "cagr": 0.00896066958462094,
+        "score": 0.34172062142072307
+      },
+      "robust_oof": {
+        "net": -88.57904970592449,
+        "max_drawdown": 0.10653476017555741,
+        "cagr": -0.054022231461562376,
+        "score": -0.5070854937162271
+      }
+    },
+    {
+      "model": "RF classifier + lineup__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -5.430000000000064,
+        "max_drawdown": 0.07435719908570981,
+        "cagr": -0.0032180067896584452,
+        "score": -0.04327767626035945
+      },
+      "robust_oof": {
+        "net": -63.374319229375374,
+        "max_drawdown": 0.2018135887046325,
+        "cagr": -0.03801621117567988,
+        "score": -0.18837290105038026
+      }
+    },
+    {
+      "model": "RF classifier + lineup__calibrated",
+      "league": "E0",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "oof": {
+        "net": -119.77208660534882,
+        "max_drawdown": 0.27190702853329973,
+        "cagr": -0.07273988818825972,
+        "score": -0.2675174988326992
+      },
+      "robust_oof": {
+        "net": -116.72807961548904,
+        "max_drawdown": 0.18803254878347253,
+        "cagr": -0.070842958928095,
+        "score": -0.3767590206399514
+      }
+    },
+    {
+      "model": "RF classifier + lineup__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -32.10000000000002,
+        "max_drawdown": 0.08232316375414583,
+        "cagr": -0.01912882621868628,
+        "score": -0.23236262245476375
+      },
+      "robust_oof": {
+        "net": -52.010216251792826,
+        "max_drawdown": 0.10366451093081952,
+        "cagr": -0.031123792116251048,
+        "score": -0.3002357493107887
+      }
+    },
+    {
+      "model": "RF classifier + lineup__calibrated",
+      "league": "D1",
+      "weights": [
+        0.85,
+        0.15,
+        0.0
+      ],
+      "oof": {
+        "net": 120.87364435086852,
+        "max_drawdown": 0.03457306888171696,
+        "cagr": 0.0715625513803515,
+        "score": 2.0698929454363664
+      },
+      "robust_oof": {
+        "net": 327.2173448269082,
+        "max_drawdown": 0.10611591918192664,
+        "cagr": 0.18704895211710326,
+        "score": 1.7626851235809764
+      }
+    },
+    {
+      "model": "RF classifier + lineup__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 9.759999999999991,
+        "max_drawdown": 0.040404841443709816,
+        "cagr": 0.00583260930717322,
+        "score": 0.14435421842451593
+      },
+      "robust_oof": {
+        "net": -158.8449229420063,
+        "max_drawdown": 0.18889308771127122,
+        "cagr": -0.09839147834230211,
+        "score": -0.5208844830399323
+      }
+    },
+    {
+      "model": "RF classifier + both",
+      "league": "All",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 127.26112317515208,
+        "max_drawdown": 0.19385088789300065,
+        "cagr": 0.07348836309772189,
+        "score": 0.3790973768368039
+      },
+      "robust_oof": {
+        "net": 127.26112317515208,
+        "max_drawdown": 0.19385088789300065,
+        "cagr": 0.07348836309772189,
+        "score": 0.3790973768368039
+      }
+    },
+    {
+      "model": "RF classifier + both",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 11.950000000000045,
+        "max_drawdown": 0.032768249888795564,
+        "cagr": 0.007056978616487131,
+        "score": 0.2153602539176229
+      },
+      "robust_oof": {
+        "net": -2.873809724391549,
+        "max_drawdown": 0.16114422523626937,
+        "cagr": -0.0017022289103427735,
+        "score": -0.01056338759795437
+      }
+    },
+    {
+      "model": "RF classifier + both",
+      "league": "SP1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": -50.72284889991124,
+        "max_drawdown": 0.10484724413191904,
+        "cagr": -0.030345124835972626,
+        "score": -0.2894222455460281
+      },
+      "robust_oof": {
+        "net": -50.72284889991124,
+        "max_drawdown": 0.10484724413191904,
+        "cagr": -0.030345124835972626,
+        "score": -0.2894222455460281
+      }
+    },
+    {
+      "model": "RF classifier + both",
+      "league": "D1",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "oof": {
+        "net": 320.0684906508443,
+        "max_drawdown": 0.07391736785929226,
+        "cagr": 0.18317193245340957,
+        "score": 2.4780635154933046
+      },
+      "robust_oof": {
+        "net": 320.0684906508443,
+        "max_drawdown": 0.07391736785929226,
+        "cagr": 0.18317193245340957,
+        "score": 2.4780635154933046
+      }
+    },
+    {
+      "model": "RF classifier + both",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 15.930000000000064,
+        "max_drawdown": 0.02560180021910563,
+        "cagr": 0.009508155800044271,
+        "score": 0.37138621966703356
+      },
+      "robust_oof": {
+        "net": -98.47955853556186,
+        "max_drawdown": 0.11742506891794402,
+        "cagr": -0.060188608062315074,
+        "score": -0.5125703447904684
+      }
+    },
+    {
+      "model": "RF classifier + both__calibrated",
+      "league": "All",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 91.42000000000007,
+        "max_drawdown": 0.05798713017481827,
+        "cagr": 0.05315027962012153,
+        "score": 0.9165875162279162
+      },
+      "robust_oof": {
+        "net": 44.47869106465646,
+        "max_drawdown": 0.18134484516933158,
+        "cagr": 0.02609630799587359,
+        "score": 0.14390432753413004
+      }
+    },
+    {
+      "model": "RF classifier + both__calibrated",
+      "league": "E0",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 6.419999999999959,
+        "max_drawdown": 0.025828296946670104,
+        "cagr": 0.0037955315601241324,
+        "score": 0.14695245172227542
+      },
+      "robust_oof": {
+        "net": -59.534980021918386,
+        "max_drawdown": 0.18664278353107977,
+        "cagr": -0.03568382426029837,
+        "score": -0.19118780584600686
+      }
+    },
+    {
+      "model": "RF classifier + both__calibrated",
+      "league": "SP1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": -7.090000000000032,
+        "max_drawdown": 0.06244572663591985,
+        "cagr": -0.004203210295898208,
+        "score": -0.06730981481574191
+      },
+      "robust_oof": {
+        "net": -48.75618027997143,
+        "max_drawdown": 0.08659874687174374,
+        "cagr": -0.02915641190623608,
+        "score": -0.3366839932385847
+      }
+    },
+    {
+      "model": "RF classifier + both__calibrated",
+      "league": "D1",
+      "weights": [
+        0.95,
+        0.0,
+        0.05
+      ],
+      "oof": {
+        "net": 94.3110117428314,
+        "max_drawdown": 0.018277329703068834,
+        "cagr": 0.056108167729371106,
+        "score": 3.069823034376314
+      },
+      "robust_oof": {
+        "net": 342.47023485662703,
+        "max_drawdown": 0.10066826841091392,
+        "cagr": 0.19529359424625548,
+        "score": 1.9399717242487384
+      }
+    },
+    {
+      "model": "RF classifier + both__calibrated",
+      "league": "I1",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "oof": {
+        "net": 10.840000000000032,
+        "max_drawdown": 0.040118034857785756,
+        "cagr": 0.0064766281048458385,
+        "score": 0.1614393159536555
+      },
+      "robust_oof": {
+        "net": -131.10843523050573,
+        "max_drawdown": 0.15871057995450755,
+        "cagr": -0.08070607327978041,
+        "score": -0.508510984604264
+      }
+    }
+  ]
+}

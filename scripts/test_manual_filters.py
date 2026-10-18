@@ -29,7 +29,7 @@ class ManualFilters(unittest.TestCase):
 
     def test_history_reproduces_search_and_curves(self):
         h=historical(self.config());search=json.loads((ROOT/'results/strategy_search.json').read_text(encoding='utf-8'))['chosen']['profit']
-        for period,years in [('test',{2022})]:
+        for period,years in [('search',{2018,2019}),('validation',{2020,2021}),('test',{2022})]:
             rows=[s for s in h['rows'] if s['season']!='All seasons' and int(s['season'][:4]) in years]
             self.assertAlmostEqual(sum(s['net'] for s in rows),search[period]['net'])
             self.assertEqual(sum(s['bets'] for s in rows),search[period]['bets'])
@@ -37,6 +37,11 @@ class ManualFilters(unittest.TestCase):
             total=next(s for s in h['rows'] if s['split']==curve['split'] and s['season']=='All seasons')
             self.assertAlmostEqual(curve['points'][-1]['net'],total['net'])
         flat=historical(self.config(sizing='flat'))
+        self.assertEqual({c['split'] for c in h['curves']},{'Train (OOB)','Test'})
+        for row in h['rows']:
+            comparison=next(s for s in flat['rows'] if (s['split'],s['season'])==(row['split'],row['season']))
+            self.assertEqual(row['bets'],comparison['bets'])
+            self.assertAlmostEqual(row['flat_net'],comparison['net'])
         test=next(s for s in flat['rows'] if s['split']=='Test' and s['season']=='All seasons')
         self.assertAlmostEqual(test['net'],-11.04)
 

@@ -1,0 +1,4 @@
+split,source_row,fixture_date,league,home_team_name,away_team_name
+train,6497,2013-09-25,I1,Chievo,Juventus
+train,6653,2013-10-27,I1,Chievo,Fiorentina
+test,142,2022-12-29,SP1,Atlético Madrid,Elche

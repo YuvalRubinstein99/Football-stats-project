@@ -64,6 +64,8 @@ function manualRender(r){
   const esc=v=>'"'+String(typeof v==='string'&&/^[=+@-]/.test(v)?"'"+v:v??'').replaceAll('"','""')+'"';
   if(manualDownload)URL.revokeObjectURL(manualDownload);manualDownload=URL.createObjectURL(new Blob([[headers,...rows].map(row=>row.map(esc).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));const a=manualElement('a');a.href=manualDownload;a.download='manual-strategy-selections.csv';a.click();
  };parent.append(download,manualElement('h3','Historical results for these filters'),manualElement('p',r.history.note));
- if(r.history.rows.length){const tb=manualTable(parent,['Split','Season','Bets','Staked','Gross returns','Net profit','ROI']);for(const s of r.history.rows){const tr=manualElement('tr');for(const v of [s.split,s.season,s.bets,money(s.staked),money(s.gross),money(s.net),s.roi===null?'—':(100*s.roi).toFixed(2)+'%'])cell(tr,v);tb.append(tr)}for(const curve of r.history.curves)manualCurve(parent,curve)}
+ if(r.history.rows.length){const tb=manualTable(parent,['Split','Season','Bets','Staked','Gross returns','Net profit','ROI','Flat $1 net (same bets)']);for(const s of r.history.rows){const tr=manualElement('tr');for(const v of [s.split,s.season,s.bets,money(s.staked),money(s.gross),money(s.net),s.roi===null?'—':(100*s.roi).toFixed(2)+'%',money(s.flat_net)])cell(tr,v);tb.append(tr)}for(const curve of r.history.curves)manualCurve(parent,curve)}
 }
+const manualRenderBase=manualRender;
+manualRender=function(r){manualRenderBase(r);drawLeagueCurves($('manual-output'),r.history.league_curves)};
 if(currentReport)manualSetReport(currentReport);

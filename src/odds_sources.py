@@ -108,6 +108,7 @@ def quote_for(source,entry,match):
     if not isinstance(entry,dict):raise ValueError('Enter or fetch all three source prices for this match')
     if source=='winner':
         if entry.get('confirmed') is not True:raise ValueError('Confirm Winner full-time 1/X/2 rules')
+        if not isinstance(entry.get('observed_at'),str):raise ValueError('Confirm when these Winner prices were observed')
         observed=datetime.fromisoformat(entry['observed_at'].replace('Z','+00:00'))
         if observed.tzinfo is None:raise ValueError('Quote time must include a time zone')
         if not -30<=(now()-observed).total_seconds()<=900:raise ValueError('Winner quote expired; enter current prices')

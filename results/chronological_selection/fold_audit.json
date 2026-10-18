@@ -1,0 +1,640 @@
+[
+  {
+    "model": "Expanded RF",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Expanded RF",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0181313772186864,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Expanded RF",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0126220055714705,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Linear__no_teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Linear__no_teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 0.9914102795980608,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Linear__no_teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 0.9896051961917232,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Linear__teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Linear__teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0549969793666398,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Linear__teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0708316609959854,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Poisson__no_teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Poisson__no_teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0107444509814612,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Poisson__no_teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0058612822819657,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Poisson__teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Poisson__teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.017110696728642,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Poisson__teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.014757777454418,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_logit__no_teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_logit__no_teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0606996181837804,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_logit__no_teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0466762785164911,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_logit__teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_logit__teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.1176782288248825,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_logit__teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.1337528811850968,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_probit__no_teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_probit__no_teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0603535323257418,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_probit__no_teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0492544815929727,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_probit__teams",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_probit__teams",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.1260458353093272,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_probit__teams",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.1391609567265102,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Expanded RF__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Expanded RF__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.007836648873661,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Expanded RF__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0021368749150088,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Linear__no_teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Linear__no_teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 0.9764013337688324,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Linear__no_teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 0.9726838045879801,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Linear__teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Linear__teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.068240040932425,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Linear__teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0927798495100467,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Poisson__no_teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Poisson__no_teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 0.992764474510022,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Poisson__no_teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 0.9849092340772957,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Poisson__teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Poisson__teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0137556676261195,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Poisson__teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0122009482439849,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_logit__no_teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_logit__no_teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0496758102533266,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_logit__no_teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0328534904061244,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_logit__teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_logit__teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.1399445647636957,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_logit__teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.171591287677869,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_probit__no_teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_probit__no_teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0482378543342212,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_probit__no_teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0335853085089854,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "Ordered_probit__teams__half3",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "Ordered_probit__teams__half3",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.1503586782678108,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "Ordered_probit__teams__half3",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.1798516897096887,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "RF classifier",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "RF classifier",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0555185230269741,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "RF classifier",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0546086482099326,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "RF classifier + adjusted form",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "RF classifier + adjusted form",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0529336512373897,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "RF classifier + adjusted form",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0506592161279582,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "RF classifier + lineup",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "RF classifier + lineup",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0569742417158179,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "RF classifier + lineup",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.0545310706878837,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "model": "RF classifier + both",
+    "season": 2019,
+    "train_last_date": "2019-05-26",
+    "validation_first_date": "2019-08-09",
+    "temperature": 1.0,
+    "calibration_seasons": []
+  },
+  {
+    "model": "RF classifier + both",
+    "season": 2020,
+    "train_last_date": "2020-08-02",
+    "validation_first_date": "2020-09-12",
+    "temperature": 1.0522960964661157,
+    "calibration_seasons": [
+      2019
+    ]
+  },
+  {
+    "model": "RF classifier + both",
+    "season": 2021,
+    "train_last_date": "2021-05-23",
+    "validation_first_date": "2021-08-13",
+    "temperature": 1.04998591389378,
+    "calibration_seasons": [
+      2019,
+      2020
+    ]
+  }
+]

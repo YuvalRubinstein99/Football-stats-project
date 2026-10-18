@@ -1,4 +1,4 @@
-"""Rebuild five-level dollar results from held-out vector RF test predictions only."""
+"""Rebuild dollar results from row-held-out OOB and held-out test predictions."""
 from pathlib import Path
 import sys
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,6 +9,9 @@ import hashlib
 import json
 from collections import defaultdict
 import pandas as pd
+import numpy as np
+from lineup_model import LineupForest, clean
+from live_predictions import probabilities
 from live_bets import integrated_recommendations
 from stake_levels import size_bet
 
@@ -24,6 +27,11 @@ def identity(row):
 
 
 def main():
+    model = LineupForest()
+    train = clean(pd.read_csv(ROOT/'data/train.csv')).replace([np.inf, -np.inf], np.nan).dropna()
+    oob = model.forest.oob_prediction_
+    if oob.shape != (len(train), 2) or not np.isfinite(oob).all() or (oob < 0).any():
+        raise ValueError('Invalid or misaligned saved OOB goal predictions')
     details = json.loads((ROOT/'results/run_details.json').read_text())
     test_path = ROOT/'data/test.csv'
     if hashlib.sha256(test_path.read_bytes()).hexdigest() != details['input_sha256']['test.csv']:
@@ -48,17 +56,22 @@ def main():
               'unit_return','original_bet','original_unit_return','decimal_odds','expected_net_per_unit','selected_outcome','week']
     with ledger_path.open('w',encoding='utf-8',newline='') as handle:
         writer = csv.DictWriter(handle,fieldnames=fields); writer.writeheader()
-        for split, frame in [('Test',tests)]:
+        for split, frame in [('Train (OOB)',train),('Test',tests)]:
             print(f'Evaluating {split}: {len(frame)} matches',flush=True)
             for position, (index,row) in enumerate(frame.iterrows()):
-                source_row = int(row.source_test_row)
-                original = raw_test.iloc[source_row]
-                if identity(original)[:4] != identity({**original.to_dict(), **row.to_dict()})[:4]:
-                    raise ValueError('Test prediction identity mismatch')
-                for k in ['B365A','B365D','B365H']:
-                    if float(original[k]) != float(row[k]):
-                        raise ValueError('Test odds mismatch')
-                p = [float(row['RF_vector_'+k]) for k in ('Home','Draw','Away')]
+                if split == 'Train (OOB)':
+                    source_row = int(index)
+                    original = row
+                    p, _ = probabilities(*map(float, oob[position]))
+                else:
+                    source_row = int(row.source_test_row)
+                    original = raw_test.iloc[source_row]
+                    if identity(original)[:4] != identity({**original.to_dict(), **row.to_dict()})[:4]:
+                        raise ValueError('Test prediction identity mismatch')
+                    for k in ['B365A','B365D','B365H']:
+                        if float(original[k]) != float(row[k]):
+                            raise ValueError('Test odds mismatch')
+                    p = [float(row['RF_vector_'+k]) for k in ('Home','Draw','Away')]
                 seasons = season_map.get(identity(original),set())
                 if len(seasons) != 1:
                     raise ValueError(f'Ambiguous/missing season: {split} row {source_row}: {seasons}')
@@ -97,9 +110,9 @@ def main():
     for s in rows:
         s['net_profit_dollars']=s['gross_return_dollars']-s['stake_dollars']
         s['roi']=s['net_profit_dollars']/s['stake_dollars'] if s['stake_dollars'] else None
-    methodology = 'Held-out test predictions only. Training profit is unavailable pending a chronological backtest. Historical actual lineups differ from live projected lineups. Gross returns include stakes; net profit subtracts stakes. No compounding, bankroll limit or fees. The test set has already been inspected; filtered presets are exploratory, not independently validated.'
+    methodology = 'Train (OOB): each match uses only trees whose bootstrap samples omitted that match. These trees can include later seasons and related matches: OOB is not chronological validation. Saved OOB home/away goal means become outcome probabilities through the same Poisson calculation. Test: matches excluded from forest fitting, but already inspected during strategy comparisons. Historical actual lineups differ from live projected lineups. Gross returns include stakes; net profit subtracts stakes; ROI = net profit / total staked. No compounding, bankroll limit or fees. Filtered presets are exploratory, not independently validated.'
     report = dict(model='RF_vector',amounts=[1,2,3,4,5],methodology=methodology,rows=rows,
-                  train_matches=0,test_matches=len(tests))
+                  train_matches=len(train),test_matches=len(tests))
     (ROOT/'results/stake_level_results.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
     with (ROOT/'results/stake_level_results.csv').open('w',encoding='utf-8',newline='') as handle:
         writer=csv.DictWriter(handle,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)

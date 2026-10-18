@@ -1,0 +1,52 @@
+{
+  "Linear": {
+    "candidate": "compact_fifa_odds",
+    "columns": [
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "B365H",
+      "B365D",
+      "B365A",
+      "Matchweek"
+    ],
+    "mean_log_loss": 0.9833697332327055,
+    "threshold": 0.9852649533106284,
+    "best_candidate": "compact_fifa_form_odds"
+  },
+  "Poisson": {
+    "candidate": "compact_fifa_odds",
+    "columns": [
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "B365H",
+      "B365D",
+      "B365A",
+      "Matchweek"
+    ],
+    "mean_log_loss": 0.9832064401362737,
+    "threshold": 0.9850622192274825,
+    "best_candidate": "compact_fifa_form_odds"
+  },
+  "Ordered_logit": {
+    "candidate": "odds_only",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A"
+    ],
+    "mean_log_loss": 0.9823145227082629,
+    "threshold": 0.9832767488500901,
+    "best_candidate": "compact_fifa_form_odds"
+  },
+  "Ordered_probit": {
+    "candidate": "odds_only",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A"
+    ],
+    "mean_log_loss": 0.9846932853711045,
+    "threshold": 0.9851058729163066,
+    "best_candidate": "compact_fifa_form_odds"
+  }
+}

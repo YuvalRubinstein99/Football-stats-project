@@ -1,0 +1,59 @@
+{
+  "state": "completed",
+  "started_at": "2026-10-11T01:59:58.988117+00:00",
+  "data": {
+    "added_matches": 7702,
+    "original_train": 11561,
+    "expanded_train": 19263,
+    "test_matches": 1447,
+    "added_by_season": {
+      "2008/2009": 1161,
+      "2009/2010": 1299,
+      "2010/2011": 1358,
+      "2011/2012": 1051,
+      "2012/2013": 1428,
+      "2013/2014": 1405
+    },
+    "notebook_rating_features_verified": true,
+    "excluded_leagues": [
+      "F1"
+    ],
+    "excluded_incomplete_seasons": [
+      {
+        "league": "I1",
+        "season": "2011/2012"
+      }
+    ]
+  },
+  "completed": [
+    "original__RF_vector",
+    "original__RF_separate",
+    "original__Linear_vector",
+    "original__Ridge_vector",
+    "original__Poisson_alpha1",
+    "original__Poisson_alpha001",
+    "expanded__RF_vector",
+    "expanded__RF_separate",
+    "expanded__Linear_vector",
+    "expanded__Ridge_vector",
+    "expanded__Poisson_alpha1",
+    "expanded__Poisson_alpha001"
+  ],
+  "input_hashes": {
+    "data\\train.csv": "87916289a3b918da6faeadc25dc8c37ebfa5de8964233b4e64419cbed2ea4711",
+    "data\\test.csv": "3b08ed2b56ed814babf09e629037a43f63148a80f1cef94e74898f7c5ebbd39b",
+    "data\\expanded_2008\\train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4"
+  },
+  "finished_at": "2026-10-11T02:02:32.902230+00:00",
+  "verification": {
+    "test_alignment": true,
+    "probabilities_and_metrics": true,
+    "legacy_profit_reconciled": true,
+    "original_inputs_unchanged": true,
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.6",
+      "sklearn": "1.9.1"
+    }
+  }
+}

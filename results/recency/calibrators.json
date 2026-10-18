@@ -1,0 +1,251 @@
+{
+  "models": {
+    "Expanded RF__recent": {
+      "temperature": 0.9913659744799606,
+      "audit_temperature": 1.0021368842201517,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.97467417135118,
+        "brier": 0.5785711830571711,
+        "auc": 0.6848663328982543
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9746884319427933,
+        "brier": 0.5785793715479309,
+        "auc": 0.6848628946611656
+      },
+      "test_raw": {
+        "log_loss": 0.9794508713778702,
+        "brier": 0.5830443121645861,
+        "auc": 0.6625338978678642
+      },
+      "test_calibrated": {
+        "log_loss": 0.9793604118874941,
+        "brier": 0.5829991785163886,
+        "auc": 0.6625235201177603
+      }
+    },
+    "Linear__no_teams__recent": {
+      "temperature": 0.9620980386535725,
+      "audit_temperature": 0.9726838045879801,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9790660320896674,
+        "brier": 0.5815927895072351,
+        "auc": 0.6825064652664067
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9788174886114291,
+        "brier": 0.5813855763768903,
+        "auc": 0.6825141400902116
+      },
+      "test_raw": {
+        "log_loss": 0.9858413354676464,
+        "brier": 0.5864005821000838,
+        "auc": 0.6562798390613388
+      },
+      "test_calibrated": {
+        "log_loss": 0.9852507575249002,
+        "brier": 0.5859381690073008,
+        "auc": 0.6562736900709636
+      }
+    },
+    "Linear__teams__recent": {
+      "temperature": 1.0602805264764585,
+      "audit_temperature": 1.0746620558861997,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.984572527848928,
+        "brier": 0.5861902289222598,
+        "auc": 0.6761546651722904
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9846209482285552,
+        "brier": 0.5862726407846439,
+        "auc": 0.6762740859781505
+      },
+      "test_raw": {
+        "log_loss": 0.9888594224785278,
+        "brier": 0.5896128379045444,
+        "auc": 0.651653211830658
+      },
+      "test_calibrated": {
+        "log_loss": 0.9895071130242586,
+        "brier": 0.5900110332019699,
+        "auc": 0.6516383537076088
+      }
+    },
+    "Poisson__no_teams__recent": {
+      "temperature": 0.9710992344556645,
+      "audit_temperature": 0.9849092340772957,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9805289952618771,
+        "brier": 0.5823528217582044,
+        "auc": 0.6820073692574934
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9803839116910932,
+        "brier": 0.5822194918703352,
+        "auc": 0.682038562850825
+      },
+      "test_raw": {
+        "log_loss": 0.9848537898942753,
+        "brier": 0.5861939506335307,
+        "auc": 0.6575031041929098
+      },
+      "test_calibrated": {
+        "log_loss": 0.9843491644964235,
+        "brier": 0.5858256395646866,
+        "auc": 0.6574651819543641
+      }
+    },
+    "Poisson__teams__recent": {
+      "temperature": 0.9932996976558919,
+      "audit_temperature": 1.0123630189089037,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9784343142401918,
+        "brier": 0.5814613336484495,
+        "auc": 0.6842073513283516
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9785559092808434,
+        "brier": 0.5815522217464685,
+        "auc": 0.6841961761896367
+      },
+      "test_raw": {
+        "log_loss": 0.9839996034869902,
+        "brier": 0.5857928825419546,
+        "auc": 0.6592096148191974
+      },
+      "test_calibrated": {
+        "log_loss": 0.9838877989800414,
+        "brier": 0.5857156606814445,
+        "auc": 0.6591826151335588
+      }
+    },
+    "Ordered_logit__no_teams__recent": {
+      "temperature": 1.0175740980657653,
+      "audit_temperature": 1.0328534904061244,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9747412367006667,
+        "brier": 0.5791221551250438,
+        "auc": 0.6827623705114259
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9749204255945464,
+        "brier": 0.5793338091065799,
+        "auc": 0.6827623705114259
+      },
+      "test_raw": {
+        "log_loss": 0.9830243991771995,
+        "brier": 0.5852677301922538,
+        "auc": 0.656422259988719
+      },
+      "test_calibrated": {
+        "log_loss": 0.9832714934996961,
+        "brier": 0.5854716711682391,
+        "auc": 0.656422259988719
+      }
+    },
+    "Ordered_logit__teams__recent": {
+      "temperature": 1.1151809283145597,
+      "audit_temperature": 1.133752874054115,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.986559382172611,
+        "brier": 0.587610071075679,
+        "auc": 0.6664627629329092
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9862021862615868,
+        "brier": 0.5876736420274375,
+        "auc": 0.6664627629329092
+      },
+      "test_raw": {
+        "log_loss": 0.9872305282280144,
+        "brier": 0.5885526275617579,
+        "auc": 0.6529486699038549
+      },
+      "test_calibrated": {
+        "log_loss": 0.9888323453077799,
+        "brier": 0.5896690620453134,
+        "auc": 0.6529486699038549
+      }
+    },
+    "Ordered_probit__no_teams__recent": {
+      "temperature": 1.0168446044393469,
+      "audit_temperature": 1.0335853085089854,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9767622685233986,
+        "brier": 0.5799408047126746,
+        "auc": 0.6822105123180945
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9769658419090077,
+        "brier": 0.5802131795491449,
+        "auc": 0.6822105123180945
+      },
+      "test_raw": {
+        "log_loss": 0.983291284889057,
+        "brier": 0.5852627678691059,
+        "auc": 0.655999639031083
+      },
+      "test_calibrated": {
+        "log_loss": 0.9835656467660064,
+        "brier": 0.5854908881960241,
+        "auc": 0.655999639031083
+      }
+    },
+    "Ordered_probit__teams__recent": {
+      "temperature": 1.1225029734783873,
+      "audit_temperature": 1.139160991375441,
+      "calibration_matches": 4335,
+      "audit_raw": {
+        "log_loss": 0.9887135446227402,
+        "brier": 0.5883548456747341,
+        "auc": 0.665653270890949
+      },
+      "audit_calibrated": {
+        "log_loss": 0.9881684352936116,
+        "brier": 0.5885585615848181,
+        "auc": 0.665653270890949
+      },
+      "test_raw": {
+        "log_loss": 0.9878125140804751,
+        "brier": 0.5889830118870852,
+        "auc": 0.6524323612434856
+      },
+      "test_calibrated": {
+        "log_loss": 0.9895916579273277,
+        "brier": 0.5902622452029478,
+        "auc": 0.6524323612434856
+      }
+    }
+  },
+  "input_hashes": {
+    "data/expanded_2008/train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4",
+    "data/expanded_2008/test.csv": "f1aa6f24ff379608eddaabf436ce373732f79dc1ab7f55684afa52df195e78c5",
+    "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+    "results/team_identity/Linear__no_teams.joblib": "9e7682f5bcd20836e0d9a8ca912c8883b549da5c81724d4e6d1d8835cdd99e02",
+    "results/team_identity/Linear__teams.joblib": "975e5d2df33acab905089c32d05951b21508a5a9f17fbdf68eb2a1d5ca559cf1",
+    "results/team_identity/Poisson__no_teams.joblib": "a4f3a3f062087f7c2a420db246a74b8dda464d0fff57cce75797436f4ec86b0c",
+    "results/team_identity/Poisson__teams.joblib": "36f7df88da217fb36b63f4980d19d18542108d33417ead1b17377462d339c231",
+    "results/team_identity/Ordered_logit__no_teams.joblib": "90948f264c5879c18e5495d575b558399ee28a28fe4c102eb20e431c6158b0c5",
+    "results/team_identity/Ordered_logit__teams.joblib": "73fc7736666384c1a6a3b1b844e67ec7af554172332fe8057807983eab0c3fb9",
+    "results/team_identity/Ordered_probit__no_teams.joblib": "c70ab5087efcdead87f131879782037879e246c0c5d742fb907ebb38499b7f07",
+    "results/team_identity/Ordered_probit__teams.joblib": "25df2a0d4233e6cdfb08bbd98a2ee01b2e12042d4998ec287b26a880b3029eeb",
+    "results/recency/Expanded RF__recent.joblib": "a5157881eae2b73fcda648db9ea60a2bad5cde17b32ce15d7a2b0485913486d6",
+    "results/recency/Linear__no_teams__recent.joblib": "0126ec95005c412de27563a1b149e6441d433fef71302c8ad3d339b8c6e96092",
+    "results/recency/Linear__teams__recent.joblib": "023cc077eae01951002bc36b98f4e151dc41caa8aae33cd1307f561cd98d6add",
+    "results/recency/Poisson__no_teams__recent.joblib": "f3cbde9256b72406ad0db3dd5860d454c22c582373886434409c80f73957c307",
+    "results/recency/Poisson__teams__recent.joblib": "963dbbff46e096da85464e30c486d3bc2b94fe7e80bfff5e3ae5d5fe99d6c171",
+    "results/recency/Ordered_logit__no_teams__recent.joblib": "cfe4a5f8846c372e00e4ee77ee85b36c90d231d167a6c29b72075170ec50c052",
+    "results/recency/Ordered_logit__teams__recent.joblib": "4a641e728b1fe1b100ad1bf340fbd48172c9d05dd6ec0a21dfb5d06cab1a1b26",
+    "results/recency/Ordered_probit__no_teams__recent.joblib": "a08d36e1c45193826a73e173eff4c5bf77eb39fc104646bce071491e610297d8",
+    "results/recency/Ordered_probit__teams__recent.joblib": "c17e0591b5ca172fa44f33a9654fba2027633d4c60e8f8a61959be8ac22907df"
+  }
+}

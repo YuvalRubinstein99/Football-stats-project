@@ -1,0 +1,35 @@
+[
+  {
+    "year": 2020,
+    "train_rows": 16374,
+    "evaluation_rows": 1444,
+    "train_last": "2020-08-02",
+    "evaluation_first": "2020-09-12",
+    "imputation_medians": {
+      "tm_home_log_value": 18.069703835332817,
+      "tm_away_log_value": 18.064005814299346
+    }
+  },
+  {
+    "year": 2021,
+    "train_rows": 17818,
+    "evaluation_rows": 1445,
+    "train_last": "2021-05-23",
+    "evaluation_first": "2021-08-13",
+    "imputation_medians": {
+      "tm_home_log_value": 18.139643227464287,
+      "tm_away_log_value": 18.139643227464287
+    }
+  },
+  {
+    "year": 2022,
+    "train_rows": 19263,
+    "evaluation_rows": 1447,
+    "train_last": "2022-05-22",
+    "evaluation_first": "2022-08-05",
+    "imputation_medians": {
+      "tm_home_log_value": 18.197537205138154,
+      "tm_away_log_value": 18.194407312168412
+    }
+  }
+]

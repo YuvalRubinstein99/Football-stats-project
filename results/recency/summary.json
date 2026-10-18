@@ -1,0 +1,376 @@
+{
+  "plan": {
+    "candidates_half_life_seasons": [
+      null,
+      3,
+      6
+    ],
+    "selection_seasons": [
+      2019,
+      2020
+    ],
+    "audit_season": 2021,
+    "test_season": 2022,
+    "selection_metric": "Mean seasonal raw log loss; ties favor equal weights",
+    "weight_formula": "2 ** (-(latest_training_season - season) / half_life), normalized to mean 1",
+    "input_hashes": {
+      "data/expanded_2008/train.csv": "070eaf4f5027131dbd0411a11a7a61cff2a6ade7bc2c60e13bde8d40b3aaf7f4",
+      "data/expanded_2008/test.csv": "f1aa6f24ff379608eddaabf436ce373732f79dc1ab7f55684afa52df195e78c5",
+      "results/expanded_comparison/expanded__RF_vector.joblib": "0597e28792de54e7a0a0e5e12092736135b81ca16d22bfa740984fc3db0d9df9",
+      "results/team_identity/Linear__no_teams.joblib": "9e7682f5bcd20836e0d9a8ca912c8883b549da5c81724d4e6d1d8835cdd99e02",
+      "results/team_identity/Linear__teams.joblib": "975e5d2df33acab905089c32d05951b21508a5a9f17fbdf68eb2a1d5ca559cf1",
+      "results/team_identity/Poisson__no_teams.joblib": "a4f3a3f062087f7c2a420db246a74b8dda464d0fff57cce75797436f4ec86b0c",
+      "results/team_identity/Poisson__teams.joblib": "36f7df88da217fb36b63f4980d19d18542108d33417ead1b17377462d339c231",
+      "results/team_identity/Ordered_logit__no_teams.joblib": "90948f264c5879c18e5495d575b558399ee28a28fe4c102eb20e431c6158b0c5",
+      "results/team_identity/Ordered_logit__teams.joblib": "73fc7736666384c1a6a3b1b844e67ec7af554172332fe8057807983eab0c3fb9",
+      "results/team_identity/Ordered_probit__no_teams.joblib": "c70ab5087efcdead87f131879782037879e246c0c5d742fb907ebb38499b7f07",
+      "results/team_identity/Ordered_probit__teams.joblib": "25df2a0d4233e6cdfb08bbd98a2ee01b2e12042d4998ec287b26a880b3029eeb"
+    }
+  },
+  "models": {
+    "Expanded RF": {
+      "half_life": 3,
+      "cv_log_loss": 0.9774787832330248,
+      "equal_cv_log_loss": 0.9777016287546554,
+      "effective_matches": 11366.586649423733
+    },
+    "Linear__no_teams": {
+      "half_life": 3,
+      "cv_log_loss": 0.9842284143428924,
+      "equal_cv_log_loss": 0.9846634368610354,
+      "effective_matches": 11366.586649423733
+    },
+    "Linear__teams": {
+      "half_life": 6,
+      "cv_log_loss": 0.9935987568430666,
+      "equal_cv_log_loss": 0.9942359321976355,
+      "effective_matches": 16095.830475291148
+    },
+    "Poisson__no_teams": {
+      "half_life": 3,
+      "cv_log_loss": 0.9837360069949252,
+      "equal_cv_log_loss": 0.984260859094866,
+      "effective_matches": 11366.586649423733
+    },
+    "Poisson__teams": {
+      "half_life": 6,
+      "cv_log_loss": 0.9856608793197885,
+      "equal_cv_log_loss": 0.9856949491921693,
+      "effective_matches": 16095.830475291148
+    },
+    "Ordered_logit__no_teams": {
+      "half_life": 3,
+      "cv_log_loss": 0.9816871762501373,
+      "equal_cv_log_loss": 0.983060122096532,
+      "effective_matches": 11366.586649423733
+    },
+    "Ordered_logit__teams": {
+      "half_life": null,
+      "cv_log_loss": 0.9965996078908459,
+      "equal_cv_log_loss": 0.9965996078908459,
+      "effective_matches": 19263.0
+    },
+    "Ordered_probit__no_teams": {
+      "half_life": 3,
+      "cv_log_loss": 0.9834224055727896,
+      "equal_cv_log_loss": 0.9847720163789113,
+      "effective_matches": 11366.586649423733
+    },
+    "Ordered_probit__teams": {
+      "half_life": null,
+      "cv_log_loss": 0.997535835239425,
+      "equal_cv_log_loss": 0.997535835239425,
+      "effective_matches": 19263.0
+    }
+  },
+  "metrics": [
+    {
+      "model": "Expanded RF",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9747168936120565,
+      "brier": 0.578633815375372,
+      "auc": 0.6852370599248384
+    },
+    {
+      "model": "Expanded RF",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.97467417135118,
+      "brier": 0.5785711830571711,
+      "auc": 0.6848663328982543
+    },
+    {
+      "model": "Linear__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9790730661857102,
+      "brier": 0.5816661751811439,
+      "auc": 0.6842154379367203
+    },
+    {
+      "model": "Linear__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9790660320896674,
+      "brier": 0.5815927895072351,
+      "auc": 0.6825064652664067
+    },
+    {
+      "model": "Linear__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9855384339154994,
+      "brier": 0.5867653656261064,
+      "auc": 0.6752284897874019
+    },
+    {
+      "model": "Linear__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.984572527848928,
+      "brier": 0.5861902289222598,
+      "auc": 0.6761546651722904
+    },
+    {
+      "model": "Poisson__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9799591908405166,
+      "brier": 0.5820591958138885,
+      "auc": 0.6842071703112257
+    },
+    {
+      "model": "Poisson__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9805289952618771,
+      "brier": 0.5823528217582044,
+      "auc": 0.6820073692574934
+    },
+    {
+      "model": "Poisson__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9787182745378332,
+      "brier": 0.581581023304912,
+      "auc": 0.6842460002902294
+    },
+    {
+      "model": "Poisson__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9784343142401918,
+      "brier": 0.5814613336484495,
+      "auc": 0.6842073513283516
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9747475518233001,
+      "brier": 0.5792102225403943,
+      "auc": 0.6829607187070416
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9747412367006667,
+      "brier": 0.5791221551250438,
+      "auc": 0.6827623705114259
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.986559382172611,
+      "brier": 0.587610071075679,
+      "auc": 0.6664627629329092
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.986559382172611,
+      "brier": 0.587610071075679,
+      "auc": 0.6664627629329092
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9767850190208522,
+      "brier": 0.5800588709893091,
+      "auc": 0.6824195040799536
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9767622685233986,
+      "brier": 0.5799408047126746,
+      "auc": 0.6822105123180945
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Equal weights",
+      "log_loss": 0.9887135446227402,
+      "brier": 0.5883548456747341,
+      "auc": 0.665653270890949
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "split": "Forward audit 2021\u201322",
+      "variant": "Selected weights",
+      "log_loss": 0.9887135446227402,
+      "brier": 0.5883548456747341,
+      "auc": 0.665653270890949
+    },
+    {
+      "model": "Expanded RF",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9785063207959493,
+      "brier": 0.5823876913054822,
+      "auc": 0.6631669833424545
+    },
+    {
+      "model": "Expanded RF",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9794508713778702,
+      "brier": 0.5830443121645861,
+      "auc": 0.6625338978678642
+    },
+    {
+      "model": "Linear__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9841161314376777,
+      "brier": 0.5853611123782456,
+      "auc": 0.6588422886696943
+    },
+    {
+      "model": "Linear__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9858413354676464,
+      "brier": 0.5864005821000838,
+      "auc": 0.6562798390613388
+    },
+    {
+      "model": "Linear__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9882147004266016,
+      "brier": 0.5891458993657033,
+      "auc": 0.6532004725599454
+    },
+    {
+      "model": "Linear__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9888594224785278,
+      "brier": 0.5896128379045444,
+      "auc": 0.651653211830658
+    },
+    {
+      "model": "Poisson__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.983581074910338,
+      "brier": 0.5852779522641733,
+      "auc": 0.6600790565744191
+    },
+    {
+      "model": "Poisson__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9848537898942753,
+      "brier": 0.5861939506335307,
+      "auc": 0.6575031041929098
+    },
+    {
+      "model": "Poisson__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9835714614138735,
+      "brier": 0.5854880479985246,
+      "auc": 0.6601400534010319
+    },
+    {
+      "model": "Poisson__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9839996034869902,
+      "brier": 0.5857928825419546,
+      "auc": 0.6592096148191974
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9819110782277457,
+      "brier": 0.5845417600650064,
+      "auc": 0.6565551015453467
+    },
+    {
+      "model": "Ordered_logit__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9830243991771995,
+      "brier": 0.5852677301922538,
+      "auc": 0.656422259988719
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9872305282280146,
+      "brier": 0.5885526275617579,
+      "auc": 0.6529486699038549
+    },
+    {
+      "model": "Ordered_logit__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9872305282280144,
+      "brier": 0.5885526275617579,
+      "auc": 0.6529486699038549
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9821770080091328,
+      "brier": 0.5845982664252849,
+      "auc": 0.6561421719377559
+    },
+    {
+      "model": "Ordered_probit__no_teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.983291284889057,
+      "brier": 0.5852627678691059,
+      "auc": 0.655999639031083
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Equal weights",
+      "log_loss": 0.9878125140804751,
+      "brier": 0.5889830118870852,
+      "auc": 0.6524323612434856
+    },
+    {
+      "model": "Ordered_probit__teams",
+      "split": "Test 2022\u201323 (previously inspected)",
+      "variant": "Selected weights",
+      "log_loss": 0.9878125140804751,
+      "brier": 0.5889830118870852,
+      "auc": 0.6524323612434856
+    }
+  ]
+}
