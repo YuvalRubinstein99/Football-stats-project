@@ -1,0 +1,7 @@
+{
+  "fixtures": 1446,
+  "eligible": 768,
+  "legacy_form": "passed",
+  "attack_defence_shots_all_windows": "passed",
+  "dated_distinct_player_ratings": "passed"
+}

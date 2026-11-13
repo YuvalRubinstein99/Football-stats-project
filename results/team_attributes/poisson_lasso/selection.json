@@ -1,0 +1,16 @@
+{
+  "home": {
+    "minimum_deviance_alpha": 0.046415888336127795,
+    "one_se_alpha": 0.1,
+    "minimum_cv_deviance": 1.0961875782651478,
+    "one_se_cv_deviance": 1.1095547462333766,
+    "one_se_threshold": 1.1107204566348619
+  },
+  "away": {
+    "minimum_deviance_alpha": 0.021544346900318846,
+    "one_se_alpha": 0.1,
+    "minimum_cv_deviance": 1.1242519759554384,
+    "one_se_cv_deviance": 1.1446809117064844,
+    "one_se_threshold": 1.1549652286340064
+  }
+}

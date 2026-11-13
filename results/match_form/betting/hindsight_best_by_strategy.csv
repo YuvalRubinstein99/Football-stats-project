@@ -1,0 +1,46 @@
+family,variant,split,strategy,league,staking,matches,bets,wins,total_staked,gross_return,net_profit,roi,max_daily_drawdown_dollars,max_daily_exposure,unavailable
+RF_classifier,minimum_cv_form_allowed,test_2022,Expected return > 1,ALL,Existing $1-$5 tiers,1445,750,257,1584.0,1891.54,307.54,0.1941540404040404,62.95000000000002,32.0,0
+Linear,minimum_cv_without_form,test_2022,Square-root odds weighting,ALL,Existing $1-$5 tiers,1445,511,217,2077.0,2353.05,276.04999999999995,0.13290804044294655,111.26000000000002,50.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Square-root profit weighting,ALL,Existing $1-$5 tiers,1445,451,191,1141.0,1392.45,251.45,0.22037686240140228,34.81,28.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Legacy variance score,ALL,Existing $1-$5 tiers,1445,520,134,1056.0,1301.96,245.95999999999998,0.23291666666666666,49.540000000000006,24.0,0
+Ordered_probit,minimum_cv_without_form,test_2022,Home win or skip (sqrt profit),ALL,Existing $1-$5 tiers,1445,574,224,2009.0,2245.9799999999996,236.98,0.11795918367346939,100.99,50.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Legacy draw-to-home return weighting,ALL,Existing $1-$5 tiers,1445,346,141,852.0,1084.3200000000002,232.32,0.27267605633802816,51.639999999999986,19.0,0
+RF_goals,original_plus_form5,test_2022,Log odds weighting,ALL,Existing $1-$5 tiers,1445,878,275,2183.0,2409.1,226.1,0.10357306459001374,71.21999999999998,44.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Legacy variance — filtered search candidate,ALL,Existing $1-$5 tiers,1445,191,43,488.0,711.61,223.61,0.4582172131147541,39.0,14.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home wins vs not (sqrt profit),ALL,Existing $1-$5 tiers,1445,384,158,948.0,1153.4081627496537,205.40816274965374,0.21667527716208201,44.989999999999995,21.0,0
+Poisson,minimum_cv_without_form,test_2022,Most likely outcome,ALL,Existing $1-$5 tiers,1445,382,173,1495.0,1697.02,202.01999999999998,0.1351304347826087,48.67,45.0,0
+Linear,minimum_cv_without_form,test_2022,Legacy draw-to-home weighting,ALL,Existing $1-$5 tiers,1445,539,210,2159.0,2335.2000000000003,176.2,0.08161185734136174,116.21000000000001,48.0,0
+Linear,minimum_cv_without_form,test_2022,Legacy market power weighting,ALL,Existing $1-$5 tiers,1445,383,112,1131.0,1282.0300000000002,151.03,0.13353669319186562,60.9,28.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Expected return > 1,ALL,Flat $1 original rule,1445,750,257,750.0,836.26,86.26,0.11501333333333334,34.35,14.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Expected return > 1,ALL,Flat $1 positive edge,1445,750,257,750.0,836.26,86.26,0.11501333333333334,34.35,14.0,0
+RF_goals,original,test_2022,Home wins vs not (sqrt profit),ALL,Flat $1 original rule,1445,1445,629,1445.0,1530.6466098110873,85.64660981108742,0.059271010249887485,30.192139724897054,25.0,0
+RF_goals,original,test_2022,Home win or skip (sqrt profit),ALL,Flat $1 original rule,1445,1048,452,1048.0,1133.52,85.51999999999998,0.08160305343511448,26.33,21.0,0
+RF_classifier,original_plus_form5,test_2022,Log odds weighting,ALL,Flat $1 positive edge,1445,717,251,717.0,801.94,84.94,0.11846582984658298,27.42,14.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Square-root profit weighting,ALL,Flat $1 positive edge,1445,451,191,451.0,530.4,79.4,0.17605321507760532,14.950000000000001,13.0,0
+RF_classifier,selected_without_form,test_2022,Legacy variance — filtered search candidate,ALL,Flat $1 positive edge,1445,103,31,103.0,177.16,74.16,0.72,10.75,3.0,0
+RF_classifier,selected_form_allowed,test_2022,Legacy variance — filtered search candidate,ALL,Flat $1 original rule,1445,103,31,103.0,177.16,74.16,0.72,10.75,3.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home win or skip (sqrt profit),ALL,Flat $1 positive edge,1445,328,140,328.0,398.38,70.38,0.2145731707317073,18.62,10.0,0
+RF_classifier,selected_form_allowed,test_2022,Legacy variance score,ALL,Flat $1 positive edge,1445,419,116,419.0,488.35999999999996,69.36,0.16553699284009546,24.39,9.0,0
+RF_classifier,original_plus_form5,test_2022,Square-root profit weighting,ALL,Flat $1 original rule,1445,1445,716,1445.0,1514.1499999999999,69.14999999999999,0.04785467128027681,24.010000000000005,25.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Legacy draw-to-home return weighting,ALL,Flat $1 positive edge,1445,346,141,346.0,409.38,63.38,0.1831791907514451,20.620000000000005,10.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home wins vs not (sqrt profit),ALL,Flat $1 positive edge,1445,384,158,384.0,444.6951235981384,60.69512359813841,0.15806021770348544,20.27,10.0,0
+Ordered_probit,minimum_cv_without_form,test_2022,Square-root odds weighting,ALL,Flat $1 positive edge,1445,440,207,440.0,496.63,56.63,0.12870454545454546,15.849999999999998,10.0,0
+RF_goals,original_plus_form5,test_2022,Legacy market power weighting,ALL,Flat $1 positive edge,1445,250,79,250.0,302.65999999999997,52.660000000000004,0.21064000000000002,12.0,7.0,0
+Ordered_probit,minimum_cv_form_allowed,test_2022,Home loses vs not (synthetic double chance),ALL,Existing $1-$5 tiers,1445,331,214,1367.0,1418.1643216586262,51.16432165862624,0.0374281797063835,54.812693814054015,39.0,0
+Ordered_probit,minimum_cv_without_form,test_2022,Most likely outcome,ALL,Flat $1 positive edge,1445,344,176,344.0,392.12,48.12,0.13988372093023255,9.65,10.0,0
+RF_classifier,minimum_cv_without_form,test_2022,Legacy draw-to-home return weighting,ALL,Flat $1 original rule,1445,1445,664,1445.0,1491.87,46.870000000000005,0.03243598615916955,41.68,25.0,0
+RF_classifier,original,test_2022,Log odds weighting,ALL,Flat $1 original rule,1445,1445,451,1445.0,1489.48,44.480000000000004,0.030782006920415227,78.14999999999999,25.0,0
+Ordered_probit,minimum_cv_without_form,test_2022,Legacy draw-to-home weighting,ALL,Flat $1 positive edge,1445,519,219,519.0,561.83,42.83,0.08252408477842003,22.650000000000002,13.0,0
+Linear,minimum_cv_form_allowed,test_2022,Square-root odds weighting,ALL,Flat $1 original rule,1445,1445,764,1445.0,1475.46,30.459999999999994,0.0210795847750865,33.190000000000005,25.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home loses vs not (sqrt profit),ALL,Existing $1-$5 tiers,1445,229,91,536.0,566.2158636516464,30.215863651646334,0.05637287994710137,40.41917762788366,16.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home wins vs not (synthetic double chance),ALL,Existing $1-$5 tiers,1445,112,78,320.0,345.93236348417884,25.932363484178893,0.08103863588805904,13.13612040133779,14.0,0
+Poisson,minimum_cv_without_form,test_2022,Most likely outcome,ALL,Flat $1 original rule,1445,1445,786,1445.0,1466.51,21.50999999999999,0.014885813148788922,34.51000000000001,25.0,0
+Ordered_probit,minimum_cv_form_allowed,test_2022,Home loses vs not (synthetic double chance),ALL,Flat $1 positive edge,1445,331,214,331.0,347.9207984410053,16.920798441005267,0.05112023698188903,11.76775099641145,8.0,0
+RF_classifier,minimum_cv_form_allowed,test_2022,Home wins vs not (synthetic double chance),ALL,Flat $1 positive edge,1445,112,78,112.0,126.14425194603375,14.144251946033762,0.1262879638038729,4.367224080267557,5.0,0
+Linear,minimum_cv_without_form,test_2022,Legacy draw-to-home weighting,ALL,Flat $1 original rule,1445,1445,731,1445.0,1456.37,11.370000000000001,0.007868512110726644,41.83999999999999,25.0,0
+RF_classifier,original,test_2022,Home loses vs not (sqrt profit),ALL,Flat $1 positive edge,1445,372,161,372.0,379.1052184080596,7.105218408059626,0.019100049484031253,22.27859937048685,9.0,0
+Linear,minimum_cv_form_allowed,test_2022,Home loses vs not (synthetic double chance),ALL,Flat $1 original rule,1445,1445,1053,1445.0,1406.973035989216,-38.02696401078404,-0.026316238069746742,53.42321040406527,25.0,0
+Ordered_logit,minimum_cv_without_form,test_2022,Legacy variance score,ALL,Flat $1 original rule,1445,1445,327,1445.0,1388.09,-56.910000000000004,-0.0393840830449827,84.16999999999999,25.0,0
+Poisson_lasso,minimum_cv_without_form,test_2022,Home wins vs not (synthetic double chance),ALL,Flat $1 original rule,1445,1445,943,1445.0,1382.2860247830195,-62.71397521698047,-0.04340067489064393,79.45372065742976,25.0,0
+RF_classifier,selected_form_allowed,test_2022,Home loses vs not (sqrt profit),ALL,Flat $1 original rule,1445,1445,635,1445.0,1354.0257189984586,-90.97428100154147,-0.06295797993186261,95.4432750723265,25.0,0
+Linear,minimum_cv_form_allowed,test_2022,Legacy market power weighting,ALL,Flat $1 original rule,1445,1445,370,1445.0,1342.71,-102.28999999999999,-0.07078892733564013,130.83999999999997,25.0,0

@@ -1,0 +1,65 @@
+{
+  "season": "2024-25",
+  "model_training_last_date": "2022-05-22",
+  "cutoff_primary": 0.02,
+  "cutoffs": [
+    0.0,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.1
+  ],
+  "initial_bankroll": 1000.0,
+  "policy": "Use saved 2022-test model artifacts unchanged. No training or feature/threshold selection on this season. Predictive features only use strictly prior dates. No quoted-odds floor/cap beyond valid prices. Each simulation independently starts at $1000.",
+  "coverage": {
+    "history_matches": 1446,
+    "tested_matches": 768,
+    "rating_dates": [
+      "2022-09-26",
+      "2023-09-22"
+    ],
+    "min_rated_starters_per_side": 10,
+    "first_fixture": "2024-08-15",
+    "last_fixture": "2025-05-25",
+    "exclusions": {
+      "fewer_than_10_dated_starter_ratings": 678
+    },
+    "policy": "Frozen pre-season dated EA snapshots; unique name/club matches; at least ten of eleven starters rated per side, like the existing historical data minimum. All 1446 results feed within-season form before eligibility filtering. Same-day results excluded.",
+    "limitations": "FC24/FC23 ratings are stale, not contemporaneous FC25 ratings. Supplied snapshot dates are used; undated FC25 archive excluded. Actual historical lineups, not forecast lineups. Eligible subset can differ systematically from excluded matches; not a full-season sample.",
+    "input_hashes": {
+      "data/recent_seasons/games.csv": "7ad5b65d1ef4a2eccf83f95c78779333508f46741417f2771ca54fd220e56044",
+      "data/recent_seasons/lineups.csv": "9a4fe75781957d15a888e0f2b909cf3ac96731c9029b6b9d54e4121cf3e8e6b3",
+      "data/recent_seasons/ratings_fc23_fc24.csv": "36b88c82dbc281337b905b3457dbfb91c7dac3a1183dbe67595bb692c2420835",
+      "data/recent_seasons/raw/2425_E0.csv": "d0c8ce4a96d886cf60cf101f570f4a3893844226f91c7bd769eb568c49edbfa4",
+      "data/recent_seasons/raw/2425_D1.csv": "a295c58033cfe6393cbbc28f7db85671839b960c5f1153fd3678e20ad2adb92e",
+      "data/recent_seasons/raw/2425_SP1.csv": "c086e96d6a53f6e6c0fce4e35db0d1728c773b4362323da0161a34769e315a36",
+      "data/recent_seasons/raw/2425_I1.csv": "79d87a5b18771e066ac7419b7876bfd9771a68ca117a9712375d6bc9685abee3",
+      "scripts/prepare_form_2024.py": "b1abd1c41ff1d270d467800e65f39af2a842db71a317fc8da586d08b081e7d22",
+      "src/match_form.py": "38bd0d2b2fc543ac36a7f2ea032ca692226bd82fd980fee0f9ffec63315702fe"
+    }
+  },
+  "full_sample_reference": "RF_classifier_odds_full is the separate saved conservative odds-only classifier, evaluated on all 1446 fixtures. Other models share the rated subset.",
+  "hashes": {
+    "results/match_form/Ordered_logit_minimum_cv_without_form.joblib": "1b32d55a1c5e16cadf9399754214d007e4d25c7d969fc8e6d6aa9e66b7097ff1",
+    "results/match_form/Ordered_probit_minimum_cv_without_form.joblib": "869bb7ccdf5f256051e716101a3f424c879b404c3e99307f6dbed99667af3793",
+    "results/match_form/Linear_minimum_cv_without_form.joblib": "1854d6459726b1f8adf4413863be407e84fdaf8b5846639dda2d4334e7fe2722",
+    "results/match_form/RF_classifier_test_2022_odds_None.joblib": "52148442cfaeb37c6928ba22eb925c0f55bfdf0c1a3a6d8f7075e4e8f17524f0",
+    "results/match_form/Linear_test_2022_compact_gaps_10_None.joblib": "5481de7102420ea183fd7e91a9300ba3d07df20e474bc094d5e6f51806386cbf",
+    "results/match_form/Poisson_lasso_minimum_cv_without_form.joblib": "b92383fd23bc534a9ea2d33c7ad481c4260a9c39e79246d7ddaf2adaae9c70d4",
+    "results/match_form/Poisson_minimum_cv_without_form.joblib": "3cf9194a7603885bea716d97a6ac9750f8e6cec9ba97b946627e1c6dfbc18b53",
+    "results/match_form/Ordered_probit_test_2022_compact_gaps_10_None.joblib": "9bb73bb794bd76efa9826b23f5587c5a52b738b1d9965f7fce6ce17badb659eb",
+    "results/match_form/RF_classifier_minimum_cv_without_form.joblib": "bc28cfe0aad35881588c26452a6cc48165cf7a465bc4d332dd91ffe952a505c5",
+    "results/match_form/selection.json": "c7b293a4107c1e307ad41f991701566857c020c4ba5c1440a20f7e76e5b0d6b4",
+    "results/match_form/RF_classifier_test_2022_compact_gaps_5_None.joblib": "44992f54c7dfde53a26cc623fbe8521fca214d2fdae01998064ad7cf40b8681c",
+    "results/match_form/RF_goals_minimum_cv_without_form.joblib": "6043e2a6cedaec8c71caa29229a9c89286e4d083124b1fe58de2d7486a44cfad",
+    "results/match_form/Poisson_lasso_test_2022_compact_all_3_0.001.joblib": "5dd1d5d1118f84b739f59db0487592c01316c5940a79be59ac504062f29db66a",
+    "results/match_form/Poisson_test_2022_compact_gaps_10_None.joblib": "3884e9646f579940a1a966c2aeea8bb025d614d90dfb074ca323520374eb3fed",
+    "results/match_form/season_2024/matches.csv": "7d9716919627ec5aad74ffc1c61966a3ecc5553d1e64bc5fa6c4892f823971e4",
+    "src/bankroll_backtest.py": "6d79354330409586f6ec8c623322f655a8f8c9e9429b0575bd30ab1eaecf0ad0",
+    "results/match_form/season_2024/all_matches.csv": "124340d433fd0e9ef5b45fe86327a5de30e701d56e59ecba237849d27e2e59f6",
+    "results/match_form/RF_goals_test_2022_odds_None.joblib": "6f90c1ab52048d28f9b703d73735ab7601e40d674f90fdb084f8bc581904bf25",
+    "results/match_form/Ordered_logit_test_2022_compact_gaps_10_None.joblib": "5976d2ee3e65dbfec5176257c85760d1a7125f81197291d34a5a36a1467c0f31",
+    "scripts/evaluate_form_2024.py": "3ab89cb3aadd5762ca6f293171ec3a68651da3b080cfe0165ed638f2c4560c1f"
+  }
+}

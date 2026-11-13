@@ -15,6 +15,26 @@ The current experiment compares two separate random forests, a single **2,000-tr
 
 ## Start here
 
+### Position-based matchups
+
+The [positional experiment](docs/positional-matchups.md) uses matched starters'
+preferred FIFA positions to compare attack against opposing defense/goalkeeper
+and midfield against midfield. Run `python scripts/prepare_positional_features.py`
+then `python scripts/compare_positional_matchups.py` for chronological Poisson
+and random-forest comparisons with the original and whole-team-attribute models.
+Results and saved predictions are under `results/positional_matchups/`.
+
+The [four-improvement experiment](docs/lineup-improvements.md) adds stronger
+identity matching, deviations from prior club lineups, independent unit weights
+and monthly FIFA-prior player updates. Run `prepare_lineup_improvements.py`,
+`prepare_dynamic_lineups.py`, then `compare_lineup_improvements.py` from `scripts/`.
+Its isolated results are under `results/lineup_improvements/`.
+
+For [direct home-win versus non-win classifiers](docs/binary-home-win.md), run
+`python scripts/train_binary_home_win.py`. This trains binary logistic and
+random-forest models and compares them with the existing goal-based
+probabilities. Outputs are in `results/lineup_improvements/binary_retrained/`.
+
 ### Live predictions and local interface
 
 The unified model/strategy interface starts with `python run.py model-app` at
@@ -328,6 +348,100 @@ inputs require verifiable cached current-season results; missing provenance
 withholds a fixture instead of substituting historical training-era state.
 Run `python scripts/test_classifier_models.py` for causal-feature and inference checks.
 
+### Team skill comparisons and feature selection
+
+```bash
+python scripts/prepare_team_attributes.py
+python scripts/compare_team_attributes.py --trees 500
+python scripts/test_team_attributes.py
+```
+
+This experiment uses the existing named starting lineups and season-edition FIFA
+files to compare pace, shooting, passing, dribbling, defending and physicality.
+Each attribute has home/away outfield means, coverage counts and a home-minus-away
+difference. Matchup features compare each side's shooting, dribbling and pace with
+the opponent's defending. Goalkeepers are excluded from outfield means. At least
+eight verified outfield values are required; missing values remain missing until
+training-fold median imputation. Names must match uniquely, and the player's
+overall rating must agree with the original lineup pipeline. The player-level
+matching audit records exclusions and matching methods.
+
+The comparison covers the same available Spain/Germany/Italy fixtures from
+2014–15 onward for every variant. EPL source files lack player names; the
+pre-2014 expanded rows lack these subratings. Neither is silently assigned
+invented attributes. Ambiguous duplicate test fixtures are excluded. Full
+attribute coverage and partial coverage are reported separately.
+
+RF outcome classification and RF goal regression each compare the original
+predictor set with individual attribute groups and combined groups. Both use
+500 trees by default and otherwise the established forest settings; baselines
+are refitted on exactly the same samples. Feature selection uses forward
+2019–20 and 2020–21 folds, with a one-standard-error simplicity rule that can
+choose the baseline. Choices are saved before the 2021–22 audit and previously
+inspected 2022–23 test evaluations. Encoders and imputation are fitted inside
+each fold. There is no betting-profit selection.
+
+See `results/team_attributes/report.html`, `metrics.csv`, `selection.json`,
+`selection_scores.csv`, `coverage.csv` and `feature_audit.json`. Models and
+predictions are saved separately from active interface models. FIFA snapshot
+publication times are unverified, so this is exploratory historical evidence,
+not a verified live backtest. Downloaded extra seasons are not automatically
+included in this experiment.
+
+For OLS, Poisson, ordered logit and ordered probit, run:
+
+```bash
+python scripts/compare_attribute_regressions.py
+python scripts/test_attribute_regressions.py
+```
+
+This comparison also allows feature removal: 22 predefined sets range from all
+68 original/skill predictors to compact combinations, individual skill gaps
+plus odds, and odds alone. Team identities, redundant overall summaries, form,
+matchweek and skill groups can be omitted. Selection uses only forward
+2019–20 and 2020–21 scores. Among candidates within one standard error of the
+best mean log loss, it prefers fewer encoded columns, then fewer raw columns.
+This is a finite feature-set search, not exhaustive subset search. Both the
+minimum-loss candidate and the simpler selected candidate are evaluated later.
+All preprocessing is fitted on earlier training rows; SVD removes exact
+collinearity for the ordered models. Poisson retains alpha=0.01.
+
+The regression report in `results/team_attributes/regressions/report.html`
+compares original predictors, all added attributes, and selected smaller models
+on identical audit/test matches. `comparison.csv` lists feature counts and
+retained predictors, `selection.json` freezes the choices, and `metrics.csv`
+includes convergence diagnostics, probability metrics and goal errors where
+applicable. Selected models are saved separately; active interface models are
+not replaced by this exploratory comparison.
+
+For coefficient-level Poisson lasso selection, run:
+
+```bash
+python scripts/poisson_lasso_cv.py
+python scripts/test_poisson_lasso.py
+```
+
+The lasso experiment starts with all 68 original/skill inputs, then penalizes
+individual encoded coefficients with L1. It fits separate home/away goal
+equations, with unpenalized intercepts. All numeric columns, team dummies and
+missing indicators are standardized within each training fold; the lasso
+design is not rotated by SVD. Thirteen penalties from 0.0001 to 1 are compared
+on forward 2017–18, 2018–19, 2019–20 and 2020–21 folds. Each target independently
+selects its minimum mean Poisson-deviance penalty and the strongest penalty
+within one standard error of that minimum. Both fixed choices are evaluated on
+2021–22 and the previously inspected 2022–23 test. Outcome log loss is reported
+after converting the goal means to home/draw/away probabilities.
+
+The solver uses nonnegative coefficient splitting with SciPy L-BFGS-B and
+checks the original L1 optimality conditions for every fit. Zero-penalty,
+strong-penalty, collinearity and fold-preprocessing tests guard the implementation.
+This is actual L1 shrinkage, distinct from the earlier PoissonRegressor's L2
+penalty and predefined group selection. Correlated variables can substitute
+for one another, so retained coefficients are not causal feature rankings.
+See `results/team_attributes/poisson_lasso/report.html`, `cv_scores.csv`,
+`selection.json`, `metrics.csv` and `retained_coefficients.csv`. Both selected
+models are saved separately from active interface models.
+
 ### Recent-data weighting
 
 Run `python scripts/train_recent_models.py` after calibration to compare equal
@@ -419,3 +533,220 @@ Choose **Odds source → Winner Israel · automatic download** on port 8767. The
 Only upcoming, non-live, full-time football 1/X/2 markets from E0/SP1/D1/I1 are accepted. Hebrew team names use explicit aliases. Matching requires league, date, home and away; duplicates or unknown aliases are withheld. Prices expire after five minutes or at kickoff. Missing/download failures never substitute Bet365 prices. Bet365 remains a model input; Winner is the execution-odds source. Refresh shared match inputs when the model fixture cache is out of date.
 
 `python scripts/download_winner_odds.py` downloads independently. Parsed prices are in `results/winner/latest.json`; original responses are archived in `results/winner/snapshots/` to establish a future quote history. These snapshots alone are not a completed historical backtest. `python scripts/test_winner_download.py` verifies market filtering, translation, strict matching, duplicate rejection and expiry. The earlier note that automatic retrieval was unavailable is superseded: verified direct public-feed download on 2026-10-15.
+
+### Attacking, defensive and shots-on-target form
+
+Run the offline research comparison:
+
+```text
+python scripts/prepare_match_form.py
+python scripts/test_match_form.py
+python scripts/compare_match_form.py
+python scripts/compare_match_form_minimum.py
+python scripts/verify_match_form_results.py
+```
+
+`src/match_form.py` builds goals scored/conceded and shots on target for/against
+per match, home-away differences, and history/shot-coverage counts. Candidates
+use the last 3, 5 or 10 league matches, or exponential weighting with a five-match
+half-life. History resets at each explicitly labelled source season, preserving
+the 2019-20 COVID postponements. Every prediction reads state before any results
+on its calendar date are added. Missing shots remain missing; imputers are fitted
+inside each training fold.
+
+All 21,690 completed cached fixtures from 2008-09 through 2022-23 feed form,
+including fixtures without usable EA ratings or odds. Model comparisons use the
+same 19,262 training and 1,445 test rows from England, Spain, Germany and Italy.
+One historical target/source score disagreement and both rows of an ambiguous
+duplicated test fixture are excluded from every variant. Only one cached fixture
+has incomplete shots coverage; it is retained with missing shots.
+
+The comparison includes goal-vector random forest, direct outcome random forest,
+linear regression, L2 Poisson, ordered logit/probit, and L1 Poisson. Forests use
+300 trees, depth 5 and a fixed seed. Fifteen predeclared feature sets allow removal
+of original predictors as well as selection of the new form groups and windows.
+Lasso searches nine of those sets and seven penalties (1 to .001); both goal
+equations use the same candidate penalty, chosen by outcome log loss. The two
+Poisson equations are fitted separately and use independent-Poisson conversion
+to home/draw/away probabilities.
+
+Expanding training folds predict 2018-19, 2019-20 and 2020-21. Feature sets and
+penalties are frozen before the 2021-22 forward audit and 2022-23 test. Selection
+uses the smallest encoded dimension (lasso: union of active coefficients) within
+one standard error of minimum mean seasonal log loss; this is a simplicity
+heuristic, not a confidence interval. The form-allowed search includes the
+without-form candidates, so it can reject all new features. Fixed original versus
+original-plus-five-match-form ablations and minimum-CV choices are also reported.
+The minimum-CV supplement evaluates the already-frozen minimum-loss choices on
+both sides; it does not perform another search or select on audit/test outcomes.
+
+Results appear in `results/match_form/report.html`, with pooled and league-specific
+metrics, selected columns, chronological CV scores, paired date-bootstrap
+differences, temporal audits, source coverage and exclusions. Prepared data and
+model/code checksums guard resumable caches. Saved model reloads are verified
+against predictions. No active app model is replaced. Test results remain
+exploratory because the audit/test periods have already been inspected; existing
+EA snapshot and odds timing limitations also remain. During each held-out season,
+features update from completed earlier matches, while fitted model parameters
+remain fixed.
+
+On the matched 1,445-match test, the frozen minimum-CV choices give:
+
+| Model | Without new form: log loss | Form allowed: log loss |
+| --- | ---: | ---: |
+| RF classifier | 0.97700 | 0.97696 |
+| Goal-vector RF | 0.97979 | 0.97979 |
+| Linear | 0.98368 | 0.98267 |
+| Poisson | 0.98313 | 0.98198 |
+| Ordered logit | 0.98158 | 0.98056 |
+| Ordered probit | 0.98180 | 0.98085 |
+| Poisson lasso | 0.98315 | 0.98367 |
+
+The minimum-CV classifier chooses five-match differences; the four non-lasso
+regressions choose ten-match differences (22 raw predictors, 26 encoded columns).
+Lasso chooses three-match form with alpha .001 and retains 25 of 30 raw predictor
+sources, including 13 new form sources. Goal RF chooses no new form. All nonzero
+test differences have paired bootstrap intervals crossing zero. The conservative
+one-standard-error rule selects odds alone in every family, so these small gains
+do not establish a robust improvement. See `minimum_cv_comparison.csv` for the
+matched comparison and `metrics.csv` for fixed ablations and league breakdowns.
+
+### Betting rerun for the form models
+
+After the form comparison, replay the saved probabilities without refitting or
+changing strategy thresholds:
+
+```text
+python scripts/test_match_form_betting.py
+python scripts/backtest_match_form.py
+python scripts/verify_match_form_betting.py
+python scripts/backtest_match_form_bankroll.py
+python scripts/report_match_form_betting.py
+```
+
+Open `results/match_form/betting/overview.html` for net dollar returns across all
+15 existing rules, with and without form, and cumulative profit charts. The full
+`report.html` and `summary.csv` include every saved feature-selection variant,
+both the 2021-22 audit and 2022-23 test, and league breakdowns. Each season has
+1,445 matched fixtures. The main comparison uses minimum-CV feature choices frozen
+on earlier seasons; conservative one-standard-error and fixed feature ablations
+remain available in the full results.
+
+Three fixed staking modes distinguish $1 on every original rule selection, $1
+only on positive-edge selections, and the existing fixed $1-$5 tiers on those
+same positive-edge selections. Net profit subtracts the entire stake, including
+all legs of synthetic double chance. ROI divides net profit by total stakes.
+The filtered legacy candidate transfers its existing thresholds unchanged to all
+model families; that transfer remains exploratory. Each strategy/model is a
+separate hypothetical alternative, so their profits must not be added together.
+The compressed bet ledger can be rebuilt and independently reconciled against
+all aggregate tables with the verification command.
+
+`bankroll_summary.csv` separately replays the three existing cash-constrained
+experiments from a $1,000 balance: flat $1, quarter Kelly and robust quarter Kelly.
+They select the highest expected-return outcome, cap each match at 2% of opening
+cash and all same-day stakes at 10%, and settle only after reserving the day's
+stakes. Robust quarter Kelly subtracts two percentage points from the selected
+outcome probability. The runner verifies daily cash limits and reconciles every
+settlement. These are separate experiments from the 15 fixed-rule comparisons.
+
+Recorded Bet365 odds are used, without fees, taxes, stake rounding or execution
+costs. These are historical simulations, not actual earnings or Winner-market
+results. The audit/test seasons have already been inspected; the report labels
+the highest realized profits as hindsight rankings, not validated future returns.
+The existing EA snapshot and odds timing limitations still apply.
+
+In this rerun, the minimum-CV form-allowed RF classifier had the largest 2022-23
+fixed-tier profit: $307.54 on $1,584 staked (19.42% ROI), using Expected return > 1.
+Its matched without-form model made $172.31. The previously used filtered legacy
+rule improved from $157.66 to $223.61 for that model. However, all 15 RF classifier
+rules lost money under fixed tiers in the 2021-22 audit; Expected return > 1 lost
+$62.78. The separate quarter-Kelly simulation ended at $1,938.87 in the test but
+$864.74 in the audit, each from $1,000. These differing seasons do not establish
+reliable profitability. Settlement verification reconciled 1,583,576 fixed-rule
+ledger rows to 18,000 aggregate rows and checked 346,800 bankroll settlements.
+
+To replay Kelly with the selected 2% minimum expected-return filter:
+
+```text
+python scripts/test_bankroll_backtest.py
+python scripts/backtest_match_form_bankroll.py --profile edge2
+python scripts/report_filtered_bankroll.py
+```
+
+`edge2` requires expected gross return `probability * decimal_odds > 1.02`
+(expected net return strictly above 2%), with no additional quoted-odds floor
+or cap. The highest expected-return outcome is selected
+first; a failed filter skips the fixture rather than substituting another pick.
+The nominal probability determines eligibility; robust Kelly then subtracts
+two percentage points before stake sizing. Its existing 2% match and 10% daily
+bankroll caps remain unchanged.
+
+Filtered results use the frozen minimum-CV choices for all seven models, both
+with and without form, on the 2021-22 audit and 2022-23 test. They are saved in
+separate profile directories, preserving the original baseline results.
+`results/match_form/betting/filtered_bankroll.html` compares this filter with
+the original positive-return baseline and
+shows quarter-Kelly and robust-quarter-Kelly graphs. A nominal 2% return filter
+alone leaves robust Kelly unchanged: positive robust stakes already require
+nominal expected net return greater than `0.02 * odds`. The original browser
+dashboard remains a separate experiment; its custom mixtures are not recalculated.
+The earlier `odds4_edge2` experiment is retained in its output directory for
+reference but is excluded from the current report, comparison CSV and graphs.
+
+Compare return cutoffs without changing the active 2% setting:
+
+```text
+python scripts/compare_return_cutoffs.py
+python scripts/report_return_cutoffs.py
+```
+
+`results/match_form/betting/return_cutoffs/report.html` compares nominal expected
+net-return cutoffs of 0%, 1%, 2%, 3%, 5% and 10%, with no quoted-odds restriction.
+Its model, feature and season controls show all seven model families, frozen
+minimum-CV choices with/without form, and separate 2021-22 audit and 2022-23 test
+results. All three existing bankroll methods retain their cash caps. Tables show
+profit, turnover, ROI, bet counts and daily maximum drawdown; graphs show bankroll
+paths and profit versus cutoff. Each scenario starts independently at $1,000.
+This is an exploratory sensitivity analysis, not optimization on an untouched
+test set. The runner verifies accounting, exposure, drawdown, eligibility,
+decreasing bet counts and reproduction of the saved 0%/2% experiments. Summary,
+curves, input hashes, verification counts and a regenerable compressed ledger
+are saved beside the report.
+
+The 2024-25 forward evaluation reuses the exact 2022-23-test model artifacts,
+trained through 22 May 2022, without refitting or choosing new features/cutoffs:
+
+```text
+python scripts/prepare_form_2024.py
+python scripts/verify_form_2024.py
+python scripts/evaluate_form_2024.py
+python scripts/report_return_cutoffs.py
+```
+
+Cached results cover all 1,446 fixtures across England, Germany, Spain and Italy.
+All matches feed strictly prior-date form. The paired model comparison covers
+768 fixtures with at least ten dated rated starters per side: E0 166, D1 210,
+SP1 134 and I1 258. It uses old FC23/FC24 snapshots dated before the season;
+the undated FC25 archive is excluded. Names match by unique exact name, club
+and name tokens, or unique full name tokens across the dated catalogue, without
+fuzzy matching. This subset may not represent the whole season. Actual starting
+lineups are used, and cached bookmaker prices are not timestamp-aligned to
+lineup publication, so these results do not establish executable returns.
+
+At the unchanged expected net return >2% cutoff, RF classifier with form loses
+$105.83 with flat $1 stakes (301 bets), $561.63 with quarter Kelly, and $215.33
+with robust quarter Kelly, from separate $1,000 balances. Its flat-stake daily
+bankroll-return volatility is 0.223%, with 11.42% maximum drawdown. Without new
+form, the matched RF classifier loses $77.04 at flat $1 stakes. A separate saved
+odds-only RF classifier covers all 1,446 matches and makes $4.03 with flat $1
+stakes (347 bets); that is a different model/sample, not the effect of form.
+
+Artifacts are under `results/match_form/season_2024/`. Input verification checks
+all form windows directly against raw results, dated rating means and distinct
+player identities. Evaluation reproduces earlier saved predictions, confirms
+target-blind inference, and reconciles 270 simulations / 219,564 settlements.
+The existing return-cutoff dashboard includes 2024-25 by default, keeping
+strategy colors consistent and adding daily volatility. Volatility is the sample
+standard deviation of daily net profit divided by opening bankroll across all
+eligible match dates, including dates with no bets, without annualization.

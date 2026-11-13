@@ -1,0 +1,26 @@
+{
+  "evaluation": "IN-SAMPLE: saved final model predicts the exact rows it was fitted on. No refitting, no OOB probabilities, no held-out or forward predictions.",
+  "model": "results\\lineup_improvements\\binary_retrained\\RF_binary_selected.joblib",
+  "model_sha256": "5235069fe65bf7d20363709c55b62d3dbcfb2b34b127bb8a381dc1e536901fb2",
+  "candidate": "fifa_prior",
+  "training_matches": 8521,
+  "trained_through": "2022-05-22",
+  "metrics": {
+    "matches": 8521,
+    "correct": 5816,
+    "accuracy": 0.6825489965966436,
+    "log_loss": 0.5792140278936899,
+    "brier": 0.19823694270460887,
+    "auc": 0.7600395737286688,
+    "home_picks": 3191,
+    "no_home_picks": 5330,
+    "home_wins": 3780,
+    "no_home_wins": 4741
+  },
+  "filters": [
+    "P(home win)*home odds - 1 > 0",
+    "P(home win)*home odds - 1 > 0.02"
+  ],
+  "settlement": "Home only; draws and away wins lose. Existing flat and 1-5-unit stakes. Daily chronological settlement, no compounding, fees or bankroll limits.",
+  "caveat": "Descriptive training fit; optimistic as a measure of future betting performance."
+}

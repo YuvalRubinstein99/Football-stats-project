@@ -1,0 +1,33 @@
+{
+  "source_hashes": {
+    "data/players_15.csv": "c07d332d4088064b4a078897d19dc6c631dd7e53237b2790165eebffabac8a44",
+    "data/season_data/season1415.csv": "43ba50bb64fee7561ac89d3d2aa85fc4b14984476c1b1fdaea03c7eb6e43f1b8",
+    "data/players_16.csv": "0f6f598616c4aec4377dcb079aecef08bdf9c3a6ad466081f010614ff2a9b200",
+    "data/season_data/season1516.csv": "1d9f2788f967531f8ed9caa376fc9b905afa382a27a52e1c02355f299d376e69",
+    "data/players_17.csv": "c71c3a2dfcce7c2caee669be24848fdbc1137a8bc8ed6d343b2566c3132ae525",
+    "data/season_data/season1617.csv": "259669ed1f6549af5bd4db15739c4c5cfa93832a5df7d1fe5dbaf47581abf3b8",
+    "data/players_18.csv": "66484eae37c5c45927370e7de72328c55e1315f83ae58f0ff5f1c5c022922a37",
+    "data/season_data/season1718.csv": "74612cae1fe620ee985d260aa7970855f45172e1ef44f82592458cf93d5f6852",
+    "data/players_19.csv": "9435c61aae87941f716af8c5e9cea6d49dda7a1bc663a75ef4d98464d09b6c32",
+    "data/season_data/season1819.csv": "af131736caa4c32eba231c77bd0b413ba94ff01b20b91a717182ac8fb36c1b80",
+    "data/players_20.csv": "3eaecbe17d7e651e42eea11c6883b2e5528e7b6be02b68232b9151e95344e911",
+    "data/season_data/season1920.csv": "d74f9a8d2cfd4853de81c5383f3242bf3bb99d22eec69bd9a08155363f953044",
+    "data/players_21.csv": "0a87e241d9f4bee65923a35012158b891e0d38a2f9f280d677d234afa401ab89",
+    "data/season_data/season2021.csv": "5a3bd2d70be226822ba6ec0d8aaa1b5df06cf86824d75329cb99cb1b255be1fb",
+    "data/players_22.csv": "b82a9a932ef74729d05e95b6f72334e664711bf6326132d8c38f5912cfc41c3f",
+    "data/season_data/season2122.csv": "9c4bfdb0db853bae54181b403a1f9d2c31f9dc4e94280d3c46498d63fb629c60",
+    "data/players_23.csv": "37bf79c993381aa02d694933e8575d347e9a763c663e1826c56c23c440b11f0e",
+    "data/season_data/season2223.csv": "3abfc1f554942c3141c82039a0a5e4cf36c224e18230e86af78ae704e589879b",
+    "results/classifier/train.csv": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "results/classifier/test.csv": "f330efe0d902566782d90dd4e8b2cedf3c0ac810159ebf9c0ddb1c8f3c8f6062"
+  },
+  "input_hashes": {
+    "src/player_identity.py": "56d16d54383add8d971a126d99b3c80586c8b9b190e22d2c581fa0262b49e61f",
+    "src/positional_features.py": "562352a354581d1986752026e7374c969798fb397aad7f702ddd3ecf0aa25383",
+    "scripts/prepare_lineup_improvements.py": "ea543953335c84dfdac59f8a23dfea98f5f50edf607431cb5a5454b9cca0ca99",
+    "results/positional_matchups/train.csv": "32d4589843d9fc38af9aab9aeb4276797cce191079216f752031764c3327c531",
+    "results/positional_matchups/test.csv": "225a4303b769ceb40635a53c6ecb5fb376d347326944617cd5c339f5ebe906a6"
+  },
+  "rule": "Identity determined by unique names, explicit club aliases, club-constrained token/prefix matches and names from earlier FIFA editions linked by stable EA ID. No fuzzy edit-distance matching. Legacy overall agreement is an audit field, not an identity gate. Duplicate IDs invalidate a fixture. Identical snapshot rows are deduplicated before matching; conflicting duplicate FIFA IDs raise an error. Preferred positions, not observed formation roles.",
+  "caveat": "Season-edition FIFA files have no verified publication timestamps. This inherits the historical pipeline snapshot limitation and is an exploratory experiment, not a strict as-of live backtest. No named EPL lineups or pre-2014 subratings used."
+}

@@ -1,0 +1,252 @@
+{
+  "input_hashes": {
+    "data/players_15.csv": "c07d332d4088064b4a078897d19dc6c631dd7e53237b2790165eebffabac8a44",
+    "data/season_data/season1415.csv": "43ba50bb64fee7561ac89d3d2aa85fc4b14984476c1b1fdaea03c7eb6e43f1b8",
+    "data/players_16.csv": "0f6f598616c4aec4377dcb079aecef08bdf9c3a6ad466081f010614ff2a9b200",
+    "data/season_data/season1516.csv": "1d9f2788f967531f8ed9caa376fc9b905afa382a27a52e1c02355f299d376e69",
+    "data/players_17.csv": "c71c3a2dfcce7c2caee669be24848fdbc1137a8bc8ed6d343b2566c3132ae525",
+    "data/season_data/season1617.csv": "259669ed1f6549af5bd4db15739c4c5cfa93832a5df7d1fe5dbaf47581abf3b8",
+    "data/players_18.csv": "66484eae37c5c45927370e7de72328c55e1315f83ae58f0ff5f1c5c022922a37",
+    "data/season_data/season1718.csv": "74612cae1fe620ee985d260aa7970855f45172e1ef44f82592458cf93d5f6852",
+    "data/players_19.csv": "9435c61aae87941f716af8c5e9cea6d49dda7a1bc663a75ef4d98464d09b6c32",
+    "data/season_data/season1819.csv": "af131736caa4c32eba231c77bd0b413ba94ff01b20b91a717182ac8fb36c1b80",
+    "data/players_20.csv": "3eaecbe17d7e651e42eea11c6883b2e5528e7b6be02b68232b9151e95344e911",
+    "data/season_data/season1920.csv": "d74f9a8d2cfd4853de81c5383f3242bf3bb99d22eec69bd9a08155363f953044",
+    "data/players_21.csv": "0a87e241d9f4bee65923a35012158b891e0d38a2f9f280d677d234afa401ab89",
+    "data/season_data/season2021.csv": "5a3bd2d70be226822ba6ec0d8aaa1b5df06cf86824d75329cb99cb1b255be1fb",
+    "data/players_22.csv": "b82a9a932ef74729d05e95b6f72334e664711bf6326132d8c38f5912cfc41c3f",
+    "data/season_data/season2122.csv": "9c4bfdb0db853bae54181b403a1f9d2c31f9dc4e94280d3c46498d63fb629c60",
+    "data/players_23.csv": "37bf79c993381aa02d694933e8575d347e9a763c663e1826c56c23c440b11f0e",
+    "data/season_data/season2223.csv": "3abfc1f554942c3141c82039a0a5e4cf36c224e18230e86af78ae704e589879b",
+    "results/classifier/train.csv": "efd641995bb2428155194323e19ecde421af3bfbc764a277f21a793f5b4894ba",
+    "results/classifier/test.csv": "f330efe0d902566782d90dd4e8b2cedf3c0ac810159ebf9c0ddb1c8f3c8f6062"
+  },
+  "attributes": [
+    "pace",
+    "shooting",
+    "passing",
+    "dribbling",
+    "defending",
+    "physicality"
+  ],
+  "coverage": [
+    {
+      "split": "train",
+      "season": 2014,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 286,
+      "average_matched_starters": 10.133986928104575
+    },
+    {
+      "split": "train",
+      "season": 2014,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 233,
+      "average_matched_starters": 9.380263157894737
+    },
+    {
+      "split": "train",
+      "season": 2014,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 142,
+      "average_matched_starters": 8.289473684210526
+    },
+    {
+      "split": "train",
+      "season": 2015,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 233,
+      "average_matched_starters": 9.7859477124183
+    },
+    {
+      "split": "train",
+      "season": 2015,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 258,
+      "average_matched_starters": 9.239473684210527
+    },
+    {
+      "split": "train",
+      "season": 2015,
+      "league": "SP1",
+      "matches": 379,
+      "all_attributes_available": 160,
+      "average_matched_starters": 8.383905013192612
+    },
+    {
+      "split": "train",
+      "season": 2016,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 263,
+      "average_matched_starters": 10.130718954248366
+    },
+    {
+      "split": "train",
+      "season": 2016,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 287,
+      "average_matched_starters": 9.878947368421052
+    },
+    {
+      "split": "train",
+      "season": 2016,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 168,
+      "average_matched_starters": 8.639473684210527
+    },
+    {
+      "split": "train",
+      "season": 2017,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 289,
+      "average_matched_starters": 10.366013071895425
+    },
+    {
+      "split": "train",
+      "season": 2017,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 224,
+      "average_matched_starters": 9.60657894736842
+    },
+    {
+      "split": "train",
+      "season": 2017,
+      "league": "SP1",
+      "matches": 377,
+      "all_attributes_available": 86,
+      "average_matched_starters": 7.720159151193634
+    },
+    {
+      "split": "train",
+      "season": 2018,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 257,
+      "average_matched_starters": 10.05718954248366
+    },
+    {
+      "split": "train",
+      "season": 2018,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 263,
+      "average_matched_starters": 9.62236842105263
+    },
+    {
+      "split": "train",
+      "season": 2018,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 79,
+      "average_matched_starters": 7.398684210526316
+    },
+    {
+      "split": "train",
+      "season": 2019,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 235,
+      "average_matched_starters": 9.915032679738562
+    },
+    {
+      "split": "train",
+      "season": 2019,
+      "league": "I1",
+      "matches": 380,
+      "all_attributes_available": 176,
+      "average_matched_starters": 8.83157894736842
+    },
+    {
+      "split": "train",
+      "season": 2019,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 137,
+      "average_matched_starters": 8.317105263157895
+    },
+    {
+      "split": "train",
+      "season": 2020,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 242,
+      "average_matched_starters": 9.80718954248366
+    },
+    {
+      "split": "train",
+      "season": 2020,
+      "league": "I1",
+      "matches": 378,
+      "all_attributes_available": 181,
+      "average_matched_starters": 8.825396825396826
+    },
+    {
+      "split": "train",
+      "season": 2020,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 146,
+      "average_matched_starters": 8.313157894736841
+    },
+    {
+      "split": "train",
+      "season": 2021,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 267,
+      "average_matched_starters": 10.009803921568627
+    },
+    {
+      "split": "train",
+      "season": 2021,
+      "league": "I1",
+      "matches": 379,
+      "all_attributes_available": 209,
+      "average_matched_starters": 9.398416886543536
+    },
+    {
+      "split": "train",
+      "season": 2021,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 195,
+      "average_matched_starters": 8.922368421052632
+    },
+    {
+      "split": "test",
+      "season": 2022,
+      "league": "D1",
+      "matches": 306,
+      "all_attributes_available": 220,
+      "average_matched_starters": 9.511437908496733
+    },
+    {
+      "split": "test",
+      "season": 2022,
+      "league": "I1",
+      "matches": 379,
+      "all_attributes_available": 261,
+      "average_matched_starters": 9.641160949868073
+    },
+    {
+      "split": "test",
+      "season": 2022,
+      "league": "SP1",
+      "matches": 380,
+      "all_attributes_available": 186,
+      "average_matched_starters": 8.969736842105263
+    }
+  ],
+  "feature_rule": "Outfield starter means with >=8 matched valid players per attribute; otherwise missing. Home-away gaps and shooting/dribbling/pace vs opposing defending. Unique names, no fuzzy matching; original overall must agree. Fold-only imputation.",
+  "limitation": "Season-edition FIFA files have no verified publication timestamps. This inherits the historical pipeline snapshot limitation and is an exploratory experiment, not a strict as-of live backtest. No named EPL lineups or pre-2014 subratings used."
+}

@@ -1,0 +1,84 @@
+{
+  "selection": {
+    "Poisson": {
+      "candidate": "baseline",
+      "alpha": 0.1,
+      "mean_log_loss": 0.9826910139651485
+    },
+    "RF_goals": {
+      "candidate": "baseline",
+      "alpha": 0.0,
+      "mean_log_loss": 0.974929369993971
+    }
+  },
+  "penalties": {
+    "Poisson": {
+      "baseline": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9826910139651485
+      },
+      "old_positions": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9861879442343935
+      },
+      "improved_positions": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9833050080041958
+      },
+      "compact_gaps": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9836704956257882
+      },
+      "learned_weights": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9838166093269867
+      },
+      "lineup_changes": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9852001996392679
+      },
+      "fifa_prior": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9847947644391793
+      },
+      "full_dynamic": {
+        "alpha": 0.1,
+        "mean_log_loss": 0.9839183488315721
+      }
+    },
+    "RF_goals": {
+      "baseline": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.974929369993971
+      },
+      "old_positions": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9751477609207041
+      },
+      "improved_positions": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9756959898715327
+      },
+      "compact_gaps": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.975207418112969
+      },
+      "learned_weights": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9751045205338876
+      },
+      "lineup_changes": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9752332647109316
+      },
+      "fifa_prior": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9759027179100628
+      },
+      "full_dynamic": {
+        "alpha": 0.0,
+        "mean_log_loss": 0.9757821632710971
+      }
+    }
+  }
+}

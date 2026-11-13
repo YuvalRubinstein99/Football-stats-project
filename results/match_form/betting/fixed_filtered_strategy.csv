@@ -1,0 +1,8 @@
+family,strategy,staking,net_profit_without,roi_without,bets_without,total_staked_without,max_daily_drawdown_dollars_without,net_profit_form,roi_form,bets_form,total_staked_form,max_daily_drawdown_dollars_form,net_change_with_form
+Linear,Legacy variance — filtered search candidate,Existing $1-$5 tiers,-392.73,-0.18283519553072627,577,2148.0,423.0300000000001,-306.29999999999995,-0.15391959798994972,544,1990.0,383.35,86.43000000000006
+Ordered_logit,Legacy variance — filtered search candidate,Existing $1-$5 tiers,44.129999999999995,0.044802030456852784,331,985.0,131.07,71.14999999999999,0.07650537634408601,307,930.0,122.29999999999998,27.019999999999996
+Ordered_probit,Legacy variance — filtered search candidate,Existing $1-$5 tiers,56.17,0.05101725703905541,346,1101.0,124.69999999999999,48.43000000000001,0.0465673076923077,316,1040.0,138.37,-7.739999999999995
+Poisson,Legacy variance — filtered search candidate,Existing $1-$5 tiers,-276.98,-0.13202097235462346,557,2098.0,364.28000000000003,-246.12,-0.12673532440782698,532,1942.0,351.37,30.860000000000014
+Poisson_lasso,Legacy variance — filtered search candidate,Existing $1-$5 tiers,-278.28,-0.1318862559241706,567,2110.0,373.40000000000003,-293.29999999999995,-0.1424477901894123,561,2059.0,403.0,-15.019999999999982
+RF_classifier,Legacy variance — filtered search candidate,Existing $1-$5 tiers,157.66,0.3789903846153846,169,416.0,61.5,223.61,0.4582172131147541,191,488.0,39.0,65.95000000000002
+RF_goals,Legacy variance — filtered search candidate,Existing $1-$5 tiers,75.07,0.11007331378299119,333,682.0,59.9,75.07,0.11007331378299119,333,682.0,59.9,0.0

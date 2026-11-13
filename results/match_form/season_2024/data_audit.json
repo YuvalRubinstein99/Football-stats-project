@@ -1,0 +1,27 @@
+{
+  "history_matches": 1446,
+  "tested_matches": 768,
+  "rating_dates": [
+    "2022-09-26",
+    "2023-09-22"
+  ],
+  "min_rated_starters_per_side": 10,
+  "first_fixture": "2024-08-15",
+  "last_fixture": "2025-05-25",
+  "exclusions": {
+    "fewer_than_10_dated_starter_ratings": 678
+  },
+  "policy": "Frozen pre-season dated EA snapshots; unique name/club matches; at least ten of eleven starters rated per side, like the existing historical data minimum. All 1446 results feed within-season form before eligibility filtering. Same-day results excluded.",
+  "limitations": "FC24/FC23 ratings are stale, not contemporaneous FC25 ratings. Supplied snapshot dates are used; undated FC25 archive excluded. Actual historical lineups, not forecast lineups. Eligible subset can differ systematically from excluded matches; not a full-season sample.",
+  "input_hashes": {
+    "data/recent_seasons/games.csv": "7ad5b65d1ef4a2eccf83f95c78779333508f46741417f2771ca54fd220e56044",
+    "data/recent_seasons/lineups.csv": "9a4fe75781957d15a888e0f2b909cf3ac96731c9029b6b9d54e4121cf3e8e6b3",
+    "data/recent_seasons/ratings_fc23_fc24.csv": "36b88c82dbc281337b905b3457dbfb91c7dac3a1183dbe67595bb692c2420835",
+    "data/recent_seasons/raw/2425_E0.csv": "d0c8ce4a96d886cf60cf101f570f4a3893844226f91c7bd769eb568c49edbfa4",
+    "data/recent_seasons/raw/2425_D1.csv": "a295c58033cfe6393cbbc28f7db85671839b960c5f1153fd3678e20ad2adb92e",
+    "data/recent_seasons/raw/2425_SP1.csv": "c086e96d6a53f6e6c0fce4e35db0d1728c773b4362323da0161a34769e315a36",
+    "data/recent_seasons/raw/2425_I1.csv": "79d87a5b18771e066ac7419b7876bfd9771a68ca117a9712375d6bc9685abee3",
+    "scripts/prepare_form_2024.py": "b1abd1c41ff1d270d467800e65f39af2a842db71a317fc8da586d08b081e7d22",
+    "src/match_form.py": "38bd0d2b2fc543ac36a7f2ea032ca692226bd82fd980fee0f9ffec63315702fe"
+  }
+}

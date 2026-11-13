@@ -1,6 +1,18 @@
 {
-  "started_at": "2026-10-15T21:27:55.558130+00:00",
-  "scope": "2023/24, 2024/25, 2025/26; E0 SP1 D1 I1",
+  "started_at": "2026-10-20T10:54:13.879959+00:00",
+  "state": "completed_with_gaps",
+  "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "leagues": [
+    "E0",
+    "SP1",
+    "D1",
+    "I1"
+  ],
   "sources": [
     {
       "url": "https://www.football-data.co.uk/mmz4281/2324/E0.csv",
@@ -99,25 +111,38 @@
       "sha256": "b7a0438fb2c5bda6c9107637b4c57f840e38b25246d3785080054dac5b441c9a"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "source": "2627/E0",
+      "error": "Verified cached source unavailable: C:\\Users\\Yuval\\OneDrive\\Documents\\GitHub\\Football-stats-project\\data\\recent_seasons\\raw\\2627_E0.csv"
+    },
+    {
+      "source": "2627/SP1",
+      "error": "Verified cached source unavailable: C:\\Users\\Yuval\\OneDrive\\Documents\\GitHub\\Football-stats-project\\data\\recent_seasons\\raw\\2627_SP1.csv"
+    },
+    {
+      "source": "2627/D1",
+      "error": "Verified cached source unavailable: C:\\Users\\Yuval\\OneDrive\\Documents\\GitHub\\Football-stats-project\\data\\recent_seasons\\raw\\2627_D1.csv"
+    },
+    {
+      "source": "2627/I1",
+      "error": "Verified cached source unavailable: C:\\Users\\Yuval\\OneDrive\\Documents\\GitHub\\Football-stats-project\\data\\recent_seasons\\raw\\2627_I1.csv"
+    },
+    {
+      "source": "FC24 ratings",
+      "error": "[WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\Yuval\\\\OneDrive\\\\Documents\\\\GitHub\\\\Football-stats-project\\\\data\\\\recent_seasons\\\\ratings_fc23_fc24.tmp'"
+    }
+  ],
   "model_ready": false,
+  "results_published": false,
   "lineups": {
     "rows": 185817,
     "games": 4338,
-    "games_with_22_starters": 4337
+    "games_with_22_starters": 4337,
+    "latest_source_match": "2026-05-24",
+    "reused_extraction": false
   },
-  "ratings": {
-    "rows": 36883,
-    "versions": {
-      "24.0": 18350,
-      "23.0": 18533
-    },
-    "dates": [
-      "2022-09-26",
-      "2023-09-22"
-    ]
-  },
-  "finished_at": "2026-10-15T21:29:59.700477+00:00",
+  "finished_at": "2026-10-20T10:54:49.601045+00:00",
   "results_matches": 4338,
   "coverage": [
     {
@@ -126,7 +151,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2023,
@@ -134,7 +161,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2023,
@@ -142,7 +171,9 @@
       "matches": 306,
       "expected": 306,
       "complete": true,
-      "with_bet365": 306
+      "with_bet365": 306,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2023,
@@ -150,7 +181,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2024,
@@ -158,7 +191,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2024,
@@ -166,7 +201,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2024,
@@ -174,7 +211,9 @@
       "matches": 306,
       "expected": 306,
       "complete": true,
-      "with_bet365": 306
+      "with_bet365": 306,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2024,
@@ -182,7 +221,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2025,
@@ -190,7 +231,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2025,
@@ -198,7 +241,9 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2025,
@@ -206,7 +251,9 @@
       "matches": 306,
       "expected": 306,
       "complete": true,
-      "with_bet365": 306
+      "with_bet365": 306,
+      "season_status": "historical",
+      "source_status": "available"
     },
     {
       "season": 2025,
@@ -214,9 +261,50 @@
       "matches": 380,
       "expected": 380,
       "complete": true,
-      "with_bet365": 380
+      "with_bet365": 380,
+      "season_status": "historical",
+      "source_status": "available"
+    },
+    {
+      "season": 2026,
+      "league": "E0",
+      "matches": 0,
+      "expected": 380,
+      "complete": false,
+      "with_bet365": 0,
+      "season_status": "in_progress",
+      "source_status": "unavailable"
+    },
+    {
+      "season": 2026,
+      "league": "SP1",
+      "matches": 0,
+      "expected": 380,
+      "complete": false,
+      "with_bet365": 0,
+      "season_status": "in_progress",
+      "source_status": "unavailable"
+    },
+    {
+      "season": 2026,
+      "league": "D1",
+      "matches": 0,
+      "expected": 306,
+      "complete": false,
+      "with_bet365": 0,
+      "season_status": "in_progress",
+      "source_status": "unavailable"
+    },
+    {
+      "season": 2026,
+      "league": "I1",
+      "matches": 0,
+      "expected": 380,
+      "complete": false,
+      "with_bet365": 0,
+      "season_status": "in_progress",
+      "source_status": "unavailable"
     }
   ],
-  "note": "Sources collected separately; not yet joined or promoted to models. See collection_audit.csv and recent_ratings_audit.json. Ratings must predate each match; verify identities and snapshot publication dates.",
-  "recent_ratings_audit": "recent_ratings_audit.json"
+  "note": "Sources collected separately; identities and dated ratings still require joining before model use. See collection_audit.csv for requested seasons and source gaps."
 }

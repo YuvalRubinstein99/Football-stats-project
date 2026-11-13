@@ -1,0 +1,55 @@
+{
+  "status": "evaluated_frozen_without_refitting",
+  "model": "rf_positions_d2_leaf100__raw",
+  "threshold": 0.0,
+  "model_sha256": "193996af97e3671ec23cd377bc572fcf66cc2ff81bb22ddc797e74541ef27e07",
+  "plan_sha256": "c646a2df03e21203bb75a10d370b926b4e4b6a093377e955e252c3208c40eec9",
+  "sample_matches": 286,
+  "all_matches": 1066,
+  "metrics": [
+    {
+      "sample": "same eligible matches",
+      "model": "frozen_model",
+      "matches": 286,
+      "correct": 183,
+      "accuracy": 0.6398601398601399,
+      "log_loss": 0.6265972797278555,
+      "brier": 0.21828467740238142,
+      "auc": 0.7001087816455696,
+      "home_picks": 97,
+      "no_home_picks": 189,
+      "home_wins": 128,
+      "no_home_wins": 158
+    },
+    {
+      "sample": "same eligible matches",
+      "model": "market",
+      "matches": 286,
+      "correct": 184,
+      "accuracy": 0.6433566433566433,
+      "log_loss": 0.623714902750934,
+      "brier": 0.2176248826151987,
+      "auc": 0.7049545094936709,
+      "home_picks": 90,
+      "no_home_picks": 196,
+      "home_wins": 128,
+      "no_home_wins": 158
+    },
+    {
+      "sample": "all valid-odds matches",
+      "model": "market",
+      "matches": 1066,
+      "correct": 714,
+      "accuracy": 0.6697936210131332,
+      "log_loss": 0.5982068905412063,
+      "brier": 0.20602879299287355,
+      "auc": 0.7379191321499013,
+      "home_picks": 342,
+      "no_home_picks": 724,
+      "home_wins": 468,
+      "no_home_wins": 598
+    }
+  ],
+  "caveats": "2025-26 held out from this experiment. Earlier training seasons had prior researcher exposure. FC23/FC24 ratings are stale; actual starting lineups and an eligible subset are used. Odds capture time relative to lineup announcement is not verified.",
+  "uncertainty": "5,000 circular four-week block bootstrap samples; descriptive conditional ROI intervals, excluding fitting and selection uncertainty."
+}

@@ -1,0 +1,22 @@
+{
+  "initial_bankroll": 1000.0,
+  "methods": [
+    "Flat $1",
+    "Quarter Kelly",
+    "Robust quarter Kelly"
+  ],
+  "profile": "odds4_edge2",
+  "filters": {
+    "min_edge": 0.02,
+    "min_odds": 4.0,
+    "max_odds": 1000.0
+  },
+  "selection": "Select highest nominal expected return among H/D/A, then filter that pick. Expected gross payout probability * decimal odds must strictly exceed 1 + min_edge; quoted odds bounds are inclusive. No replacement pick if the original fails. The return filter uses nominal probabilities; robust sizing then subtracts 0.02.",
+  "sizing": "Quarter Kelly capped at 2% per match and 10% per day of opening bankroll. Flat $1 respects the same caps. Reserve all stakes before daily settlement.",
+  "limits": "Frozen earlier chronological CV model choices; no retraining or threshold optimization. Previously inspected audit/test seasons. Historical Bet365 quotes, no costs or rounding. Each simulation independently starts at $1000; profits are not additive.",
+  "hashes": {
+    "src/bankroll_backtest.py": "6d79354330409586f6ec8c623322f655a8f8c9e9429b0575bd30ab1eaecf0ad0",
+    "scripts/backtest_match_form_bankroll.py": "c20aa9826ff4dbfc496617839898a12802c243ff4e26ca1ec4cc6bc5ac0f89c6",
+    "results/match_form/predictions.csv": "c312b4a439cec8e97fe93e179dd782099c189b5a7c8b48164dab453c354a1e17"
+  }
+}

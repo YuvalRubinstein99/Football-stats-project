@@ -1,0 +1,10 @@
+{
+  "model": "RF_classifier",
+  "variant": "minimum_cv_form_allowed",
+  "stake": "Exactly $1 per placed bet; no quoted-odds filter",
+  "volatility": "Sample standard deviation (ddof=1) of daily net profit / opening bankroll. Includes every calendar date with a fixture in the matched sample, including dates on which this strategy places no bets. Excludes dates with no fixtures. Not annualized.",
+  "roi": "Net profit / total stakes; distinct from return on initial $1000 bankroll.",
+  "gross_payout": "Includes returned winning stakes; net subtracts every stake.",
+  "drawdown": "Maximum decline from previous daily closing bankroll peak, including initial $1000.",
+  "limits": "Hypothetical historical Bet365 returns, no costs; outcomes and cutoffs already inspected."
+}

@@ -1,0 +1,5 @@
+period,staking,matches,bets,skips,wins,losses,win_rate,staked,net,roi,same_bets_flat_net,home_bets,away_bets,draw_losses,max_drawdown
+historical_replay,flat,5326,0,5326,0,0,,0.0,0.0,,0.0,0,0,0,0.0
+historical_replay,tiers,5326,0,5326,0,0,,0.0,0.0,,0.0,0,0,0,0.0
+holdout_2025,flat,286,95,191,37,58,0.3894736842105263,95.0,-11.21,-0.11800000000000001,-11.21,95,0,27,14.770000000000001
+holdout_2025,tiers,286,95,191,37,58,0.3894736842105263,328.0,-42.85,-0.13064024390243903,-11.21,95,0,27,58.4

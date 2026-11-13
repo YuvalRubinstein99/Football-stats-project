@@ -1,0 +1,310 @@
+{
+  "selection": {
+    "Poisson": {
+      "candidate": "baseline",
+      "mean_log_loss": 0.9862030605959
+    },
+    "RF_goals": {
+      "candidate": "baseline",
+      "mean_log_loss": 0.974929369993971
+    }
+  },
+  "metrics": [
+    {
+      "family": "Poisson",
+      "candidate": "baseline",
+      "split": "Forward audit 2021-22",
+      "selected": true,
+      "matches": 1065,
+      "accuracy": 0.5220657276995305,
+      "log_loss": 0.9924035245210158,
+      "brier": 0.5907875096957435,
+      "auc": 0.6765627180681353,
+      "goal_mae": 0.9189854328022071
+    },
+    {
+      "family": "Poisson",
+      "candidate": "team_attributes",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5136150234741784,
+      "log_loss": 0.9909559291734511,
+      "brier": 0.5903242309381479,
+      "auc": 0.6778667980944167,
+      "goal_mae": 0.9174207520221099
+    },
+    {
+      "family": "Poisson",
+      "candidate": "positional",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5173708920187794,
+      "log_loss": 0.9908561319522307,
+      "brier": 0.5897599617912267,
+      "auc": 0.6768027365835542,
+      "goal_mae": 0.9193952796690268
+    },
+    {
+      "family": "Poisson",
+      "candidate": "attributes_and_positions",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5154929577464789,
+      "log_loss": 0.9913672221741097,
+      "brier": 0.5904938856911072,
+      "auc": 0.6747835525397216,
+      "goal_mae": 0.9215031635653966
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "baseline",
+      "split": "Forward audit 2021-22",
+      "selected": true,
+      "matches": 1065,
+      "accuracy": 0.5183098591549296,
+      "log_loss": 0.9872163334936578,
+      "brier": 0.586777638084495,
+      "auc": 0.6813263592070565,
+      "goal_mae": 0.9121239292530775
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "team_attributes",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5136150234741784,
+      "log_loss": 0.9874352954200812,
+      "brier": 0.586885370244861,
+      "auc": 0.6821604447931623,
+      "goal_mae": 0.9116131030438829
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "positional",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5173708920187794,
+      "log_loss": 0.9863262705306494,
+      "brier": 0.5860921365885129,
+      "auc": 0.684228872581571,
+      "goal_mae": 0.9113886621557258
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "attributes_and_positions",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5173708920187794,
+      "log_loss": 0.9868326060171264,
+      "brier": 0.5864357771508905,
+      "auc": 0.6839035734094159,
+      "goal_mae": 0.9110713785666855
+    },
+    {
+      "family": "Market",
+      "candidate": "normalized_odds",
+      "split": "Forward audit 2021-22",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5201877934272301,
+      "log_loss": 0.9836273843217014,
+      "brier": 0.5850537842706618,
+      "auc": 0.682453202588582
+    },
+    {
+      "family": "Poisson",
+      "candidate": "baseline",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": true,
+      "matches": 1065,
+      "accuracy": 0.5295774647887324,
+      "log_loss": 0.9862705704132496,
+      "brier": 0.5874870775574647,
+      "auc": 0.6573077391164337,
+      "goal_mae": 0.8840319773107366
+    },
+    {
+      "family": "Poisson",
+      "candidate": "team_attributes",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.532394366197183,
+      "log_loss": 0.9867121310846684,
+      "brier": 0.5879599141621544,
+      "auc": 0.6572781774029905,
+      "goal_mae": 0.8883103332985764
+    },
+    {
+      "family": "Poisson",
+      "candidate": "positional",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5183098591549296,
+      "log_loss": 0.9887459901496582,
+      "brier": 0.5895795567027791,
+      "auc": 0.6540272299822761,
+      "goal_mae": 0.8897966830074493
+    },
+    {
+      "family": "Poisson",
+      "candidate": "attributes_and_positions",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5286384976525822,
+      "log_loss": 0.9891169280547251,
+      "brier": 0.58980601828598,
+      "auc": 0.6550314665245014,
+      "goal_mae": 0.8936118407412744
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "baseline",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": true,
+      "matches": 1065,
+      "accuracy": 0.5333333333333333,
+      "log_loss": 0.9826178508525852,
+      "brier": 0.585488112773448,
+      "auc": 0.6599960240330082,
+      "goal_mae": 0.8766235112446591
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "team_attributes",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5305164319248826,
+      "log_loss": 0.9835526295488124,
+      "brier": 0.5861877344195517,
+      "auc": 0.6584193903412012,
+      "goal_mae": 0.8782466677493789
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "positional",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5352112676056338,
+      "log_loss": 0.9835419283443584,
+      "brier": 0.5861554904531895,
+      "auc": 0.6606889804099,
+      "goal_mae": 0.8793145607248806
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "attributes_and_positions",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5333333333333333,
+      "log_loss": 0.9829007539911859,
+      "brier": 0.5856691158659961,
+      "auc": 0.6613809272436847,
+      "goal_mae": 0.878486722956954
+    },
+    {
+      "family": "Market",
+      "candidate": "normalized_odds",
+      "split": "Test 2022-23 (previously inspected)",
+      "selected": false,
+      "matches": 1065,
+      "accuracy": 0.5352112676056338,
+      "log_loss": 0.9854795261471322,
+      "brier": 0.5874554610059273,
+      "auc": 0.6522169632004985
+    }
+  ],
+  "paired_differences": [
+    {
+      "family": "Poisson",
+      "candidate": "positional",
+      "comparator": "baseline",
+      "split": "Forward audit 2021-22",
+      "log_loss_difference": -0.001547392568785117,
+      "lower_95": -0.005222532659284763,
+      "upper_95": 0.0022068327039262707,
+      "week_blocks": 36
+    },
+    {
+      "family": "Poisson",
+      "candidate": "attributes_and_positions",
+      "comparator": "team_attributes",
+      "split": "Forward audit 2021-22",
+      "log_loss_difference": 0.0004112930006584854,
+      "lower_95": -0.0027200592397884217,
+      "upper_95": 0.0036630640442229068,
+      "week_blocks": 36
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "positional",
+      "comparator": "baseline",
+      "split": "Forward audit 2021-22",
+      "log_loss_difference": -0.0008900629630083494,
+      "lower_95": -0.0020298384220975157,
+      "upper_95": 0.00015496466911341369,
+      "week_blocks": 36
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "attributes_and_positions",
+      "comparator": "team_attributes",
+      "split": "Forward audit 2021-22",
+      "log_loss_difference": -0.0006026894029545528,
+      "lower_95": -0.0017582879653361746,
+      "upper_95": 0.0006336553266146618,
+      "week_blocks": 36
+    },
+    {
+      "family": "Poisson",
+      "candidate": "positional",
+      "comparator": "baseline",
+      "split": "Test 2022-23 (previously inspected)",
+      "log_loss_difference": 0.002475419736408642,
+      "lower_95": -0.001163944603525256,
+      "upper_95": 0.005964373371462034,
+      "week_blocks": 36
+    },
+    {
+      "family": "Poisson",
+      "candidate": "attributes_and_positions",
+      "comparator": "team_attributes",
+      "split": "Test 2022-23 (previously inspected)",
+      "log_loss_difference": 0.0024047969700563944,
+      "lower_95": -0.0006611018432035904,
+      "upper_95": 0.005655544506163288,
+      "week_blocks": 36
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "positional",
+      "comparator": "baseline",
+      "split": "Test 2022-23 (previously inspected)",
+      "log_loss_difference": 0.000924077491773136,
+      "lower_95": -0.00039835991450721956,
+      "upper_95": 0.0022770181639331917,
+      "week_blocks": 36
+    },
+    {
+      "family": "RF_goals",
+      "candidate": "attributes_and_positions",
+      "comparator": "team_attributes",
+      "split": "Test 2022-23 (previously inspected)",
+      "log_loss_difference": -0.0006518755576266337,
+      "lower_95": -0.0018570395540412961,
+      "upper_95": 0.0004739971928572902,
+      "week_blocks": 36
+    }
+  ]
+}

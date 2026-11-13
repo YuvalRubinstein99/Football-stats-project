@@ -1,0 +1,3 @@
+family,attribute_minus_baseline_log_loss,lower,upper,method
+RF_classifier,-0.0006277753752392227,-0.0028828215485314826,0.0015435915644258502,"2000 paired date-cluster bootstrap resamples; exploratory, not adjusted for earlier test inspection"
+RF_goals,0.0009347786962272065,-0.0004601498827440285,0.0023000273857595216,"2000 paired date-cluster bootstrap resamples; exploratory, not adjusted for earlier test inspection"

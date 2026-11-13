@@ -1,0 +1,16 @@
+{
+  "initial_bankroll": 1000.0,
+  "methods": [
+    "Flat $1",
+    "Quarter Kelly",
+    "Robust quarter Kelly"
+  ],
+  "selection": "Existing highest expected net return among H/D/A; skip nonpositive edge. These are three existing selection/staking combinations, separate from the 15-rule replay.",
+  "sizing": "Quarter Kelly capped at 2% of opening bankroll per match and 10% per calendar day. Robust quarter Kelly subtracts 0.02 from the selected outcome probability. Flat $1 also respects the same cash caps. All stakes reserved before daily settlement.",
+  "limits": "No fees, taxes, rounding or live execution. Historical Bet365 quotes. Previously inspected seasons; each row is an alternative, not additive.",
+  "hashes": {
+    "src/bankroll_backtest.py": "0c3819f5ebb910dbc13805be293188f6b2ef5bd340b89c6bf3987e9293e882dc",
+    "scripts/backtest_match_form_bankroll.py": "5969cbf405aba62a8c7a745c9702a8d36fc12f0f35a6de7a5a6981be6e0c115b",
+    "results/match_form/predictions.csv": "c312b4a439cec8e97fe93e179dd782099c189b5a7c8b48164dab453c354a1e17"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "strategies": [
+    "Most likely outcome",
+    "Expected return > 1",
+    "Log odds weighting",
+    "Square-root odds weighting",
+    "Square-root profit weighting",
+    "Legacy draw-to-home weighting",
+    "Legacy draw-to-home return weighting",
+    "Legacy market power weighting",
+    "Legacy variance score",
+    "Home win or skip (sqrt profit)",
+    "Home loses vs not (synthetic double chance)",
+    "Home loses vs not (sqrt profit)",
+    "Home wins vs not (synthetic double chance)",
+    "Home wins vs not (sqrt profit)",
+    "Legacy variance \u2014 filtered search candidate"
+  ],
+  "staking_modes": [
+    "Flat $1 original rule",
+    "Flat $1 positive edge",
+    "Existing $1-$5 tiers"
+  ],
+  "selection": "Use saved model/window/feature choices. Replay all 15 existing strategies unchanged. The filtered legacy candidate (odds 4\u20131000, expected return >2%) is applied unchanged to every model, as in previous regression backtests. No strategy tuning.",
+  "staking": "Original-rule flat: $1 for every original Bet action. Positive-edge flat: $1 only when existing tier sizing permits a bet. Tiers: existing fixed $1\u2013$5 amounts, ceil(100*positive Kelly score), capped at level five. The latter two use identical bets.",
+  "accounting": "Net = gross return minus stakes; ROI = net / total staked. Synthetic double chance splits a single total stake across 1X2 outcomes with equal payout. Daily drawdown measured from cumulative net including initial zero.",
+  "capital": "Fixed stakes, no compounding, bankroll cap, fees, taxes or minimum-stake rounding. Max daily exposure and drawdown are dollar amounts, not bankroll percentages. Each strategy is a separate counterfactual; never add strategy profits together.",
+  "limits": "Historical Bet365 prices, not live bets or Winner prices. 2021-22 audit and 2022-23 test have been previously inspected. Best-in-table results are hindsight rankings, not independently selected profitable strategies. Existing EA/odds timestamp limitations remain.",
+  "input_hashes": {
+    "results/match_form/predictions.csv": "c312b4a439cec8e97fe93e179dd782099c189b5a7c8b48164dab453c354a1e17",
+    "results/match_form/train.csv": "9f8217464b23d4fe89b0de6f245db98bd322bd23dbce0b8b2d0eafbeaebface5",
+    "results/match_form/test.csv": "af49a0656e3f3500b0083827f0ee1211e286860aa3b6edc7a76dd2ad74407db9",
+    "results/match_form/selection.json": "c7b293a4107c1e307ad41f991701566857c020c4ba5c1440a20f7e76e5b0d6b4",
+    "results/match_form/selection_plan.json": "a9794d45d4a967328948d764f7eb65b587c54d63fe154fd678d90a1a45633547",
+    "results/match_form/minimum_cv_audit.json": "40f81446eb1ad965a1d6503e70a3a7f1523c769a83a095a139062ebd32766fdd",
+    "scripts/backtest_match_form.py": "b7c83edc84319baa9d40fe6f507eac6c83d7b676361ccda84ca73ccc83ac658e",
+    "src/live_bets.py": "3d9aeff3d91a5c111c99c2ccd4d22e365043d5101f0925886b28507fa042ae2f",
+    "src/stake_levels.py": "476618bcdf4647fc5daaba7002da6f0c37f46c273d7613ba5783cd0fff193c58"
+  }
+}

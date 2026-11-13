@@ -1,0 +1,30 @@
+{
+  "objective": "binary:logistic",
+  "eval_metric": "logloss",
+  "tree_method": "hist",
+  "learning_rate": 0.04,
+  "min_child_weight": 25,
+  "reg_lambda": 10,
+  "subsample": 0.8,
+  "colsample_bytree": 0.85,
+  "random_state": 20261020,
+  "n_jobs": 4,
+  "max_depth": 1,
+  "n_estimators": 160,
+  "features": [
+    "market_logit",
+    "market_overround",
+    "overall_gap",
+    "gd_form_gap",
+    "points_form_gap",
+    "matchweek",
+    "home_attack_defense",
+    "away_attack_defense",
+    "mid_passing_gap",
+    "mid_defending_gap",
+    "keeper_gap",
+    "minimum_position_coverage"
+  ],
+  "xgboost_version": "3.4.1",
+  "selection": "Minimum mean seasonal log loss, 2018\u201321 forward folds"
+}

@@ -1,0 +1,7 @@
+{
+  "metric": "Test binary log loss: new minus old; negative favors new",
+  "difference": -0.000766738113110128,
+  "lower_95": -0.004413543801305419,
+  "upper_95": 0.0033660675075809932,
+  "limitation": "Descriptive paired interval; does not account for model-selection exposure to this test season."
+}

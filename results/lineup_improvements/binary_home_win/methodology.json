@@ -1,0 +1,11 @@
+{
+  "rule": "Choose home when P(home)>=0.5, otherwise not-home. No new model training, threshold optimization, odds weighting or expected-return filter. Flat one unit per fixture.",
+  "away_or_draw": "Synthetic double chance: odds=1/(1/draw_odds+1/away_odds); split the one-unit stake as effective_odds/draw_odds and effective_odds/away_odds. Either draw or away wins the covered outcome. These are not quoted double-chance prices. Assumes simultaneous recorded odds and fractional stakes, with no fees or rounding.",
+  "straight_away": "Use the same binary selection but place a straight away-win bet on not-home picks. Draws lose. P(away)+P(draw) is not the probability that this straight bet wins.",
+  "caveat": "Previously inspected historical audit/test matches. Binary correctness is distinct from settled bet wins and profit. No actual wagers placed.",
+  "input_hashes": {
+    "results/lineup_improvements/predictions.csv": "c228f01591740a9c1bb7e18fb5dc8618a3c7cecb606dcaaee5b5f56291b4b1db",
+    "results/lineup_improvements/train_features.csv": "79449cd120af198ac696a54e1027ae672ed2b5ff6829f9ce980502dfc21649cc",
+    "results/lineup_improvements/test_features.csv": "dbd6c8dad8dfc3d3f1eb6fe16b953232671a4b412b34da3caf19bd4f1ecdbf0a"
+  }
+}

@@ -1,0 +1,5 @@
+model,selected,original_features,all_features,selected_features,selected_encoded_features,original_test_log_loss,all_attributes_test_log_loss,selected_test_log_loss,retained_features
+Linear,odds_overall_form,32,68,13,13,0.9929541778249633,0.9937320829308649,0.9884956991395935,"B365H, B365D, B365A, HomePlayer_Overall_mean, AwayPlayer_Overall_mean, home_GD_prior, home_Points_prior, home_GD_form, home_Points_form, away_GD_prior, away_Points_prior, away_GD_form, away_Points_form"
+Poisson,odds_overall_form,32,68,13,13,0.9862705704132496,0.9867121108772441,0.9877553857818132,"B365H, B365D, B365A, HomePlayer_Overall_mean, AwayPlayer_Overall_mean, home_GD_prior, home_Points_prior, home_GD_form, home_Points_form, away_GD_prior, away_Points_prior, away_GD_form, away_Points_form"
+Ordered_logit,odds_only,32,68,3,3,0.9959897211581815,1.0003939081358906,0.9889684651991713,"B365H, B365D, B365A"
+Ordered_probit,odds_defending,32,68,4,5,0.9972800840598744,1.0018234872798546,0.9899817170555871,"B365H, B365D, B365A, defending_advantage"

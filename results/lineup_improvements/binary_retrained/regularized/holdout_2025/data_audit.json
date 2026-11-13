@@ -1,0 +1,36 @@
+{
+  "season": 2025,
+  "matches": 1066,
+  "eligible": 286,
+  "rating_dates": [
+    "2022-09-26",
+    "2023-09-22"
+  ],
+  "first_fixture": "2025-08-15",
+  "last_fixture": "2026-05-24",
+  "frozen_model_sha256": "193996af97e3671ec23cd377bc572fcf66cc2ff81bb22ddc797e74541ef27e07",
+  "policy": {
+    "season": 2025,
+    "leagues": [
+      "D1",
+      "I1",
+      "SP1"
+    ],
+    "minimum_rated_starters": 10,
+    "policy": "All valid-odds fixtures get the market benchmark. Model comparison uses complete unique lineups with >=10 dated ratings per side; same eligible rows for both. Use only FC23/FC24 snapshots dated before season start. Existing snapshots are stale. No model or threshold revisions after evaluation. Actual historical starters, not forecast lineups."
+  },
+  "exclusions": {
+    "fewer_than_10_dated_ratings": 634,
+    "missing_or_ambiguous_fixture": 146
+  },
+  "limitation": "2025-26 held out from this experiment. Earlier training seasons had prior researcher exposure. FC23/FC24 ratings are stale; actual starting lineups and an eligible subset are used. Odds capture time relative to lineup announcement is not verified.",
+  "input_hashes": {
+    "data\\recent_seasons\\games.csv": "7ad5b65d1ef4a2eccf83f95c78779333508f46741417f2771ca54fd220e56044",
+    "data\\recent_seasons\\lineups.csv": "9a4fe75781957d15a888e0f2b909cf3ac96731c9029b6b9d54e4121cf3e8e6b3",
+    "data\\recent_seasons\\ratings_fc23_fc24.csv": "36b88c82dbc281337b905b3457dbfb91c7dac3a1183dbe67595bb692c2420835",
+    "data\\recent_seasons\\raw\\2526_D1.csv": "618301a4b39918225a8ccc57f0f839d675e1abd92fa3a3ccd9a67acd7c79dd7f",
+    "data\\recent_seasons\\raw\\2526_I1.csv": "709ae279617d16af226312bcceac941e71241745ddaf950bdac2b83afad4fcbb",
+    "data\\recent_seasons\\raw\\2526_SP1.csv": "4ca2e285f3ee0702f6bc55fcaa4f5a15cb3aef6220735a1d15398131e21d63f5"
+  },
+  "output_sha256": "2ae23ff1fc64632a25e4ede3ffbcc59154a98af8ccf6eeef0cafc4a5faad7320"
+}

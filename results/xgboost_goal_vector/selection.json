@@ -1,0 +1,29 @@
+{
+  "objective": "reg:squarederror",
+  "tree_method": "hist",
+  "multi_strategy": "multi_output_tree",
+  "learning_rate": 0.04,
+  "min_child_weight": 30,
+  "reg_lambda": 10,
+  "subsample": 0.8,
+  "colsample_bytree": 0.85,
+  "random_state": 20261007,
+  "n_jobs": 4,
+  "max_depth": 2,
+  "n_estimators": 160,
+  "xgboost_version": "3.4.1",
+  "selection": "Mean three-way outcome log loss on 2018\u201321 expanding season folds",
+  "targets": [
+    "home_score",
+    "away_score"
+  ],
+  "probability_order": [
+    "Home",
+    "Draw",
+    "Away"
+  ],
+  "data_hashes": {
+    "train.csv": "87916289a3b918da6faeadc25dc8c37ebfa5de8964233b4e64419cbed2ea4711",
+    "test.csv": "3b08ed2b56ed814babf09e629037a43f63148a80f1cef94e74898f7c5ebbd39b"
+  }
+}

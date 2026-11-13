@@ -1,0 +1,13 @@
+{
+  "input_hashes": {
+    "results/lineup_improvements/train.csv": "eefafcf07b0893e51facbfe930fd4194fa6520ccbdd2b99d65b2a245c6f5b19c",
+    "results/lineup_improvements/test.csv": "a610a278e03940523c72d8c03e81433dfcd1dc6b2f3442359b4cba7ccc6fa1b2",
+    "results/lineup_improvements/lineups.json": "8d74f7110a4f83363e378157b6355c59bdffeb0a7e567c34654d438dd1bf3f6c",
+    "src/lineup_history.py": "dd532bc66042c709213ac75e5fbf2dfd7792b3a01a44357dfd7351afd0c11a37",
+    "scripts/prepare_dynamic_lineups.py": "54c0ca9120175db89ecea1d08b546d22a18972e16aca2b6fc9e602a7bf85bf91"
+  },
+  "lineup_change_rule": "Current unit strengths minus means from at most five prior club lineups within 365 days, at least three valid observations. Same-day rows never update one another.",
+  "dynamic_rule": "Monthly penalized Poisson player attack/defense corrections to FIFA priors, using only earlier calendar months. Starter averages, >=8 matched per team. FIFA prior 0.02*(overall-70), prior corrections centered at zero with L2 alpha=1.0. Results weighted with 365-day half-life. League-specific home/away intercepts. New players have zero correction.",
+  "evaluation": "Sequential pre-match evaluation: earlier audit/test outcomes may update later-month player features. Outcome prediction model weights are fixed for each evaluation season.",
+  "limitation": "Starter-based approximation; no substitution minutes, red-card timing or on-pitch segments. Not a reproduction of published adjusted plus-minus. FIFA snapshot dates unverified."
+}

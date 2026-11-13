@@ -1,0 +1,202 @@
+[
+  {
+    "season": 2018,
+    "model": "market__sigmoid",
+    "validation_log_loss": 0.5984101648493124,
+    "threshold": null,
+    "selection_seasons": [
+      2016,
+      2017
+    ],
+    "threshold_search": [
+      {
+        "threshold": 0.0,
+        "bets": 236,
+        "net": -10.829999999999997,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.02,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.05,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.1,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      }
+    ]
+  },
+  {
+    "season": 2019,
+    "model": "market__raw",
+    "validation_log_loss": 0.6021424996340708,
+    "threshold": null,
+    "selection_seasons": [
+      2017,
+      2018
+    ],
+    "threshold_search": [
+      {
+        "threshold": 0.0,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.02,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.05,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.1,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      }
+    ]
+  },
+  {
+    "season": 2020,
+    "model": "market__raw",
+    "validation_log_loss": 0.6082548204067326,
+    "threshold": null,
+    "selection_seasons": [
+      2018,
+      2019
+    ],
+    "threshold_search": [
+      {
+        "threshold": 0.0,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.02,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.05,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.1,
+        "bets": 0,
+        "net": 0.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      }
+    ]
+  },
+  {
+    "season": 2021,
+    "model": "logit_core_C0.1__sigmoid",
+    "validation_log_loss": 0.5978786140668643,
+    "threshold": null,
+    "selection_seasons": [
+      2019,
+      2020
+    ],
+    "threshold_search": [
+      {
+        "threshold": 0.0,
+        "bets": 53,
+        "net": 0.6300000000000008,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.02,
+        "bets": 20,
+        "net": 0.2499999999999991,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.05,
+        "bets": 7,
+        "net": 6.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.1,
+        "bets": 1,
+        "net": 12.0,
+        "positive_both_seasons": false,
+        "eligible": false
+      }
+    ]
+  },
+  {
+    "season": 2022,
+    "model": "rf_positions_d2_leaf100__sigmoid",
+    "validation_log_loss": 0.596679583249436,
+    "threshold": null,
+    "selection_seasons": [
+      2020,
+      2021
+    ],
+    "threshold_search": [
+      {
+        "threshold": 0.0,
+        "bets": 330,
+        "net": 0.17000000000000526,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.02,
+        "bets": 238,
+        "net": -7.679999999999998,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.05,
+        "bets": 189,
+        "net": 5.309999999999999,
+        "positive_both_seasons": false,
+        "eligible": false
+      },
+      {
+        "threshold": 0.1,
+        "bets": 129,
+        "net": 1.4499999999999993,
+        "positive_both_seasons": false,
+        "eligible": false
+      }
+    ]
+  }
+]

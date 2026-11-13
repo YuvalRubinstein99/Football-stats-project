@@ -1,0 +1,16 @@
+{
+  "rule": "Only straight home/away bets; draws remain in every evaluated sample and lose either bet. No outcome-based exclusions. One bet at most per fixture; ties choose home.",
+  "probability": "The models predict P(home win) and P(draw or away win). H/A weighting assigns the latter to the away selection as a heuristic score. It is NOT a calibrated away-win probability. Away expected-return filters and stake scores are therefore proxies. Home-only expected-return rules use the genuine model probability of a paying outcome.",
+  "adaptations": "Synthetic double-chance rules omitted. Draw-to-home rules duplicate probability and return-score rules when no draw selection exists. Home-only sqrt rule compares against straight-away proxy odds, not the old synthetic draw/away hedge. Legacy market power uses normalized three-way odds but only home/away can be selected. Fixed legacy odds>=4 and score-edge>2% filter retained as an exploratory heuristic, not claimed validated for binary models.",
+  "stakes": "Flat: one unit per strategy selection. Tiers: existing positive-score gate, score=(probability_score*odds-1)/(odds-1); each 1 percentage point advances one tier, capped at five, stakes 1..5 units. Non-positive scores skip. Same-bets flat profit also shown.",
+  "selection": "Model candidates selected on earlier validation seasons; no strategies or thresholds selected or optimized using these audit/test returns. All saved candidate summaries exported; primary table shows the two validation-selected models.",
+  "caveat": "Previously inspected data, recorded Bet365 odds, no fees/slippage or stake rounding, no bankroll constraints or compounding. Historical simulation only.",
+  "input_hashes": {
+    "results/lineup_improvements/binary_retrained/predictions.csv": "5b3851a72ddb92e184122e58335447d039c55dabf041fc379f99d9cdb2c2100e",
+    "results/lineup_improvements/binary_retrained/selection.json": "0d27dc870501d52bb4de96724432a1b4ff09b160af4dfd73781af131beb3260f",
+    "results/lineup_improvements/train_features.csv": "79449cd120af198ac696a54e1027ae672ed2b5ff6829f9ce980502dfc21649cc",
+    "results/lineup_improvements/test_features.csv": "dbd6c8dad8dfc3d3f1eb6fe16b953232671a4b412b34da3caf19bd4f1ecdbf0a",
+    "src/binary_betting.py": "4567500db3b1151ce287a33e11f90959bfc3cce0eee0dbbef58ffb2cc13d8212",
+    "scripts/backtest_binary_strategies.py": "ecfda1efb0b0e744e2983aefd3ad410152de31b97619ae0b2c9b699bf456ab29"
+  }
+}

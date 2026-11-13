@@ -1,0 +1,24 @@
+{
+  "cutoffs": [
+    0.0,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.1
+  ],
+  "initial_bankroll": 1000.0,
+  "methods": [
+    "Flat $1",
+    "Quarter Kelly",
+    "Robust quarter Kelly"
+  ],
+  "selection": "Highest nominal expected-return H/D/A selection, then require probability * decimal odds > 1 + cutoff. No quoted-odds restriction. No substitution when the selected outcome fails.",
+  "sizing": "Flat $1, quarter Kelly, robust quarter Kelly with a 0.02 probability reduction. Nominal return gate before robust sizing. 2% match / 10% daily cash caps; same-day stakes reserved before settlement. Independent $1000 per simulation.",
+  "interpretation": "Sensitivity comparison only; does not select or change the active 2% cutoff. Frozen chronological CV choices, same fixtures, no refitting. Previously inspected 2021-22 audit and 2022-23 test. Historical Bet365 odds; no fees or rounding. Best realized cutoff is a hindsight result.",
+  "hashes": {
+    "scripts/compare_return_cutoffs.py": "8fd5885655ee0d4b9316123a1e123b340226628625318e6ce9e581baeb5645e5",
+    "src/bankroll_backtest.py": "6d79354330409586f6ec8c623322f655a8f8c9e9429b0575bd30ab1eaecf0ad0",
+    "results/match_form/predictions.csv": "c312b4a439cec8e97fe93e179dd782099c189b5a7c8b48164dab453c354a1e17"
+  }
+}

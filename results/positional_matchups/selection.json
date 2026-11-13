@@ -1,0 +1,10 @@
+{
+  "Poisson": {
+    "candidate": "baseline",
+    "mean_log_loss": 0.9862030605959
+  },
+  "RF_goals": {
+    "candidate": "baseline",
+    "mean_log_loss": 0.974929369993971
+  }
+}

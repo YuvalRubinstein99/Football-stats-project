@@ -1,0 +1,345 @@
+{
+  "comparison": [
+    {
+      "model": "RF_classifier",
+      "without_form_log_loss": 0.9794664966464858,
+      "form_allowed_log_loss": 0.9794664966464858,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9769605959152781,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "RF_goals",
+      "without_form_log_loss": 0.9797883340062173,
+      "form_allowed_log_loss": 0.9797883340062173,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9797883340062173,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "Linear",
+      "without_form_log_loss": 0.9878380681432495,
+      "form_allowed_log_loss": 0.9878380681432495,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9826745759747402,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "Poisson",
+      "without_form_log_loss": 0.9876147825080592,
+      "form_allowed_log_loss": 0.9876147825080592,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9819824428127545,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "Ordered_logit",
+      "without_form_log_loss": 0.9841029501838512,
+      "form_allowed_log_loss": 0.9841029501838512,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9805622222234509,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "Ordered_probit",
+      "without_form_log_loss": 0.984790616913982,
+      "form_allowed_log_loss": 0.984790616913982,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.9808470759430697,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    },
+    {
+      "model": "Poisson_lasso",
+      "without_form_log_loss": 0.9877069329033588,
+      "form_allowed_log_loss": 0.9877069329033588,
+      "difference": 0.0,
+      "minimum_cv_form_allowed_log_loss": 0.983673355536323,
+      "selected_without": "odds",
+      "selected_with": "odds",
+      "without_features": 3,
+      "with_features": 3,
+      "selected_columns": "B365H, B365D, B365A"
+    }
+  ],
+  "paired_differences": [
+    {
+      "model": "RF_classifier",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "RF_goals",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "Linear",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "Poisson",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "Ordered_logit",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "Ordered_probit",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    {
+      "model": "Poisson_lasso",
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    }
+  ],
+  "selection": {
+    "RF_classifier": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact",
+        "cv_log_loss": 0.9712984771166449,
+        "best_mean_log_loss": 0.9700518827464365,
+        "threshold": 0.9779273128198619
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_gaps_5",
+        "cv_log_loss": 0.9712984771166449,
+        "best_mean_log_loss": 0.9699634578940687,
+        "threshold": 0.9779717843750078
+      }
+    },
+    "RF_goals": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "odds",
+        "cv_log_loss": 0.9712574070927724,
+        "best_mean_log_loss": 0.9712574070927724,
+        "threshold": 0.9786855678309045
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "odds",
+        "cv_log_loss": 0.9712574070927724,
+        "best_mean_log_loss": 0.9712574070927724,
+        "threshold": 0.9786855678309045
+      }
+    },
+    "Linear": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact",
+        "cv_log_loss": 0.983855508259253,
+        "best_mean_log_loss": 0.9765702630423069,
+        "threshold": 0.984708271759239
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_gaps_10",
+        "cv_log_loss": 0.983855508259253,
+        "best_mean_log_loss": 0.9760013029276436,
+        "threshold": 0.9839047442844102
+      }
+    },
+    "Poisson": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact",
+        "cv_log_loss": 0.9804522092249114,
+        "best_mean_log_loss": 0.9765468608727771,
+        "threshold": 0.9843401661035195
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_gaps_10",
+        "cv_log_loss": 0.9804522092249114,
+        "best_mean_log_loss": 0.9760374003419833,
+        "threshold": 0.9835273424207588
+      }
+    },
+    "Ordered_logit": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact",
+        "cv_log_loss": 0.9762710773110151,
+        "best_mean_log_loss": 0.9744342344412625,
+        "threshold": 0.9829894291973914
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_gaps_10",
+        "cv_log_loss": 0.9762710773110151,
+        "best_mean_log_loss": 0.9741527629959384,
+        "threshold": 0.9824921570335338
+      }
+    },
+    "Ordered_probit": {
+      "selected_without_form": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact",
+        "cv_log_loss": 0.9789760669194009,
+        "best_mean_log_loss": 0.976260775988329,
+        "threshold": 0.9847469340404957
+      },
+      "selected_form_allowed": {
+        "config": "odds",
+        "candidate": "odds",
+        "alpha": null,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_gaps_10",
+        "cv_log_loss": 0.9789760669194009,
+        "best_mean_log_loss": 0.9758668560205228,
+        "threshold": 0.9841858797211783
+      }
+    },
+    "Poisson_lasso": {
+      "selected_without_form": {
+        "config": "odds@0.001",
+        "candidate": "odds",
+        "alpha": 0.001,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact@0.001",
+        "cv_log_loss": 0.9802210120445155,
+        "best_mean_log_loss": 0.9763721484996485,
+        "threshold": 0.984160555651594
+      },
+      "selected_form_allowed": {
+        "config": "odds@0.001",
+        "candidate": "odds",
+        "alpha": 0.001,
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "best_mean_config": "compact_all_3@0.001",
+        "cv_log_loss": 0.9802210120445155,
+        "best_mean_log_loss": 0.9761174304614317,
+        "threshold": 0.9838493139705843
+      }
+    }
+  },
+  "experiment_signature": "4dd7b7ab3a96ef0b79bc37f75e664b573976df0c51202973b028703e0e2ae7da"
+}

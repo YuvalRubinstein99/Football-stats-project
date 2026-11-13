@@ -1,0 +1,8 @@
+model,difference,ci_low,ci_high
+RF_classifier,0.0,0.0,0.0
+RF_goals,0.0,0.0,0.0
+Linear,0.0,0.0,0.0
+Poisson,0.0,0.0,0.0
+Ordered_logit,0.0,0.0,0.0
+Ordered_probit,0.0,0.0,0.0
+Poisson_lasso,0.0,0.0,0.0

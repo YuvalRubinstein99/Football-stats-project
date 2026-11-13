@@ -1,0 +1,13 @@
+{
+  "simulations": 504,
+  "ledger_rows": 728280,
+  "checks": [
+    "fixture alignment",
+    "threshold eligibility",
+    "monotonic bet counts",
+    "daily exposure",
+    "settlement accounting",
+    "drawdown",
+    "saved 0% and 2% result reproduction"
+  ]
+}

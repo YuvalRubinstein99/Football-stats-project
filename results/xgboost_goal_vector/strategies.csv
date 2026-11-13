@@ -1,0 +1,113 @@
+model,split,strategy,staking,bets,staked,net,roi
+RF_vector,train,Most likely outcome,flat,11561,11561.0,-442.36,-0.03826312602716028
+RF_vector,train,Most likely outcome,tiers,1760,4278.0,826.5000000000001,0.19319775596072933
+RF_vector,train,Expected return > 1,flat,8900,8900.0,530.42,0.05959775280898876
+RF_vector,train,Expected return > 1,tiers,8900,24725.0,2992.76,0.1210418604651163
+RF_vector,train,Log odds weighting,flat,11561,11561.0,-68.83999999999996,-0.005954502205691546
+RF_vector,train,Log odds weighting,tiers,7738,21724.0,2708.6200000000003,0.12468329957650526
+RF_vector,train,Square-root odds weighting,flat,11561,11561.0,-216.43999999999994,-0.018721563878557213
+RF_vector,train,Square-root odds weighting,tiers,2117,5586.0,1329.76,0.23805227354099534
+RF_vector,train,Square-root profit weighting,flat,11561,11561.0,520.21,0.04499697258022663
+RF_vector,train,Square-root profit weighting,tiers,5699,17470.0,3052.13,0.17470692615912994
+RF_vector,train,Legacy draw-to-home weighting,flat,11561,11561.0,-456.62999999999994,-0.03949744831761958
+RF_vector,train,Legacy draw-to-home weighting,tiers,2311,5867.0,1072.7800000000002,0.182849838077382
+RF_vector,train,Legacy draw-to-home return weighting,flat,11561,11561.0,-332.80999999999995,-0.02878730213649338
+RF_vector,train,Legacy draw-to-home return weighting,tiers,4326,11659.0,2199.75,0.18867398576207223
+RF_vector,train,Legacy market power weighting,flat,11561,11561.0,-939.3199999999999,-0.08124902690078713
+RF_vector,train,Legacy market power weighting,tiers,2585,5325.0,422.0,0.07924882629107981
+RF_vector,train,Legacy variance score,flat,11561,11561.0,-456.91999999999996,-0.0395225326528847
+RF_vector,train,Legacy variance score,tiers,6958,20060.0,2157.6099999999997,0.10755782652043867
+RF_vector,train,Home win or skip (sqrt profit),flat,7015,7015.0,-27.49999999999997,-0.0039201710620099745
+RF_vector,train,Home win or skip (sqrt profit),tiers,3429,9088.0,1487.25,0.16364986795774647
+RF_vector,train,Home loses vs not (synthetic double chance),flat,11561,11561.0,-338.5591546790497,-0.02928459083808059
+RF_vector,train,Home loses vs not (synthetic double chance),tiers,332,987.0,178.99997662734128,0.18135762576225053
+RF_vector,train,Home loses vs not (sqrt profit),flat,11561,11561.0,-312.0613749207008,-0.026992593626909506
+RF_vector,train,Home loses vs not (sqrt profit),tiers,6392,18373.0,1698.2610492220304,0.0924324306984178
+RF_vector,train,Home wins vs not (synthetic double chance),flat,11561,11561.0,-275.6615803770486,-0.0238440948341016
+RF_vector,train,Home wins vs not (synthetic double chance),tiers,1216,3152.0,615.0827651523512,0.1951404711777764
+RF_vector,train,Home wins vs not (sqrt profit),flat,11549,11549.0,66.81968173805697,0.005785754761282966
+RF_vector,train,Home wins vs not (sqrt profit),tiers,5313,14238.0,2219.5273634617697,0.15588757995938823
+XGBoost,train,Most likely outcome,flat,11561,11561.0,-458.32,-0.03964362944381974
+XGBoost,train,Most likely outcome,tiers,1608,3883.0,405.01,0.10430337368014421
+XGBoost,train,Expected return > 1,flat,8518,8518.0,147.54,0.017320967363230803
+XGBoost,train,Expected return > 1,tiers,8518,22332.0,1348.29,0.06037479849543256
+XGBoost,train,Log odds weighting,flat,11561,11561.0,-267.2799999999999,-0.023119107343655385
+XGBoost,train,Log odds weighting,tiers,7372,19588.0,1343.6000000000001,0.06859301613232592
+XGBoost,train,Square-root odds weighting,flat,11561,11561.0,-359.11999999999995,-0.03106305682899403
+XGBoost,train,Square-root odds weighting,tiers,1987,5191.0,495.3300000000001,0.09542092082450397
+XGBoost,train,Square-root profit weighting,flat,11561,11561.0,211.77000000000007,0.018317619583081052
+XGBoost,train,Square-root profit weighting,tiers,4807,14112.0,1432.38,0.10150085034013606
+XGBoost,train,Legacy draw-to-home weighting,flat,11561,11561.0,-536.6199999999999,-0.04641639996540091
+XGBoost,train,Legacy draw-to-home weighting,tiers,1760,3974.0,284.24,0.07152491192752894
+XGBoost,train,Legacy draw-to-home return weighting,flat,11561,11561.0,-455.59999999999997,-0.039408355678574515
+XGBoost,train,Legacy draw-to-home return weighting,tiers,3752,9788.0,979.4300000000001,0.10006436452799347
+XGBoost,train,Legacy market power weighting,flat,11561,11561.0,-939.3199999999999,-0.08124902690078713
+XGBoost,train,Legacy market power weighting,tiers,2184,4482.0,93.85000000000004,0.020939312806782694
+XGBoost,train,Legacy variance score,flat,11561,11561.0,-480.60999999999996,-0.0415716633509212
+XGBoost,train,Legacy variance score,tiers,6676,18084.0,989.6999999999998,0.05472793629727935
+XGBoost,train,Home win or skip (sqrt profit),flat,6927,6927.0,-55.89999999999997,-0.008069871517251331
+XGBoost,train,Home win or skip (sqrt profit),tiers,2974,7507.0,720.9300000000001,0.09603436792327162
+XGBoost,train,Home loses vs not (synthetic double chance),flat,11561,11561.0,-386.1061860875916,-0.033397300068124865
+XGBoost,train,Home loses vs not (synthetic double chance),tiers,210,594.0,48.001994807258754,0.08081143906945919
+XGBoost,train,Home loses vs not (sqrt profit),flat,11561,11561.0,-578.7287760391321,-0.05005871257150178
+XGBoost,train,Home loses vs not (sqrt profit),tiers,6283,16802.0,719.5618846190332,0.042825966231343486
+XGBoost,train,Home wins vs not (synthetic double chance),flat,11561,11561.0,-304.6181369331189,-0.026348770602293823
+XGBoost,train,Home wins vs not (synthetic double chance),tiers,951,2373.0,215.0540188907855,0.09062537669228213
+XGBoost,train,Home wins vs not (sqrt profit),flat,11549,11549.0,-5.947924340802199,-0.0005150163945624902
+XGBoost,train,Home wins vs not (sqrt profit),tiers,4430,11442.0,987.4664252524607,0.08630190746831504
+RF_vector,test,Most likely outcome,flat,1447,1447.0,-17.730000000000015,-0.012252937111264696
+RF_vector,test,Most likely outcome,tiers,276,687.0,33.14999999999999,0.048253275109170296
+RF_vector,test,Expected return > 1,flat,1012,1012.0,21.01,0.02076086956521739
+RF_vector,test,Expected return > 1,tiers,1012,2652.0,205.77999999999997,0.0775942684766214
+RF_vector,test,Log odds weighting,flat,1447,1447.0,-37.78999999999999,-0.026116102280580505
+RF_vector,test,Log odds weighting,tiers,910,2422.0,173.76,0.0717423616845582
+RF_vector,test,Square-root odds weighting,flat,1447,1447.0,-5.810000000000002,-0.004015203870076021
+RF_vector,test,Square-root odds weighting,tiers,317,845.0,68.99,0.08164497041420117
+RF_vector,test,Square-root profit weighting,flat,1447,1447.0,21.85,0.015100207325501037
+RF_vector,test,Square-root profit weighting,tiers,687,2012.0,110.64,0.054990059642147114
+RF_vector,test,Legacy draw-to-home weighting,flat,1447,1447.0,-24.58,-0.016986869384934346
+RF_vector,test,Legacy draw-to-home weighting,tiers,295,769.0,-34.78,-0.04522756827048115
+RF_vector,test,Legacy draw-to-home return weighting,flat,1447,1447.0,16.440000000000005,0.011361437456807191
+RF_vector,test,Legacy draw-to-home return weighting,tiers,456,1199.0,68.79000000000002,0.057372810675562984
+RF_vector,test,Legacy market power weighting,flat,1447,1447.0,-104.29,-0.07207325501036628
+RF_vector,test,Legacy market power weighting,tiers,318,674.0,140.23000000000002,0.2080563798219585
+RF_vector,test,Legacy variance score,flat,1447,1447.0,-101.31,-0.0700138217000691
+RF_vector,test,Legacy variance score,tiers,706,1920.0,109.10000000000002,0.05682291666666668
+RF_vector,test,Home win or skip (sqrt profit),flat,942,942.0,84.37999999999998,0.08957537154989383
+RF_vector,test,Home win or skip (sqrt profit),tiers,389,1018.0,115.79000000000002,0.11374263261296662
+RF_vector,test,Home loses vs not (synthetic double chance),flat,1447,1447.0,-62.615481493088865,-0.04327262024401442
+RF_vector,test,Home loses vs not (synthetic double chance),tiers,50,142.0,-17.482950271575824,-0.1231193681096889
+RF_vector,test,Home loses vs not (sqrt profit),flat,1447,1447.0,-188.92791770575803,-0.13056525066051006
+RF_vector,test,Home loses vs not (sqrt profit),tiers,700,1854.0,-13.578494670298138,-0.007323891407927798
+RF_vector,test,Home wins vs not (synthetic double chance),flat,1447,1447.0,-75.31675947952724,-0.05205028298516049
+RF_vector,test,Home wins vs not (synthetic double chance),tiers,145,373.0,-4.844244848789659,-0.012987251605334206
+RF_vector,test,Home wins vs not (sqrt profit),flat,1447,1447.0,78.44483165141904,0.05421204675288116
+RF_vector,test,Home wins vs not (sqrt profit),tiers,556,1485.0,136.22315547401413,0.09173276462896575
+XGBoost,test,Most likely outcome,flat,1447,1447.0,-35.470000000000006,-0.02451278507256393
+XGBoost,test,Most likely outcome,tiers,205,498.0,22.910000000000004,0.04600401606425704
+XGBoost,test,Expected return > 1,flat,971,971.0,-36.08,-0.03715756951596292
+XGBoost,test,Expected return > 1,tiers,971,2298.0,252.28000000000006,0.10978241949521325
+XGBoost,test,Log odds weighting,flat,1447,1447.0,-58.09999999999998,-0.04015203870076018
+XGBoost,test,Log odds weighting,tiers,848,2076.0,236.26000000000002,0.1138053949903661
+XGBoost,test,Square-root odds weighting,flat,1447,1447.0,-24.610000000000007,-0.017007601935038013
+XGBoost,test,Square-root odds weighting,tiers,264,683.0,35.400000000000006,0.05183016105417278
+XGBoost,test,Square-root profit weighting,flat,1447,1447.0,67.36,0.04655148583275743
+XGBoost,test,Square-root profit weighting,tiers,552,1516.0,240.64000000000004,0.1587335092348285
+XGBoost,test,Legacy draw-to-home weighting,flat,1447,1447.0,-15.910000000000004,-0.010995162404975814
+XGBoost,test,Legacy draw-to-home weighting,tiers,219,498.0,-2.7300000000000004,-0.005481927710843375
+XGBoost,test,Legacy draw-to-home return weighting,flat,1447,1447.0,43.66000000000001,0.030172771250863865
+XGBoost,test,Legacy draw-to-home return weighting,tiers,395,958.0,242.56000000000003,0.2531941544885178
+XGBoost,test,Legacy market power weighting,flat,1447,1447.0,-104.29,-0.07207325501036628
+XGBoost,test,Legacy market power weighting,tiers,271,565.0,106.13000000000001,0.18784070796460178
+XGBoost,test,Legacy variance score,flat,1447,1447.0,-119.89,-0.08285418106427091
+XGBoost,test,Legacy variance score,tiers,712,1713.0,217.41,0.12691768826619965
+XGBoost,test,Home win or skip (sqrt profit),flat,940,940.0,79.33999999999999,0.08440425531914893
+XGBoost,test,Home win or skip (sqrt profit),tiers,343,826.0,267.56,0.32392251815980627
+XGBoost,test,Home loses vs not (synthetic double chance),flat,1447,1447.0,-57.27258345773036,-0.0395802235367867
+XGBoost,test,Home loses vs not (synthetic double chance),tiers,27,68.0,-19.786940309535318,-0.29098441631669586
+XGBoost,test,Home loses vs not (sqrt profit),flat,1447,1447.0,-185.46576663527532,-0.1281726099760023
+XGBoost,test,Home loses vs not (sqrt profit),tiers,678,1594.0,-33.51157917438435,-0.02102357539170913
+XGBoost,test,Home wins vs not (synthetic double chance),flat,1447,1447.0,-81.45967808667078,-0.05629556191200468
+XGBoost,test,Home wins vs not (synthetic double chance),tiers,95,224.0,17.998324574263386,0.08034966327796154
+XGBoost,test,Home wins vs not (sqrt profit),flat,1447,1447.0,66.14095367492115,0.04570902119897799
+XGBoost,test,Home wins vs not (sqrt profit),tiers,467,1146.0,277.16401067222455,0.24185341245394812

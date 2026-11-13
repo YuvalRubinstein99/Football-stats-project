@@ -1,0 +1,679 @@
+source_row,date,league,home,away,reason
+0,2024-08-15,SP1,Ath Bilbao,Getafe,fewer_than_10_dated_starter_ratings
+3,2024-08-16,SP1,Celta,Alaves,fewer_than_10_dated_starter_ratings
+5,2024-08-17,E0,Arsenal,Wolves,fewer_than_10_dated_starter_ratings
+6,2024-08-17,E0,Everton,Brighton,fewer_than_10_dated_starter_ratings
+8,2024-08-17,E0,Newcastle,Southampton,fewer_than_10_dated_starter_ratings
+9,2024-08-17,E0,Nott'm Forest,Bournemouth,fewer_than_10_dated_starter_ratings
+15,2024-08-17,SP1,Osasuna,Leganes,fewer_than_10_dated_starter_ratings
+16,2024-08-17,SP1,Valencia,Barcelona,fewer_than_10_dated_starter_ratings
+17,2024-08-18,E0,Brentford,Crystal Palace,fewer_than_10_dated_starter_ratings
+24,2024-08-18,SP1,Sociedad,Vallecano,fewer_than_10_dated_starter_ratings
+25,2024-08-19,E0,Leicester,Tottenham,fewer_than_10_dated_starter_ratings
+30,2024-08-23,D1,M'gladbach,Leverkusen,fewer_than_10_dated_starter_ratings
+31,2024-08-23,SP1,Celta,Valencia,fewer_than_10_dated_starter_ratings
+32,2024-08-23,SP1,Sevilla,Villarreal,fewer_than_10_dated_starter_ratings
+40,2024-08-24,E0,Brighton,Man United,fewer_than_10_dated_starter_ratings
+41,2024-08-24,E0,Crystal Palace,West Ham,fewer_than_10_dated_starter_ratings
+44,2024-08-24,E0,Southampton,Nott'm Forest,fewer_than_10_dated_starter_ratings
+45,2024-08-24,E0,Tottenham,Everton,fewer_than_10_dated_starter_ratings
+50,2024-08-24,SP1,Barcelona,Ath Bilbao,fewer_than_10_dated_starter_ratings
+52,2024-08-24,SP1,Getafe,Vallecano,fewer_than_10_dated_starter_ratings
+58,2024-08-25,E0,Wolves,Chelsea,fewer_than_10_dated_starter_ratings
+65,2024-08-25,SP1,Leganes,Las Palmas,fewer_than_10_dated_starter_ratings
+68,2024-08-26,I1,Verona,Juventus,fewer_than_10_dated_starter_ratings
+69,2024-08-26,SP1,Villarreal,Celta,fewer_than_10_dated_starter_ratings
+71,2024-08-27,SP1,Vallecano,Barcelona,fewer_than_10_dated_starter_ratings
+72,2024-08-28,SP1,Ath Bilbao,Valencia,fewer_than_10_dated_starter_ratings
+74,2024-08-28,SP1,Sociedad,Alaves,fewer_than_10_dated_starter_ratings
+75,2024-08-28,SP1,Valladolid,Leganes,fewer_than_10_dated_starter_ratings
+81,2024-08-31,D1,Bochum,M'gladbach,fewer_than_10_dated_starter_ratings
+85,2024-08-31,D1,Stuttgart,Mainz,fewer_than_10_dated_starter_ratings
+87,2024-08-31,E0,Arsenal,Brighton,fewer_than_10_dated_starter_ratings
+88,2024-08-31,E0,Brentford,Southampton,fewer_than_10_dated_starter_ratings
+92,2024-08-31,E0,Nott'm Forest,Wolves,fewer_than_10_dated_starter_ratings
+94,2024-08-31,I1,Bologna,Empoli,fewer_than_10_dated_starter_ratings
+99,2024-08-31,SP1,Barcelona,Valladolid,fewer_than_10_dated_starter_ratings
+101,2024-08-31,SP1,Leganes,Mallorca,fewer_than_10_dated_starter_ratings
+102,2024-08-31,SP1,Valencia,Villarreal,fewer_than_10_dated_starter_ratings
+105,2024-09-01,E0,Chelsea,Crystal Palace,fewer_than_10_dated_starter_ratings
+110,2024-09-01,I1,Juventus,Roma,fewer_than_10_dated_starter_ratings
+113,2024-09-01,SP1,Getafe,Sociedad,fewer_than_10_dated_starter_ratings
+114,2024-09-01,SP1,Osasuna,Celta,fewer_than_10_dated_starter_ratings
+115,2024-09-01,SP1,Real Madrid,Betis,fewer_than_10_dated_starter_ratings
+118,2024-09-13,SP1,Betis,Leganes,fewer_than_10_dated_starter_ratings
+121,2024-09-14,D1,Holstein Kiel,Bayern Munich,fewer_than_10_dated_starter_ratings
+122,2024-09-14,D1,M'gladbach,Stuttgart,fewer_than_10_dated_starter_ratings
+127,2024-09-14,E0,Brighton,Ipswich,fewer_than_10_dated_starter_ratings
+128,2024-09-14,E0,Crystal Palace,Leicester,fewer_than_10_dated_starter_ratings
+130,2024-09-14,E0,Liverpool,Nott'm Forest,fewer_than_10_dated_starter_ratings
+132,2024-09-14,E0,Southampton,Man United,fewer_than_10_dated_starter_ratings
+134,2024-09-14,I1,Empoli,Juventus,fewer_than_10_dated_starter_ratings
+137,2024-09-14,SP1,Mallorca,Villarreal,fewer_than_10_dated_starter_ratings
+138,2024-09-14,SP1,Sevilla,Getafe,fewer_than_10_dated_starter_ratings
+139,2024-09-14,SP1,Sociedad,Real Madrid,fewer_than_10_dated_starter_ratings
+141,2024-09-15,D1,Mainz,Werder Bremen,fewer_than_10_dated_starter_ratings
+142,2024-09-15,E0,Tottenham,Arsenal,fewer_than_10_dated_starter_ratings
+146,2024-09-15,I1,Genoa,Roma,fewer_than_10_dated_starter_ratings
+150,2024-09-15,SP1,Celta,Valladolid,fewer_than_10_dated_starter_ratings
+151,2024-09-15,SP1,Girona,Barcelona,fewer_than_10_dated_starter_ratings
+152,2024-09-15,SP1,Las Palmas,Ath Bilbao,fewer_than_10_dated_starter_ratings
+153,2024-09-16,I1,Lazio,Verona,fewer_than_10_dated_starter_ratings
+157,2024-09-18,SP1,Betis,Getafe,fewer_than_10_dated_starter_ratings
+159,2024-09-20,D1,Augsburg,Mainz,fewer_than_10_dated_starter_ratings
+160,2024-09-20,I1,Cagliari,Empoli,fewer_than_10_dated_starter_ratings
+162,2024-09-20,SP1,Alaves,Sevilla,fewer_than_10_dated_starter_ratings
+164,2024-09-21,D1,Ein Frankfurt,M'gladbach,fewer_than_10_dated_starter_ratings
+169,2024-09-21,E0,Crystal Palace,Man United,fewer_than_10_dated_starter_ratings
+172,2024-09-21,E0,Liverpool,Bournemouth,fewer_than_10_dated_starter_ratings
+173,2024-09-21,E0,Southampton,Ipswich,fewer_than_10_dated_starter_ratings
+174,2024-09-21,E0,Tottenham,Brentford,fewer_than_10_dated_starter_ratings
+175,2024-09-21,E0,West Ham,Chelsea,fewer_than_10_dated_starter_ratings
+177,2024-09-21,I1,Lecce,Parma,fewer_than_10_dated_starter_ratings
+182,2024-09-21,SP1,Valladolid,Sociedad,fewer_than_10_dated_starter_ratings
+186,2024-09-22,E0,Brighton,Nott'm Forest,fewer_than_10_dated_starter_ratings
+192,2024-09-22,SP1,Ath Bilbao,Celta,fewer_than_10_dated_starter_ratings
+193,2024-09-22,SP1,Getafe,Leganes,fewer_than_10_dated_starter_ratings
+195,2024-09-22,SP1,Villarreal,Barcelona,fewer_than_10_dated_starter_ratings
+196,2024-09-23,SP1,Betis,Mallorca,fewer_than_10_dated_starter_ratings
+198,2024-09-24,SP1,Real Madrid,Alaves,fewer_than_10_dated_starter_ratings
+201,2024-09-25,SP1,Barcelona,Getafe,fewer_than_10_dated_starter_ratings
+205,2024-09-26,SP1,Las Palmas,Betis,fewer_than_10_dated_starter_ratings
+208,2024-09-27,SP1,Valladolid,Mallorca,fewer_than_10_dated_starter_ratings
+211,2024-09-28,D1,M'gladbach,Union Berlin,fewer_than_10_dated_starter_ratings
+212,2024-09-28,D1,Mainz,Heidenheim,fewer_than_10_dated_starter_ratings
+217,2024-09-28,E0,Chelsea,Brighton,fewer_than_10_dated_starter_ratings
+218,2024-09-28,E0,Everton,Crystal Palace,fewer_than_10_dated_starter_ratings
+220,2024-09-28,E0,Nott'm Forest,Fulham,fewer_than_10_dated_starter_ratings
+221,2024-09-28,E0,Wolves,Liverpool,fewer_than_10_dated_starter_ratings
+223,2024-09-28,I1,Genoa,Juventus,fewer_than_10_dated_starter_ratings
+225,2024-09-28,SP1,Getafe,Alaves,fewer_than_10_dated_starter_ratings
+226,2024-09-28,SP1,Osasuna,Barcelona,fewer_than_10_dated_starter_ratings
+227,2024-09-28,SP1,Sociedad,Valencia,fewer_than_10_dated_starter_ratings
+228,2024-09-28,SP1,Vallecano,Leganes,fewer_than_10_dated_starter_ratings
+234,2024-09-29,I1,Empoli,Fiorentina,fewer_than_10_dated_starter_ratings
+236,2024-09-29,I1,Roma,Venezia,fewer_than_10_dated_starter_ratings
+240,2024-09-29,SP1,Betis,Espanol,fewer_than_10_dated_starter_ratings
+241,2024-09-29,SP1,Celta,Girona,fewer_than_10_dated_starter_ratings
+242,2024-09-30,E0,Bournemouth,Southampton,fewer_than_10_dated_starter_ratings
+243,2024-09-30,I1,Parma,Cagliari,fewer_than_10_dated_starter_ratings
+244,2024-09-30,SP1,Villarreal,Las Palmas,fewer_than_10_dated_starter_ratings
+245,2024-10-04,D1,Augsburg,M'gladbach,fewer_than_10_dated_starter_ratings
+248,2024-10-04,SP1,Leganes,Valencia,fewer_than_10_dated_starter_ratings
+254,2024-10-05,E0,Arsenal,Southampton,fewer_than_10_dated_starter_ratings
+255,2024-10-05,E0,Brentford,Wolves,fewer_than_10_dated_starter_ratings
+256,2024-10-05,E0,Crystal Palace,Liverpool,fewer_than_10_dated_starter_ratings
+260,2024-10-05,E0,West Ham,Ipswich,fewer_than_10_dated_starter_ratings
+266,2024-10-05,SP1,Las Palmas,Celta,fewer_than_10_dated_starter_ratings
+267,2024-10-05,SP1,Real Madrid,Villarreal,fewer_than_10_dated_starter_ratings
+268,2024-10-05,SP1,Valladolid,Vallecano,fewer_than_10_dated_starter_ratings
+271,2024-10-06,D1,Stuttgart,Hoffenheim,fewer_than_10_dated_starter_ratings
+273,2024-10-06,E0,Brighton,Tottenham,fewer_than_10_dated_starter_ratings
+274,2024-10-06,E0,Chelsea,Nott'm Forest,fewer_than_10_dated_starter_ratings
+275,2024-10-06,I1,Bologna,Parma,fewer_than_10_dated_starter_ratings
+276,2024-10-06,I1,Fiorentina,Milan,fewer_than_10_dated_starter_ratings
+277,2024-10-06,I1,Juventus,Cagliari,fewer_than_10_dated_starter_ratings
+278,2024-10-06,I1,Lazio,Empoli,fewer_than_10_dated_starter_ratings
+279,2024-10-06,I1,Monza,Roma,fewer_than_10_dated_starter_ratings
+280,2024-10-06,SP1,Alaves,Barcelona,fewer_than_10_dated_starter_ratings
+281,2024-10-06,SP1,Girona,Ath Bilbao,fewer_than_10_dated_starter_ratings
+282,2024-10-06,SP1,Sevilla,Betis,fewer_than_10_dated_starter_ratings
+283,2024-10-06,SP1,Sociedad,Ath Madrid,fewer_than_10_dated_starter_ratings
+285,2024-10-18,SP1,Alaves,Valladolid,fewer_than_10_dated_starter_ratings
+290,2024-10-19,D1,M'gladbach,Heidenheim,fewer_than_10_dated_starter_ratings
+294,2024-10-19,E0,Ipswich,Everton,fewer_than_10_dated_starter_ratings
+297,2024-10-19,E0,Southampton,Leicester,fewer_than_10_dated_starter_ratings
+298,2024-10-19,E0,Tottenham,West Ham,fewer_than_10_dated_starter_ratings
+299,2024-10-19,I1,Como,Parma,fewer_than_10_dated_starter_ratings
+303,2024-10-19,SP1,Ath Bilbao,Espanol,fewer_than_10_dated_starter_ratings
+306,2024-10-19,SP1,Osasuna,Betis,fewer_than_10_dated_starter_ratings
+309,2024-10-20,E0,Liverpool,Chelsea,fewer_than_10_dated_starter_ratings
+310,2024-10-20,E0,Wolves,Man City,fewer_than_10_dated_starter_ratings
+312,2024-10-20,I1,Empoli,Napoli,fewer_than_10_dated_starter_ratings
+313,2024-10-20,I1,Lecce,Fiorentina,fewer_than_10_dated_starter_ratings
+314,2024-10-20,I1,Roma,Inter,fewer_than_10_dated_starter_ratings
+316,2024-10-20,SP1,Ath Madrid,Leganes,fewer_than_10_dated_starter_ratings
+317,2024-10-20,SP1,Barcelona,Sevilla,fewer_than_10_dated_starter_ratings
+319,2024-10-20,SP1,Villarreal,Getafe,fewer_than_10_dated_starter_ratings
+320,2024-10-21,E0,Nott'm Forest,Crystal Palace,fewer_than_10_dated_starter_ratings
+323,2024-10-25,D1,Mainz,M'gladbach,fewer_than_10_dated_starter_ratings
+324,2024-10-25,E0,Leicester,Nott'm Forest,fewer_than_10_dated_starter_ratings
+327,2024-10-25,SP1,Espanol,Sevilla,fewer_than_10_dated_starter_ratings
+331,2024-10-26,D1,Stuttgart,Holstein Kiel,fewer_than_10_dated_starter_ratings
+334,2024-10-26,E0,Brentford,Ipswich,fewer_than_10_dated_starter_ratings
+335,2024-10-26,E0,Brighton,Wolves,fewer_than_10_dated_starter_ratings
+337,2024-10-26,E0,Man City,Southampton,fewer_than_10_dated_starter_ratings
+340,2024-10-26,SP1,Las Palmas,Girona,fewer_than_10_dated_starter_ratings
+341,2024-10-26,SP1,Real Madrid,Barcelona,fewer_than_10_dated_starter_ratings
+343,2024-10-26,SP1,Vallecano,Alaves,fewer_than_10_dated_starter_ratings
+349,2024-10-27,E0,Crystal Palace,Tottenham,fewer_than_10_dated_starter_ratings
+355,2024-10-27,I1,Parma,Empoli,fewer_than_10_dated_starter_ratings
+356,2024-10-27,SP1,Betis,Ath Madrid,fewer_than_10_dated_starter_ratings
+365,2024-10-30,I1,Empoli,Inter,fewer_than_10_dated_starter_ratings
+366,2024-10-30,I1,Juventus,Parma,fewer_than_10_dated_starter_ratings
+370,2024-10-31,I1,Roma,Torino,fewer_than_10_dated_starter_ratings
+372,2024-11-01,SP1,Alaves,Mallorca,fewer_than_10_dated_starter_ratings
+376,2024-11-02,D1,Hoffenheim,St Pauli,fewer_than_10_dated_starter_ratings
+380,2024-11-02,E0,Ipswich,Leicester,fewer_than_10_dated_starter_ratings
+381,2024-11-02,E0,Liverpool,Brighton,fewer_than_10_dated_starter_ratings
+382,2024-11-02,E0,Newcastle,Arsenal,fewer_than_10_dated_starter_ratings
+383,2024-11-02,E0,Nott'm Forest,West Ham,fewer_than_10_dated_starter_ratings
+385,2024-11-02,E0,Wolves,Crystal Palace,fewer_than_10_dated_starter_ratings
+392,2024-11-03,D1,M'gladbach,Werder Bremen,fewer_than_10_dated_starter_ratings
+398,2024-11-03,I1,Verona,Roma,fewer_than_10_dated_starter_ratings
+399,2024-11-03,SP1,Ath Bilbao,Betis,fewer_than_10_dated_starter_ratings
+401,2024-11-03,SP1,Barcelona,Espanol,fewer_than_10_dated_starter_ratings
+402,2024-11-03,SP1,Sevilla,Sociedad,fewer_than_10_dated_starter_ratings
+406,2024-11-04,I1,Parma,Genoa,fewer_than_10_dated_starter_ratings
+407,2024-11-04,SP1,Celta,Getafe,fewer_than_10_dated_starter_ratings
+410,2024-11-08,I1,Lecce,Empoli,fewer_than_10_dated_starter_ratings
+414,2024-11-09,D1,RB Leipzig,M'gladbach,fewer_than_10_dated_starter_ratings
+418,2024-11-09,E0,Brighton,Man City,fewer_than_10_dated_starter_ratings
+419,2024-11-09,E0,Crystal Palace,Fulham,fewer_than_10_dated_starter_ratings
+425,2024-11-09,I1,Venezia,Parma,fewer_than_10_dated_starter_ratings
+428,2024-11-09,SP1,Villarreal,Alaves,fewer_than_10_dated_starter_ratings
+434,2024-11-10,E0,Nott'm Forest,Newcastle,fewer_than_10_dated_starter_ratings
+435,2024-11-10,E0,Tottenham,Ipswich,fewer_than_10_dated_starter_ratings
+440,2024-11-10,I1,Roma,Bologna,fewer_than_10_dated_starter_ratings
+441,2024-11-10,SP1,Betis,Celta,fewer_than_10_dated_starter_ratings
+445,2024-11-10,SP1,Valladolid,Ath Bilbao,fewer_than_10_dated_starter_ratings
+450,2024-11-23,D1,Hoffenheim,RB Leipzig,fewer_than_10_dated_starter_ratings
+455,2024-11-23,E0,Aston Villa,Crystal Palace,fewer_than_10_dated_starter_ratings
+456,2024-11-23,E0,Bournemouth,Brighton,fewer_than_10_dated_starter_ratings
+458,2024-11-23,E0,Fulham,Wolves,fewer_than_10_dated_starter_ratings
+460,2024-11-23,E0,Man City,Tottenham,fewer_than_10_dated_starter_ratings
+462,2024-11-23,I1,Parma,Atalanta,fewer_than_10_dated_starter_ratings
+465,2024-11-23,SP1,Celta,Barcelona,fewer_than_10_dated_starter_ratings
+466,2024-11-23,SP1,Girona,Espanol,fewer_than_10_dated_starter_ratings
+468,2024-11-23,SP1,Valencia,Betis,fewer_than_10_dated_starter_ratings
+469,2024-11-24,D1,Holstein Kiel,Mainz,fewer_than_10_dated_starter_ratings
+470,2024-11-24,D1,M'gladbach,St Pauli,fewer_than_10_dated_starter_ratings
+471,2024-11-24,E0,Ipswich,Man United,fewer_than_10_dated_starter_ratings
+476,2024-11-24,I1,Napoli,Roma,fewer_than_10_dated_starter_ratings
+478,2024-11-24,SP1,Ath Bilbao,Sociedad,fewer_than_10_dated_starter_ratings
+479,2024-11-24,SP1,Leganes,Real Madrid,fewer_than_10_dated_starter_ratings
+480,2024-11-24,SP1,Osasuna,Villarreal,fewer_than_10_dated_starter_ratings
+481,2024-11-24,SP1,Sevilla,Vallecano,fewer_than_10_dated_starter_ratings
+482,2024-11-25,E0,Newcastle,West Ham,fewer_than_10_dated_starter_ratings
+483,2024-11-25,I1,Empoli,Udinese,fewer_than_10_dated_starter_ratings
+486,2024-11-29,E0,Brighton,Southampton,fewer_than_10_dated_starter_ratings
+491,2024-11-30,D1,Freiburg,M'gladbach,fewer_than_10_dated_starter_ratings
+494,2024-11-30,D1,Werder Bremen,Stuttgart,fewer_than_10_dated_starter_ratings
+496,2024-11-30,E0,Crystal Palace,Newcastle,fewer_than_10_dated_starter_ratings
+497,2024-11-30,E0,Nott'm Forest,Ipswich,fewer_than_10_dated_starter_ratings
+499,2024-11-30,E0,Wolves,Bournemouth,fewer_than_10_dated_starter_ratings
+502,2024-11-30,I1,Milan,Empoli,fewer_than_10_dated_starter_ratings
+503,2024-11-30,SP1,Alaves,Leganes,fewer_than_10_dated_starter_ratings
+514,2024-12-01,I1,Parma,Lazio,fewer_than_10_dated_starter_ratings
+518,2024-12-01,SP1,Sociedad,Betis,fewer_than_10_dated_starter_ratings
+520,2024-12-01,SP1,Villarreal,Girona,fewer_than_10_dated_starter_ratings
+521,2024-12-02,I1,Roma,Atalanta,fewer_than_10_dated_starter_ratings
+522,2024-12-02,SP1,Sevilla,Osasuna,fewer_than_10_dated_starter_ratings
+523,2024-12-03,E0,Ipswich,Crystal Palace,fewer_than_10_dated_starter_ratings
+525,2024-12-03,SP1,Mallorca,Barcelona,fewer_than_10_dated_starter_ratings
+528,2024-12-04,E0,Everton,Wolves,fewer_than_10_dated_starter_ratings
+529,2024-12-04,E0,Man City,Nott'm Forest,fewer_than_10_dated_starter_ratings
+531,2024-12-04,E0,Southampton,Chelsea,fewer_than_10_dated_starter_ratings
+532,2024-12-04,SP1,Ath Bilbao,Real Madrid,fewer_than_10_dated_starter_ratings
+533,2024-12-05,E0,Bournemouth,Tottenham,fewer_than_10_dated_starter_ratings
+534,2024-12-05,E0,Fulham,Brighton,fewer_than_10_dated_starter_ratings
+537,2024-12-06,I1,Inter,Parma,fewer_than_10_dated_starter_ratings
+538,2024-12-06,SP1,Celta,Mallorca,fewer_than_10_dated_starter_ratings
+540,2024-12-07,D1,Bochum,Werder Bremen,fewer_than_10_dated_starter_ratings
+542,2024-12-07,D1,Holstein Kiel,RB Leipzig,fewer_than_10_dated_starter_ratings
+544,2024-12-07,D1,M'gladbach,Dortmund,fewer_than_10_dated_starter_ratings
+548,2024-12-07,E0,Man United,Nott'm Forest,fewer_than_10_dated_starter_ratings
+551,2024-12-07,I1,Roma,Lecce,fewer_than_10_dated_starter_ratings
+552,2024-12-07,SP1,Betis,Barcelona,fewer_than_10_dated_starter_ratings
+556,2024-12-08,D1,Hoffenheim,Freiburg,fewer_than_10_dated_starter_ratings
+559,2024-12-08,E0,Ipswich,Bournemouth,fewer_than_10_dated_starter_ratings
+561,2024-12-08,E0,Tottenham,Chelsea,fewer_than_10_dated_starter_ratings
+565,2024-12-08,I1,Verona,Empoli,fewer_than_10_dated_starter_ratings
+566,2024-12-08,SP1,Ath Bilbao,Villarreal,fewer_than_10_dated_starter_ratings
+567,2024-12-08,SP1,Ath Madrid,Sevilla,fewer_than_10_dated_starter_ratings
+568,2024-12-08,SP1,Leganes,Sociedad,fewer_than_10_dated_starter_ratings
+569,2024-12-08,SP1,Osasuna,Alaves,fewer_than_10_dated_starter_ratings
+570,2024-12-09,E0,West Ham,Wolves,fewer_than_10_dated_starter_ratings
+572,2024-12-09,SP1,Getafe,Espanol,fewer_than_10_dated_starter_ratings
+574,2024-12-13,I1,Empoli,Torino,fewer_than_10_dated_starter_ratings
+577,2024-12-14,D1,M'gladbach,Holstein Kiel,fewer_than_10_dated_starter_ratings
+580,2024-12-14,D1,Union Berlin,Bochum,fewer_than_10_dated_starter_ratings
+584,2024-12-14,E0,Nott'm Forest,Aston Villa,fewer_than_10_dated_starter_ratings
+585,2024-12-14,E0,Wolves,Ipswich,fewer_than_10_dated_starter_ratings
+593,2024-12-15,D1,Dortmund,Hoffenheim,fewer_than_10_dated_starter_ratings
+597,2024-12-15,E0,Chelsea,Brentford,fewer_than_10_dated_starter_ratings
+599,2024-12-15,E0,Southampton,Tottenham,fewer_than_10_dated_starter_ratings
+600,2024-12-15,I1,Bologna,Fiorentina,fewer_than_10_dated_starter_ratings
+601,2024-12-15,I1,Como,Roma,fewer_than_10_dated_starter_ratings
+603,2024-12-15,I1,Milan,Genoa,fewer_than_10_dated_starter_ratings
+604,2024-12-15,I1,Parma,Verona,fewer_than_10_dated_starter_ratings
+605,2024-12-15,SP1,Alaves,Ath Bilbao,fewer_than_10_dated_starter_ratings
+606,2024-12-15,SP1,Ath Madrid,Getafe,fewer_than_10_dated_starter_ratings
+607,2024-12-15,SP1,Barcelona,Leganes,fewer_than_10_dated_starter_ratings
+608,2024-12-15,SP1,Sociedad,Las Palmas,fewer_than_10_dated_starter_ratings
+609,2024-12-15,SP1,Villarreal,Betis,fewer_than_10_dated_starter_ratings
+610,2024-12-16,E0,Bournemouth,West Ham,fewer_than_10_dated_starter_ratings
+613,2024-12-18,SP1,Villarreal,Vallecano,fewer_than_10_dated_starter_ratings
+618,2024-12-21,D1,Hoffenheim,M'gladbach,fewer_than_10_dated_starter_ratings
+619,2024-12-21,D1,Holstein Kiel,Augsburg,fewer_than_10_dated_starter_ratings
+624,2024-12-21,E0,Brentford,Nott'm Forest,fewer_than_10_dated_starter_ratings
+625,2024-12-21,E0,Crystal Palace,Arsenal,fewer_than_10_dated_starter_ratings
+626,2024-12-21,E0,Ipswich,Newcastle,fewer_than_10_dated_starter_ratings
+632,2024-12-21,SP1,Celta,Sociedad,fewer_than_10_dated_starter_ratings
+633,2024-12-21,SP1,Getafe,Mallorca,fewer_than_10_dated_starter_ratings
+634,2024-12-21,SP1,Osasuna,Ath Bilbao,fewer_than_10_dated_starter_ratings
+638,2024-12-22,E0,Fulham,Southampton,fewer_than_10_dated_starter_ratings
+639,2024-12-22,E0,Leicester,Wolves,fewer_than_10_dated_starter_ratings
+640,2024-12-22,E0,Man United,Bournemouth,fewer_than_10_dated_starter_ratings
+642,2024-12-22,I1,Atalanta,Empoli,fewer_than_10_dated_starter_ratings
+644,2024-12-22,I1,Roma,Parma,fewer_than_10_dated_starter_ratings
+646,2024-12-22,SP1,Betis,Vallecano,fewer_than_10_dated_starter_ratings
+648,2024-12-22,SP1,Leganes,Villarreal,fewer_than_10_dated_starter_ratings
+649,2024-12-22,SP1,Real Madrid,Sevilla,fewer_than_10_dated_starter_ratings
+650,2024-12-22,SP1,Valencia,Alaves,fewer_than_10_dated_starter_ratings
+653,2024-12-26,E0,Bournemouth,Crystal Palace,fewer_than_10_dated_starter_ratings
+656,2024-12-26,E0,Man City,Everton,fewer_than_10_dated_starter_ratings
+658,2024-12-26,E0,Nott'm Forest,Tottenham,fewer_than_10_dated_starter_ratings
+660,2024-12-26,E0,Wolves,Man United,fewer_than_10_dated_starter_ratings
+661,2024-12-27,E0,Arsenal,Ipswich,fewer_than_10_dated_starter_ratings
+662,2024-12-27,E0,Brighton,Brentford,fewer_than_10_dated_starter_ratings
+664,2024-12-28,I1,Empoli,Genoa,fewer_than_10_dated_starter_ratings
+667,2024-12-29,E0,Crystal Palace,Southampton,fewer_than_10_dated_starter_ratings
+668,2024-12-29,E0,Everton,Nott'm Forest,fewer_than_10_dated_starter_ratings
+669,2024-12-29,E0,Fulham,Bournemouth,fewer_than_10_dated_starter_ratings
+670,2024-12-29,E0,Leicester,Man City,fewer_than_10_dated_starter_ratings
+671,2024-12-29,E0,Tottenham,Wolves,fewer_than_10_dated_starter_ratings
+673,2024-12-29,I1,Juventus,Fiorentina,fewer_than_10_dated_starter_ratings
+674,2024-12-29,I1,Milan,Roma,fewer_than_10_dated_starter_ratings
+678,2024-12-30,E0,Ipswich,Chelsea,fewer_than_10_dated_starter_ratings
+685,2025-01-04,E0,Bournemouth,Everton,fewer_than_10_dated_starter_ratings
+687,2025-01-04,E0,Crystal Palace,Chelsea,fewer_than_10_dated_starter_ratings
+688,2025-01-04,E0,Man City,West Ham,fewer_than_10_dated_starter_ratings
+689,2025-01-04,E0,Southampton,Brentford,fewer_than_10_dated_starter_ratings
+691,2025-01-04,I1,Fiorentina,Napoli,fewer_than_10_dated_starter_ratings
+692,2025-01-04,I1,Venezia,Empoli,fewer_than_10_dated_starter_ratings
+694,2025-01-05,E0,Fulham,Ipswich,fewer_than_10_dated_starter_ratings
+698,2025-01-05,I1,Roma,Lazio,fewer_than_10_dated_starter_ratings
+699,2025-01-05,I1,Torino,Parma,fewer_than_10_dated_starter_ratings
+700,2025-01-06,E0,Wolves,Nott'm Forest,fewer_than_10_dated_starter_ratings
+704,2025-01-11,D1,Freiburg,Holstein Kiel,fewer_than_10_dated_starter_ratings
+706,2025-01-11,D1,Hoffenheim,Wolfsburg,fewer_than_10_dated_starter_ratings
+707,2025-01-11,D1,M'gladbach,Bayern Munich,fewer_than_10_dated_starter_ratings
+710,2025-01-11,I1,Empoli,Lecce,fewer_than_10_dated_starter_ratings
+712,2025-01-11,I1,Torino,Juventus,fewer_than_10_dated_starter_ratings
+714,2025-01-11,SP1,Alaves,Girona,fewer_than_10_dated_starter_ratings
+717,2025-01-11,SP1,Valladolid,Betis,fewer_than_10_dated_starter_ratings
+720,2025-01-12,I1,Bologna,Roma,fewer_than_10_dated_starter_ratings
+721,2025-01-12,I1,Genoa,Parma,fewer_than_10_dated_starter_ratings
+725,2025-01-12,SP1,Las Palmas,Getafe,fewer_than_10_dated_starter_ratings
+726,2025-01-13,I1,Monza,Fiorentina,fewer_than_10_dated_starter_ratings
+727,2025-01-13,SP1,Sociedad,Villarreal,fewer_than_10_dated_starter_ratings
+729,2025-01-14,D1,Holstein Kiel,Dortmund,fewer_than_10_dated_starter_ratings
+731,2025-01-14,D1,Wolfsburg,M'gladbach,fewer_than_10_dated_starter_ratings
+732,2025-01-14,E0,Brentford,Man City,fewer_than_10_dated_starter_ratings
+733,2025-01-14,E0,Chelsea,Bournemouth,fewer_than_10_dated_starter_ratings
+734,2025-01-14,E0,Nott'm Forest,Liverpool,fewer_than_10_dated_starter_ratings
+738,2025-01-15,D1,Bayern Munich,Hoffenheim,fewer_than_10_dated_starter_ratings
+739,2025-01-15,D1,Bochum,St Pauli,fewer_than_10_dated_starter_ratings
+743,2025-01-15,E0,Arsenal,Tottenham,fewer_than_10_dated_starter_ratings
+745,2025-01-15,E0,Leicester,Crystal Palace,fewer_than_10_dated_starter_ratings
+746,2025-01-15,E0,Newcastle,Wolves,fewer_than_10_dated_starter_ratings
+748,2025-01-16,E0,Ipswich,Brighton,fewer_than_10_dated_starter_ratings
+749,2025-01-16,E0,Man United,Southampton,fewer_than_10_dated_starter_ratings
+751,2025-01-17,I1,Roma,Genoa,fewer_than_10_dated_starter_ratings
+756,2025-01-18,D1,Holstein Kiel,Hoffenheim,fewer_than_10_dated_starter_ratings
+762,2025-01-18,E0,Newcastle,Bournemouth,fewer_than_10_dated_starter_ratings
+763,2025-01-18,E0,West Ham,Crystal Palace,fewer_than_10_dated_starter_ratings
+767,2025-01-18,SP1,Betis,Alaves,fewer_than_10_dated_starter_ratings
+768,2025-01-18,SP1,Getafe,Barcelona,fewer_than_10_dated_starter_ratings
+770,2025-01-18,SP1,Leganes,Ath Madrid,fewer_than_10_dated_starter_ratings
+773,2025-01-19,E0,Everton,Tottenham,fewer_than_10_dated_starter_ratings
+774,2025-01-19,E0,Ipswich,Man City,fewer_than_10_dated_starter_ratings
+775,2025-01-19,E0,Man United,Brighton,fewer_than_10_dated_starter_ratings
+776,2025-01-19,E0,Nott'm Forest,Southampton,fewer_than_10_dated_starter_ratings
+778,2025-01-19,I1,Fiorentina,Torino,fewer_than_10_dated_starter_ratings
+780,2025-01-19,I1,Parma,Venezia,fewer_than_10_dated_starter_ratings
+782,2025-01-19,SP1,Celta,Ath Bilbao,fewer_than_10_dated_starter_ratings
+786,2025-01-20,E0,Chelsea,Wolves,fewer_than_10_dated_starter_ratings
+788,2025-01-20,SP1,Villarreal,Mallorca,fewer_than_10_dated_starter_ratings
+789,2025-01-24,D1,Wolfsburg,Holstein Kiel,fewer_than_10_dated_starter_ratings
+792,2025-01-25,D1,Augsburg,Heidenheim,fewer_than_10_dated_starter_ratings
+798,2025-01-25,E0,Bournemouth,Nott'm Forest,fewer_than_10_dated_starter_ratings
+799,2025-01-25,E0,Brighton,Everton,fewer_than_10_dated_starter_ratings
+800,2025-01-25,E0,Liverpool,Ipswich,fewer_than_10_dated_starter_ratings
+803,2025-01-25,E0,Wolves,Arsenal,fewer_than_10_dated_starter_ratings
+805,2025-01-25,I1,Empoli,Bologna,fewer_than_10_dated_starter_ratings
+807,2025-01-25,SP1,Ath Madrid,Villarreal,fewer_than_10_dated_starter_ratings
+808,2025-01-25,SP1,Mallorca,Betis,fewer_than_10_dated_starter_ratings
+809,2025-01-25,SP1,Sevilla,Espanol,fewer_than_10_dated_starter_ratings
+811,2025-01-26,D1,Hoffenheim,Ein Frankfurt,fewer_than_10_dated_starter_ratings
+814,2025-01-26,E0,Crystal Palace,Brentford,fewer_than_10_dated_starter_ratings
+816,2025-01-26,E0,Tottenham,Leicester,fewer_than_10_dated_starter_ratings
+819,2025-01-26,I1,Milan,Parma,fewer_than_10_dated_starter_ratings
+820,2025-01-26,I1,Udinese,Roma,fewer_than_10_dated_starter_ratings
+821,2025-01-26,SP1,Ath Bilbao,Leganes,fewer_than_10_dated_starter_ratings
+822,2025-01-26,SP1,Barcelona,Valencia,fewer_than_10_dated_starter_ratings
+823,2025-01-26,SP1,Sociedad,Getafe,fewer_than_10_dated_starter_ratings
+827,2025-01-27,SP1,Alaves,Celta,fewer_than_10_dated_starter_ratings
+829,2025-01-31,I1,Parma,Lecce,fewer_than_10_dated_starter_ratings
+830,2025-01-31,SP1,Leganes,Vallecano,fewer_than_10_dated_starter_ratings
+831,2025-02-01,D1,Bayern Munich,Holstein Kiel,fewer_than_10_dated_starter_ratings
+834,2025-02-01,D1,St Pauli,Augsburg,fewer_than_10_dated_starter_ratings
+835,2025-02-01,D1,Stuttgart,M'gladbach,fewer_than_10_dated_starter_ratings
+837,2025-02-01,E0,Bournemouth,Liverpool,fewer_than_10_dated_starter_ratings
+839,2025-02-01,E0,Ipswich,Southampton,fewer_than_10_dated_starter_ratings
+841,2025-02-01,E0,Nott'm Forest,Brighton,fewer_than_10_dated_starter_ratings
+842,2025-02-01,E0,Wolves,Aston Villa,fewer_than_10_dated_starter_ratings
+848,2025-02-01,SP1,Espanol,Real Madrid,fewer_than_10_dated_starter_ratings
+849,2025-02-01,SP1,Getafe,Sevilla,fewer_than_10_dated_starter_ratings
+850,2025-02-01,SP1,Villarreal,Valladolid,fewer_than_10_dated_starter_ratings
+853,2025-02-02,E0,Arsenal,Man City,fewer_than_10_dated_starter_ratings
+854,2025-02-02,E0,Brentford,Tottenham,fewer_than_10_dated_starter_ratings
+855,2025-02-02,E0,Man United,Crystal Palace,fewer_than_10_dated_starter_ratings
+857,2025-02-02,I1,Juventus,Empoli,fewer_than_10_dated_starter_ratings
+859,2025-02-02,I1,Roma,Napoli,fewer_than_10_dated_starter_ratings
+860,2025-02-02,SP1,Barcelona,Alaves,fewer_than_10_dated_starter_ratings
+861,2025-02-02,SP1,Betis,Ath Bilbao,fewer_than_10_dated_starter_ratings
+862,2025-02-02,SP1,Osasuna,Sociedad,fewer_than_10_dated_starter_ratings
+864,2025-02-03,E0,Chelsea,West Ham,fewer_than_10_dated_starter_ratings
+873,2025-02-08,D1,Hoffenheim,Union Berlin,fewer_than_10_dated_starter_ratings
+874,2025-02-08,D1,M'gladbach,Ein Frankfurt,fewer_than_10_dated_starter_ratings
+877,2025-02-08,I1,Empoli,Milan,fewer_than_10_dated_starter_ratings
+880,2025-02-08,SP1,Ath Bilbao,Girona,fewer_than_10_dated_starter_ratings
+881,2025-02-08,SP1,Celta,Betis,fewer_than_10_dated_starter_ratings
+882,2025-02-08,SP1,Las Palmas,Villarreal,fewer_than_10_dated_starter_ratings
+884,2025-02-09,D1,Holstein Kiel,Bochum,fewer_than_10_dated_starter_ratings
+886,2025-02-09,I1,Cagliari,Parma,fewer_than_10_dated_starter_ratings
+891,2025-02-09,SP1,Alaves,Getafe,fewer_than_10_dated_starter_ratings
+893,2025-02-09,SP1,Sociedad,Espanol,fewer_than_10_dated_starter_ratings
+899,2025-02-14,E0,Brighton,Chelsea,fewer_than_10_dated_starter_ratings
+902,2025-02-15,D1,Bochum,Dortmund,fewer_than_10_dated_starter_ratings
+903,2025-02-15,D1,Leverkusen,Bayern Munich,fewer_than_10_dated_starter_ratings
+906,2025-02-15,D1,Union Berlin,M'gladbach,fewer_than_10_dated_starter_ratings
+907,2025-02-15,E0,Aston Villa,Ipswich,fewer_than_10_dated_starter_ratings
+908,2025-02-15,E0,Crystal Palace,Everton,fewer_than_10_dated_starter_ratings
+909,2025-02-15,E0,Fulham,Nott'm Forest,fewer_than_10_dated_starter_ratings
+910,2025-02-15,E0,Leicester,Arsenal,fewer_than_10_dated_starter_ratings
+911,2025-02-15,E0,Man City,Newcastle,fewer_than_10_dated_starter_ratings
+912,2025-02-15,E0,Southampton,Bournemouth,fewer_than_10_dated_starter_ratings
+917,2025-02-15,SP1,Ath Madrid,Celta,fewer_than_10_dated_starter_ratings
+918,2025-02-15,SP1,Leganes,Alaves,fewer_than_10_dated_starter_ratings
+920,2025-02-15,SP1,Villarreal,Valencia,fewer_than_10_dated_starter_ratings
+921,2025-02-16,D1,Ein Frankfurt,Holstein Kiel,fewer_than_10_dated_starter_ratings
+923,2025-02-16,D1,Werder Bremen,Hoffenheim,fewer_than_10_dated_starter_ratings
+924,2025-02-16,E0,Liverpool,Wolves,fewer_than_10_dated_starter_ratings
+929,2025-02-16,I1,Parma,Roma,fewer_than_10_dated_starter_ratings
+930,2025-02-16,I1,Udinese,Empoli,fewer_than_10_dated_starter_ratings
+931,2025-02-16,SP1,Betis,Sociedad,fewer_than_10_dated_starter_ratings
+932,2025-02-16,SP1,Espanol,Ath Bilbao,fewer_than_10_dated_starter_ratings
+934,2025-02-16,SP1,Valladolid,Sevilla,fewer_than_10_dated_starter_ratings
+936,2025-02-17,SP1,Barcelona,Vallecano,fewer_than_10_dated_starter_ratings
+941,2025-02-21,SP1,Celta,Osasuna,fewer_than_10_dated_starter_ratings
+943,2025-02-22,D1,Holstein Kiel,Leverkusen,fewer_than_10_dated_starter_ratings
+944,2025-02-22,D1,M'gladbach,Augsburg,fewer_than_10_dated_starter_ratings
+946,2025-02-22,D1,Wolfsburg,Bochum,fewer_than_10_dated_starter_ratings
+949,2025-02-22,E0,Bournemouth,Wolves,fewer_than_10_dated_starter_ratings
+951,2025-02-22,E0,Fulham,Crystal Palace,fewer_than_10_dated_starter_ratings
+953,2025-02-22,E0,Southampton,Brighton,fewer_than_10_dated_starter_ratings
+955,2025-02-22,I1,Parma,Bologna,fewer_than_10_dated_starter_ratings
+958,2025-02-22,SP1,Alaves,Espanol,fewer_than_10_dated_starter_ratings
+959,2025-02-22,SP1,Las Palmas,Barcelona,fewer_than_10_dated_starter_ratings
+961,2025-02-22,SP1,Vallecano,Villarreal,fewer_than_10_dated_starter_ratings
+963,2025-02-23,D1,Hoffenheim,Stuttgart,fewer_than_10_dated_starter_ratings
+965,2025-02-23,E0,Man City,Liverpool,fewer_than_10_dated_starter_ratings
+966,2025-02-23,E0,Newcastle,Nott'm Forest,fewer_than_10_dated_starter_ratings
+969,2025-02-23,I1,Empoli,Atalanta,fewer_than_10_dated_starter_ratings
+971,2025-02-23,SP1,Ath Bilbao,Valladolid,fewer_than_10_dated_starter_ratings
+972,2025-02-23,SP1,Getafe,Betis,fewer_than_10_dated_starter_ratings
+974,2025-02-23,SP1,Sociedad,Leganes,fewer_than_10_dated_starter_ratings
+977,2025-02-25,E0,Brighton,Bournemouth,fewer_than_10_dated_starter_ratings
+978,2025-02-25,E0,Chelsea,Southampton,fewer_than_10_dated_starter_ratings
+979,2025-02-25,E0,Crystal Palace,Aston Villa,fewer_than_10_dated_starter_ratings
+980,2025-02-25,E0,Wolves,Fulham,fewer_than_10_dated_starter_ratings
+982,2025-02-26,E0,Liverpool,Newcastle,fewer_than_10_dated_starter_ratings
+984,2025-02-26,E0,Nott'm Forest,Arsenal,fewer_than_10_dated_starter_ratings
+988,2025-02-28,D1,Stuttgart,Bayern Munich,fewer_than_10_dated_starter_ratings
+990,2025-02-28,SP1,Valladolid,Las Palmas,fewer_than_10_dated_starter_ratings
+991,2025-03-01,D1,Bochum,Hoffenheim,fewer_than_10_dated_starter_ratings
+993,2025-03-01,D1,Heidenheim,M'gladbach,fewer_than_10_dated_starter_ratings
+999,2025-03-01,I1,Udinese,Parma,fewer_than_10_dated_starter_ratings
+1000,2025-03-01,SP1,Ath Madrid,Ath Bilbao,fewer_than_10_dated_starter_ratings
+1001,2025-03-01,SP1,Betis,Real Madrid,fewer_than_10_dated_starter_ratings
+1005,2025-03-02,D1,Union Berlin,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1007,2025-03-02,I1,Genoa,Empoli,fewer_than_10_dated_starter_ratings
+1009,2025-03-02,I1,Monza,Torino,fewer_than_10_dated_starter_ratings
+1010,2025-03-02,I1,Roma,Como,fewer_than_10_dated_starter_ratings
+1011,2025-03-02,SP1,Barcelona,Sociedad,fewer_than_10_dated_starter_ratings
+1018,2025-03-08,D1,Bayern Munich,Bochum,fewer_than_10_dated_starter_ratings
+1021,2025-03-08,D1,Holstein Kiel,Stuttgart,fewer_than_10_dated_starter_ratings
+1026,2025-03-08,E0,Crystal Palace,Ipswich,fewer_than_10_dated_starter_ratings
+1027,2025-03-08,E0,Liverpool,Southampton,fewer_than_10_dated_starter_ratings
+1028,2025-03-08,E0,Nott'm Forest,Man City,fewer_than_10_dated_starter_ratings
+1029,2025-03-08,E0,Wolves,Everton,fewer_than_10_dated_starter_ratings
+1030,2025-03-08,I1,Como,Venezia,fewer_than_10_dated_starter_ratings
+1031,2025-03-08,I1,Inter,Monza,fewer_than_10_dated_starter_ratings
+1033,2025-03-08,I1,Parma,Torino,fewer_than_10_dated_starter_ratings
+1034,2025-03-08,SP1,Alaves,Villarreal,fewer_than_10_dated_starter_ratings
+1035,2025-03-08,SP1,Celta,Leganes,fewer_than_10_dated_starter_ratings
+1036,2025-03-08,SP1,Valencia,Valladolid,fewer_than_10_dated_starter_ratings
+1042,2025-03-09,I1,Empoli,Roma,fewer_than_10_dated_starter_ratings
+1044,2025-03-09,I1,Napoli,Fiorentina,fewer_than_10_dated_starter_ratings
+1046,2025-03-09,SP1,Ath Bilbao,Mallorca,fewer_than_10_dated_starter_ratings
+1047,2025-03-09,SP1,Betis,Las Palmas,fewer_than_10_dated_starter_ratings
+1048,2025-03-09,SP1,Getafe,Ath Madrid,fewer_than_10_dated_starter_ratings
+1053,2025-03-10,SP1,Espanol,Girona,fewer_than_10_dated_starter_ratings
+1061,2025-03-15,D1,Werder Bremen,M'gladbach,fewer_than_10_dated_starter_ratings
+1062,2025-03-15,E0,Bournemouth,Brentford,fewer_than_10_dated_starter_ratings
+1064,2025-03-15,E0,Ipswich,Nott'm Forest,fewer_than_10_dated_starter_ratings
+1065,2025-03-15,E0,Man City,Brighton,fewer_than_10_dated_starter_ratings
+1066,2025-03-15,E0,Southampton,Wolves,fewer_than_10_dated_starter_ratings
+1068,2025-03-15,I1,Monza,Parma,fewer_than_10_dated_starter_ratings
+1069,2025-03-15,I1,Torino,Empoli,fewer_than_10_dated_starter_ratings
+1072,2025-03-15,SP1,Mallorca,Espanol,fewer_than_10_dated_starter_ratings
+1073,2025-03-15,SP1,Valladolid,Celta,fewer_than_10_dated_starter_ratings
+1074,2025-03-15,SP1,Villarreal,Real Madrid,fewer_than_10_dated_starter_ratings
+1076,2025-03-16,D1,Heidenheim,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1084,2025-03-16,I1,Roma,Cagliari,fewer_than_10_dated_starter_ratings
+1086,2025-03-16,SP1,Ath Madrid,Barcelona,fewer_than_10_dated_starter_ratings
+1087,2025-03-16,SP1,Leganes,Betis,fewer_than_10_dated_starter_ratings
+1088,2025-03-16,SP1,Osasuna,Getafe,fewer_than_10_dated_starter_ratings
+1090,2025-03-16,SP1,Vallecano,Sociedad,fewer_than_10_dated_starter_ratings
+1094,2025-03-29,D1,Ein Frankfurt,Stuttgart,fewer_than_10_dated_starter_ratings
+1095,2025-03-29,D1,Hoffenheim,Augsburg,fewer_than_10_dated_starter_ratings
+1096,2025-03-29,D1,Holstein Kiel,Werder Bremen,fewer_than_10_dated_starter_ratings
+1097,2025-03-29,D1,M'gladbach,RB Leipzig,fewer_than_10_dated_starter_ratings
+1099,2025-03-29,I1,Como,Empoli,fewer_than_10_dated_starter_ratings
+1101,2025-03-29,I1,Lecce,Roma,fewer_than_10_dated_starter_ratings
+1102,2025-03-29,I1,Venezia,Bologna,fewer_than_10_dated_starter_ratings
+1103,2025-03-29,SP1,Alaves,Vallecano,fewer_than_10_dated_starter_ratings
+1104,2025-03-29,SP1,Espanol,Ath Madrid,fewer_than_10_dated_starter_ratings
+1105,2025-03-29,SP1,Real Madrid,Leganes,fewer_than_10_dated_starter_ratings
+1106,2025-03-29,SP1,Sociedad,Valladolid,fewer_than_10_dated_starter_ratings
+1113,2025-03-30,SP1,Ath Bilbao,Osasuna,fewer_than_10_dated_starter_ratings
+1114,2025-03-30,SP1,Barcelona,Girona,fewer_than_10_dated_starter_ratings
+1115,2025-03-30,SP1,Betis,Sevilla,fewer_than_10_dated_starter_ratings
+1116,2025-03-30,SP1,Getafe,Villarreal,fewer_than_10_dated_starter_ratings
+1119,2025-03-31,I1,Verona,Parma,fewer_than_10_dated_starter_ratings
+1120,2025-03-31,SP1,Celta,Las Palmas,fewer_than_10_dated_starter_ratings
+1121,2025-04-01,E0,Arsenal,Fulham,fewer_than_10_dated_starter_ratings
+1122,2025-04-01,E0,Nott'm Forest,Man United,fewer_than_10_dated_starter_ratings
+1123,2025-04-01,E0,Wolves,West Ham,fewer_than_10_dated_starter_ratings
+1124,2025-04-02,E0,Bournemouth,Ipswich,fewer_than_10_dated_starter_ratings
+1125,2025-04-02,E0,Brighton,Aston Villa,fewer_than_10_dated_starter_ratings
+1130,2025-04-03,E0,Chelsea,Tottenham,fewer_than_10_dated_starter_ratings
+1133,2025-04-04,SP1,Vallecano,Espanol,fewer_than_10_dated_starter_ratings
+1137,2025-04-05,D1,Mainz,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1138,2025-04-05,D1,RB Leipzig,Hoffenheim,fewer_than_10_dated_starter_ratings
+1140,2025-04-05,E0,Aston Villa,Nott'm Forest,fewer_than_10_dated_starter_ratings
+1141,2025-04-05,E0,Crystal Palace,Brighton,fewer_than_10_dated_starter_ratings
+1142,2025-04-05,E0,Everton,Arsenal,fewer_than_10_dated_starter_ratings
+1143,2025-04-05,E0,Ipswich,Wolves,fewer_than_10_dated_starter_ratings
+1144,2025-04-05,E0,West Ham,Bournemouth,fewer_than_10_dated_starter_ratings
+1147,2025-04-05,I1,Parma,Inter,fewer_than_10_dated_starter_ratings
+1148,2025-04-05,SP1,Barcelona,Betis,fewer_than_10_dated_starter_ratings
+1149,2025-04-05,SP1,Girona,Alaves,fewer_than_10_dated_starter_ratings
+1150,2025-04-05,SP1,Mallorca,Celta,fewer_than_10_dated_starter_ratings
+1152,2025-04-06,D1,St Pauli,M'gladbach,fewer_than_10_dated_starter_ratings
+1153,2025-04-06,D1,Union Berlin,Wolfsburg,fewer_than_10_dated_starter_ratings
+1154,2025-04-06,E0,Brentford,Chelsea,fewer_than_10_dated_starter_ratings
+1157,2025-04-06,E0,Tottenham,Southampton,fewer_than_10_dated_starter_ratings
+1159,2025-04-06,I1,Empoli,Cagliari,fewer_than_10_dated_starter_ratings
+1160,2025-04-06,I1,Lecce,Venezia,fewer_than_10_dated_starter_ratings
+1161,2025-04-06,I1,Roma,Juventus,fewer_than_10_dated_starter_ratings
+1163,2025-04-06,SP1,Las Palmas,Sociedad,fewer_than_10_dated_starter_ratings
+1165,2025-04-06,SP1,Valladolid,Getafe,fewer_than_10_dated_starter_ratings
+1166,2025-04-06,SP1,Villarreal,Ath Bilbao,fewer_than_10_dated_starter_ratings
+1169,2025-04-07,SP1,Leganes,Osasuna,fewer_than_10_dated_starter_ratings
+1172,2025-04-11,SP1,Valencia,Sevilla,fewer_than_10_dated_starter_ratings
+1174,2025-04-12,D1,Bochum,Augsburg,fewer_than_10_dated_starter_ratings
+1175,2025-04-12,D1,Hoffenheim,Mainz,fewer_than_10_dated_starter_ratings
+1178,2025-04-12,D1,M'gladbach,Freiburg,fewer_than_10_dated_starter_ratings
+1180,2025-04-12,E0,Brighton,Leicester,fewer_than_10_dated_starter_ratings
+1181,2025-04-12,E0,Man City,Crystal Palace,fewer_than_10_dated_starter_ratings
+1182,2025-04-12,E0,Nott'm Forest,Everton,fewer_than_10_dated_starter_ratings
+1187,2025-04-12,SP1,Celta,Espanol,fewer_than_10_dated_starter_ratings
+1188,2025-04-12,SP1,Getafe,Las Palmas,fewer_than_10_dated_starter_ratings
+1189,2025-04-12,SP1,Leganes,Barcelona,fewer_than_10_dated_starter_ratings
+1190,2025-04-12,SP1,Sociedad,Mallorca,fewer_than_10_dated_starter_ratings
+1192,2025-04-13,D1,Stuttgart,Werder Bremen,fewer_than_10_dated_starter_ratings
+1193,2025-04-13,E0,Chelsea,Ipswich,fewer_than_10_dated_starter_ratings
+1196,2025-04-13,E0,Wolves,Tottenham,fewer_than_10_dated_starter_ratings
+1199,2025-04-13,I1,Fiorentina,Parma,fewer_than_10_dated_starter_ratings
+1200,2025-04-13,I1,Lazio,Roma,fewer_than_10_dated_starter_ratings
+1203,2025-04-13,SP1,Ath Bilbao,Vallecano,fewer_than_10_dated_starter_ratings
+1204,2025-04-13,SP1,Betis,Villarreal,fewer_than_10_dated_starter_ratings
+1207,2025-04-14,I1,Napoli,Empoli,fewer_than_10_dated_starter_ratings
+1209,2025-04-16,E0,Newcastle,Crystal Palace,fewer_than_10_dated_starter_ratings
+1210,2025-04-18,SP1,Espanol,Getafe,fewer_than_10_dated_starter_ratings
+1211,2025-04-19,D1,Freiburg,Hoffenheim,fewer_than_10_dated_starter_ratings
+1214,2025-04-19,D1,RB Leipzig,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1215,2025-04-19,D1,Union Berlin,Stuttgart,fewer_than_10_dated_starter_ratings
+1216,2025-04-19,D1,Werder Bremen,Bochum,fewer_than_10_dated_starter_ratings
+1218,2025-04-19,E0,Brentford,Brighton,fewer_than_10_dated_starter_ratings
+1219,2025-04-19,E0,Crystal Palace,Bournemouth,fewer_than_10_dated_starter_ratings
+1222,2025-04-19,I1,Lecce,Como,fewer_than_10_dated_starter_ratings
+1224,2025-04-19,I1,Roma,Verona,fewer_than_10_dated_starter_ratings
+1225,2025-04-19,SP1,Barcelona,Celta,fewer_than_10_dated_starter_ratings
+1226,2025-04-19,SP1,Las Palmas,Ath Madrid,fewer_than_10_dated_starter_ratings
+1227,2025-04-19,SP1,Mallorca,Leganes,fewer_than_10_dated_starter_ratings
+1230,2025-04-20,D1,Dortmund,M'gladbach,fewer_than_10_dated_starter_ratings
+1233,2025-04-20,E0,Ipswich,Arsenal,fewer_than_10_dated_starter_ratings
+1235,2025-04-20,E0,Man United,Wolves,fewer_than_10_dated_starter_ratings
+1237,2025-04-20,I1,Empoli,Venezia,fewer_than_10_dated_starter_ratings
+1240,2025-04-20,SP1,Sevilla,Alaves,fewer_than_10_dated_starter_ratings
+1241,2025-04-20,SP1,Valladolid,Osasuna,fewer_than_10_dated_starter_ratings
+1242,2025-04-20,SP1,Villarreal,Sociedad,fewer_than_10_dated_starter_ratings
+1243,2025-04-21,E0,Tottenham,Nott'm Forest,fewer_than_10_dated_starter_ratings
+1244,2025-04-21,SP1,Girona,Betis,fewer_than_10_dated_starter_ratings
+1246,2025-04-22,SP1,Barcelona,Mallorca,fewer_than_10_dated_starter_ratings
+1247,2025-04-22,SP1,Valencia,Espanol,fewer_than_10_dated_starter_ratings
+1248,2025-04-23,E0,Arsenal,Crystal Palace,fewer_than_10_dated_starter_ratings
+1250,2025-04-23,I1,Genoa,Lazio,fewer_than_10_dated_starter_ratings
+1251,2025-04-23,I1,Parma,Juventus,fewer_than_10_dated_starter_ratings
+1253,2025-04-23,SP1,Alaves,Sociedad,fewer_than_10_dated_starter_ratings
+1254,2025-04-23,SP1,Ath Bilbao,Las Palmas,fewer_than_10_dated_starter_ratings
+1255,2025-04-23,SP1,Celta,Villarreal,fewer_than_10_dated_starter_ratings
+1258,2025-04-24,SP1,Betis,Valladolid,fewer_than_10_dated_starter_ratings
+1259,2025-04-24,SP1,Leganes,Girona,fewer_than_10_dated_starter_ratings
+1261,2025-04-25,D1,Stuttgart,Heidenheim,fewer_than_10_dated_starter_ratings
+1264,2025-04-26,D1,Hoffenheim,Dortmund,fewer_than_10_dated_starter_ratings
+1265,2025-04-26,D1,Holstein Kiel,M'gladbach,fewer_than_10_dated_starter_ratings
+1268,2025-04-26,E0,Brighton,West Ham,fewer_than_10_dated_starter_ratings
+1270,2025-04-26,E0,Newcastle,Ipswich,fewer_than_10_dated_starter_ratings
+1272,2025-04-26,E0,Wolves,Leicester,fewer_than_10_dated_starter_ratings
+1275,2025-04-27,E0,Bournemouth,Man United,fewer_than_10_dated_starter_ratings
+1278,2025-04-27,I1,Como,Genoa,fewer_than_10_dated_starter_ratings
+1279,2025-04-27,I1,Fiorentina,Empoli,fewer_than_10_dated_starter_ratings
+1280,2025-04-27,I1,Inter,Roma,fewer_than_10_dated_starter_ratings
+1284,2025-04-27,SP1,Villarreal,Espanol,fewer_than_10_dated_starter_ratings
+1285,2025-04-28,I1,Lazio,Parma,fewer_than_10_dated_starter_ratings
+1288,2025-05-01,E0,Nott'm Forest,Brentford,fewer_than_10_dated_starter_ratings
+1289,2025-05-02,D1,Heidenheim,Bochum,fewer_than_10_dated_starter_ratings
+1290,2025-05-02,E0,Man City,Wolves,fewer_than_10_dated_starter_ratings
+1294,2025-05-03,D1,M'gladbach,Hoffenheim,fewer_than_10_dated_starter_ratings
+1296,2025-05-03,D1,St Pauli,Stuttgart,fewer_than_10_dated_starter_ratings
+1298,2025-05-03,E0,Arsenal,Bournemouth,fewer_than_10_dated_starter_ratings
+1305,2025-05-03,I1,Parma,Como,fewer_than_10_dated_starter_ratings
+1307,2025-05-03,SP1,Las Palmas,Valencia,fewer_than_10_dated_starter_ratings
+1308,2025-05-03,SP1,Valladolid,Barcelona,fewer_than_10_dated_starter_ratings
+1309,2025-05-03,SP1,Villarreal,Osasuna,fewer_than_10_dated_starter_ratings
+1310,2025-05-04,D1,Augsburg,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1313,2025-05-04,E0,Brentford,Man United,fewer_than_10_dated_starter_ratings
+1314,2025-05-04,E0,Brighton,Newcastle,fewer_than_10_dated_starter_ratings
+1318,2025-05-04,I1,Empoli,Lazio,fewer_than_10_dated_starter_ratings
+1320,2025-05-04,I1,Roma,Fiorentina,fewer_than_10_dated_starter_ratings
+1321,2025-05-04,SP1,Espanol,Betis,fewer_than_10_dated_starter_ratings
+1322,2025-05-04,SP1,Real Madrid,Celta,fewer_than_10_dated_starter_ratings
+1323,2025-05-04,SP1,Sevilla,Leganes,fewer_than_10_dated_starter_ratings
+1324,2025-05-04,SP1,Sociedad,Ath Bilbao,fewer_than_10_dated_starter_ratings
+1325,2025-05-05,E0,Crystal Palace,Nott'm Forest,fewer_than_10_dated_starter_ratings
+1328,2025-05-09,D1,Wolfsburg,Hoffenheim,fewer_than_10_dated_starter_ratings
+1330,2025-05-09,SP1,Las Palmas,Vallecano,fewer_than_10_dated_starter_ratings
+1332,2025-05-10,D1,Bochum,Mainz,fewer_than_10_dated_starter_ratings
+1333,2025-05-10,D1,Holstein Kiel,Freiburg,fewer_than_10_dated_starter_ratings
+1336,2025-05-10,E0,Bournemouth,Aston Villa,fewer_than_10_dated_starter_ratings
+1339,2025-05-10,E0,Southampton,Man City,fewer_than_10_dated_starter_ratings
+1340,2025-05-10,E0,Wolves,Brighton,fewer_than_10_dated_starter_ratings
+1342,2025-05-10,I1,Empoli,Parma,fewer_than_10_dated_starter_ratings
+1344,2025-05-10,SP1,Ath Madrid,Sociedad,fewer_than_10_dated_starter_ratings
+1346,2025-05-10,SP1,Girona,Villarreal,fewer_than_10_dated_starter_ratings
+1347,2025-05-10,SP1,Mallorca,Valladolid,fewer_than_10_dated_starter_ratings
+1351,2025-05-11,D1,Stuttgart,Augsburg,fewer_than_10_dated_starter_ratings
+1352,2025-05-11,E0,Liverpool,Arsenal,fewer_than_10_dated_starter_ratings
+1355,2025-05-11,E0,Nott'm Forest,Leicester,fewer_than_10_dated_starter_ratings
+1356,2025-05-11,E0,Tottenham,Crystal Palace,fewer_than_10_dated_starter_ratings
+1357,2025-05-11,I1,Napoli,Genoa,fewer_than_10_dated_starter_ratings
+1359,2025-05-11,I1,Udinese,Monza,fewer_than_10_dated_starter_ratings
+1360,2025-05-11,I1,Verona,Lecce,fewer_than_10_dated_starter_ratings
+1361,2025-05-11,SP1,Ath Bilbao,Alaves,fewer_than_10_dated_starter_ratings
+1362,2025-05-11,SP1,Barcelona,Real Madrid,fewer_than_10_dated_starter_ratings
+1363,2025-05-11,SP1,Betis,Osasuna,fewer_than_10_dated_starter_ratings
+1364,2025-05-11,SP1,Leganes,Espanol,fewer_than_10_dated_starter_ratings
+1365,2025-05-12,I1,Atalanta,Roma,fewer_than_10_dated_starter_ratings
+1367,2025-05-13,SP1,Sevilla,Las Palmas,fewer_than_10_dated_starter_ratings
+1368,2025-05-13,SP1,Sociedad,Celta,fewer_than_10_dated_starter_ratings
+1369,2025-05-13,SP1,Valladolid,Girona,fewer_than_10_dated_starter_ratings
+1371,2025-05-14,SP1,Real Madrid,Mallorca,fewer_than_10_dated_starter_ratings
+1372,2025-05-14,SP1,Villarreal,Leganes,fewer_than_10_dated_starter_ratings
+1373,2025-05-15,SP1,Espanol,Barcelona,fewer_than_10_dated_starter_ratings
+1374,2025-05-15,SP1,Getafe,Ath Bilbao,fewer_than_10_dated_starter_ratings
+1376,2025-05-15,SP1,Vallecano,Betis,fewer_than_10_dated_starter_ratings
+1377,2025-05-16,E0,Aston Villa,Tottenham,fewer_than_10_dated_starter_ratings
+1378,2025-05-16,E0,Chelsea,Man United,fewer_than_10_dated_starter_ratings
+1380,2025-05-17,D1,Dortmund,Holstein Kiel,fewer_than_10_dated_starter_ratings
+1387,2025-05-17,D1,St Pauli,Bochum,fewer_than_10_dated_starter_ratings
+1389,2025-05-18,E0,Arsenal,Newcastle,fewer_than_10_dated_starter_ratings
+1391,2025-05-18,E0,Everton,Southampton,fewer_than_10_dated_starter_ratings
+1393,2025-05-18,E0,West Ham,Nott'm Forest,fewer_than_10_dated_starter_ratings
+1398,2025-05-18,I1,Lecce,Torino,fewer_than_10_dated_starter_ratings
+1399,2025-05-18,I1,Monza,Empoli,fewer_than_10_dated_starter_ratings
+1400,2025-05-18,I1,Parma,Napoli,fewer_than_10_dated_starter_ratings
+1401,2025-05-18,I1,Roma,Milan,fewer_than_10_dated_starter_ratings
+1403,2025-05-18,SP1,Ath Madrid,Betis,fewer_than_10_dated_starter_ratings
+1404,2025-05-18,SP1,Barcelona,Villarreal,fewer_than_10_dated_starter_ratings
+1405,2025-05-18,SP1,Celta,Vallecano,fewer_than_10_dated_starter_ratings
+1406,2025-05-18,SP1,Las Palmas,Leganes,fewer_than_10_dated_starter_ratings
+1408,2025-05-18,SP1,Osasuna,Espanol,fewer_than_10_dated_starter_ratings
+1409,2025-05-18,SP1,Sevilla,Real Madrid,fewer_than_10_dated_starter_ratings
+1410,2025-05-18,SP1,Sociedad,Girona,fewer_than_10_dated_starter_ratings
+1411,2025-05-18,SP1,Valencia,Ath Bilbao,fewer_than_10_dated_starter_ratings
+1412,2025-05-18,SP1,Valladolid,Alaves,fewer_than_10_dated_starter_ratings
+1414,2025-05-20,E0,Crystal Palace,Wolves,fewer_than_10_dated_starter_ratings
+1415,2025-05-20,E0,Man City,Bournemouth,fewer_than_10_dated_starter_ratings
+1418,2025-05-23,SP1,Betis,Valencia,fewer_than_10_dated_starter_ratings
+1419,2025-05-24,I1,Bologna,Genoa,fewer_than_10_dated_starter_ratings
+1422,2025-05-24,SP1,Espanol,Las Palmas,fewer_than_10_dated_starter_ratings
+1423,2025-05-24,SP1,Getafe,Celta,fewer_than_10_dated_starter_ratings
+1424,2025-05-24,SP1,Leganes,Valladolid,fewer_than_10_dated_starter_ratings
+1425,2025-05-24,SP1,Real Madrid,Sociedad,fewer_than_10_dated_starter_ratings
+1430,2025-05-25,E0,Liverpool,Crystal Palace,fewer_than_10_dated_starter_ratings
+1433,2025-05-25,E0,Nott'm Forest,Chelsea,fewer_than_10_dated_starter_ratings
+1434,2025-05-25,E0,Southampton,Arsenal,fewer_than_10_dated_starter_ratings
+1436,2025-05-25,E0,Wolves,Brentford,fewer_than_10_dated_starter_ratings
+1437,2025-05-25,I1,Atalanta,Parma,fewer_than_10_dated_starter_ratings
+1438,2025-05-25,I1,Empoli,Verona,fewer_than_10_dated_starter_ratings
+1440,2025-05-25,I1,Torino,Roma,fewer_than_10_dated_starter_ratings
+1442,2025-05-25,I1,Venezia,Juventus,fewer_than_10_dated_starter_ratings
+1443,2025-05-25,SP1,Ath Bilbao,Barcelona,fewer_than_10_dated_starter_ratings
+1444,2025-05-25,SP1,Girona,Ath Madrid,fewer_than_10_dated_starter_ratings
+1445,2025-05-25,SP1,Villarreal,Sevilla,fewer_than_10_dated_starter_ratings

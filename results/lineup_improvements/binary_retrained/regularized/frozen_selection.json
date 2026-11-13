@@ -1,0 +1,57 @@
+{
+  "model": "rf_positions_d2_leaf100__raw",
+  "threshold": 0.0,
+  "threshold_search": [
+    {
+      "threshold": 0.0,
+      "bets": 536,
+      "net": 79.97,
+      "positive_both_seasons": true,
+      "eligible": true
+    },
+    {
+      "threshold": 0.02,
+      "bets": 411,
+      "net": 45.36,
+      "positive_both_seasons": true,
+      "eligible": true
+    },
+    {
+      "threshold": 0.05,
+      "bets": 281,
+      "net": 49.790000000000006,
+      "positive_both_seasons": true,
+      "eligible": true
+    },
+    {
+      "threshold": 0.1,
+      "bets": 175,
+      "net": 28.91,
+      "positive_both_seasons": true,
+      "eligible": true
+    }
+  ],
+  "validation_log_loss": 0.6173505479914381,
+  "training_matches": 9586,
+  "training_last_date": "2023-06-04",
+  "selection_seasons": [
+    2021,
+    2022
+  ],
+  "calibration_seasons": [],
+  "in_sample_metrics": {
+    "matches": 9586,
+    "correct": 6462,
+    "accuracy": 0.6741080742749843,
+    "log_loss": 0.6068200934665966,
+    "brier": 0.20931238567526025,
+    "auc": 0.7271427774603625,
+    "home_picks": 3640,
+    "no_home_picks": 5946,
+    "home_wins": 4268,
+    "no_home_wins": 5318
+  },
+  "model_sha256": "193996af97e3671ec23cd377bc572fcf66cc2ff81bb22ddc797e74541ef27e07",
+  "plan_sha256": "c646a2df03e21203bb75a10d370b926b4e4b6a093377e955e252c3208c40eec9",
+  "holdout_status": "Not evaluated; 2025-26 reserved for one frozen evaluation."
+}

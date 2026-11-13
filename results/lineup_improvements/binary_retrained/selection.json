@@ -1,0 +1,84 @@
+{
+  "selection": {
+    "Logistic": {
+      "candidate": "improved_positions",
+      "C": 0.01,
+      "mean_log_loss": 0.6028950291114015
+    },
+    "RF_binary": {
+      "candidate": "fifa_prior",
+      "C": 1.0,
+      "mean_log_loss": 0.5988671840029902
+    }
+  },
+  "parameters": {
+    "Logistic": {
+      "baseline": {
+        "C": 0.01,
+        "mean_log_loss": 0.6041408660795153
+      },
+      "old_positions": {
+        "C": 0.01,
+        "mean_log_loss": 0.606463650455642
+      },
+      "improved_positions": {
+        "C": 0.01,
+        "mean_log_loss": 0.6028950291114015
+      },
+      "compact_gaps": {
+        "C": 0.01,
+        "mean_log_loss": 0.605100884326437
+      },
+      "learned_weights": {
+        "C": 0.01,
+        "mean_log_loss": 0.6034807318662867
+      },
+      "lineup_changes": {
+        "C": 0.01,
+        "mean_log_loss": 0.6049377835004348
+      },
+      "fifa_prior": {
+        "C": 0.01,
+        "mean_log_loss": 0.6044489001481115
+      },
+      "full_dynamic": {
+        "C": 0.01,
+        "mean_log_loss": 0.6038280066649626
+      }
+    },
+    "RF_binary": {
+      "baseline": {
+        "C": 1.0,
+        "mean_log_loss": 0.6002470809856496
+      },
+      "old_positions": {
+        "C": 1.0,
+        "mean_log_loss": 0.6005534243694373
+      },
+      "improved_positions": {
+        "C": 1.0,
+        "mean_log_loss": 0.600203737827159
+      },
+      "compact_gaps": {
+        "C": 1.0,
+        "mean_log_loss": 0.6000609425708567
+      },
+      "learned_weights": {
+        "C": 1.0,
+        "mean_log_loss": 0.599351053353918
+      },
+      "lineup_changes": {
+        "C": 1.0,
+        "mean_log_loss": 0.60028110721231
+      },
+      "fifa_prior": {
+        "C": 1.0,
+        "mean_log_loss": 0.5988671840029902
+      },
+      "full_dynamic": {
+        "C": 1.0,
+        "mean_log_loss": 0.5997162583989519
+      }
+    }
+  }
+}

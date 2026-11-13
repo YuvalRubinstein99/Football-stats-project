@@ -1,34 +1,61 @@
-"""Check source coverage without promoting unjoined data to model inputs."""
-import csv,json
-from collections import Counter,defaultdict
-from scrape_recent_seasons import OUT,LEAGUES,write_csv,atomic_json
+"""Audit every requested season, including missing and partially collected seasons."""
+import argparse
+import csv
+import json
+from collections import Counter, defaultdict
+from pathlib import Path
+from scrape_recent_seasons import OUT, LEAGUES, write_csv
 
-def read(name):
-    with (OUT/name).open(encoding='utf-8-sig',newline='') as stream:return list(csv.DictReader(stream))
+
+def read(out, name):
+    path = out / name
+    if path.exists():
+        with path.open(encoding='utf-8-sig', newline='') as stream:
+            yield from csv.DictReader(stream)
+
+
+def audit(out=OUT, status=None):
+    status = status or json.loads((out / 'status.json').read_text(encoding='utf-8'))
+    counts, odds, seen = Counter(), Counter(), set()
+    for row in read(out, 'results_odds.csv'):
+        key = tuple(row[k] for k in ('season', 'league', 'fixture_date', 'home_team_name', 'away_team_name'))
+        if key in seen:
+            raise ValueError('Duplicate fixture: ' + str(key))
+        seen.add(key)
+        counts[key[:2]] += 1
+        odds[key[:2]] += row['valid_bet365'] == 'True'
+    games = defaultdict(list)
+    for row in read(out, 'games.csv'):
+        games[row['season'], LEAGUES[row['competition_id']]].append(row)
+    starters = defaultdict(list)
+    for row in read(out, 'lineups.csv'):
+        if row['type'] == 'starting_lineup':
+            starters[row['game_id'], row['club_id']].append(row['player_id'])
+    years = sorted(map(str, status.get('seasons') or {k[0] for k in counts.keys() | games.keys()}))
+    audits = []
+    for year in years:
+        for league in status.get('leagues', list(LEAGUES.values())):
+            key = year, league
+            full = 0
+            for row in games[key]:
+                home = starters[row['game_id'], row['home_club_id']]
+                away = starters[row['game_id'], row['away_club_id']]
+                full += len(home) == len(away) == 11 and len(set(home + away)) == 22 and '' not in home + away
+            audits.append(dict(season=year, league=league, results_matches=counts[key],
+                bet365_matches=odds[key], lineup_source_matches=len(games[key]),
+                complete_unique_starter_sets=full, model_ready_matches=0,
+                results_from_successful_run=status.get('results_published', True),
+                note='Not joined/rated' if counts[key] and games[key] else 'Missing results or lineup source'))
+    write_csv(out / 'collection_audit.csv', audits)
+    return audits
+
 
 def main():
-    results=read('results_odds.csv');games=read('games.csv');lineups=read('lineups.csv')
-    assert len({(r['season'],r['league'],r['fixture_date'],r['home_team_name'],r['away_team_name']) for r in results})==len(results)
-    starters=defaultdict(list)
-    for r in lineups:
-        if r['type']=='starting_lineup':starters[r['game_id'],r['club_id']].append(r['player_id'])
-    audits=[]
-    for year in ['2023','2024','2025']:
-        for competition,league in LEAGUES.items():
-            matches=[r for r in results if r['season']==year and r['league']==league]
-            archive=[r for r in games if r['season']==year and r['competition_id']==competition]
-            full=0
-            for r in archive:
-                home=starters[r['game_id'],r['home_club_id']];away=starters[r['game_id'],r['away_club_id']]
-                full+=len(home)==11 and len(away)==11 and len(set(home+away))==22
-            audits.append(dict(season=year,league=league,results_matches=len(matches),bet365_matches=sum(r['valid_bet365']=='True' for r in matches),lineup_source_matches=len(archive),complete_unique_starter_sets=full,model_ready_matches=0))
-    write_csv(OUT/'collection_audit.csv',audits)
-    status=json.loads((OUT/'status.json').read_text())
-    ratings=read('ratings_fc23_fc24.csv')
-    status['ratings']['dates']=sorted(set(r.get('fifa_update_date') or r.get('update_as_of','') for r in ratings))
-    status['note']='Sources collected separately; not yet joined or promoted to models. See collection_audit.csv and recent_ratings_audit.json. Ratings must predate each match; verify identities and snapshot publication dates.'
-    status['recent_ratings_audit']='recent_ratings_audit.json'
-    atomic_json(OUT/'status.json',status)
-    print(json.dumps(audits,indent=2))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=OUT)
+    args = parser.parse_args()
+    print(json.dumps(audit(args.output), indent=2))
 
-if __name__=='__main__':main()
+
+if __name__ == '__main__':
+    main()

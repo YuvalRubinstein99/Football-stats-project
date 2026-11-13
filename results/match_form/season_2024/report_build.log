@@ -1,0 +1,55 @@
+       split               method  cutoff  bets       net  max_drawdown
+  audit_2021              Flat $1    0.00   789   -2.2400        0.0372
+  audit_2021              Flat $1    0.01   645    1.8000        0.0344
+  audit_2021              Flat $1    0.02   503  -31.8100        0.0556
+  audit_2021              Flat $1    0.03   405  -10.6800        0.0363
+  audit_2021              Flat $1    0.05   265  -31.2600        0.0466
+  audit_2021              Flat $1    0.10   120  -12.9200        0.0226
+  audit_2021        Quarter Kelly    0.00   789 -135.2584        0.2164
+  audit_2021        Quarter Kelly    0.01   645 -136.6744        0.2118
+  audit_2021        Quarter Kelly    0.02   503 -169.1926        0.2125
+  audit_2021        Quarter Kelly    0.03   405  -83.1909        0.1913
+  audit_2021        Quarter Kelly    0.05   265 -119.4919        0.2180
+  audit_2021        Quarter Kelly    0.10   120    9.5375        0.1533
+  audit_2021 Robust quarter Kelly    0.00   141   31.0662        0.0822
+  audit_2021 Robust quarter Kelly    0.01   141   31.0662        0.0822
+  audit_2021 Robust quarter Kelly    0.02   141   31.0662        0.0822
+  audit_2021 Robust quarter Kelly    0.03   137   36.5226        0.0806
+  audit_2021 Robust quarter Kelly    0.05   117   34.5308        0.0808
+  audit_2021 Robust quarter Kelly    0.10    82   65.5307        0.0721
+   test_2022              Flat $1    0.00   750   86.2600        0.0330
+   test_2022              Flat $1    0.01   591   88.3900        0.0245
+   test_2022              Flat $1    0.02   459  101.3400        0.0224
+   test_2022              Flat $1    0.03   360   83.0100        0.0245
+   test_2022              Flat $1    0.05   225   54.2600        0.0207
+   test_2022              Flat $1    0.10    94   42.8600        0.0115
+   test_2022        Quarter Kelly    0.00   750  938.8654        0.1193
+   test_2022        Quarter Kelly    0.01   591  932.1372        0.1168
+   test_2022        Quarter Kelly    0.02   459  915.9575        0.1196
+   test_2022        Quarter Kelly    0.03   360  852.7689        0.1230
+   test_2022        Quarter Kelly    0.05   225  624.0389        0.1347
+   test_2022        Quarter Kelly    0.10    94  515.4498        0.0912
+   test_2022 Robust quarter Kelly    0.00   114  235.9963        0.0467
+   test_2022 Robust quarter Kelly    0.01   114  235.9963        0.0467
+   test_2022 Robust quarter Kelly    0.02   114  235.9963        0.0467
+   test_2022 Robust quarter Kelly    0.03   114  235.9963        0.0467
+   test_2022 Robust quarter Kelly    0.05   103  215.0023        0.0467
+   test_2022 Robust quarter Kelly    0.10    69  196.8243        0.0436
+forward_2024              Flat $1    0.00   442 -101.5900        0.1125
+forward_2024              Flat $1    0.01   362  -94.4900        0.1023
+forward_2024              Flat $1    0.02   301 -105.8300        0.1142
+forward_2024              Flat $1    0.03   256  -91.6100        0.1012
+forward_2024              Flat $1    0.05   183  -80.7100        0.0895
+forward_2024              Flat $1    0.10    83  -63.7700        0.0638
+forward_2024        Quarter Kelly    0.00   442 -553.7392        0.5616
+forward_2024        Quarter Kelly    0.01   362 -556.2910        0.5634
+forward_2024        Quarter Kelly    0.02   301 -561.6312        0.5686
+forward_2024        Quarter Kelly    0.03   256 -526.5991        0.5351
+forward_2024        Quarter Kelly    0.05   183 -511.1891        0.5200
+forward_2024        Quarter Kelly    0.10    83 -452.0066        0.4520
+forward_2024 Robust quarter Kelly    0.00    85 -215.3261        0.2153
+forward_2024 Robust quarter Kelly    0.01    85 -215.3261        0.2153
+forward_2024 Robust quarter Kelly    0.02    85 -215.3261        0.2153
+forward_2024 Robust quarter Kelly    0.03    85 -215.3261        0.2153
+forward_2024 Robust quarter Kelly    0.05    82 -213.0378        0.2130
+forward_2024 Robust quarter Kelly    0.10    61 -205.1572        0.2052

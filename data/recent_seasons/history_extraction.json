@@ -1,0 +1,32 @@
+{
+  "signature": {
+    "version": 1,
+    "years": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "leagues": [
+      "E0",
+      "SP1",
+      "D1",
+      "I1"
+    ],
+    "as_of": "2026-10-20",
+    "sources": {
+      "games": "142561989017d379bcf9e72bad0b87e0996bae0e7b710ebb3def9255f464c741",
+      "game_lineups": "5e83d6fad28364aadfea608013700cf09990062eede1ad9ef189189b0af47ba2"
+    }
+  },
+  "summary": {
+    "rows": 185817,
+    "games": 4338,
+    "games_with_22_starters": 4337,
+    "latest_source_match": "2026-05-24"
+  },
+  "outputs": {
+    "games.csv": "7ad5b65d1ef4a2eccf83f95c78779333508f46741417f2771ca54fd220e56044",
+    "lineups.csv": "9a4fe75781957d15a888e0f2b909cf3ac96731c9029b6b9d54e4121cf3e8e6b3"
+  }
+}

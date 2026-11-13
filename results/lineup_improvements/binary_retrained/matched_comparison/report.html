@@ -1,0 +1,181 @@
+<!doctype html><meta charset="utf-8"><title>Matched model comparison</title><style>body{font:15px system-ui;margin:30px;color:#263548}img{width:100%;max-width:1440px}table{border-collapse:collapse;font-size:12px}td,th{padding:7px;border-bottom:1px solid #ddd}</style><h1>Old and new models on exactly the same split</h1><p>Both fits: 8,521 matches, 2014-15 through 2021-22. Both tests: 1,065 matches in 2022-23.</p><p>Identical ordered training rows, test rows, labels, odds, random seed (20261020), 500 trees, and home-only betting rules. Fit all preprocessing on the training rows only. Ordinary fitted predictions for training; no test rows used in either fit. No retuning.</p><p>2022-23 is previously inspected and influenced the new model specification. This is a controlled retrospective diagnostic, not an untouched evaluation of model selection. Both features and forest regularization differ, so their individual effects are not isolated. Historical rating publication timestamps remain unverified.</p><p>The 2025-26 prepared table lacks the old specification&#x27;s history and rating inputs. Use the common complete historical split rather than fabricate missing old inputs.</p><h2>Probability generalization gaps</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>train_log_loss</th>
+      <th>test_log_loss</th>
+      <th>log_loss_gap</th>
+      <th>train_brier</th>
+      <th>test_brier</th>
+      <th>brier_gap</th>
+      <th>train_accuracy</th>
+      <th>test_accuracy</th>
+      <th>accuracy_gap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>old</td>
+      <td>0.579214</td>
+      <td>0.631419</td>
+      <td>0.052205</td>
+      <td>0.198237</td>
+      <td>0.220585</td>
+      <td>0.022348</td>
+      <td>0.682549</td>
+      <td>0.637559</td>
+      <td>0.044990</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>0.603450</td>
+      <td>0.630652</td>
+      <td>0.027201</td>
+      <td>0.207827</td>
+      <td>0.220200</td>
+      <td>0.012373</td>
+      <td>0.677033</td>
+      <td>0.641315</td>
+      <td>0.035719</td>
+    </tr>
+    <tr>
+      <td>market</td>
+      <td>0.602245</td>
+      <td>0.632411</td>
+      <td>0.030167</td>
+      <td>0.207788</td>
+      <td>0.220922</td>
+      <td>0.013134</td>
+      <td>0.677737</td>
+      <td>0.637559</td>
+      <td>0.040179</td>
+    </tr>
+  </tbody>
+</table><img src="cumulative_flat.svg" alt="Old versus new, flat stakes"><img src="cumulative_tiers.svg" alt="Old versus new, variable stakes"><h2>Betting generalization gaps</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>strategy</th>
+      <th>staking</th>
+      <th>bets_train</th>
+      <th>net_train</th>
+      <th>roi_train</th>
+      <th>bets_test</th>
+      <th>net_test</th>
+      <th>roi_test</th>
+      <th>roi_gap_percentage_points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>old</td>
+      <td>Home only: positive expected return</td>
+      <td>flat</td>
+      <td>2141</td>
+      <td>934.05000</td>
+      <td>0.43627</td>
+      <td>248</td>
+      <td>28.62000</td>
+      <td>0.11540</td>
+      <td>32.08649</td>
+    </tr>
+    <tr>
+      <td>old</td>
+      <td>Home only: positive expected return</td>
+      <td>tiers</td>
+      <td>2141</td>
+      <td>4200.03000</td>
+      <td>0.58766</td>
+      <td>248</td>
+      <td>144.68000</td>
+      <td>0.18062</td>
+      <td>40.70391</td>
+    </tr>
+    <tr>
+      <td>old</td>
+      <td>Home only: expected return &gt;2%</td>
+      <td>flat</td>
+      <td>1570</td>
+      <td>839.18000</td>
+      <td>0.53451</td>
+      <td>169</td>
+      <td>40.57000</td>
+      <td>0.24006</td>
+      <td>29.44504</td>
+    </tr>
+    <tr>
+      <td>old</td>
+      <td>Home only: expected return &gt;2%</td>
+      <td>tiers</td>
+      <td>1570</td>
+      <td>4026.82000</td>
+      <td>0.65949</td>
+      <td>169</td>
+      <td>160.91000</td>
+      <td>0.24832</td>
+      <td>41.11679</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>Home only: positive expected return</td>
+      <td>flat</td>
+      <td>2143</td>
+      <td>81.26000</td>
+      <td>0.03792</td>
+      <td>281</td>
+      <td>46.15000</td>
+      <td>0.16423</td>
+      <td>-12.63161</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>Home only: positive expected return</td>
+      <td>tiers</td>
+      <td>2143</td>
+      <td>394.36000</td>
+      <td>0.05138</td>
+      <td>281</td>
+      <td>162.36000</td>
+      <td>0.16895</td>
+      <td>-11.75733</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>Home only: expected return &gt;2%</td>
+      <td>flat</td>
+      <td>1640</td>
+      <td>113.30000</td>
+      <td>0.06909</td>
+      <td>209</td>
+      <td>17.20000</td>
+      <td>0.08230</td>
+      <td>-1.32113</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>Home only: expected return &gt;2%</td>
+      <td>tiers</td>
+      <td>1640</td>
+      <td>408.73000</td>
+      <td>0.05964</td>
+      <td>209</td>
+      <td>121.76000</td>
+      <td>0.14392</td>
+      <td>-8.42819</td>
+    </tr>
+  </tbody>
+</table><h2>Paired test comparison</h2><pre>{
+  &quot;metric&quot;: &quot;Test binary log loss: new minus old; negative favors new&quot;,
+  &quot;difference&quot;: -0.000766738113110128,
+  &quot;lower_95&quot;: -0.004413543801305419,
+  &quot;upper_95&quot;: 0.0033660675075809932,
+  &quot;limitation&quot;: &quot;Descriptive paired interval; does not account for model-selection exposure to this test season.&quot;
+}</pre><h2>Verification</h2><pre>{
+  &quot;training_rows_identical&quot;: true,
+  &quot;test_rows_identical&quot;: true,
+  &quot;old_refit_reproduces_original&quot;: true,
+  &quot;new_refit_reproduces_earlier_forward_fit&quot;: true,
+  &quot;outcome_free_inference&quot;: true,
+  &quot;saved_model_roundtrip&quot;: true,
+  &quot;settlements_checked&quot;: 76688
+}</pre>

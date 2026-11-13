@@ -1,0 +1,88 @@
+variant,target,alpha,feature,source_feature,standardized_coefficient,nonzero
+Lasso minimum CV deviance,away,0.021544346900318846,B365A,B365A,-0.11433945322949322,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Atlético Madrid,home_team_name,-0.027209951674085894,True
+Lasso minimum CV deviance,away,0.021544346900318846,HomePlayer_Overall_min,HomePlayer_Overall_min,-0.02650583754109471,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Getafe,home_team_name,-0.024790523239252467,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_physicality_mean,home_physicality_mean,-0.01924006354708317,True
+Lasso minimum CV deviance,away,0.021544346900318846,HomePlayer_3rd_worst,HomePlayer_3rd_worst,-0.018796841852583356,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Getafe,away_team_name,-0.010407921577920658,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Athletic Club,home_team_name,-0.009838213110566912,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Juventus,home_team_name,-0.009760828001012863,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Málaga,away_team_name,-0.00760324413540958,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Athletic Club,away_team_name,-0.006649870590462747,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Hamburger SV,away_team_name,-0.0036858919928632627,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Chievo,away_team_name,-0.0031775856624233828,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Sevilla,home_team_name,-0.0031380859743569012,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Alavés,home_team_name,-0.0024246318198930714,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Atlético Madrid,away_team_name,-0.0010043272561261302,True
+Lasso minimum CV deviance,away,0.021544346900318846,pace_advantage,pace_advantage,-0.0006331139577408324,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Union Berlin,home_team_name,-0.00011635702362163321,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Real Sociedad,home_team_name,-2.3547753862894655e-05,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Pescara,home_team_name,0.0002767589001626611,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Milan,away_team_name,0.000537399938489353,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Werder Bremen,home_team_name,0.0013225633340446595,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Venezia,home_team_name,0.0014946719662671745,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Real Madrid,away_team_name,0.0019332165283657385,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_pace_mean,away_pace_mean,0.002280245592067633,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_pace_count,away_pace_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_shooting_count,away_shooting_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_passing_count,away_passing_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_dribbling_count,away_dribbling_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_defending_count,away_defending_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_physicality_count,away_physicality_count,0.0025357086192251297,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Roma,away_team_name,0.0025595331604407676,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Cagliari,home_team_name,0.002571154299350627,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_La Coruña,home_team_name,0.00281418821614525,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_dribbling_vs_defending,away_dribbling_vs_defending,0.004011368113498153,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Lecce,home_team_name,0.004085909851618692,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_shooting_mean,away_shooting_mean,0.004644053579661624,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Benevento,home_team_name,0.005196195428438513,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Leverkusen,away_team_name,0.007706204940839262,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_RB Leipzig,away_team_name,0.009782735912109987,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Hoffenheim,away_team_name,0.012532785327570455,True
+Lasso minimum CV deviance,away,0.021544346900318846,home_team_name_Paderborn 07,home_team_name,0.012716351839748816,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Werder Bremen,away_team_name,0.012743269954833299,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Sassuolo,away_team_name,0.013883770237151505,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_team_name_Atalanta,away_team_name,0.019939035803386795,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_pace_vs_defending,away_pace_vs_defending,0.020092757022833245,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_dribbling_mean,away_dribbling_mean,0.030263696393631953,True
+Lasso minimum CV deviance,away,0.021544346900318846,AwayPlayer_3rd_best,AwayPlayer_3rd_best,0.03868623708446946,True
+Lasso minimum CV deviance,away,0.021544346900318846,away_GD_prior,away_GD_prior,0.04080775434130482,True
+Lasso minimum CV deviance,away,0.021544346900318846,B365H,B365H,0.09177225226158925,True
+Lasso minimum CV deviance,home,0.046415888336127795,B365H,B365H,-0.15135088242660252,True
+Lasso minimum CV deviance,home,0.046415888336127795,AwayPlayer_Overall_mean_ln,AwayPlayer_Overall_mean_ln,-0.027271927230870678,True
+Lasso minimum CV deviance,home,0.046415888336127795,Away_min_max,Away_min_max,-0.005530466560360355,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_pace_mean,home_pace_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_shooting_mean,home_shooting_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_passing_mean,home_passing_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_dribbling_mean,home_dribbling_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_defending_mean,home_defending_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,missingindicator_home_physicality_mean,home_physicality_mean,-0.00014612217044093634,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_pace_count,home_pace_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_shooting_count,home_shooting_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_passing_count,home_passing_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_dribbling_count,home_dribbling_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_defending_count,home_defending_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_physicality_count,home_physicality_count,0.0007961591514832795,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_shooting_vs_defending,home_shooting_vs_defending,0.0017653854016250214,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_dribbling_vs_defending,home_dribbling_vs_defending,0.00474163940778672,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_shooting_mean,home_shooting_mean,0.0064285037982164134,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_team_name_Dortmund,home_team_name,0.008863296531050573,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_GD_form,home_GD_form,0.009607545996874146,True
+Lasso minimum CV deviance,home,0.046415888336127795,home_dribbling_mean,home_dribbling_mean,0.010562885071614188,True
+Lasso minimum CV deviance,home,0.046415888336127795,HomePlayer_3rd_best,HomePlayer_3rd_best,0.011305112552976235,True
+Lasso minimum CV deviance,home,0.046415888336127795,passing_advantage,passing_advantage,0.015722318166785744,True
+Lasso minimum CV deviance,home,0.046415888336127795,HomePlayer_Overall_max,HomePlayer_Overall_max,0.029185972898598696,True
+Lasso minimum CV deviance,home,0.046415888336127795,B365A,B365A,0.044126871011159925,True
+Lasso minimum CV deviance,home,0.046415888336127795,B365D,B365D,0.06582046180456476,True
+Lasso one SE,away,0.1,B365A,B365A,-0.08150924258966757,True
+Lasso one SE,away,0.1,AwayPlayer_3rd_best,AwayPlayer_3rd_best,0.015008555602504609,True
+Lasso one SE,away,0.1,away_dribbling_vs_defending,away_dribbling_vs_defending,0.015288791281602283,True
+Lasso one SE,away,0.1,away_GD_prior,away_GD_prior,0.019019007980917848,True
+Lasso one SE,away,0.1,B365H,B365H,0.12228524743977619,True
+Lasso one SE,home,0.1,B365H,B365H,-0.090815242848944,True
+Lasso one SE,home,0.1,HomePlayer_3rd_best,HomePlayer_3rd_best,0.0018282097539748985,True
+Lasso one SE,home,0.1,home_dribbling_mean,home_dribbling_mean,0.002784023708610652,True
+Lasso one SE,home,0.1,passing_advantage,passing_advantage,0.022878390980836175,True
+Lasso one SE,home,0.1,HomePlayer_Overall_max,HomePlayer_Overall_max,0.02742261068821922,True
+Lasso one SE,home,0.1,B365A,B365A,0.12643649205358154,True

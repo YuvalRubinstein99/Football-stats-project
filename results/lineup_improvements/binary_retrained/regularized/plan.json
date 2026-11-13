@@ -1,0 +1,165 @@
+{
+  "grid": {
+    "market": {
+      "family": "market",
+      "columns": []
+    },
+    "logit_odds": {
+      "family": "logistic",
+      "columns": [
+        "market_logit",
+        "market_overround"
+      ],
+      "C": 0.1
+    },
+    "logit_core_C0.01": {
+      "family": "logistic",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek"
+      ],
+      "C": 0.01
+    },
+    "logit_core_C0.1": {
+      "family": "logistic",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek"
+      ],
+      "C": 0.1
+    },
+    "rf_core_d2_leaf100": {
+      "family": "forest",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek"
+      ],
+      "max_depth": 2,
+      "min_samples_leaf": 100
+    },
+    "rf_core_d3_leaf50": {
+      "family": "forest",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek"
+      ],
+      "max_depth": 3,
+      "min_samples_leaf": 50
+    },
+    "logit_positions_C0.01": {
+      "family": "logistic",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek",
+        "home_attack_defense",
+        "away_attack_defense",
+        "mid_passing_gap",
+        "mid_defending_gap",
+        "keeper_gap",
+        "minimum_position_coverage"
+      ],
+      "C": 0.01
+    },
+    "logit_positions_C0.1": {
+      "family": "logistic",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek",
+        "home_attack_defense",
+        "away_attack_defense",
+        "mid_passing_gap",
+        "mid_defending_gap",
+        "keeper_gap",
+        "minimum_position_coverage"
+      ],
+      "C": 0.1
+    },
+    "rf_positions_d2_leaf100": {
+      "family": "forest",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek",
+        "home_attack_defense",
+        "away_attack_defense",
+        "mid_passing_gap",
+        "mid_defending_gap",
+        "keeper_gap",
+        "minimum_position_coverage"
+      ],
+      "max_depth": 2,
+      "min_samples_leaf": 100
+    },
+    "rf_positions_d3_leaf50": {
+      "family": "forest",
+      "columns": [
+        "market_logit",
+        "market_overround",
+        "overall_gap",
+        "gd_form_gap",
+        "points_form_gap",
+        "matchweek",
+        "home_attack_defense",
+        "away_attack_defense",
+        "mid_passing_gap",
+        "mid_defending_gap",
+        "keeper_gap",
+        "minimum_position_coverage"
+      ],
+      "max_depth": 3,
+      "min_samples_leaf": 50
+    }
+  },
+  "probability_variants": [
+    "raw",
+    "sigmoid"
+  ],
+  "calibration": "Sigmoid on logits; C=1. Fit on preceding two seasons of raw forward predictions (one season for 2016 initialization). Never fit on in-sample probabilities.",
+  "selection": "Minimum mean binary log loss over the previous two forward validation seasons; include raw bookmaker probabilities. Outer seasons 2018 through 2022.",
+  "threshold": "Choose among 0%, 2%, 5%, 10% using previous two seasons only. Require >=100 bets combined and positive flat net in BOTH seasons; maximize total flat net among eligible thresholds, ties favor lower cutoff. Otherwise select no betting.",
+  "history": "2014-2022 already inspected in previous experiments; historical nested replay is not untouched data.",
+  "final": "Freeze model, calibration, threshold and all preprocessing on 2014-2022 before opening 2025-26 outcomes.",
+  "holdout": {
+    "season": 2025,
+    "leagues": [
+      "D1",
+      "I1",
+      "SP1"
+    ],
+    "minimum_rated_starters": 10,
+    "policy": "All valid-odds fixtures get the market benchmark. Model comparison uses complete unique lineups with >=10 dated ratings per side; same eligible rows for both. Use only FC23/FC24 snapshots dated before season start. Existing snapshots are stale. No model or threshold revisions after evaluation. Actual historical starters, not forecast lineups."
+  },
+  "input_hashes": {
+    "results\\lineup_improvements\\train_features.csv": "79449cd120af198ac696a54e1027ae672ed2b5ff6829f9ce980502dfc21649cc",
+    "results\\lineup_improvements\\test_features.csv": "dbd6c8dad8dfc3d3f1eb6fe16b953232671a4b412b34da3caf19bd4f1ecdbf0a",
+    "src\\regularized_home_win.py": "c10c0d147737ee3900159846abe6103bee7acd74d81aeafbcc9ff95e82e0bf27",
+    "scripts\\train_regularized_home_win.py": "7bd2d06d68cf88f874b98c1011d9ab82eb3b7bdb3027e48590ef4c649ec15828"
+  }
+}

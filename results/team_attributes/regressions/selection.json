@@ -1,0 +1,79 @@
+{
+  "Linear": {
+    "candidate": "odds_overall_form",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "home_GD_prior",
+      "home_Points_prior",
+      "home_GD_form",
+      "home_Points_form",
+      "away_GD_prior",
+      "away_Points_prior",
+      "away_GD_form",
+      "away_Points_form"
+    ],
+    "raw_features": 13,
+    "mean_encoded_features": 13.0,
+    "best_mean_candidate": "compact_matchups",
+    "mean_log_loss": 0.9815264347030731,
+    "best_mean_log_loss": 0.9801970824427283,
+    "threshold": 0.9822586273595679
+  },
+  "Poisson": {
+    "candidate": "odds_overall_form",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "HomePlayer_Overall_mean",
+      "AwayPlayer_Overall_mean",
+      "home_GD_prior",
+      "home_Points_prior",
+      "home_GD_form",
+      "home_Points_form",
+      "away_GD_prior",
+      "away_Points_prior",
+      "away_GD_form",
+      "away_Points_form"
+    ],
+    "raw_features": 13,
+    "mean_encoded_features": 13.0,
+    "best_mean_candidate": "compact_skill_means",
+    "mean_log_loss": 0.9805689942922373,
+    "best_mean_log_loss": 0.9795105621293114,
+    "threshold": 0.9814898885093049
+  },
+  "Ordered_logit": {
+    "candidate": "odds_only",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A"
+    ],
+    "raw_features": 3,
+    "mean_encoded_features": 3.0,
+    "best_mean_candidate": "compact_skill_gaps",
+    "mean_log_loss": 0.9798159599932934,
+    "best_mean_log_loss": 0.9760190144272511,
+    "threshold": 0.9806206879318362
+  },
+  "Ordered_probit": {
+    "candidate": "odds_defending",
+    "columns": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "defending_advantage"
+    ],
+    "raw_features": 4,
+    "mean_encoded_features": 5.0,
+    "best_mean_candidate": "compact_skill_gaps",
+    "mean_log_loss": 0.9812453917700661,
+    "best_mean_log_loss": 0.9777855343127362,
+    "threshold": 0.9816685902794512
+  }
+}

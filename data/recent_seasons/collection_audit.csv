@@ -1,13 +1,17 @@
-season,league,results_matches,bet365_matches,lineup_source_matches,complete_unique_starter_sets,model_ready_matches
-2023,E0,380,380,380,380,0
-2023,SP1,380,380,380,380,0
-2023,D1,306,306,306,306,0
-2023,I1,380,380,380,380,0
-2024,E0,380,380,380,380,0
-2024,SP1,380,380,380,380,0
-2024,D1,306,306,306,306,0
-2024,I1,380,380,380,380,0
-2025,E0,380,380,380,380,0
-2025,SP1,380,380,380,380,0
-2025,D1,306,306,306,306,0
-2025,I1,380,380,380,379,0
+season,league,results_matches,bet365_matches,lineup_source_matches,complete_unique_starter_sets,model_ready_matches,results_from_successful_run,note
+2023,E0,380,380,380,380,0,False,Not joined/rated
+2023,SP1,380,380,380,380,0,False,Not joined/rated
+2023,D1,306,306,306,306,0,False,Not joined/rated
+2023,I1,380,380,380,380,0,False,Not joined/rated
+2024,E0,380,380,380,380,0,False,Not joined/rated
+2024,SP1,380,380,380,380,0,False,Not joined/rated
+2024,D1,306,306,306,306,0,False,Not joined/rated
+2024,I1,380,380,380,380,0,False,Not joined/rated
+2025,E0,380,380,380,380,0,False,Not joined/rated
+2025,SP1,380,380,380,380,0,False,Not joined/rated
+2025,D1,306,306,306,306,0,False,Not joined/rated
+2025,I1,380,380,380,379,0,False,Not joined/rated
+2026,E0,0,0,0,0,0,False,Missing results or lineup source
+2026,SP1,0,0,0,0,0,False,Missing results or lineup source
+2026,D1,0,0,0,0,0,False,Missing results or lineup source
+2026,I1,0,0,0,0,0,False,Missing results or lineup source

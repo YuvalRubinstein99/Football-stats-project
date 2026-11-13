@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "reconciled_metric_rows": 400,
+  "probability_rows": 115600,
+  "train_temporal_rows": 19262,
+  "test_temporal_rows": 1445
+}

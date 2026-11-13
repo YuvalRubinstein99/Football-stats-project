@@ -44,11 +44,13 @@ def digest(path):
         for block in iter(lambda:f.read(1024*1024),b''):h.update(block)
     return h.hexdigest()
 
-def fetch(url,path,validate,delay):
+def fetch(url,path,validate,delay,*,offline=False,refresh=False):
     meta=path.with_suffix(path.suffix+'.json')
-    if path.exists() and meta.exists():
+    if offline and refresh:raise ValueError('Cannot refresh in offline mode')
+    if not refresh and path.exists() and meta.exists():
         record=json.loads(meta.read_text())
-        if record['sha256']==digest(path):validate(path);return record
+        if record.get('url')==url and record['sha256']==digest(path):validate(path);return record
+    if offline:raise FileNotFoundError('Verified cached source unavailable: '+str(path))
     for attempt in range(3):
         try:
             time.sleep(delay)

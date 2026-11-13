@@ -1,0 +1,22 @@
+Frozen minimum-CV baseline RF_classifier / compact / audit_2021
+Frozen minimum-CV baseline RF_classifier / compact / test_2022
+Frozen minimum-CV baseline RF_goals / odds / audit_2021
+Frozen minimum-CV baseline RF_goals / odds / test_2022
+Frozen minimum-CV baseline Linear / compact / audit_2021
+Frozen minimum-CV baseline Linear / compact / test_2022
+Frozen minimum-CV baseline Poisson / compact / audit_2021
+Frozen minimum-CV baseline Poisson / compact / test_2022
+Frozen minimum-CV baseline Ordered_logit / compact / audit_2021
+Frozen minimum-CV baseline Ordered_logit / compact / test_2022
+Frozen minimum-CV baseline Ordered_probit / compact / audit_2021
+Frozen minimum-CV baseline Ordered_probit / compact / test_2022
+Frozen minimum-CV baseline Poisson_lasso / compact@0.001 / audit_2021
+Frozen minimum-CV baseline Poisson_lasso / compact@0.001 / test_2022
+         model  without_form_log_loss  form_allowed_log_loss    difference    ci_low  ci_high without_candidate  form_candidate  without_raw_features  form_raw_features  without_active_features  form_active_features
+ RF_classifier               0.976998               0.976961 -3.763789e-05 -0.001346 0.001293           compact  compact_gaps_5                    14                 22                       14                    26
+      RF_goals               0.979788               0.979788 -1.110223e-16  0.000000 0.000000              odds            odds                     3                  3                        3                     3
+        Linear               0.983682               0.982675 -1.007317e-03 -0.003231 0.001219           compact compact_gaps_10                    14                 22                       14                    26
+       Poisson               0.983134               0.981982 -1.151916e-03 -0.003505 0.001197           compact compact_gaps_10                    14                 22                       14                    26
+ Ordered_logit               0.981575               0.980562 -1.012879e-03 -0.002898 0.000907           compact compact_gaps_10                    14                 22                       14                    26
+Ordered_probit               0.981803               0.980847 -9.554934e-04 -0.002949 0.001042           compact compact_gaps_10                    14                 22                       14                    26
+ Poisson_lasso               0.983149               0.983673  5.246542e-04 -0.001580 0.002646           compact   compact_all_3                    14                 30                       13                    33

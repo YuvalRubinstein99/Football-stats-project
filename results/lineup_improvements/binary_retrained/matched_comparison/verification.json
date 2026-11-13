@@ -1,0 +1,9 @@
+{
+  "training_rows_identical": true,
+  "test_rows_identical": true,
+  "old_refit_reproduces_original": true,
+  "new_refit_reproduces_earlier_forward_fit": true,
+  "outcome_free_inference": true,
+  "saved_model_roundtrip": true,
+  "settlements_checked": 76688
+}

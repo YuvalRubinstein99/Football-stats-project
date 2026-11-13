@@ -1,0 +1,87 @@
+[
+  {
+    "season": 2015,
+    "train_matches": 1066,
+    "forecast_matches": 1065,
+    "trained_through": "2015-05-31",
+    "forecast_start": "2015-08-14",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": null,
+    "selection_seasons": []
+  },
+  {
+    "season": 2016,
+    "train_matches": 2131,
+    "forecast_matches": 1066,
+    "trained_through": "2016-05-15",
+    "forecast_start": "2016-08-19",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": null,
+    "selection_seasons": []
+  },
+  {
+    "season": 2017,
+    "train_matches": 3197,
+    "forecast_matches": 1063,
+    "trained_through": "2017-05-28",
+    "forecast_start": "2017-08-18",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": "baseline",
+    "selection_seasons": [
+      2015,
+      2016
+    ]
+  },
+  {
+    "season": 2018,
+    "train_matches": 4260,
+    "forecast_matches": 1066,
+    "trained_through": "2018-05-20",
+    "forecast_start": "2018-08-17",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": "learned_weights",
+    "selection_seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "season": 2019,
+    "train_matches": 5326,
+    "forecast_matches": 1066,
+    "trained_through": "2019-05-26",
+    "forecast_start": "2019-08-16",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": "full_dynamic",
+    "selection_seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "season": 2020,
+    "train_matches": 6392,
+    "forecast_matches": 1064,
+    "trained_through": "2020-08-02",
+    "forecast_start": "2020-09-12",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": "fifa_prior",
+    "selection_seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "season": 2021,
+    "train_matches": 7456,
+    "forecast_matches": 1065,
+    "trained_through": "2021-05-23",
+    "forecast_start": "2021-08-13",
+    "fixed_candidate": "fifa_prior",
+    "nested_candidate": "fifa_prior",
+    "selection_seasons": [
+      2019,
+      2020
+    ]
+  }
+]

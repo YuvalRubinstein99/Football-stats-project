@@ -1,0 +1,49 @@
+{
+  "method": "Both minimum-mean configurations were frozen in selection.json before audit/test. This supplement evaluates the missing without-form comparator; no new tuning.",
+  "choices": [
+    {
+      "family": "RF_classifier",
+      "config": "compact",
+      "candidate": "compact",
+      "alpha": null
+    },
+    {
+      "family": "RF_goals",
+      "config": "odds",
+      "candidate": "odds",
+      "alpha": null
+    },
+    {
+      "family": "Linear",
+      "config": "compact",
+      "candidate": "compact",
+      "alpha": null
+    },
+    {
+      "family": "Poisson",
+      "config": "compact",
+      "candidate": "compact",
+      "alpha": null
+    },
+    {
+      "family": "Ordered_logit",
+      "config": "compact",
+      "candidate": "compact",
+      "alpha": null
+    },
+    {
+      "family": "Ordered_probit",
+      "config": "compact",
+      "candidate": "compact",
+      "alpha": null
+    },
+    {
+      "family": "Poisson_lasso",
+      "config": "compact@0.001",
+      "candidate": "compact",
+      "alpha": 0.001
+    }
+  ],
+  "selection_sha256": "c7b293a4107c1e307ad41f991701566857c020c4ba5c1440a20f7e76e5b0d6b4",
+  "code_sha256": "d919a2cc6489d120492401cb6a0b5a990023cba6c864135fd694bbf1a2af9e23"
+}

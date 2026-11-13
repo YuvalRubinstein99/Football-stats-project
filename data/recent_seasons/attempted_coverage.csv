@@ -1,0 +1,17 @@
+season,league,matches,expected,complete,with_bet365,season_status,source_status
+2023,E0,380,380,True,380,historical,available
+2023,SP1,380,380,True,380,historical,available
+2023,D1,306,306,True,306,historical,available
+2023,I1,380,380,True,380,historical,available
+2024,E0,380,380,True,380,historical,available
+2024,SP1,380,380,True,380,historical,available
+2024,D1,306,306,True,306,historical,available
+2024,I1,380,380,True,380,historical,available
+2025,E0,380,380,True,380,historical,available
+2025,SP1,380,380,True,380,historical,available
+2025,D1,306,306,True,306,historical,available
+2025,I1,380,380,True,380,historical,available
+2026,E0,0,380,False,0,in_progress,unavailable
+2026,SP1,0,380,False,0,in_progress,unavailable
+2026,D1,0,306,False,0,in_progress,unavailable
+2026,I1,0,380,False,0,in_progress,unavailable
