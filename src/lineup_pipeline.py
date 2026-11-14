@@ -65,6 +65,7 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
     audits = []
     for fixture in fixtures:
         f = {**fixture, 'date': fixture['date'].isoformat()}
+        lineup_details = {}
         label = f'{f["home"]} vs {f["away"]}'
         progress('Matching lineups and ratings: ' + label)
         try:
@@ -73,6 +74,11 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
             if len(candidates) != 1:
                 raise ValueError('No unique expected lineup for this fixture and date')
             lineup = candidates[0]
+            lineup_details = {
+                'kickoff_utc': lineup.get('kickoff_utc'),
+                'lineup_status': lineup['home_status']+'/'+lineup['away_status'],
+                'home_lineup': lineup['home_players'], 'away_lineup': lineup['away_players'],
+            }
             if lineup.get('kickoff_utc'):
                 if datetime.fromisoformat(lineup['kickoff_utc']) <= now:
                     raise ValueError('Kickoff has passed; live/in-play prediction is not supported')
@@ -134,7 +140,7 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
                         if x['match_method'] == 'global_exact_name_club_mismatch']
             if mismatch:
                 notes.append('EA club differs from lineup (exact-name match): ' + ', '.join(mismatch))
-            predictions.append({**f, 'expected_home_goals': h, 'expected_away_goals': a,
+            predictions.append({**f, 'kickoff_utc': lineup.get('kickoff_utc'), 'expected_home_goals': h, 'expected_away_goals': a,
                 'p_home': p[0], 'p_draw': p[1], 'p_away': p[2], 'modal_score': score,
                 'pick': ['Home', 'Draw', 'Away'][max(range(3), key=p.__getitem__)],
                 'limited_history': bool(unknown), 'lineup_status': lineup['home_status']+'/'+lineup['away_status'],
@@ -142,7 +148,20 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
                 'home_lineup': matched['home'], 'away_lineup': matched['away']})
             audits.append({'fixture': fixture_key, 'features': row, 'matchweek_source': week_source})
         except (ValueError, OSError, KeyError) as exc:
-            skipped.append({**f, 'reason': str(exc)})
+            skipped.append({**f, **lineup_details, 'reason': str(exc)})
+    # Lineups can be published before Football-Data lists the fixture and prices.
+    from datetime import date
+    listed = {(m['league'], m['date'].isoformat(), team_key(m['home']), team_key(m['away']))
+              for m in fixtures + history}
+    awaiting_prices = []
+    for key, candidates in lineup_index.items():
+        if key in listed or len(candidates) != 1 or not 0 <= (date.fromisoformat(key[1])-today).days <= days:
+            continue
+        item = candidates[0]
+        awaiting_prices.append({k: item.get(k) for k in ('league', 'date', 'home', 'away', 'kickoff_utc')} |
+                               dict(home_lineup=item['home_players'], away_lineup=item['away_players'],
+                                    lineup_status=item['home_status']+'/'+item['away_status'],
+                                    reason='Waiting for a matching Football-Data fixture with Bet365 odds.'))
     sources.extend({**s, 'kind': 'ratings'} for s in ratings.sources)
     warnings.append('Lineup RF uses the existing historical model; future accuracy is unverified. EA launch ratings may differ from historical career-mode ratings.')
     if any(p['notes'].find('Matchweek estimated') >= 0 for p in predictions):
@@ -154,7 +173,8 @@ def run(leagues=None, seasons=3, days=14, offline=False, progress=print, output=
     report = {'generated_at': now.isoformat(), 'as_of': today.isoformat(), 'model': forest.metadata['name'],
         'model_kind': 'lineup_rf', 'model_metadata': forest.metadata, 'ratings_edition': ratings.edition,
         'leagues': leagues, 'days': days, 'seasons': 1, 'sources': sources, 'warnings': warnings,
-        'validation': {}, 'predictions': predictions, 'skipped': skipped, 'feature_audit': audits}
+        'validation': {}, 'predictions': predictions, 'skipped': skipped, 'feature_audit': audits,
+        'lineups_awaiting_prices': awaiting_prices}
     from live_bets import save as save_strategies
     save_strategies(report, output)
     atomic_write(output/'predictions.json', json.dumps(report, indent=2, allow_nan=False))

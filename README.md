@@ -37,8 +37,21 @@ probabilities. Outputs are in `results/lineup_improvements/binary_retrained/`.
 
 ### Live predictions and local interface
 
+Run `python run.py model-app` and open **http://127.0.0.1:8767/** for
+**Upcoming outcome picks**, also available at **http://127.0.0.1:8767/lineups/**.
+The default view shows qualifying picks. Refresh the next 14 days to see expected or
+confirmed starters, EA ratings when available, and XGBoost home/draw/away probabilities.
+The view uses the original 2014–22 goal-vector
+model and saved Bet365 prices. Filtered variance risks one unit when the chosen
+price is 4–1000 and expected return exceeds 2%. Each fixture shows its decision
+or the reason inputs are missing.
+Qualifying, skipped and awaiting-input counts appear above the fixtures. Select
+**Awaiting inputs** to see missing prices or lineup details. Each qualifying pick
+shows the selected outcome, its probability, Bet365 price, expected return and
+flat stake.
+
 The unified model/strategy interface starts with `python run.py model-app` at
-**http://127.0.0.1:8767/**. Choose expanded RF, OLS, Poisson, ordered logit or
+**http://127.0.0.1:8767/lab/**. Choose expanded RF, OLS, Poisson, ordered logit or
 ordered probit and any of the 15 fixed strategies. Regression variants retain
 FIFA, all form/prior fields, odds and numeric matchweek, with optional home/away
 club identities. Exact active inputs are visible. Selections are recomputed from

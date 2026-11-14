@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Upcoming outcome picks · Football Forecast</title>
+<style>
+:root{font:16px system-ui,sans-serif;color:#192b28;background:#f4f6f1;--ink:#163b33;--muted:#50625c;--line:#ced8cd}*{box-sizing:border-box}
+body{margin:0}main{max-width:1100px;margin:auto;padding:28px clamp(16px,4vw,48px) 60px}a{color:var(--ink)}
+header{margin:24px 0;background:#143c32;color:white;padding:clamp(20px,4vw,42px);border-radius:16px}
+h1{font-size:clamp(32px,5vw,52px);letter-spacing:-.045em;margin:0}header p{color:#cfe7dc;max-width:56ch;line-height:1.55;margin-bottom:0}
+.tools,.meta,.metrics,.barlabels{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.tools{justify-content:space-between}.meta{color:var(--muted);font-size:.85rem}.metrics{align-items:stretch;margin:16px 0}.metrics div{flex:1;min-width:105px}
+label{font-size:.9rem}select,button{font:inherit;padding:9px 12px;border:1px solid #aabcb0;border-radius:7px;background:white;color:var(--ink)}button{background:var(--ink);color:white;cursor:pointer}button:disabled{opacity:.65;cursor:wait}
+article,.empty{border:1px solid var(--line);background:white;border-radius:12px;padding:20px 24px;margin:14px 0}h2{font-size:1.45rem;letter-spacing:-.025em;margin:.35em 0}
+.decision{font-weight:700;color:var(--muted)}.qualifies{color:#046737}.metrics span,.rating,.stamp{color:var(--muted);font-size:.85rem}.metrics strong{display:block;margin-top:4px}
+.bar{display:flex;height:7px;border-radius:4px;overflow:hidden;margin:12px 0 6px;background:#e9ede9}.bar i:nth-child(1){background:#238269}.bar i:nth-child(2){background:#bfc8b5}.bar i:nth-child(3){background:#70648c}.barlabels{justify-content:space-between;font-size:.83rem}
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}summary{cursor:pointer;color:var(--ink);font-weight:600}.teams{display:grid;grid-template-columns:1fr 1fr;gap:24px}ol{padding-left:1.7em}li{padding:3px 0}.rating{margin-left:.5em}
+#status{white-space:pre-line}p{line-height:1.5}.empty{color:var(--muted)}@media(max-width:600px){.teams{grid-template-columns:1fr;gap:0}.tools{align-items:flex-start}.metrics{gap:8px}article{padding:16px}}
+</style></head>
+<body><main><a href="/lab/">Model &amp; Strategy Lab</a>
+<header><h1>Upcoming outcome picks</h1><p>XGBoost · filtered legacy variance · flat 1 unit per qualifying match</p><p>Home, draw or away at full time. Select the highest variance-score outcome, then qualify it when Bet365 odds are 4–1000 and expected return is above 2%.</p></header>
+<div class="tools"><label>Show <select id="filter"><option value="Qualifies">Qualifying picks</option><option value="all">All fixtures</option><option value="Skip">Skipped</option><option value="Waiting">Awaiting inputs</option></select></label><button id="refresh">Refresh next 14 days</button></div>
+<p id="status" role="status"></p><p id="stamp" class="stamp"></p>
+<div id="counts" class="metrics" aria-live="polite"></div>
+<section id="cards" aria-label="Upcoming fixtures"></section>
+<details><summary>Weekly exposure</summary><p>Monday–Sunday by fixture date, across all four leagues. Each qualifying pick puts 1 unit at risk. Weeks are sorted by the maximum loss on current picks.</p><div id="weekly"></div></details>
+</main><script>
+const el=id=>document.getElementById(id), leagues={E0:'Premier League',SP1:'La Liga',D1:'Bundesliga',I1:'Serie A'};
+let board=null;
+function node(tag,value,cls){const n=document.createElement(tag);if(value!=null)n.textContent=value;if(cls)n.className=cls;return n}
+function metric(label,value){const d=node('div');d.append(node('span',label),node('strong',value));return d}
+function fixture(m){
+  const card=node('article'), meta=node('div',null,'meta');
+  const when=m.kickoff_utc?new Date(m.kickoff_utc).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'}):m.date;
+  meta.append(node('span',leagues[m.league]),node('span',when),node('span',m.decision==='Qualifies'?'Qualifies · 1 unit':m.decision,'decision '+(m.stake?'qualifies':'')));
+  card.append(meta,node('h2',m.home+' vs '+m.away));
+  if(m.probabilities){
+    const metrics=node('div',null,'metrics');
+    metrics.append(metric('Selected outcome',m.selection),metric('Bet365 odds',m.odds.toFixed(2)),metric('Outcome probability',(100*m.selected_probability).toFixed(1)+'%'),metric('Expected return',(m.edge>0?'+':'')+(100*m.edge).toFixed(2)+'%'),metric('Flat stake',m.stake+' unit'+(m.stake===1?'':'s')));
+    const bar=node('div',null,'bar'), labels=node('div',null,'barlabels');
+    m.probabilities.forEach((p,i)=>{const s=node('i');s.style.width=p*100+'%';bar.append(s);labels.append(node('span',['Home','Draw','Away'][i]+' '+(p*100).toFixed(1)+'%'))});
+    card.append(metrics,bar,labels);
+  }
+  if(m.reason)card.append(node('p',m.reason));
+  if(m.home_lineup?.length||m.away_lineup?.length){
+    const details=node('details'), teams=node('div',null,'teams'), statuses=(m.lineup_status||'').split('/');
+    details.append(node('summary','Starting XIs · '+(m.lineup_status||'Status unavailable')));
+    ['home','away'].forEach((side,i)=>{const team=node('section'),list=node('ol');team.append(node('h3',m[side]+' · '+(statuses[i]||'Unavailable')));
+      for(const p of m[side+'_lineup']||[]){const item=node('li',p.lineup_name||p.name);if(p.overall)item.append(node('span','EA '+p.overall,'rating'));if(p.injury_flag)item.append(node('span',p.injury_flag,'rating'));list.append(item)}
+      team.append(list);teams.append(team)});
+    details.append(teams);card.append(details);
+  }
+  return card;
+}
+function weeklyDownside(fixtures){
+  const weeks=new Map();
+  for(const fixture of fixtures){
+    const monday=new Date(fixture.date+'T00:00:00Z');
+    monday.setUTCDate(monday.getUTCDate()-(monday.getUTCDay()+6)%7);
+    const key=monday.toISOString().slice(0,10);
+    if(!weeks.has(key))weeks.set(key,{start:key,stake:0,waiting:0,count:0});
+    const week=weeks.get(key);
+    week.count++;
+    week.stake+=fixture.stake;
+    if(fixture.decision==='Waiting')week.waiting++;
+  }
+  return [...weeks.values()].sort((a,b)=>b.stake-a.stake||a.start.localeCompare(b.start));
+}
+function renderWeeks(fixtures){
+  const rows=weeklyDownside(fixtures).map(w=>{
+    const line=node('p'),start=new Date(w.start+'T00:00:00Z'),end=new Date(start);
+    end.setUTCDate(end.getUTCDate()+6);
+    const fmt=new Intl.DateTimeFormat(undefined,{month:'short',day:'numeric',timeZone:'UTC'});
+    line.append(node('strong',fmt.formatRange(start,end)+' · '));
+    const loss=w.stake+' unit'+(w.stake===1?'':'s');
+    line.append(w.waiting===w.count?'Awaiting inputs for all '+w.count+' fixtures':
+      'Maximum loss '+loss+' on current picks · '+w.count+' fixtures'+(w.waiting?' · '+w.waiting+' awaiting inputs':''));
+    return line;
+  });
+  el('weekly').replaceChildren(...(rows.length?rows:[node('p','No upcoming fixtures to rank.')]));
+}
+function render(){
+  if(!board)return;
+  const all=board.fixtures.filter(m=>m.kickoff_utc?Date.parse(m.kickoff_utc)>Date.now():m.date>=new Date().toISOString().slice(0,10));
+  const rows=all.filter(m=>el('filter').value==='all'||m.decision===el('filter').value);
+  renderWeeks(all);
+  const waiting=all.filter(m=>m.decision==='Waiting').length;
+  el('counts').replaceChildren(metric('Qualifying picks',all.filter(m=>m.decision==='Qualifies').length),metric('Skipped',all.filter(m=>m.decision==='Skip').length),metric('Awaiting inputs',waiting));
+  el('stamp').textContent='Inputs updated '+new Date(board.generated_at).toLocaleString()+' · '+all.length+' upcoming · '+all.filter(m=>m.stake).length+' qualifying';
+  el('cards').replaceChildren(...rows.map(fixture));
+  if(!rows.length){
+    const empty=node('div',null,'empty');
+    empty.append(node('p',!all.length?'No upcoming fixtures in the saved inputs. Refresh to check the latest fixtures and starting XIs.':el('filter').value==='Qualifies'?'No qualifying picks currently available.'+(waiting?' '+waiting+' fixtures still need inputs before they can be evaluated.':''):'No fixtures match this filter.'));
+    if(waiting&&el('filter').value!=='Waiting'){
+      const button=node('button','Show matches awaiting inputs');
+      button.onclick=()=>{el('filter').value='Waiting';render()};
+      empty.append(button);
+    }
+    el('cards').append(empty);
+  }
+}
+async function api(path,options){const r=await fetch(path,options),j=await r.json();if(!r.ok)throw Error(j.error||'Request failed');return j}
+async function load(){try{board=await api('/api/lineups');render();el('status').textContent=board.warnings.join('\n')}catch(e){el('status').textContent=e.message}}
+async function watch(){
+  const status=await api('/api/status');el('status').textContent=status.error||status.message;
+  if(status.running){el('refresh').disabled=true;await new Promise(r=>setTimeout(r,1400));return watch()}
+  if(!status.error)await load();
+}
+el('filter').onchange=render;
+el('refresh').onclick=async()=>{el('refresh').disabled=true;try{
+  await api('/api/refresh',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':'__TOKEN__'},body:JSON.stringify({days:14,offline:false})});await watch()
+}catch(e){el('status').textContent=e.message}finally{el('refresh').disabled=false}};
+load();setInterval(render,30000);
+</script></body></html>

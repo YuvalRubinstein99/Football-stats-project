@@ -51,12 +51,17 @@ def parse_csv(payload, results=False):
         match = {'league': row['Div'].strip(), 'date': parse_date(row['Date']),
                  'home': row['HomeTeam'].strip(), 'away': row['AwayTeam'].strip(),
                  'time': row.get('Time', '')}
-        for field in ('B365H', 'B365D', 'B365A'):
+        for field in ('B365H', 'B365D', 'B365A', 'B365>2.5', 'B365<2.5', 'B365AHH', 'B365AHA'):
             try:
                 odds = float(row.get(field, ''))
                 match[field] = odds if math.isfinite(odds) and odds > 1 else None
             except (ValueError, TypeError):
                 match[field] = None
+        try:
+            line = float(row.get('AHh', ''))
+            match['AHh'] = line if math.isfinite(line) and (4 * line).is_integer() else None
+        except (ValueError, TypeError):
+            match['AHh'] = None
         if results:
             for target, source in [('hg', 'FTHG'), ('ag', 'FTAG')]:
                 value = float(row[source])

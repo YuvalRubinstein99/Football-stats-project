@@ -19,6 +19,10 @@ BINARY = ['Home loses vs not (synthetic double chance)', 'Home loses vs not (sqr
 STRATEGIES = STANDARD + BINARY
 SEARCH_CANDIDATE = 'Legacy variance — filtered search candidate'
 
+def qualifies_filtered_variance(bet):
+    return (bet['action'] == 'Bet' and 4 <= bet['decimal_odds'] <= 1000
+            and bet['expected_net_per_unit'] > .02)
+
 
 def integrated_recommendations(match, model_kind='lineup_rf'):
     rows = recommendations(match)
@@ -28,8 +32,7 @@ def integrated_recommendations(match, model_kind='lineup_rf'):
     if model_kind != 'lineup_rf':
         candidate['action'] = 'Unavailable'
         reason = 'This search candidate requires the saved lineup RF probabilities.'
-    elif candidate['action'] == 'Bet' and not (
-            4 <= candidate['decimal_odds'] <= 1000 and candidate['expected_net_per_unit'] > .02):
+    elif candidate['action'] == 'Bet' and not qualifies_filtered_variance(candidate):
         candidate['action'] = 'Skip'
         reason = 'Selected outcome must have odds 4.00–1000 and model expected return strictly above 2%.'
     if candidate['action'] != 'Bet':

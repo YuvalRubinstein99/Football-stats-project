@@ -1,3 +1,4 @@
 # Install in the same environment as requirements.txt for the lineup RF workflow.
 -r requirements.txt
 beautifulsoup4>=4.12,<5
+xgboost==3.4.1

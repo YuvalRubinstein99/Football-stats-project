@@ -65,7 +65,7 @@ class LineupForest:
                          'path': str(model_path), 'sha256': hashlib.sha256(model_path.read_bytes()).hexdigest(),
                          'train_sha256': details['input_sha256']['train.csv'], 'feature_count': len(features)}
 
-    def predict(self, row):
+    def feature_matrix(self, row):
         frame = clean(pd.DataFrame([row]))
         missing = [c for c in self.numeric + self.categorical if c not in frame]
         if missing:
@@ -77,8 +77,10 @@ class LineupForest:
                 raise ValueError('Missing/invalid Bet365 odds: ' + field)
         for c in ('home_team_name', 'away_team_name'):
             frame[c] = frame[c].map(lambda n: self.teams.get(team_key(n), n))
-        matrix = np.column_stack([self.encoder.transform(frame[self.categorical]), frame[self.numeric].to_numpy(float)])
-        means = self.forest.predict(matrix)[0]
+        return np.column_stack([self.encoder.transform(frame[self.categorical]), frame[self.numeric].to_numpy(float)])
+
+    def predict(self, row):
+        means = self.forest.predict(self.feature_matrix(row))[0]
         if not np.isfinite(means).all() or (means < 0).any():
             raise ValueError('Forest returned invalid goal predictions')
         return [float(v) for v in means]

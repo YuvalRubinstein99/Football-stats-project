@@ -51,12 +51,15 @@ def catalog():
     return history,names
 
 
-def source():
+def source(lineup_only=False):
     paths=[SOURCE,ROOT/'results/expanded_interface/live/predictions.json',ROOT/'results/live/predictions.json']
     available=[p for p in paths if p.exists()]
     if not available:raise ValueError('No saved inputs yet. Refresh inputs first.')
-    path=max(available,key=lambda p:p.stat().st_mtime_ns)
-    return {**json.loads(path.read_text(encoding='utf-8')),'_source_path':str(path)}
+    for path in sorted(available,key=lambda p:p.stat().st_mtime_ns,reverse=True):
+        report=json.loads(path.read_text(encoding='utf-8'))
+        if not lineup_only or report.get('model_kind')=='lineup_rf':
+            return {**report,'_source_path':str(path)}
+    raise ValueError('Refresh match inputs to load upcoming lineups.')
 
 
 def resolve(family,teams):
@@ -164,6 +167,11 @@ def main(argv=None):
             if not self.valid():return self.send(403,dict(error='Invalid host'))
             parsed=urlparse(self.path)
             try:
+                if parsed.path in ('/', '/lineups/'):
+                    return self.send(200,Path(__file__).with_name('lineups.html').read_text(encoding='utf-8').replace('__TOKEN__',token).encode(),'text/html')
+                if parsed.path=='/api/lineups':
+                    from upcoming_lineups import board
+                    return self.send(200,board(source(lineup_only=True)))
                 if parsed.path=='/transfermarkt-comparison/':return self.send(200,(ROOT/'results/transfermarkt_models/report.html').read_bytes(),'text/html')
                 if parsed.path=='/bankroll-backtest/':return self.send(200,Path(__file__).with_name('bankroll-backtest.html').read_bytes(),'text/html')
                 if parsed.path=='/bankroll-mixture.json':
@@ -175,7 +183,7 @@ def main(argv=None):
                 if parsed.path in bankroll_files:
                     filename,kind=bankroll_files[parsed.path]
                     return self.send(200,(ROOT/'results/bankroll_backtest'/filename).read_bytes(),kind)
-                if parsed.path=='/':return self.send(200,Path(__file__).with_name('model-strategy.html').read_text(encoding='utf-8').replace('__TOKEN__',token).encode(),'text/html')
+                if parsed.path=='/lab/':return self.send(200,Path(__file__).with_name('model-strategy.html').read_text(encoding='utf-8').replace('__TOKEN__',token).encode(),'text/html')
                 if parsed.path=='/api/catalog':return self.send(200,dict(strategies=STRATEGIES+[SEARCH_CANDIDATE],default_strategy=SEARCH_CANDIDATE))
                 if parsed.path=='/api/status':
                     with lock:return self.send(200,dict(state))
