@@ -37,6 +37,12 @@ probabilities. Outputs are in `results/lineup_improvements/binary_retrained/`.
 
 ### Live predictions and local interface
 
+On this Windows machine, double-click **Open Football Picks.cmd** in the project
+folder to start the app in the background and open it in your browser. Reopening
+the launcher reuses the running app. Click **Refresh next 14 days** for current
+lineups and prices. You can create a Windows shortcut to the launcher anywhere
+convenient. Startup logs are in results/model_strategy/app.stderr.log.
+
 Run `python run.py model-app` and open **http://127.0.0.1:8767/** for
 **Upcoming outcome picks**, also available at **http://127.0.0.1:8767/lineups/**.
 The default view shows qualifying picks. Refresh the next 14 days to see expected or

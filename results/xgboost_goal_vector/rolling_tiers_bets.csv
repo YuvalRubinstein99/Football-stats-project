@@ -1,0 +1,1186 @@
+date,season,home_team_name,away_team_name,bet,tier,unit_net
+2020-09-12,2020,Fulham,Arsenal,1.0,1.0,-1.0
+2020-09-13,2020,Villarreal,Huesca,1.0,2.0,-1.0
+2020-09-14,2020,Brighton & Hove Albion,Chelsea,1.0,1.0,-1.0
+2020-09-19,2020,Everton,West Bromwich Albion,1.0,3.0,-1.0
+2020-09-19,2020,Leeds United,Fulham,1.0,1.0,-1.0
+2020-09-19,2020,Manchester United,Crystal Palace,1.0,4.0,8.5
+2020-09-19,2020,Villarreal,Eibar,1.0,1.0,-1.0
+2020-09-19,2020,Getafe,Osasuna,1.0,2.0,-1.0
+2020-09-20,2020,Huesca,Cádiz,1.0,5.0,3.0
+2020-09-20,2020,Real Sociedad,Real Madrid,1.0,3.0,-1.0
+2020-09-20,2020,Parma,Napoli,1.0,2.0,-1.0
+2020-09-20,2020,Juventus,Sampdoria,1.0,4.0,-1.0
+2020-09-20,2020,Granada,Alavés,1.0,5.0,-1.0
+2020-09-21,2020,Wolverhampton Wanderers,Manchester City,1.0,5.0,-1.0
+2020-09-26,2020,Gladbach,Union Berlin,1.0,1.0,-1.0
+2020-09-26,2020,Augsburg,Dortmund,1.0,1.0,6.0
+2020-09-26,2020,West Bromwich Albion,Chelsea,1.0,3.0,-1.0
+2020-09-26,2020,Cagliari,Lazio,1.0,3.0,-1.0
+2020-09-26,2020,Valencia,Huesca,1.0,3.0,-1.0
+2020-09-26,2020,Elche,Real Sociedad,1.0,2.0,-1.0
+2020-09-26,2020,Brighton & Hove Albion,Manchester United,1.0,2.0,-1.0
+2020-09-27,2020,Cádiz,Sevilla,1.0,4.0,-1.0
+2020-09-27,2020,Atlético Madrid,Granada,1.0,3.0,-1.0
+2020-09-27,2020,Tottenham Hotspur,Newcastle United,1.0,2.0,-1.0
+2020-09-27,2020,Hoffenheim,Bayern Munich,1.0,2.0,10.0
+2020-09-27,2020,Manchester City,Leicester City,1.0,2.0,8.5
+2020-09-27,2020,Napoli,Genoa,1.0,3.0,-1.0
+2020-09-27,2020,Spezia,Sassuolo,1.0,2.0,-1.0
+2020-09-30,2020,Udinese,Spezia,1.0,2.0,4.75
+2020-09-30,2020,Benevento,Inter,1.0,3.0,-1.0
+2020-09-30,2020,Huesca,Atlético Madrid,1.0,4.0,-1.0
+2020-10-01,2020,Sevilla,Levante,1.0,1.0,-1.0
+2020-10-01,2020,Celta Vigo,Barcelona,1.0,5.0,-1.0
+2020-10-01,2020,Athletic Club,Cádiz,1.0,3.0,5.5
+2020-10-03,2020,Chelsea,Crystal Palace,1.0,2.0,-1.0
+2020-10-03,2020,RB Leipzig,Schalke 04,1.0,2.0,-1.0
+2020-10-03,2020,Udinese,Roma,1.0,3.0,-1.0
+2020-10-04,2020,Bayern Munich,Hertha BSC,1.0,1.0,-1.0
+2020-10-04,2020,Wolverhampton Wanderers,Fulham,1.0,4.0,-1.0
+2020-10-04,2020,Aston Villa,Liverpool,1.0,1.0,9.0
+2020-10-04,2020,Milan,Spezia,1.0,5.0,-1.0
+2020-10-17,2020,Celta Vigo,Atlético Madrid,1.0,5.0,-1.0
+2020-10-17,2020,Granada,Sevilla,1.0,4.0,3.2
+2020-10-17,2020,Newcastle United,Manchester United,1.0,2.0,-1.0
+2020-10-17,2020,Getafe,Barcelona,1.0,4.0,3.75
+2020-10-17,2020,Mainz 05,Leverkusen,1.0,3.0,-1.0
+2020-10-17,2020,Arminia,Bayern Munich,1.0,1.0,-1.0
+2020-10-17,2020,Real Madrid,Cádiz,1.0,2.0,14.0
+2020-10-18,2020,Spezia,Fiorentina,1.0,3.0,-1.0
+2020-10-18,2020,Roma,Benevento,1.0,3.0,-1.0
+2020-10-18,2020,Athletic Club,Levante,1.0,4.0,-1.0
+2020-10-18,2020,Alavés,Elche,1.0,4.0,4.5
+2020-10-24,2020,Genoa,Inter,1.0,4.0,-1.0
+2020-10-24,2020,Bayern Munich,Eint Frankfurt,1.0,1.0,-1.0
+2020-10-24,2020,Sevilla,Eibar,1.0,3.0,6.5
+2020-10-24,2020,West Ham United,Manchester City,1.0,4.0,-1.0
+2020-10-25,2020,Getafe,Granada,1.0,1.0,4.0
+2020-10-25,2020,Juventus,Hellas Verona,1.0,1.0,-1.0
+2020-10-25,2020,Real Sociedad,Huesca,1.0,2.0,-1.0
+2020-10-25,2020,Wolverhampton Wanderers,Newcastle United,1.0,2.0,-1.0
+2020-10-25,2020,Wolfsburg,Arminia,1.0,2.0,-1.0
+2020-10-26,2020,Burnley,Tottenham Hotspur,1.0,4.0,-1.0
+2020-10-30,2020,Wolverhampton Wanderers,Crystal Palace,1.0,4.0,-1.0
+2020-10-31,2020,Osasuna,Atlético Madrid,1.0,5.0,-1.0
+2020-10-31,2020,Köln,Bayern Munich,1.0,2.0,-1.0
+2020-10-31,2020,Arminia,Dortmund,1.0,2.0,-1.0
+2020-10-31,2020,Inter,Parma,1.0,1.0,-1.0
+2020-11-01,2020,Spezia,Juventus,1.0,2.0,-1.0
+2020-11-01,2020,Betis,Elche,1.0,3.0,-1.0
+2020-11-06,2020,Elche,Celta Vigo,1.0,1.0,-1.0
+2020-11-07,2020,RB Leipzig,Freiburg,1.0,2.0,-1.0
+2020-11-07,2020,Atlético Madrid,Cádiz,1.0,3.0,-1.0
+2020-11-07,2020,Sevilla,Osasuna,1.0,3.0,-1.0
+2020-11-07,2020,Chelsea,Sheffield United,1.0,1.0,-1.0
+2020-11-08,2020,Bologna,Napoli,1.0,2.0,-1.0
+2020-11-08,2020,Genoa,Roma,1.0,5.0,-1.0
+2020-11-08,2020,West Bromwich Albion,Tottenham Hotspur,1.0,4.0,-1.0
+2020-11-21,2020,Manchester United,West Bromwich Albion,1.0,3.0,-1.0
+2020-11-21,2020,Juventus,Cagliari,1.0,3.0,-1.0
+2020-11-21,2020,Sevilla,Celta Vigo,1.0,2.0,-1.0
+2020-11-28,2020,Real Madrid,Alavés,1.0,2.0,8.0
+2020-11-28,2020,Benevento,Juventus,1.0,2.0,-1.0
+2020-11-28,2020,Brighton & Hove Albion,Liverpool,1.0,4.0,-1.0
+2020-11-28,2020,RB Leipzig,Arminia,1.0,2.0,-1.0
+2020-11-28,2020,Dortmund,Köln,1.0,1.0,12.0
+2020-11-28,2020,Gladbach,Schalke 04,1.0,2.0,-1.0
+2020-11-28,2020,Valencia,Atlético Madrid,1.0,3.0,-1.0
+2020-11-28,2020,Manchester City,Burnley,1.0,2.0,-1.0
+2020-11-28,2020,Sassuolo,Inter,1.0,2.0,-1.0
+2020-11-29,2020,Southampton,Manchester United,1.0,3.0,-1.0
+2020-11-29,2020,Barcelona,Osasuna,1.0,1.0,-1.0
+2020-12-05,2020,Burnley,Everton,1.0,3.0,-1.0
+2020-12-05,2020,Spezia,Lazio,1.0,1.0,-1.0
+2020-12-05,2020,Atlético Madrid,Valladolid,1.0,2.0,-1.0
+2020-12-05,2020,Cádiz,Barcelona,1.0,2.0,7.5
+2020-12-06,2020,Villarreal,Elche,1.0,2.0,-1.0
+2020-12-06,2020,Sampdoria,Milan,1.0,1.0,-1.0
+2020-12-06,2020,Crotone,Napoli,1.0,1.0,-1.0
+2020-12-06,2020,Schalke 04,Leverkusen,1.0,4.0,-1.0
+2020-12-06,2020,Alavés,Real Sociedad,1.0,5.0,-1.0
+2020-12-12,2020,Everton,Chelsea,1.0,1.0,3.33
+2020-12-12,2020,Manchester United,Manchester City,1.0,2.0,-1.0
+2020-12-12,2020,RB Leipzig,Werder Bremen,1.0,3.0,-1.0
+2020-12-13,2020,Genoa,Juventus,1.0,5.0,-1.0
+2020-12-13,2020,Real Sociedad,Eibar,1.0,2.0,-1.0
+2020-12-13,2020,Arsenal,Burnley,1.0,2.0,5.25
+2020-12-13,2020,Milan,Parma,1.0,1.0,-1.0
+2020-12-13,2020,Crystal Palace,Tottenham Hotspur,1.0,2.0,-1.0
+2020-12-13,2020,Cagliari,Inter,1.0,3.0,-1.0
+2020-12-13,2020,Fulham,Liverpool,1.0,1.0,-1.0
+2020-12-13,2020,Southampton,Sheffield United,1.0,2.0,-1.0
+2020-12-14,2020,Celta Vigo,Cádiz,1.0,3.0,-1.0
+2020-12-15,2020,Werder Bremen,Dortmund,1.0,2.0,-1.0
+2020-12-15,2020,Wolverhampton Wanderers,Chelsea,1.0,5.0,4.25
+2020-12-16,2020,Köln,Leverkusen,1.0,2.0,-1.0
+2020-12-16,2020,Genoa,Milan,1.0,4.0,-1.0
+2020-12-17,2020,Sheffield United,Manchester United,1.0,1.0,-1.0
+2020-12-18,2020,Union Berlin,Dortmund,1.0,2.0,3.75
+2020-12-19,2020,Atlético Madrid,Elche,1.0,3.0,-1.0
+2020-12-19,2020,Parma,Juventus,1.0,3.0,-1.0
+2020-12-19,2020,Crystal Palace,Liverpool,1.0,5.0,-1.0
+2020-12-19,2020,Sevilla,Valladolid,1.0,5.0,-1.0
+2020-12-19,2020,RB Leipzig,Köln,1.0,1.0,-1.0
+2020-12-19,2020,Southampton,Manchester City,1.0,1.0,-1.0
+2020-12-20,2020,Eibar,Real Madrid,1.0,4.0,-1.0
+2020-12-20,2020,Inter,Spezia,1.0,1.0,-1.0
+2020-12-20,2020,Brighton & Hove Albion,Sheffield United,1.0,4.0,-1.0
+2020-12-22,2020,Juventus,Fiorentina,1.0,1.0,8.0
+2020-12-22,2020,Valladolid,Barcelona,1.0,1.0,-1.0
+2020-12-23,2020,Roma,Cagliari,1.0,2.0,-1.0
+2020-12-23,2020,Hellas Verona,Inter,1.0,2.0,-1.0
+2020-12-26,2020,Sheffield United,Everton,1.0,3.0,-1.0
+2020-12-26,2020,Arsenal,Chelsea,1.0,4.0,3.0
+2020-12-29,2020,Barcelona,Eibar,1.0,1.0,-1.0
+2020-12-30,2020,Atlético Madrid,Getafe,1.0,2.0,-1.0
+2020-12-30,2020,Newcastle United,Liverpool,1.0,2.0,-1.0
+2021-01-02,2020,Villarreal,Levante,1.0,1.0,-1.0
+2021-01-02,2020,West Bromwich Albion,Arsenal,1.0,2.0,-1.0
+2021-01-02,2020,Getafe,Valladolid,1.0,4.0,3.5
+2021-01-02,2020,Hertha BSC,Schalke 04,1.0,1.0,-1.0
+2021-01-02,2020,Arminia,Gladbach,1.0,2.0,-1.0
+2021-01-03,2020,Real Sociedad,Osasuna,1.0,2.0,-1.0
+2021-01-03,2020,Newcastle United,Leicester City,1.0,3.0,-1.0
+2021-01-03,2020,Alavés,Atlético Madrid,1.0,4.0,-1.0
+2021-01-03,2020,Inter,Crotone,1.0,1.0,-1.0
+2021-01-03,2020,Cagliari,Napoli,1.0,5.0,-1.0
+2021-01-03,2020,Genoa,Lazio,1.0,5.0,-1.0
+2021-01-03,2020,Benevento,Milan,1.0,3.0,-1.0
+2021-01-03,2020,Athletic Club,Elche,1.0,5.0,-1.0
+2021-01-06,2020,Athletic Club,Barcelona,1.0,3.0,-1.0
+2021-01-06,2020,Sampdoria,Inter,1.0,2.0,5.0
+2021-01-06,2020,Napoli,Spezia,1.0,3.0,14.0
+2021-01-06,2020,Crotone,Roma,1.0,1.0,-1.0
+2021-01-08,2020,Gladbach,Bayern Munich,1.0,2.0,-1.0
+2021-01-10,2020,Juventus,Sassuolo,1.0,2.0,-1.0
+2021-01-10,2020,Parma,Lazio,1.0,4.0,-1.0
+2021-01-11,2020,Elche,Getafe,1.0,5.0,-1.0
+2021-01-12,2020,Burnley,Manchester United,1.0,2.0,-1.0
+2021-01-13,2020,Tottenham Hotspur,Fulham,1.0,1.0,-1.0
+2021-01-14,2020,Arsenal,Crystal Palace,1.0,2.0,-1.0
+2021-01-16,2020,Wolverhampton Wanderers,West Bromwich Albion,1.0,5.0,6.0
+2021-01-16,2020,Fulham,Chelsea,1.0,4.0,-1.0
+2021-01-16,2020,Dortmund,Mainz 05,1.0,2.0,-1.0
+2021-01-17,2020,Eint Frankfurt,Schalke 04,1.0,1.0,-1.0
+2021-01-17,2020,Atalanta,Genoa,1.0,2.0,-1.0
+2021-01-17,2020,Sheffield United,Tottenham Hotspur,1.0,3.0,-1.0
+2021-01-18,2020,Arsenal,Newcastle United,1.0,2.0,-1.0
+2021-01-19,2020,Gladbach,Werder Bremen,1.0,1.0,-1.0
+2021-01-19,2020,Alavés,Sevilla,1.0,5.0,-1.0
+2021-01-20,2020,Villarreal,Granada,1.0,4.0,-1.0
+2021-01-20,2020,Fulham,Manchester United,1.0,4.0,-1.0
+2021-01-20,2020,RB Leipzig,Union Berlin,1.0,1.0,-1.0
+2021-01-20,2020,Arminia,Stuttgart,1.0,3.0,3.33
+2021-01-20,2020,Manchester City,Aston Villa,1.0,1.0,-1.0
+2021-01-20,2020,Augsburg,Bayern Munich,1.0,2.0,-1.0
+2021-01-21,2020,Liverpool,Burnley,1.0,3.0,14.0
+2021-01-21,2020,Eibar,Atlético Madrid,1.0,5.0,-1.0
+2021-01-22,2020,Levante,Valladolid,1.0,3.0,-1.0
+2021-01-23,2020,Mainz 05,RB Leipzig,1.0,1.0,6.5
+2021-01-23,2020,Arminia,Eint Frankfurt,1.0,3.0,-1.0
+2021-01-23,2020,Alavés,Real Madrid,1.0,5.0,-1.0
+2021-01-23,2020,Sevilla,Cádiz,1.0,5.0,-1.0
+2021-01-23,2020,Udinese,Inter,1.0,2.0,-1.0
+2021-01-24,2020,Hellas Verona,Napoli,1.0,3.0,4.0
+2021-01-24,2020,Elche,Barcelona,1.0,2.0,-1.0
+2021-01-24,2020,Schalke 04,Bayern Munich,1.0,4.0,-1.0
+2021-01-26,2020,West Bromwich Albion,Manchester City,1.0,3.0,-1.0
+2021-01-27,2020,Manchester United,Sheffield United,1.0,1.0,10.0
+2021-01-30,2020,Everton,Newcastle United,1.0,3.0,5.5
+2021-01-30,2020,Valencia,Elche,1.0,3.0,-1.0
+2021-01-30,2020,Eibar,Sevilla,1.0,3.0,-1.0
+2021-01-30,2020,Sampdoria,Juventus,1.0,2.0,-1.0
+2021-01-30,2020,Inter,Benevento,1.0,2.0,-1.0
+2021-01-31,2020,Chelsea,Burnley,1.0,3.0,-1.0
+2021-01-31,2020,Cádiz,Atlético Madrid,1.0,5.0,-1.0
+2021-01-31,2020,Napoli,Parma,1.0,3.0,-1.0
+2021-01-31,2020,West Ham United,Liverpool,1.0,2.0,-1.0
+2021-02-02,2020,Sheffield United,West Bromwich Albion,1.0,2.0,-1.0
+2021-02-03,2020,Burnley,Manchester City,1.0,3.0,-1.0
+2021-02-03,2020,Liverpool,Brighton & Hove Albion,1.0,2.0,8.0
+2021-02-03,2020,Fulham,Leicester City,1.0,5.0,-1.0
+2021-02-05,2020,Fiorentina,Inter,1.0,2.0,-1.0
+2021-02-06,2020,Elche,Villarreal,1.0,2.0,-1.0
+2021-02-06,2020,Augsburg,Wolfsburg,1.0,5.0,-1.0
+2021-02-06,2020,Freiburg,Dortmund,1.0,4.0,4.25
+2021-02-06,2020,Genoa,Napoli,1.0,4.0,4.0
+2021-02-07,2020,Real Sociedad,Cádiz,1.0,5.0,-1.0
+2021-02-07,2020,Milan,Crotone,1.0,2.0,-1.0
+2021-02-09,2020,Real Madrid,Getafe,1.0,1.0,-1.0
+2021-02-12,2020,Celta Vigo,Elche,1.0,5.0,-1.0
+2021-02-13,2020,Sevilla,Huesca,1.0,3.0,-1.0
+2021-02-13,2020,Eibar,Valladolid,1.0,3.0,-1.0
+2021-02-13,2020,Manchester City,Tottenham Hotspur,1.0,2.0,-1.0
+2021-02-13,2020,Granada,Atlético Madrid,1.0,4.0,-1.0
+2021-02-13,2020,Union Berlin,Schalke 04,1.0,2.0,-1.0
+2021-02-14,2020,Cagliari,Atalanta,1.0,2.0,-1.0
+2021-02-14,2020,Eint Frankfurt,Köln,1.0,1.0,-1.0
+2021-02-15,2020,Chelsea,Newcastle United,1.0,2.0,-1.0
+2021-02-15,2020,Cádiz,Athletic Club,1.0,3.0,-1.0
+2021-02-15,2020,Hellas Verona,Parma,1.0,2.0,-1.0
+2021-02-15,2020,West Ham United,Sheffield United,1.0,2.0,-1.0
+2021-02-17,2020,Levante,Atlético Madrid,1.0,3.0,-1.0
+2021-02-19,2020,Arminia,Wolfsburg,1.0,5.0,-1.0
+2021-02-19,2020,Betis,Getafe,1.0,5.0,-1.0
+2021-02-20,2020,Burnley,West Bromwich Albion,1.0,2.0,-1.0
+2021-02-20,2020,Southampton,Chelsea,1.0,4.0,-1.0
+2021-02-20,2020,Valladolid,Real Madrid,1.0,5.0,-1.0
+2021-02-21,2020,Real Sociedad,Alavés,1.0,2.0,-1.0
+2021-02-21,2020,Manchester United,Newcastle United,1.0,3.0,-1.0
+2021-02-21,2020,Arsenal,Manchester City,1.0,5.0,-1.0
+2021-02-21,2020,Augsburg,Leverkusen,1.0,5.0,-1.0
+2021-02-21,2020,Hertha BSC,RB Leipzig,1.0,4.0,-1.0
+2021-02-22,2020,Juventus,Crotone,1.0,1.0,-1.0
+2021-02-22,2020,Osasuna,Sevilla,1.0,2.0,-1.0
+2021-02-22,2020,Brighton & Hove Albion,Crystal Palace,1.0,5.0,4.5
+2021-02-24,2020,Barcelona,Elche,1.0,1.0,-1.0
+2021-02-26,2020,Werder Bremen,Eint Frankfurt,1.0,2.0,3.33
+2021-02-27,2020,Hellas Verona,Juventus,1.0,1.0,-1.0
+2021-02-27,2020,Manchester City,West Ham United,1.0,1.0,-1.0
+2021-02-27,2020,West Bromwich Albion,Brighton & Hove Albion,1.0,4.0,3.2
+2021-02-27,2020,Dortmund,Arminia,1.0,4.0,-1.0
+2021-02-28,2020,Tottenham Hotspur,Burnley,1.0,1.0,-1.0
+2021-02-28,2020,Sheffield United,Liverpool,1.0,2.0,-1.0
+2021-02-28,2020,Granada,Elche,1.0,4.0,-1.0
+2021-02-28,2020,Inter,Genoa,1.0,3.0,-1.0
+2021-03-02,2020,Manchester City,Wolverhampton Wanderers,1.0,3.0,-1.0
+2021-03-02,2020,Juventus,Spezia,1.0,1.0,-1.0
+2021-03-03,2020,Atalanta,Crotone,1.0,1.0,-1.0
+2021-03-03,2020,Crystal Palace,Manchester United,1.0,4.0,-1.0
+2021-03-03,2020,Burnley,Leicester City,1.0,4.0,-1.0
+2021-03-04,2020,West Bromwich Albion,Everton,1.0,2.0,-1.0
+2021-03-04,2020,Parma,Inter,1.0,1.0,-1.0
+2021-03-04,2020,Fulham,Tottenham Hotspur,1.0,5.0,-1.0
+2021-03-05,2020,Valencia,Villarreal,1.0,4.0,3.0
+2021-03-06,2020,Elche,Sevilla,1.0,3.0,5.5
+2021-03-06,2020,Freiburg,RB Leipzig,1.0,4.0,-1.0
+2021-03-06,2020,Burnley,Arsenal,1.0,5.0,-1.0
+2021-03-07,2020,Athletic Club,Granada,1.0,1.0,-1.0
+2021-03-07,2020,Liverpool,Fulham,1.0,1.0,7.5
+2021-03-07,2020,Roma,Genoa,1.0,1.0,-1.0
+2021-03-07,2020,Real Sociedad,Levante,1.0,2.0,-1.0
+2021-03-07,2020,Arminia,Union Berlin,1.0,5.0,-1.0
+2021-03-08,2020,Chelsea,Everton,1.0,2.0,-1.0
+2021-03-10,2020,Manchester City,Southampton,1.0,2.0,-1.0
+2021-03-12,2020,Atalanta,Spezia,1.0,1.0,-1.0
+2021-03-13,2020,Getafe,Atlético Madrid,1.0,5.0,-1.0
+2021-03-13,2020,Wolfsburg,Schalke 04,1.0,2.0,-1.0
+2021-03-13,2020,Fulham,Manchester City,1.0,5.0,-1.0
+2021-03-13,2020,Real Madrid,Elche,1.0,2.0,-1.0
+2021-03-13,2020,Werder Bremen,Bayern Munich,1.0,1.0,-1.0
+2021-03-14,2020,Parma,Roma,1.0,5.0,4.5
+2021-03-14,2020,Cagliari,Juventus,1.0,4.0,-1.0
+2021-03-14,2020,Torino,Inter,1.0,4.0,-1.0
+2021-03-14,2020,Leverkusen,Arminia,1.0,2.0,8.0
+2021-03-14,2020,Granada,Real Sociedad,1.0,4.0,4.5
+2021-03-15,2020,Wolverhampton Wanderers,Liverpool,1.0,5.0,-1.0
+2021-03-15,2020,Barcelona,Huesca,1.0,1.0,-1.0
+2021-03-17,2020,Sevilla,Elche,1.0,1.0,-1.0
+2021-03-19,2020,Arminia,RB Leipzig,1.0,3.0,-1.0
+2021-03-20,2020,Brighton & Hove Albion,Newcastle United,1.0,5.0,-1.0
+2021-03-20,2020,Werder Bremen,Wolfsburg,1.0,5.0,-1.0
+2021-03-20,2020,Köln,Dortmund,1.0,3.0,-1.0
+2021-03-20,2020,Schalke 04,Gladbach,1.0,1.0,-1.0
+2021-03-21,2020,Freiburg,Augsburg,1.0,2.0,-1.0
+2021-03-21,2020,Villarreal,Cádiz,1.0,3.0,-1.0
+2021-03-21,2020,Atlético Madrid,Alavés,1.0,2.0,-1.0
+2021-03-21,2020,Juventus,Benevento,1.0,3.0,14.0
+2021-03-21,2020,Hellas Verona,Atalanta,1.0,3.0,-1.0
+2021-04-03,2020,Bologna,Inter,1.0,3.0,-1.0
+2021-04-03,2020,Leverkusen,Schalke 04,1.0,1.0,-1.0
+2021-04-03,2020,Napoli,Crotone,1.0,2.0,-1.0
+2021-04-03,2020,Mainz 05,Arminia,1.0,1.0,-1.0
+2021-04-03,2020,Chelsea,West Bromwich Albion,1.0,2.0,14.0
+2021-04-03,2020,Leeds United,Sheffield United,1.0,2.0,-1.0
+2021-04-03,2020,Leicester City,Manchester City,1.0,5.0,-1.0
+2021-04-03,2020,Atalanta,Udinese,1.0,1.0,-1.0
+2021-04-04,2020,Newcastle United,Tottenham Hotspur,1.0,5.0,-1.0
+2021-04-05,2020,Everton,Crystal Palace,1.0,1.0,-1.0
+2021-04-07,2020,Inter,Sassuolo,1.0,2.0,-1.0
+2021-04-09,2020,Huesca,Elche,1.0,4.0,-1.0
+2021-04-10,2020,Parma,Milan,1.0,5.0,-1.0
+2021-04-10,2020,Werder Bremen,RB Leipzig,1.0,4.0,-1.0
+2021-04-10,2020,Crystal Palace,Chelsea,1.0,5.0,-1.0
+2021-04-10,2020,Manchester City,Leeds United,1.0,1.0,9.0
+2021-04-11,2020,Sampdoria,Napoli,1.0,2.0,-1.0
+2021-04-11,2020,Inter,Cagliari,1.0,1.0,-1.0
+2021-04-11,2020,Sheffield United,Arsenal,1.0,3.0,-1.0
+2021-04-17,2020,Wolverhampton Wanderers,Sheffield United,1.0,4.0,-1.0
+2021-04-18,2020,Atlético Madrid,Eibar,1.0,2.0,-1.0
+2021-04-18,2020,Getafe,Real Madrid,1.0,5.0,-1.0
+2021-04-18,2020,Manchester United,Burnley,1.0,2.0,-1.0
+2021-04-20,2020,Arminia,Schalke 04,1.0,3.0,-1.0
+2021-04-20,2020,Köln,RB Leipzig,1.0,3.0,7.0
+2021-04-21,2020,Spezia,Inter,1.0,1.0,-1.0
+2021-04-21,2020,Levante,Sevilla,1.0,2.0,-1.0
+2021-04-21,2020,Alavés,Villarreal,1.0,2.0,3.33
+2021-04-21,2020,Aston Villa,Manchester City,1.0,5.0,-1.0
+2021-04-21,2020,Cádiz,Real Madrid,1.0,4.0,-1.0
+2021-04-22,2020,Barcelona,Getafe,1.0,1.0,-1.0
+2021-04-24,2020,Liverpool,Newcastle United,1.0,1.0,-1.0
+2021-04-24,2020,West Ham United,Chelsea,1.0,5.0,-1.0
+2021-04-24,2020,Sheffield United,Brighton & Hove Albion,1.0,5.0,4.25
+2021-04-24,2020,Union Berlin,Werder Bremen,1.0,2.0,-1.0
+2021-04-25,2020,Atalanta,Bologna,1.0,1.0,-1.0
+2021-04-25,2020,Fiorentina,Juventus,1.0,3.0,-1.0
+2021-04-25,2020,Inter,Hellas Verona,1.0,3.0,-1.0
+2021-04-25,2020,Villarreal,Barcelona,1.0,4.0,-1.0
+2021-04-26,2020,Torino,Napoli,1.0,5.0,-1.0
+2021-04-26,2020,Leicester City,Crystal Palace,1.0,3.0,-1.0
+2021-04-26,2020,Eibar,Real Sociedad,1.0,3.0,-1.0
+2021-04-28,2020,Athletic Club,Valladolid,1.0,1.0,-1.0
+2021-05-01,2020,Milan,Benevento,1.0,2.0,-1.0
+2021-05-01,2020,Elche,Atlético Madrid,1.0,5.0,-1.0
+2021-05-01,2020,Chelsea,Fulham,1.0,1.0,-1.0
+2021-05-01,2020,Crystal Palace,Manchester City,1.0,5.0,-1.0
+2021-05-02,2020,Granada,Cádiz,1.0,1.0,3.75
+2021-05-02,2020,Villarreal,Getafe,1.0,5.0,-1.0
+2021-05-02,2020,Lazio,Genoa,1.0,1.0,-1.0
+2021-05-02,2020,Tottenham Hotspur,Sheffield United,1.0,1.0,-1.0
+2021-05-07,2020,Leicester City,Newcastle United,1.0,1.0,7.0
+2021-05-07,2020,Real Sociedad,Elche,1.0,4.0,-1.0
+2021-05-08,2020,Hoffenheim,Schalke 04,1.0,3.0,-1.0
+2021-05-08,2020,Werder Bremen,Leverkusen,1.0,2.0,-1.0
+2021-05-09,2020,Parma,Atalanta,1.0,2.0,-1.0
+2021-05-09,2020,Aston Villa,Manchester United,1.0,2.0,-1.0
+2021-05-11,2020,Napoli,Udinese,1.0,4.0,-1.0
+2021-05-11,2020,Osasuna,Cádiz,1.0,3.0,-1.0
+2021-05-11,2020,Levante,Barcelona,1.0,3.0,-1.0
+2021-05-12,2020,Lazio,Parma,1.0,2.0,-1.0
+2021-05-12,2020,Sassuolo,Juventus,1.0,4.0,-1.0
+2021-05-12,2020,Schalke 04,Hertha BSC,1.0,2.0,-1.0
+2021-05-13,2020,Granada,Real Madrid,1.0,3.0,-1.0
+2021-05-14,2020,Newcastle United,Manchester City,1.0,3.0,-1.0
+2021-05-15,2020,Genoa,Atalanta,1.0,1.0,-1.0
+2021-05-15,2020,Freiburg,Bayern Munich,1.0,4.0,-1.0
+2021-05-15,2020,Schalke 04,Eint Frankfurt,1.0,4.0,12.0
+2021-05-16,2020,West Bromwich Albion,Liverpool,1.0,2.0,-1.0
+2021-05-16,2020,Athletic Club,Real Madrid,1.0,4.0,-1.0
+2021-05-16,2020,Atlético Madrid,Osasuna,1.0,2.0,-1.0
+2021-05-16,2020,Real Sociedad,Valladolid,1.0,1.0,-1.0
+2021-05-16,2020,Everton,Sheffield United,1.0,1.0,7.5
+2021-05-19,2020,West Bromwich Albion,West Ham United,1.0,3.0,-1.0
+2021-05-19,2020,Burnley,Liverpool,1.0,1.0,-1.0
+2021-05-22,2020,Valladolid,Atlético Madrid,1.0,4.0,-1.0
+2021-05-22,2020,Köln,Schalke 04,1.0,2.0,-1.0
+2021-05-22,2020,Huesca,Valencia,1.0,1.0,-1.0
+2021-05-22,2020,Osasuna,Real Sociedad,1.0,4.0,-1.0
+2021-05-23,2020,Aston Villa,Chelsea,1.0,2.0,5.5
+2021-05-23,2020,Bologna,Juventus,1.0,2.0,-1.0
+2021-05-23,2020,Napoli,Hellas Verona,1.0,1.0,-1.0
+2021-08-13,2021,Gladbach,Bayern Munich,1.0,1.0,3.5
+2021-08-13,2021,Brentford,Arsenal,1.0,2.0,3.0
+2021-08-14,2021,Alavés,Real Madrid,1.0,1.0,-1.0
+2021-08-14,2021,Leicester City,Wolverhampton Wanderers,1.0,2.0,-1.0
+2021-08-14,2021,Chelsea,Crystal Palace,1.0,4.0,-1.0
+2021-08-15,2021,Sevilla,Rayo Vallecano,1.0,5.0,-1.0
+2021-08-15,2021,Celta Vigo,Atlético Madrid,1.0,2.0,-1.0
+2021-08-15,2021,Tottenham Hotspur,Manchester City,1.0,3.0,4.5
+2021-08-16,2021,Villarreal,Granada,1.0,4.0,-1.0
+2021-08-20,2021,Betis,Cádiz,1.0,5.0,-1.0
+2021-08-21,2021,Liverpool,Burnley,1.0,4.0,-1.0
+2021-08-21,2021,Inter,Genoa,1.0,1.0,-1.0
+2021-08-21,2021,Brighton & Hove Albion,Watford,1.0,5.0,-1.0
+2021-08-21,2021,Manchester City,Norwich City,1.0,1.0,-1.0
+2021-08-21,2021,Freiburg,Dortmund,1.0,2.0,4.5
+2021-08-22,2021,Real Sociedad,Rayo Vallecano,1.0,3.0,-1.0
+2021-08-22,2021,Arsenal,Chelsea,1.0,3.0,-1.0
+2021-08-22,2021,Southampton,Manchester United,1.0,3.0,-1.0
+2021-08-22,2021,Atlético Madrid,Elche,1.0,2.0,-1.0
+2021-08-22,2021,Udinese,Juventus,1.0,3.0,-1.0
+2021-08-22,2021,Napoli,Venezia,1.0,2.0,-1.0
+2021-08-23,2021,Cagliari,Spezia,1.0,2.0,-1.0
+2021-08-27,2021,Hellas Verona,Inter,1.0,1.0,-1.0
+2021-08-27,2021,Udinese,Venezia,1.0,1.0,-1.0
+2021-08-27,2021,Valencia,Alavés,1.0,1.0,-1.0
+2021-08-28,2021,Atalanta,Bologna,1.0,1.0,-1.0
+2021-08-28,2021,Lazio,Spezia,1.0,4.0,-1.0
+2021-08-28,2021,Manchester City,Arsenal,1.0,3.0,-1.0
+2021-08-28,2021,Augsburg,Leverkusen,1.0,2.0,-1.0
+2021-08-28,2021,Norwich City,Leicester City,1.0,3.0,-1.0
+2021-08-28,2021,Real Sociedad,Levante,1.0,4.0,-1.0
+2021-08-28,2021,West Ham United,Crystal Palace,1.0,4.0,-1.0
+2021-08-28,2021,Elche,Sevilla,1.0,5.0,-1.0
+2021-08-28,2021,Mainz 05,Greuther Fürth,1.0,1.0,-1.0
+2021-08-28,2021,Juventus,Empoli,1.0,2.0,11.0
+2021-08-29,2021,Milan,Cagliari,1.0,1.0,-1.0
+2021-08-29,2021,Salernitana,Roma,1.0,1.0,-1.0
+2021-08-29,2021,Tottenham Hotspur,Watford,1.0,3.0,-1.0
+2021-08-29,2021,Wolverhampton Wanderers,Manchester United,1.0,5.0,-1.0
+2021-09-11,2021,Manchester United,Newcastle United,1.0,3.0,-1.0
+2021-09-11,2021,Leicester City,Manchester City,1.0,2.0,-1.0
+2021-09-11,2021,Chelsea,Aston Villa,1.0,5.0,-1.0
+2021-09-11,2021,Athletic Club,Mallorca,1.0,2.0,-1.0
+2021-09-11,2021,Greuther Fürth,Wolfsburg,1.0,2.0,-1.0
+2021-09-11,2021,Crystal Palace,Tottenham Hotspur,1.0,4.0,3.2
+2021-09-12,2021,Real Madrid,Celta Vigo,1.0,1.0,-1.0
+2021-09-12,2021,Cádiz,Real Sociedad,1.0,5.0,-1.0
+2021-09-12,2021,Torino,Salernitana,1.0,3.0,-1.0
+2021-09-13,2021,Getafe,Elche,1.0,1.0,3.75
+2021-09-13,2021,Everton,Burnley,1.0,2.0,-1.0
+2021-09-17,2021,Celta Vigo,Cádiz,1.0,1.0,6.0
+2021-09-18,2021,Wolverhampton Wanderers,Brentford,1.0,3.0,4.0
+2021-09-18,2021,Liverpool,Crystal Palace,1.0,3.0,-1.0
+2021-09-18,2021,Inter,Bologna,1.0,1.0,-1.0
+2021-09-18,2021,Atlético Madrid,Athletic Club,1.0,2.0,-1.0
+2021-09-18,2021,Bayern Munich,Bochum,1.0,1.0,-1.0
+2021-09-19,2021,Tottenham Hotspur,Chelsea,1.0,5.0,-1.0
+2021-09-19,2021,West Ham United,Manchester United,1.0,2.0,-1.0
+2021-09-19,2021,Betis,Espanyol,1.0,5.0,-1.0
+2021-09-20,2021,Barcelona,Granada,1.0,2.0,-1.0
+2021-09-20,2021,Udinese,Napoli,1.0,4.0,-1.0
+2021-09-21,2021,Getafe,Atlético Madrid,1.0,5.0,-1.0
+2021-09-22,2021,Milan,Venezia,1.0,2.0,-1.0
+2021-09-22,2021,Real Madrid,Mallorca,1.0,2.0,-1.0
+2021-09-22,2021,Villarreal,Elche,1.0,3.0,-1.0
+2021-09-22,2021,Sevilla,Valencia,1.0,3.0,-1.0
+2021-09-22,2021,Espanyol,Alavés,1.0,2.0,-1.0
+2021-09-23,2021,Sampdoria,Napoli,1.0,2.0,-1.0
+2021-09-23,2021,Granada,Real Sociedad,1.0,4.0,-1.0
+2021-09-24,2021,Greuther Fürth,Bayern Munich,1.0,5.0,-1.0
+2021-09-25,2021,Sevilla,Espanyol,1.0,3.0,-1.0
+2021-09-25,2021,Gladbach,Dortmund,1.0,2.0,3.33
+2021-09-25,2021,Alavés,Atlético Madrid,1.0,2.0,6.5
+2021-09-25,2021,RB Leipzig,Hertha BSC,1.0,4.0,-1.0
+2021-09-25,2021,Brentford,Liverpool,1.0,1.0,-1.0
+2021-09-25,2021,Spezia,Milan,1.0,2.0,-1.0
+2021-09-25,2021,Union Berlin,Arminia,1.0,2.0,-1.0
+2021-09-25,2021,Everton,Norwich City,1.0,2.0,-1.0
+2021-09-25,2021,Leicester City,Burnley,1.0,4.0,-1.0
+2021-09-26,2021,Rayo Vallecano,Cádiz,1.0,3.0,-1.0
+2021-09-26,2021,Real Sociedad,Elche,1.0,4.0,-1.0
+2021-09-26,2021,Napoli,Cagliari,1.0,2.0,-1.0
+2021-09-27,2021,Celta Vigo,Granada,1.0,2.0,-1.0
+2021-10-01,2021,Athletic Club,Alavés,1.0,5.0,-1.0
+2021-10-02,2021,Dortmund,Augsburg,1.0,2.0,-1.0
+2021-10-02,2021,RB Leipzig,Bochum,1.0,2.0,-1.0
+2021-10-02,2021,Manchester United,Everton,1.0,2.0,-1.0
+2021-10-02,2021,Torino,Juventus,1.0,4.0,-1.0
+2021-10-02,2021,Chelsea,Southampton,1.0,3.0,-1.0
+2021-10-03,2021,Granada,Sevilla,1.0,4.0,3.8
+2021-10-03,2021,Hellas Verona,Spezia,1.0,1.0,-1.0
+2021-10-03,2021,Espanyol,Real Madrid,1.0,3.0,4.0
+2021-10-16,2021,Brentford,Chelsea,1.0,3.0,-1.0
+2021-10-16,2021,Manchester City,Burnley,1.0,2.0,-1.0
+2021-10-16,2021,Milan,Hellas Verona,1.0,2.0,-1.0
+2021-10-16,2021,Real Sociedad,Mallorca,1.0,3.0,-1.0
+2021-10-17,2021,Napoli,Torino,1.0,2.0,-1.0
+2021-10-17,2021,Villarreal,Osasuna,1.0,1.0,4.25
+2021-10-17,2021,Rayo Vallecano,Elche,1.0,2.0,-1.0
+2021-10-18,2021,Espanyol,Cádiz,1.0,4.0,-1.0
+2021-10-18,2021,Arsenal,Crystal Palace,1.0,4.0,-1.0
+2021-10-22,2021,Mainz 05,Augsburg,1.0,3.0,-1.0
+2021-10-22,2021,Osasuna,Granada,1.0,2.0,-1.0
+2021-10-23,2021,Everton,Watford,1.0,2.0,4.5
+2021-10-23,2021,Valencia,Mallorca,1.0,1.0,-1.0
+2021-10-23,2021,Chelsea,Norwich City,1.0,4.0,-1.0
+2021-10-23,2021,Brighton & Hove Albion,Manchester City,1.0,5.0,-1.0
+2021-10-23,2021,RB Leipzig,Greuther Fürth,1.0,1.0,-1.0
+2021-10-23,2021,Sassuolo,Venezia,1.0,1.0,-1.0
+2021-10-23,2021,Arminia,Dortmund,1.0,1.0,-1.0
+2021-10-24,2021,Fiorentina,Cagliari,1.0,2.0,-1.0
+2021-10-24,2021,Sevilla,Levante,1.0,5.0,-1.0
+2021-10-26,2021,Venezia,Salernitana,1.0,2.0,3.0
+2021-10-26,2021,Villarreal,Cádiz,1.0,3.0,-1.0
+2021-10-27,2021,Mallorca,Sevilla,1.0,5.0,-1.0
+2021-10-28,2021,Levante,Atlético Madrid,1.0,5.0,-1.0
+2021-10-28,2021,Napoli,Bologna,1.0,3.0,-1.0
+2021-10-30,2021,Liverpool,Brighton & Hove Albion,1.0,3.0,-1.0
+2021-10-30,2021,Newcastle United,Chelsea,1.0,2.0,-1.0
+2021-10-30,2021,Union Berlin,Bayern Munich,1.0,1.0,-1.0
+2021-10-30,2021,Manchester City,Crystal Palace,1.0,2.0,18.0
+2021-10-30,2021,Barcelona,Alavés,1.0,4.0,-1.0
+2021-10-30,2021,Sevilla,Osasuna,1.0,4.0,-1.0
+2021-10-30,2021,Elche,Real Madrid,1.0,3.0,-1.0
+2021-10-31,2021,Inter,Udinese,1.0,1.0,-1.0
+2021-10-31,2021,Salernitana,Napoli,1.0,2.0,-1.0
+2021-10-31,2021,Gladbach,Bochum,1.0,1.0,-1.0
+2021-11-01,2021,Levante,Granada,1.0,2.0,3.0
+2021-11-05,2021,Athletic Club,Cádiz,1.0,3.0,8.0
+2021-11-06,2021,Wolfsburg,Augsburg,1.0,4.0,-1.0
+2021-11-06,2021,Juventus,Fiorentina,1.0,1.0,-1.0
+2021-11-06,2021,Manchester United,Manchester City,1.0,5.0,-1.0
+2021-11-06,2021,Brentford,Norwich City,1.0,3.0,4.75
+2021-11-06,2021,Chelsea,Burnley,1.0,3.0,-1.0
+2021-11-06,2021,Brighton & Hove Albion,Newcastle United,1.0,4.0,-1.0
+2021-11-07,2021,West Ham United,Liverpool,1.0,3.0,3.75
+2021-11-07,2021,Lazio,Salernitana,1.0,3.0,-1.0
+2021-11-07,2021,Arsenal,Watford,1.0,2.0,-1.0
+2021-11-07,2021,Valencia,Atlético Madrid,1.0,4.0,-1.0
+2021-11-07,2021,Villarreal,Getafe,1.0,4.0,-1.0
+2021-11-07,2021,Mallorca,Elche,1.0,5.0,-1.0
+2021-11-19,2021,Augsburg,Bayern Munich,1.0,3.0,14.0
+2021-11-20,2021,Leverkusen,Bochum,1.0,2.0,-1.0
+2021-11-20,2021,Gladbach,Greuther Fürth,1.0,2.0,-1.0
+2021-11-20,2021,Sevilla,Alavés,1.0,4.0,-1.0
+2021-11-20,2021,Arminia,Wolfsburg,1.0,3.0,-1.0
+2021-11-20,2021,Leicester City,Chelsea,1.0,4.0,-1.0
+2021-11-20,2021,Watford,Manchester United,1.0,1.0,5.5
+2021-11-21,2021,Granada,Real Madrid,1.0,3.0,-1.0
+2021-11-21,2021,Getafe,Cádiz,1.0,4.0,-1.0
+2021-11-21,2021,Bologna,Venezia,1.0,2.0,4.5
+2021-11-21,2021,Genoa,Roma,1.0,3.0,-1.0
+2021-11-21,2021,Manchester City,Everton,1.0,3.0,-1.0
+2021-11-22,2021,Rayo Vallecano,Mallorca,1.0,2.0,-1.0
+2021-11-26,2021,Athletic Club,Granada,1.0,4.0,-1.0
+2021-11-27,2021,Venezia,Inter,1.0,2.0,-1.0
+2021-11-27,2021,Greuther Fürth,Hoffenheim,1.0,2.0,-1.0
+2021-11-27,2021,Arsenal,Newcastle United,1.0,1.0,-1.0
+2021-11-28,2021,Udinese,Genoa,1.0,2.0,-1.0
+2021-11-28,2021,Cádiz,Atlético Madrid,1.0,4.0,-1.0
+2021-11-28,2021,Chelsea,Manchester United,1.0,3.0,-1.0
+2021-11-28,2021,Manchester City,West Ham United,1.0,2.0,-1.0
+2021-11-28,2021,Leicester City,Watford,1.0,1.0,-1.0
+2021-11-29,2021,Osasuna,Elche,1.0,2.0,-1.0
+2021-11-30,2021,Atalanta,Venezia,1.0,2.0,-1.0
+2021-11-30,2021,Salernitana,Juventus,1.0,1.0,-1.0
+2021-12-01,2021,Watford,Chelsea,1.0,3.0,-1.0
+2021-12-01,2021,Aston Villa,Manchester City,1.0,4.0,-1.0
+2021-12-01,2021,Inter,Spezia,1.0,2.0,-1.0
+2021-12-01,2021,Genoa,Milan,1.0,4.0,-1.0
+2021-12-04,2021,Leverkusen,Greuther Fürth,1.0,2.0,-1.0
+2021-12-04,2021,West Ham United,Chelsea,1.0,5.0,3.75
+2021-12-04,2021,Watford,Manchester City,1.0,2.0,-1.0
+2021-12-04,2021,Wolverhampton Wanderers,Liverpool,1.0,4.0,-1.0
+2021-12-04,2021,Atlético Madrid,Mallorca,1.0,1.0,10.0
+2021-12-04,2021,Sevilla,Villarreal,1.0,2.0,-1.0
+2021-12-04,2021,Milan,Salernitana,1.0,4.0,-1.0
+2021-12-05,2021,Tottenham Hotspur,Norwich City,1.0,2.0,-1.0
+2021-12-05,2021,Elche,Cádiz,1.0,5.0,-1.0
+2021-12-05,2021,Juventus,Genoa,1.0,2.0,-1.0
+2021-12-11,2021,Venezia,Juventus,1.0,3.0,-1.0
+2021-12-11,2021,Fiorentina,Salernitana,1.0,3.0,-1.0
+2021-12-11,2021,Hertha BSC,Arminia,1.0,3.0,-1.0
+2021-12-11,2021,Norwich City,Manchester United,1.0,2.0,-1.0
+2021-12-11,2021,Udinese,Milan,1.0,3.0,-1.0
+2021-12-11,2021,Liverpool,Aston Villa,1.0,3.0,-1.0
+2021-12-11,2021,Chelsea,Leeds United,1.0,2.0,-1.0
+2021-12-11,2021,Manchester City,Wolverhampton Wanderers,1.0,3.0,-1.0
+2021-12-11,2021,Valencia,Elche,1.0,2.0,-1.0
+2021-12-12,2021,Osasuna,Barcelona,1.0,2.0,-1.0
+2021-12-12,2021,Greuther Fürth,Union Berlin,1.0,2.0,3.75
+2021-12-12,2021,Napoli,Empoli,1.0,3.0,9.0
+2021-12-14,2021,Stuttgart,Bayern Munich,1.0,1.0,-1.0
+2021-12-15,2021,Augsburg,RB Leipzig,1.0,1.0,-1.0
+2021-12-16,2021,Chelsea,Everton,1.0,3.0,-1.0
+2021-12-17,2021,Celta Vigo,Espanyol,1.0,2.0,-1.0
+2021-12-17,2021,Salernitana,Inter,1.0,2.0,-1.0
+2021-12-17,2021,Bayern Munich,Wolfsburg,1.0,2.0,-1.0
+2021-12-18,2021,Barcelona,Elche,1.0,3.0,-1.0
+2021-12-18,2021,Hertha BSC,Dortmund,1.0,2.0,4.25
+2021-12-18,2021,RB Leipzig,Arminia,1.0,3.0,12.0
+2021-12-19,2021,Wolverhampton Wanderers,Chelsea,1.0,4.0,-1.0
+2021-12-19,2021,Tottenham Hotspur,Liverpool,1.0,2.0,-1.0
+2021-12-19,2021,Newcastle United,Manchester City,1.0,3.0,-1.0
+2021-12-21,2021,Villarreal,Alavés,1.0,4.0,-1.0
+2021-12-21,2021,Juventus,Cagliari,1.0,4.0,-1.0
+2021-12-22,2021,Napoli,Spezia,1.0,2.0,11.0
+2021-12-22,2021,Empoli,Milan,1.0,2.0,-1.0
+2021-12-22,2021,Granada,Atlético Madrid,1.0,1.0,5.0
+2021-12-22,2021,Inter,Torino,1.0,2.0,-1.0
+2021-12-22,2021,Venezia,Lazio,1.0,1.0,-1.0
+2021-12-26,2021,Norwich City,Arsenal,1.0,4.0,-1.0
+2021-12-26,2021,Manchester City,Leicester City,1.0,2.0,-1.0
+2021-12-26,2021,Aston Villa,Chelsea,1.0,5.0,-1.0
+2021-12-27,2021,Newcastle United,Manchester United,1.0,1.0,-1.0
+2021-12-28,2021,Crystal Palace,Norwich City,1.0,2.0,-1.0
+2021-12-29,2021,Brentford,Manchester City,1.0,4.0,-1.0
+2021-12-29,2021,Chelsea,Brighton & Hove Albion,1.0,1.0,-1.0
+2021-12-30,2021,Manchester United,Burnley,1.0,1.0,-1.0
+2022-01-02,2021,Getafe,Real Madrid,1.0,5.0,4.5
+2022-01-03,2021,Cádiz,Sevilla,1.0,4.0,-1.0
+2022-01-08,2021,Granada,Barcelona,1.0,3.0,-1.0
+2022-01-08,2021,Freiburg,Arminia,1.0,2.0,-1.0
+2022-01-08,2021,Real Sociedad,Celta Vigo,1.0,2.0,-1.0
+2022-01-09,2021,Alavés,Athletic Club,1.0,1.0,-1.0
+2022-01-09,2021,Osasuna,Cádiz,1.0,5.0,-1.0
+2022-01-09,2021,Sevilla,Getafe,1.0,5.0,-1.0
+2022-01-12,2021,West Ham United,Norwich City,1.0,3.0,-1.0
+2022-01-15,2021,Mainz 05,Bochum,1.0,2.0,-1.0
+2022-01-15,2021,Salernitana,Lazio,1.0,2.0,-1.0
+2022-01-16,2021,Roma,Cagliari,1.0,2.0,-1.0
+2022-01-16,2021,Elche,Villarreal,1.0,4.0,3.5
+2022-01-16,2021,Liverpool,Brentford,1.0,2.0,-1.0
+2022-01-17,2021,Milan,Spezia,1.0,2.0,8.5
+2022-01-17,2021,Bologna,Napoli,1.0,3.0,-1.0
+2022-01-17,2021,Fiorentina,Genoa,1.0,5.0,-1.0
+2022-01-18,2021,Betis,Alavés,1.0,1.0,-1.0
+2022-01-18,2021,Brighton & Hove Albion,Chelsea,1.0,4.0,-1.0
+2022-01-19,2021,Brentford,Manchester United,1.0,3.0,-1.0
+2022-01-22,2021,Atlético Madrid,Valencia,1.0,3.0,-1.0
+2022-01-22,2021,Levante,Cádiz,1.0,2.0,4.0
+2022-01-22,2021,Sevilla,Celta Vigo,1.0,3.0,-1.0
+2022-01-22,2021,Southampton,Manchester City,1.0,2.0,-1.0
+2022-01-22,2021,Greuther Fürth,Mainz 05,1.0,5.0,4.0
+2022-01-22,2021,Villarreal,Mallorca,1.0,3.0,-1.0
+2022-01-23,2021,Arsenal,Burnley,1.0,3.0,-1.0
+2022-01-23,2021,Real Sociedad,Getafe,1.0,4.0,-1.0
+2022-01-23,2021,Cagliari,Fiorentina,1.0,2.0,-1.0
+2022-01-23,2021,Napoli,Salernitana,1.0,2.0,-1.0
+2022-02-04,2021,Getafe,Levante,1.0,2.0,-1.0
+2022-02-06,2021,Atalanta,Cagliari,1.0,1.0,10.0
+2022-02-06,2021,Venezia,Napoli,1.0,3.0,-1.0
+2022-02-06,2021,Wolfsburg,Greuther Fürth,1.0,2.0,-1.0
+2022-02-07,2021,Athletic Club,Espanyol,1.0,3.0,-1.0
+2022-02-08,2021,West Ham United,Watford,1.0,1.0,-1.0
+2022-02-08,2021,Burnley,Manchester United,1.0,4.0,-1.0
+2022-02-10,2021,Liverpool,Leicester City,1.0,1.0,-1.0
+2022-02-11,2021,Sevilla,Elche,1.0,2.0,-1.0
+2022-02-12,2021,Torino,Venezia,1.0,4.0,6.0
+2022-02-12,2021,Norwich City,Manchester City,1.0,3.0,-1.0
+2022-02-12,2021,Atlético Madrid,Getafe,1.0,2.0,-1.0
+2022-02-13,2021,Real Sociedad,Granada,1.0,3.0,-1.0
+2022-02-13,2021,Espanyol,Barcelona,1.0,5.0,-1.0
+2022-02-13,2021,Tottenham Hotspur,Wolverhampton Wanderers,1.0,2.0,4.5
+2022-02-13,2021,Burnley,Liverpool,1.0,4.0,-1.0
+2022-02-18,2021,Juventus,Torino,1.0,3.0,-1.0
+2022-02-19,2021,Crystal Palace,Chelsea,1.0,5.0,-1.0
+2022-02-19,2021,Arsenal,Brentford,1.0,5.0,-1.0
+2022-02-19,2021,Aston Villa,Watford,1.0,4.0,4.75
+2022-02-19,2021,Brighton & Hove Albion,Burnley,1.0,5.0,5.0
+2022-02-19,2021,Salernitana,Milan,1.0,3.0,-1.0
+2022-02-19,2021,Real Madrid,Alavés,1.0,1.0,-1.0
+2022-02-19,2021,Granada,Villarreal,1.0,2.0,-1.0
+2022-02-19,2021,Manchester City,Tottenham Hotspur,1.0,2.0,9.0
+2022-02-20,2021,Betis,Mallorca,1.0,2.0,-1.0
+2022-02-20,2021,Hertha BSC,RB Leipzig,1.0,2.0,-1.0
+2022-02-21,2021,Cagliari,Napoli,1.0,2.0,-1.0
+2022-02-21,2021,Celta Vigo,Levante,1.0,2.0,-1.0
+2022-02-23,2021,Liverpool,Leeds United,1.0,1.0,-1.0
+2022-02-23,2021,Burnley,Tottenham Hotspur,1.0,3.0,3.5999999999999996
+2022-02-24,2021,Arsenal,Wolverhampton Wanderers,1.0,2.0,-1.0
+2022-02-25,2021,Genoa,Inter,1.0,3.0,-1.0
+2022-02-25,2021,Milan,Udinese,1.0,4.0,-1.0
+2022-02-26,2021,Rayo Vallecano,Real Madrid,1.0,4.0,-1.0
+2022-02-26,2021,Getafe,Alavés,1.0,4.0,-1.0
+2022-02-26,2021,Eint Frankfurt,Bayern Munich,1.0,2.0,-1.0
+2022-02-26,2021,Empoli,Juventus,1.0,3.0,-1.0
+2022-02-26,2021,Everton,Manchester City,1.0,3.0,-1.0
+2022-02-26,2021,Manchester United,Watford,1.0,2.0,-1.0
+2022-02-26,2021,Leeds United,Tottenham Hotspur,1.0,2.0,-1.0
+2022-02-27,2021,Real Sociedad,Osasuna,1.0,2.0,-1.0
+2022-02-27,2021,Bochum,RB Leipzig,1.0,3.0,-1.0
+2022-02-27,2021,Hellas Verona,Venezia,1.0,3.0,-1.0
+2022-02-27,2021,Spezia,Roma,1.0,4.0,-1.0
+2022-02-27,2021,Augsburg,Dortmund,1.0,1.0,-1.0
+2022-02-27,2021,Villarreal,Espanyol,1.0,5.0,-1.0
+2022-02-27,2021,Torino,Cagliari,1.0,1.0,4.5
+2022-02-28,2021,Granada,Cádiz,1.0,3.0,-1.0
+2022-03-04,2021,Inter,Salernitana,1.0,1.0,-1.0
+2022-03-04,2021,Alavés,Sevilla,1.0,4.0,-1.0
+2022-03-05,2021,Liverpool,West Ham United,1.0,1.0,-1.0
+2022-03-05,2021,Burnley,Chelsea,1.0,3.0,-1.0
+2022-03-06,2021,Elche,Barcelona,1.0,4.0,-1.0
+2022-03-06,2021,Celta Vigo,Mallorca,1.0,3.0,-1.0
+2022-03-06,2021,Juventus,Spezia,1.0,3.0,-1.0
+2022-03-07,2021,Tottenham Hotspur,Everton,1.0,3.0,-1.0
+2022-03-10,2021,Norwich City,Chelsea,1.0,5.0,-1.0
+2022-03-12,2021,Hoffenheim,Bayern Munich,1.0,2.0,3.75
+2022-03-12,2021,Sampdoria,Juventus,1.0,5.0,-1.0
+2022-03-13,2021,Real Sociedad,Alavés,1.0,4.0,-1.0
+2022-03-13,2021,Chelsea,Newcastle United,1.0,4.0,-1.0
+2022-03-13,2021,Dortmund,Arminia,1.0,1.0,-1.0
+2022-03-13,2021,Barcelona,Osasuna,1.0,4.0,-1.0
+2022-03-13,2021,Leeds United,Norwich City,1.0,2.0,-1.0
+2022-03-13,2021,Greuther Fürth,RB Leipzig,1.0,2.0,-1.0
+2022-03-13,2021,Torino,Inter,1.0,5.0,-1.0
+2022-03-13,2021,Atalanta,Genoa,1.0,2.0,-1.0
+2022-03-13,2021,Fiorentina,Bologna,1.0,1.0,-1.0
+2022-03-14,2021,Crystal Palace,Manchester City,1.0,5.0,-1.0
+2022-03-18,2021,Athletic Club,Getafe,1.0,4.0,-1.0
+2022-03-19,2021,Cagliari,Milan,1.0,2.0,-1.0
+2022-03-19,2021,Mainz 05,Arminia,1.0,3.0,-1.0
+2022-03-19,2021,Alavés,Granada,1.0,2.0,3.0
+2022-03-19,2021,Greuther Fürth,Freiburg,1.0,2.0,-1.0
+2022-03-20,2021,Cádiz,Villarreal,1.0,5.0,3.75
+2022-03-20,2021,Juventus,Salernitana,1.0,2.0,-1.0
+2022-03-20,2021,Bologna,Atalanta,1.0,3.0,-1.0
+2022-03-20,2021,RB Leipzig,Eint Frankfurt,1.0,2.0,-1.0
+2022-04-02,2021,Brighton & Hove Albion,Norwich City,1.0,4.0,-1.0
+2022-04-02,2021,Freiburg,Bayern Munich,1.0,2.0,-1.0
+2022-04-02,2021,Salernitana,Torino,1.0,3.0,-1.0
+2022-04-02,2021,Celta Vigo,Real Madrid,1.0,4.0,-1.0
+2022-04-02,2021,Chelsea,Brentford,1.0,2.0,9.0
+2022-04-02,2021,Burnley,Manchester City,1.0,5.0,-1.0
+2022-04-02,2021,Getafe,Mallorca,1.0,4.0,-1.0
+2022-04-02,2021,Atlético Madrid,Alavés,1.0,1.0,-1.0
+2022-04-03,2021,Athletic Club,Elche,1.0,5.0,-1.0
+2022-04-04,2021,Real Sociedad,Espanyol,1.0,3.0,-1.0
+2022-04-04,2021,Milan,Bologna,1.0,2.0,-1.0
+2022-04-04,2021,Crystal Palace,Arsenal,1.0,4.0,3.0
+2022-04-09,2021,Arsenal,Brighton & Hove Albion,1.0,2.0,4.75
+2022-04-09,2021,Cagliari,Juventus,1.0,1.0,-1.0
+2022-04-09,2021,Real Madrid,Getafe,1.0,1.0,-1.0
+2022-04-09,2021,Greuther Fürth,Gladbach,1.0,2.0,-1.0
+2022-04-09,2021,Everton,Manchester United,1.0,3.0,3.5999999999999996
+2022-04-10,2021,Genoa,Lazio,1.0,4.0,-1.0
+2022-04-10,2021,Roma,Salernitana,1.0,3.0,-1.0
+2022-04-10,2021,Torino,Milan,1.0,5.0,-1.0
+2022-04-10,2021,Osasuna,Alavés,1.0,3.0,-1.0
+2022-04-15,2021,Milan,Genoa,1.0,4.0,-1.0
+2022-04-16,2021,Tottenham Hotspur,Brighton & Hove Albion,1.0,3.0,5.5
+2022-04-16,2021,Freiburg,Bochum,1.0,1.0,-1.0
+2022-04-16,2021,Juventus,Bologna,1.0,3.0,-1.0
+2022-04-16,2021,Fiorentina,Venezia,1.0,1.0,-1.0
+2022-04-16,2021,Lazio,Torino,1.0,1.0,-1.0
+2022-04-17,2021,Athletic Club,Celta Vigo,1.0,3.0,4.0
+2022-04-17,2021,Arminia,Bayern Munich,1.0,2.0,-1.0
+2022-04-18,2021,Barcelona,Cádiz,1.0,3.0,14.0
+2022-04-19,2021,Betis,Elche,1.0,2.0,5.0
+2022-04-19,2021,Mallorca,Alavés,1.0,2.0,-1.0
+2022-04-20,2021,Manchester City,Brighton & Hove Albion,1.0,1.0,-1.0
+2022-04-20,2021,Osasuna,Real Madrid,1.0,4.0,-1.0
+2022-04-20,2021,Atlético Madrid,Granada,1.0,1.0,-1.0
+2022-04-23,2021,Torino,Spezia,1.0,2.0,-1.0
+2022-04-23,2021,Greuther Fürth,Leverkusen,1.0,2.0,-1.0
+2022-04-23,2021,RB Leipzig,Union Berlin,1.0,3.0,5.5
+2022-04-23,2021,Köln,Arminia,1.0,3.0,-1.0
+2022-04-23,2021,Manchester City,Watford,1.0,1.0,-1.0
+2022-04-23,2021,Brentford,Tottenham Hotspur,1.0,1.0,-1.0
+2022-04-24,2021,Empoli,Napoli,1.0,3.0,4.5
+2022-04-24,2021,Salernitana,Fiorentina,1.0,5.0,4.5
+2022-04-24,2021,Liverpool,Everton,1.0,4.0,-1.0
+2022-04-24,2021,Barcelona,Rayo Vallecano,1.0,3.0,9.0
+2022-04-25,2021,Sassuolo,Juventus,1.0,2.0,-1.0
+2022-04-27,2021,Atalanta,Torino,1.0,2.0,-1.0
+2022-04-27,2021,Bologna,Inter,1.0,2.0,6.0
+2022-04-29,2021,Sevilla,Cádiz,1.0,4.0,-1.0
+2022-04-29,2021,Union Berlin,Greuther Fürth,1.0,5.0,-1.0
+2022-04-30,2021,Spezia,Lazio,1.0,5.0,-1.0
+2022-04-30,2021,Aston Villa,Norwich City,1.0,3.0,-1.0
+2022-04-30,2021,Newcastle United,Liverpool,1.0,3.0,-1.0
+2022-05-01,2021,Everton,Chelsea,1.0,5.0,4.0
+2022-05-01,2021,Barcelona,Mallorca,1.0,2.0,-1.0
+2022-05-01,2021,Udinese,Inter,1.0,2.0,-1.0
+2022-05-01,2021,Juventus,Venezia,1.0,3.0,-1.0
+2022-05-01,2021,West Ham United,Arsenal,1.0,3.0,-1.0
+2022-05-02,2021,Gladbach,RB Leipzig,1.0,2.0,3.33
+2022-05-07,2021,Athletic Club,Valencia,1.0,3.0,-1.0
+2022-05-07,2021,Mallorca,Granada,1.0,1.0,3.0
+2022-05-07,2021,Chelsea,Wolverhampton Wanderers,1.0,3.0,-1.0
+2022-05-08,2021,Manchester City,Newcastle United,1.0,2.0,-1.0
+2022-05-08,2021,RB Leipzig,Augsburg,1.0,2.0,-1.0
+2022-05-08,2021,Getafe,Rayo Vallecano,1.0,5.0,-1.0
+2022-05-10,2021,Aston Villa,Liverpool,1.0,3.0,-1.0
+2022-05-11,2021,Elche,Atlético Madrid,1.0,4.0,-1.0
+2022-05-11,2021,Leeds United,Chelsea,1.0,3.0,-1.0
+2022-05-11,2021,Watford,Everton,1.0,2.0,-1.0
+2022-05-11,2021,Wolverhampton Wanderers,Manchester City,1.0,2.0,-1.0
+2022-05-12,2021,Real Sociedad,Cádiz,1.0,2.0,-1.0
+2022-05-14,2021,Arminia,RB Leipzig,1.0,1.0,-1.0
+2022-05-14,2021,Roma,Venezia,1.0,1.0,-1.0
+2022-05-14,2021,Stuttgart,Köln,1.0,2.0,-1.0
+2022-05-15,2021,Tottenham Hotspur,Burnley,1.0,2.0,-1.0
+2022-05-15,2021,Athletic Club,Osasuna,1.0,2.0,-1.0
+2022-05-15,2021,West Ham United,Manchester City,1.0,3.0,-1.0
+2022-05-15,2021,Mallorca,Rayo Vallecano,1.0,4.0,-1.0
+2022-05-15,2021,Celta Vigo,Elche,1.0,2.0,-1.0
+2022-05-15,2021,Cagliari,Inter,1.0,2.0,-1.0
+2022-05-16,2021,Newcastle United,Arsenal,1.0,5.0,3.33
+2022-05-19,2021,Chelsea,Leicester City,1.0,1.0,-1.0
+2022-05-21,2021,Atalanta,Empoli,1.0,1.0,10.0
+2022-05-22,2021,Arsenal,Everton,1.0,3.0,-1.0
+2022-05-22,2021,Sassuolo,Milan,1.0,5.0,-1.0
+2022-05-22,2021,Inter,Sampdoria,1.0,1.0,-1.0
+2022-05-22,2021,Granada,Espanyol,1.0,3.0,-1.0
+2022-05-22,2021,Venezia,Cagliari,1.0,5.0,-1.0
+2022-05-22,2021,Chelsea,Watford,1.0,1.0,-1.0
+2022-05-22,2021,Manchester City,Aston Villa,1.0,1.0,-1.0
+2022-05-22,2021,Norwich City,Tottenham Hotspur,1.0,2.0,-1.0
+2022-05-22,2021,Alavés,Cádiz,1.0,2.0,-1.0
+2022-08-05,2022,Eint Frankfurt,Bayern Munich,1.0,1.0,-1.0
+2022-08-06,2022,Gladbach,Hoffenheim,1.0,1.0,-1.0
+2022-08-06,2022,Everton,Chelsea,1.0,4.0,-1.0
+2022-08-06,2022,Fulham,Liverpool,1.0,2.0,-1.0
+2022-08-07,2022,West Ham United,Manchester City,1.0,4.0,-1.0
+2022-08-13,2022,Manchester City,AFC Bournemouth,1.0,1.0,-1.0
+2022-08-13,2022,Leverkusen,Augsburg,1.0,2.0,8.5
+2022-08-13,2022,Barcelona,Rayo Vallecano,1.0,2.0,-1.0
+2022-08-13,2022,Lecce,Inter,1.0,1.0,-1.0
+2022-08-14,2022,Fiorentina,Cremonese,1.0,1.0,-1.0
+2022-08-14,2022,Almería,Real Madrid,1.0,2.0,-1.0
+2022-08-15,2022,Liverpool,Crystal Palace,1.0,4.0,-1.0
+2022-08-15,2022,Getafe,Atlético Madrid,1.0,5.0,-1.0
+2022-08-15,2022,Athletic Club,Mallorca,1.0,5.0,-1.0
+2022-08-19,2022,Sevilla,Valladolid,1.0,1.0,-1.0
+2022-08-20,2022,Celta Vigo,Real Madrid,1.0,1.0,-1.0
+2022-08-20,2022,AFC Bournemouth,Arsenal,1.0,3.0,-1.0
+2022-08-21,2022,Bochum,Bayern Munich,1.0,3.0,-1.0
+2022-08-21,2022,Newcastle United,Manchester City,1.0,4.0,-1.0
+2022-08-22,2022,Roma,Cremonese,1.0,1.0,-1.0
+2022-08-22,2022,Manchester United,Liverpool,1.0,4.0,4.25
+2022-08-27,2022,Arsenal,Fulham,1.0,1.0,-1.0
+2022-08-27,2022,Manchester City,Crystal Palace,1.0,2.0,-1.0
+2022-08-27,2022,Rayo Vallecano,Mallorca,1.0,5.0,3.0
+2022-08-27,2022,Hoffenheim,Augsburg,1.0,1.0,-1.0
+2022-08-28,2022,Nottingham Forest,Tottenham Hotspur,1.0,2.0,-1.0
+2022-08-28,2022,Espanyol,Real Madrid,1.0,1.0,-1.0
+2022-08-30,2022,Southampton,Chelsea,1.0,3.0,4.25
+2022-08-30,2022,Roma,Monza,1.0,3.0,-1.0
+2022-08-30,2022,Sassuolo,Milan,1.0,2.0,-1.0
+2022-08-31,2022,Manchester City,Nottingham Forest,1.0,1.0,-1.0
+2022-08-31,2022,Napoli,Lecce,1.0,1.0,-1.0
+2022-08-31,2022,Liverpool,Newcastle United,1.0,1.0,-1.0
+2022-08-31,2022,Juventus,Spezia,1.0,4.0,-1.0
+2022-09-02,2022,Celta Vigo,Cádiz,1.0,3.0,-1.0
+2022-09-03,2022,Sevilla,Barcelona,1.0,5.0,-1.0
+2022-09-03,2022,Everton,Liverpool,1.0,2.0,-1.0
+2022-09-04,2022,Osasuna,Rayo Vallecano,1.0,5.0,-1.0
+2022-09-04,2022,Athletic Club,Espanyol,1.0,3.0,5.5
+2022-09-04,2022,Villarreal,Elche,1.0,3.0,-1.0
+2022-09-04,2022,Brighton & Hove Albion,Leicester City,1.0,2.0,-1.0
+2022-09-05,2022,Monza,Atalanta,1.0,1.0,-1.0
+2022-09-05,2022,Torino,Lecce,1.0,1.0,-1.0
+2022-09-10,2022,Atlético Madrid,Celta Vigo,1.0,1.0,-1.0
+2022-09-10,2022,Napoli,Spezia,1.0,1.0,-1.0
+2022-09-10,2022,Cádiz,Barcelona,1.0,3.0,-1.0
+2022-09-11,2022,Juventus,Salernitana,1.0,2.0,-1.0
+2022-09-11,2022,Atalanta,Cremonese,1.0,2.0,-1.0
+2022-09-11,2022,Elche,Athletic Club,1.0,2.0,-1.0
+2022-09-11,2022,Real Madrid,Mallorca,1.0,1.0,-1.0
+2022-09-12,2022,Empoli,Roma,1.0,2.0,-1.0
+2022-09-16,2022,Valladolid,Cádiz,1.0,4.0,3.0
+2022-09-17,2022,Mallorca,Almería,1.0,4.0,-1.0
+2022-09-17,2022,Augsburg,Bayern Munich,1.0,5.0,16.0
+2022-09-17,2022,Athletic Club,Rayo Vallecano,1.0,4.0,-1.0
+2022-09-17,2022,Newcastle United,AFC Bournemouth,1.0,1.0,-1.0
+2022-09-17,2022,Wolverhampton Wanderers,Manchester City,1.0,5.0,-1.0
+2022-09-18,2022,Betis,Girona,1.0,2.0,-1.0
+2022-09-18,2022,Osasuna,Getafe,1.0,3.0,4.0
+2022-09-18,2022,Monza,Juventus,1.0,2.0,3.5
+2022-09-30,2022,Athletic Club,Almería,1.0,2.0,-1.0
+2022-10-01,2022,Mallorca,Barcelona,1.0,1.0,-1.0
+2022-10-01,2022,Cádiz,Villarreal,1.0,1.0,-1.0
+2022-10-01,2022,Crystal Palace,Chelsea,1.0,2.0,-1.0
+2022-10-01,2022,Empoli,Milan,1.0,3.0,-1.0
+2022-10-01,2022,West Ham United,Wolverhampton Wanderers,1.0,5.0,-1.0
+2022-10-01,2022,RB Leipzig,Bochum,1.0,2.0,-1.0
+2022-10-01,2022,Napoli,Torino,1.0,1.0,-1.0
+2022-10-02,2022,Real Madrid,Osasuna,1.0,2.0,-1.0
+2022-10-02,2022,Atalanta,Fiorentina,1.0,4.0,-1.0
+2022-10-03,2022,Rayo Vallecano,Elche,1.0,2.0,-1.0
+2022-10-08,2022,Chelsea,Wolverhampton Wanderers,1.0,2.0,-1.0
+2022-10-08,2022,Dortmund,Bayern Munich,1.0,2.0,3.75
+2022-10-08,2022,Getafe,Real Madrid,1.0,2.0,-1.0
+2022-10-09,2022,Cremonese,Napoli,1.0,1.0,-1.0
+2022-10-15,2022,Girona,Cádiz,1.0,1.0,-1.0
+2022-10-15,2022,Valencia,Elche,1.0,1.0,-1.0
+2022-10-15,2022,Stuttgart,Bochum,1.0,1.0,-1.0
+2022-10-16,2022,Betis,Almería,1.0,1.0,-1.0
+2022-10-16,2022,Leeds United,Arsenal,1.0,1.0,-1.0
+2022-10-16,2022,Napoli,Bologna,1.0,1.0,-1.0
+2022-10-16,2022,Hellas Verona,Milan,1.0,2.0,-1.0
+2022-10-17,2022,Sampdoria,Roma,1.0,2.0,-1.0
+2022-10-18,2022,Atlético Madrid,Rayo Vallecano,1.0,3.0,-1.0
+2022-10-18,2022,Getafe,Athletic Club,1.0,5.0,-1.0
+2022-10-19,2022,Newcastle United,Everton,1.0,2.0,-1.0
+2022-10-19,2022,Brentford,Chelsea,1.0,2.0,-1.0
+2022-10-19,2022,Cádiz,Betis,1.0,4.0,-1.0
+2022-10-19,2022,Real Sociedad,Mallorca,1.0,4.0,-1.0
+2022-10-22,2022,Manchester City,Brighton & Hove Albion,1.0,3.0,-1.0
+2022-10-22,2022,Real Madrid,Sevilla,1.0,1.0,-1.0
+2022-10-22,2022,Valencia,Mallorca,1.0,2.0,4.0
+2022-10-22,2022,Augsburg,RB Leipzig,1.0,3.0,-1.0
+2022-10-22,2022,Nottingham Forest,Liverpool,1.0,3.0,10.0
+2022-10-22,2022,Hoffenheim,Bayern Munich,1.0,5.0,-1.0
+2022-10-22,2022,Rayo Vallecano,Cádiz,1.0,2.0,-1.0
+2022-10-23,2022,Atalanta,Lazio,1.0,5.0,3.0
+2022-10-23,2022,Villarreal,Almería,1.0,3.0,-1.0
+2022-10-23,2022,Udinese,Torino,1.0,4.0,3.0
+2022-10-23,2022,Espanyol,Elche,1.0,1.0,-1.0
+2022-10-23,2022,Bochum,Union Berlin,1.0,5.0,3.33
+2022-10-23,2022,Southampton,Arsenal,1.0,1.0,-1.0
+2022-10-24,2022,Sassuolo,Hellas Verona,1.0,4.0,-1.0
+2022-10-24,2022,West Ham United,AFC Bournemouth,1.0,2.0,-1.0
+2022-10-24,2022,Celta Vigo,Getafe,1.0,2.0,-1.0
+2022-10-29,2022,Bayern Munich,Mainz 05,1.0,1.0,-1.0
+2022-10-29,2022,Leicester City,Manchester City,1.0,3.0,-1.0
+2022-10-29,2022,AFC Bournemouth,Tottenham Hotspur,1.0,3.0,-1.0
+2022-10-29,2022,Lecce,Juventus,1.0,2.0,-1.0
+2022-10-29,2022,Inter,Sampdoria,1.0,1.0,-1.0
+2022-10-29,2022,Sevilla,Rayo Vallecano,1.0,4.0,3.0
+2022-10-29,2022,Valencia,Barcelona,1.0,2.0,-1.0
+2022-10-29,2022,Cádiz,Atlético Madrid,1.0,5.0,6.0
+2022-10-30,2022,Real Madrid,Girona,1.0,2.0,-1.0
+2022-10-30,2022,Spezia,Fiorentina,1.0,2.0,-1.0
+2022-10-30,2022,Arsenal,Nottingham Forest,1.0,2.0,-1.0
+2022-10-31,2022,Hellas Verona,Roma,1.0,1.0,-1.0
+2022-11-05,2022,Manchester City,Fulham,1.0,1.0,-1.0
+2022-11-05,2022,Milan,Spezia,1.0,2.0,-1.0
+2022-11-05,2022,Dortmund,Bochum,1.0,1.0,-1.0
+2022-11-06,2022,Sampdoria,Fiorentina,1.0,3.0,-1.0
+2022-11-06,2022,Southampton,Newcastle United,1.0,2.0,-1.0
+2022-11-06,2022,Real Sociedad,Valencia,1.0,3.0,-1.0
+2022-11-06,2022,Villarreal,Mallorca,1.0,1.0,4.75
+2022-11-07,2022,Rayo Vallecano,Real Madrid,1.0,1.0,3.75
+2022-11-08,2022,Cremonese,Milan,1.0,1.0,-1.0
+2022-11-08,2022,Spezia,Udinese,1.0,3.0,-1.0
+2022-11-08,2022,Athletic Club,Valladolid,1.0,2.0,-1.0
+2022-11-09,2022,Lecce,Atalanta,1.0,4.0,3.75
+2022-11-09,2022,Torino,Sampdoria,1.0,1.0,-1.0
+2022-11-09,2022,Inter,Bologna,1.0,2.0,-1.0
+2022-11-10,2022,Hellas Verona,Juventus,1.0,2.0,-1.0
+2022-11-12,2022,Manchester City,Brentford,1.0,1.0,16.0
+2022-11-12,2022,Wolverhampton Wanderers,Arsenal,1.0,2.0,-1.0
+2022-11-12,2022,Schalke 04,Bayern Munich,1.0,2.0,-1.0
+2022-11-12,2022,Liverpool,Southampton,1.0,1.0,-1.0
+2022-11-13,2022,Juventus,Lazio,1.0,3.0,-1.0
+2022-11-13,2022,Freiburg,Union Berlin,1.0,4.0,-1.0
+2022-11-13,2022,Brighton & Hove Albion,Aston Villa,1.0,2.0,3.2
+2022-12-26,2022,Brentford,Tottenham Hotspur,1.0,2.0,-1.0
+2022-12-26,2022,Arsenal,West Ham United,1.0,1.0,-1.0
+2022-12-26,2022,Aston Villa,Liverpool,1.0,3.0,-1.0
+2022-12-27,2022,Chelsea,AFC Bournemouth,1.0,3.0,-1.0
+2022-12-27,2022,Manchester United,Nottingham Forest,1.0,4.0,-1.0
+2022-12-28,2022,Leeds United,Manchester City,1.0,1.0,-1.0
+2022-12-29,2022,Atlético Madrid,Elche,1.0,1.0,-1.0
+2022-12-30,2022,Liverpool,Leicester City,1.0,1.0,-1.0
+2022-12-30,2022,Valladolid,Real Madrid,1.0,1.0,-1.0
+2022-12-31,2022,Villarreal,Valencia,1.0,4.0,-1.0
+2022-12-31,2022,Wolverhampton Wanderers,Manchester United,1.0,3.0,-1.0
+2022-12-31,2022,Newcastle United,Leeds United,1.0,1.0,-1.0
+2022-12-31,2022,Manchester City,Everton,1.0,2.0,-1.0
+2023-01-01,2022,Nottingham Forest,Chelsea,1.0,3.0,-1.0
+2023-01-02,2022,Brentford,Liverpool,1.0,3.0,4.5
+2023-01-03,2022,Arsenal,Newcastle United,1.0,1.0,-1.0
+2023-01-03,2022,Manchester United,AFC Bournemouth,1.0,4.0,-1.0
+2023-01-04,2022,Aston Villa,Wolverhampton Wanderers,1.0,4.0,-1.0
+2023-01-04,2022,Salernitana,Milan,1.0,3.0,-1.0
+2023-01-04,2022,Spezia,Atalanta,1.0,2.0,-1.0
+2023-01-05,2022,Chelsea,Manchester City,1.0,5.0,-1.0
+2023-01-06,2022,Elche,Celta Vigo,1.0,2.0,-1.0
+2023-01-06,2022,Valencia,Cádiz,1.0,2.0,4.75
+2023-01-07,2022,Mallorca,Valladolid,1.0,3.0,-1.0
+2023-01-08,2022,Almería,Real Sociedad,1.0,3.0,-1.0
+2023-01-08,2022,Sevilla,Getafe,1.0,2.0,-1.0
+2023-01-08,2022,Sampdoria,Napoli,1.0,3.0,-1.0
+2023-01-09,2022,Athletic Club,Osasuna,1.0,3.0,-1.0
+2023-01-13,2022,Napoli,Juventus,1.0,1.0,-1.0
+2023-01-14,2022,Osasuna,Mallorca,1.0,5.0,-1.0
+2023-01-14,2022,Brentford,AFC Bournemouth,1.0,1.0,-1.0
+2023-01-14,2022,Manchester United,Manchester City,1.0,5.0,3.2
+2023-01-14,2022,Inter,Hellas Verona,1.0,2.0,-1.0
+2023-01-14,2022,Lecce,Milan,1.0,2.0,-1.0
+2023-01-15,2022,Almería,Atlético Madrid,1.0,2.0,-1.0
+2023-01-15,2022,Udinese,Bologna,1.0,2.0,3.2
+2023-01-15,2022,Roma,Fiorentina,1.0,3.0,-1.0
+2023-01-15,2022,Torino,Spezia,1.0,2.0,4.5
+2023-01-15,2022,Chelsea,Crystal Palace,1.0,1.0,-1.0
+2023-01-16,2022,Cádiz,Elche,1.0,1.0,-1.0
+2023-01-18,2022,Crystal Palace,Manchester United,1.0,3.0,-1.0
+2023-01-19,2022,Manchester City,Tottenham Hotspur,1.0,3.0,-1.0
+2023-01-21,2022,Crystal Palace,Newcastle United,1.0,2.0,-1.0
+2023-01-21,2022,Eint Frankfurt,Schalke 04,1.0,1.0,-1.0
+2023-01-21,2022,Salernitana,Napoli,1.0,1.0,-1.0
+2023-01-22,2022,Spezia,Roma,1.0,4.0,-1.0
+2023-01-22,2022,Manchester City,Wolverhampton Wanderers,1.0,2.0,-1.0
+2023-01-22,2022,Barcelona,Getafe,1.0,3.0,-1.0
+2023-01-24,2022,Bayern Munich,Köln,1.0,2.0,-1.0
+2023-01-27,2022,Lecce,Salernitana,1.0,2.0,3.75
+2023-01-27,2022,RB Leipzig,Stuttgart,1.0,1.0,-1.0
+2023-01-28,2022,Cremonese,Inter,1.0,1.0,-1.0
+2023-01-28,2022,Atalanta,Sampdoria,1.0,2.0,-1.0
+2023-01-28,2022,Sevilla,Elche,1.0,3.0,-1.0
+2023-01-29,2022,Napoli,Roma,1.0,2.0,-1.0
+2023-01-29,2022,Juventus,Monza,1.0,3.0,5.5
+2023-02-01,2022,Betis,Barcelona,1.0,5.0,-1.0
+2023-02-03,2022,Athletic Club,Cádiz,1.0,4.0,-1.0
+2023-02-04,2022,Elche,Villarreal,1.0,3.0,4.0
+2023-02-04,2022,Atlético Madrid,Getafe,1.0,2.0,-1.0
+2023-02-04,2022,Union Berlin,Mainz 05,1.0,4.0,-1.0
+2023-02-04,2022,Köln,RB Leipzig,1.0,4.0,-1.0
+2023-02-04,2022,Brighton & Hove Albion,AFC Bournemouth,1.0,2.0,-1.0
+2023-02-04,2022,Manchester United,Crystal Palace,1.0,1.0,-1.0
+2023-02-04,2022,Everton,Arsenal,1.0,5.0,7.5
+2023-02-04,2022,Newcastle United,West Ham United,1.0,4.0,-1.0
+2023-02-05,2022,Mallorca,Real Madrid,1.0,5.0,4.0
+2023-02-05,2022,Real Sociedad,Valladolid,1.0,2.0,6.5
+2023-02-05,2022,Wolfsburg,Bayern Munich,1.0,2.0,-1.0
+2023-02-05,2022,Inter,Milan,1.0,2.0,-1.0
+2023-02-05,2022,Tottenham Hotspur,Manchester City,1.0,2.0,3.33
+2023-02-05,2022,Barcelona,Sevilla,1.0,1.0,-1.0
+2023-02-05,2022,Spezia,Napoli,1.0,1.0,-1.0
+2023-02-06,2022,Rayo Vallecano,Almería,1.0,1.0,-1.0
+2023-02-07,2022,Salernitana,Juventus,1.0,3.0,-1.0
+2023-02-11,2022,Lecce,Roma,1.0,1.0,-1.0
+2023-02-11,2022,Fulham,Nottingham Forest,1.0,1.0,-1.0
+2023-02-11,2022,Sevilla,Mallorca,1.0,1.0,-1.0
+2023-02-11,2022,AFC Bournemouth,Newcastle United,1.0,2.0,-1.0
+2023-02-12,2022,Manchester City,Aston Villa,1.0,2.0,-1.0
+2023-02-12,2022,Napoli,Cremonese,1.0,1.0,-1.0
+2023-02-13,2022,Sampdoria,Inter,1.0,1.0,-1.0
+2023-02-15,2022,Real Madrid,Elche,1.0,2.0,-1.0
+2023-02-18,2022,Brighton & Hove Albion,Fulham,1.0,2.0,4.5
+2023-02-18,2022,Wolverhampton Wanderers,AFC Bournemouth,1.0,4.0,5.0
+2023-02-18,2022,Aston Villa,Arsenal,1.0,3.0,-1.0
+2023-02-18,2022,Betis,Valladolid,1.0,4.0,-1.0
+2023-02-18,2022,Real Sociedad,Celta Vigo,1.0,3.0,-1.0
+2023-02-18,2022,Osasuna,Real Madrid,1.0,2.0,-1.0
+2023-02-19,2022,Atalanta,Lecce,1.0,4.0,6.0
+2023-02-19,2022,Spezia,Juventus,1.0,3.0,-1.0
+2023-02-19,2022,Fiorentina,Empoli,1.0,1.0,-1.0
+2023-02-19,2022,Roma,Hellas Verona,1.0,3.0,-1.0
+2023-02-19,2022,Union Berlin,Schalke 04,1.0,2.0,-1.0
+2023-02-19,2022,Tottenham Hotspur,West Ham United,1.0,1.0,-1.0
+2023-02-19,2022,Barcelona,Cádiz,1.0,2.0,-1.0
+2023-02-19,2022,Salernitana,Lazio,1.0,5.0,-1.0
+2023-02-25,2022,Empoli,Napoli,1.0,1.0,-1.0
+2023-02-25,2022,Leeds United,Southampton,1.0,2.0,-1.0
+2023-02-25,2022,Leicester City,Arsenal,1.0,4.0,-1.0
+2023-02-25,2022,West Ham United,Nottingham Forest,1.0,1.0,-1.0
+2023-02-25,2022,AFC Bournemouth,Manchester City,1.0,3.0,-1.0
+2023-02-25,2022,Crystal Palace,Liverpool,1.0,1.0,-1.0
+2023-02-25,2022,Real Madrid,Atlético Madrid,1.0,2.0,-1.0
+2023-02-26,2022,Celta Vigo,Valladolid,1.0,2.0,-1.0
+2023-02-26,2022,Bayern Munich,Union Berlin,1.0,1.0,-1.0
+2023-02-26,2022,Almería,Barcelona,1.0,2.0,6.0
+2023-02-26,2022,Bologna,Inter,1.0,4.0,4.5
+2023-02-26,2022,Udinese,Spezia,1.0,3.0,-1.0
+2023-02-27,2022,Lazio,Sampdoria,1.0,1.0,-1.0
+2023-02-27,2022,Villarreal,Getafe,1.0,3.0,-1.0
+2023-02-28,2022,Juventus,Torino,1.0,2.0,-1.0
+2023-02-28,2022,Cremonese,Roma,1.0,5.0,4.25
+2023-03-01,2022,Arsenal,Everton,1.0,5.0,-1.0
+2023-03-03,2022,Real Sociedad,Cádiz,1.0,4.0,-1.0
+2023-03-04,2022,Stuttgart,Bayern Munich,1.0,2.0,-1.0
+2023-03-04,2022,Arsenal,AFC Bournemouth,1.0,2.0,-1.0
+2023-03-04,2022,Manchester City,Newcastle United,1.0,1.0,-1.0
+2023-03-04,2022,Union Berlin,Köln,1.0,1.0,-1.0
+2023-03-04,2022,Brighton & Hove Albion,West Ham United,1.0,2.0,-1.0
+2023-03-04,2022,Mainz 05,Hoffenheim,1.0,2.0,-1.0
+2023-03-04,2022,Mallorca,Elche,1.0,3.0,4.75
+2023-03-04,2022,Atalanta,Udinese,1.0,2.0,-1.0
+2023-03-05,2022,Betis,Real Madrid,1.0,3.0,-1.0
+2023-03-05,2022,Inter,Lecce,1.0,2.0,-1.0
+2023-03-10,2022,Spezia,Inter,1.0,3.0,7.0
+2023-03-11,2022,Crystal Palace,Manchester City,1.0,4.0,-1.0
+2023-03-11,2022,AFC Bournemouth,Liverpool,1.0,2.0,6.5
+2023-03-11,2022,Bayern Munich,Augsburg,1.0,1.0,-1.0
+2023-03-11,2022,Celta Vigo,Rayo Vallecano,1.0,5.0,-1.0
+2023-03-11,2022,Napoli,Atalanta,1.0,1.0,-1.0
+2023-03-12,2022,Fulham,Arsenal,1.0,3.0,-1.0
+2023-03-12,2022,Freiburg,Hoffenheim,1.0,2.0,-1.0
+2023-03-12,2022,Newcastle United,Wolverhampton Wanderers,1.0,3.0,-1.0
+2023-03-12,2022,Sevilla,Almería,1.0,1.0,-1.0
+2023-03-12,2022,Juventus,Sampdoria,1.0,3.0,-1.0
+2023-03-12,2022,Roma,Sassuolo,1.0,3.0,4.5
+2023-03-12,2022,Cremonese,Fiorentina,1.0,2.0,-1.0
+2023-03-13,2022,Milan,Salernitana,1.0,1.0,-1.0
+2023-03-15,2022,Brighton & Hove Albion,Crystal Palace,1.0,4.0,-1.0
+2023-03-17,2022,Nottingham Forest,Newcastle United,1.0,5.0,-1.0
+2023-03-17,2022,Valladolid,Athletic Club,1.0,3.0,-1.0
+2023-03-18,2022,Chelsea,Everton,1.0,2.0,-1.0
+2023-03-18,2022,Bochum,RB Leipzig,1.0,3.0,4.5
+2023-03-18,2022,Southampton,Tottenham Hotspur,1.0,4.0,-1.0
+2023-03-19,2022,Real Sociedad,Elche,1.0,2.0,-1.0
+2023-03-19,2022,Arsenal,Crystal Palace,1.0,5.0,-1.0
+2023-03-19,2022,Leverkusen,Bayern Munich,1.0,5.0,4.25
+2023-03-19,2022,Betis,Mallorca,1.0,3.0,-1.0
+2023-03-19,2022,Fiorentina,Lecce,1.0,1.0,-1.0
+2023-04-01,2022,Athletic Club,Getafe,1.0,4.0,-1.0
+2023-04-01,2022,Freiburg,Hertha BSC,1.0,2.0,-1.0
+2023-04-01,2022,Wolfsburg,Augsburg,1.0,2.0,-1.0
+2023-04-01,2022,Elche,Barcelona,1.0,4.0,-1.0
+2023-04-01,2022,Girona,Espanyol,1.0,2.0,-1.0
+2023-04-01,2022,Cremonese,Atalanta,1.0,5.0,-1.0
+2023-04-01,2022,Juventus,Hellas Verona,1.0,4.0,-1.0
+2023-04-01,2022,Brighton & Hove Albion,Brentford,1.0,1.0,-1.0
+2023-04-01,2022,Arsenal,Leeds United,1.0,1.0,-1.0
+2023-04-02,2022,Real Madrid,Valladolid,1.0,1.0,-1.0
+2023-04-02,2022,Roma,Sampdoria,1.0,4.0,-1.0
+2023-04-02,2022,Celta Vigo,Almería,1.0,2.0,-1.0
+2023-04-02,2022,Atlético Madrid,Betis,1.0,2.0,-1.0
+2023-04-04,2022,AFC Bournemouth,Brighton & Hove Albion,1.0,4.0,-1.0
+2023-04-07,2022,Salernitana,Inter,1.0,3.0,-1.0
+2023-04-07,2022,Milan,Empoli,1.0,2.0,-1.0
+2023-04-07,2022,Lecce,Napoli,1.0,4.0,-1.0
+2023-04-08,2022,Hertha BSC,RB Leipzig,1.0,5.0,-1.0
+2023-04-08,2022,Freiburg,Bayern Munich,1.0,2.0,-1.0
+2023-04-08,2022,Real Sociedad,Getafe,1.0,5.0,-1.0
+2023-04-08,2022,Atalanta,Bologna,1.0,2.0,4.5
+2023-04-08,2022,Wolverhampton Wanderers,Chelsea,1.0,3.0,3.2
+2023-04-08,2022,Fiorentina,Spezia,1.0,3.0,-1.0
+2023-04-08,2022,Southampton,Manchester City,1.0,2.0,-1.0
+2023-04-09,2022,Betis,Cádiz,1.0,3.0,4.75
+2023-04-10,2022,Barcelona,Girona,1.0,2.0,-1.0
+2023-04-14,2022,Spezia,Lazio,1.0,5.0,-1.0
+2023-04-15,2022,Bayern Munich,Hoffenheim,1.0,2.0,-1.0
+2023-04-15,2022,Napoli,Hellas Verona,1.0,2.0,-1.0
+2023-04-16,2022,Getafe,Barcelona,1.0,2.0,-1.0
+2023-04-16,2022,Union Berlin,Bochum,1.0,2.0,-1.0
+2023-04-16,2022,West Ham United,Arsenal,1.0,3.0,-1.0
+2023-04-16,2022,Nottingham Forest,Manchester United,1.0,5.0,-1.0
+2023-04-16,2022,Torino,Salernitana,1.0,2.0,-1.0
+2023-04-16,2022,Lecce,Sampdoria,1.0,4.0,-1.0
+2023-04-17,2022,Celta Vigo,Mallorca,1.0,5.0,4.25
+2023-04-21,2022,Arsenal,Southampton,1.0,2.0,-1.0
+2023-04-22,2022,Lazio,Torino,1.0,2.0,3.75
+2023-04-22,2022,Mainz 05,Bayern Munich,1.0,2.0,4.25
+2023-04-22,2022,Liverpool,Nottingham Forest,1.0,1.0,-1.0
+2023-04-22,2022,Real Madrid,Celta Vigo,1.0,1.0,-1.0
+2023-04-22,2022,Real Sociedad,Rayo Vallecano,1.0,4.0,-1.0
+2023-04-23,2022,Barcelona,Atlético Madrid,1.0,3.0,-1.0
+2023-04-23,2022,Elche,Valencia,1.0,3.0,-1.0
+2023-04-23,2022,Milan,Lecce,1.0,1.0,-1.0
+2023-04-23,2022,Empoli,Inter,1.0,2.0,-1.0
+2023-04-25,2022,Girona,Real Madrid,1.0,2.0,4.25
+2023-04-26,2022,Nottingham Forest,Brighton & Hove Albion,1.0,4.0,5.0
+2023-04-26,2022,Rayo Vallecano,Barcelona,1.0,2.0,3.75
+2023-04-26,2022,Atlético Madrid,Mallorca,1.0,2.0,-1.0
+2023-04-26,2022,Celta Vigo,Elche,1.0,3.0,-1.0
+2023-04-26,2022,Getafe,Almería,1.0,1.0,3.5
+2023-04-27,2022,Athletic Club,Sevilla,1.0,1.0,3.5
+2023-04-27,2022,Villarreal,Espanyol,1.0,2.0,-1.0
+2023-04-27,2022,Everton,Newcastle United,1.0,4.0,-1.0
+2023-04-29,2022,Brentford,Nottingham Forest,1.0,2.0,-1.0
+2023-04-29,2022,Brighton & Hove Albion,Wolverhampton Wanderers,1.0,1.0,-1.0
+2023-04-29,2022,Barcelona,Betis,1.0,1.0,-1.0
+2023-04-29,2022,Elche,Rayo Vallecano,1.0,5.0,3.75
+2023-04-30,2022,Napoli,Salernitana,1.0,2.0,-1.0
+2023-04-30,2022,Valladolid,Atlético Madrid,1.0,5.0,-1.0
+2023-04-30,2022,Fiorentina,Sampdoria,1.0,2.0,-1.0
+2023-04-30,2022,Fulham,Manchester City,1.0,1.0,-1.0
+2023-04-30,2022,Newcastle United,Southampton,1.0,3.0,-1.0
+2023-05-02,2022,Arsenal,Chelsea,1.0,2.0,-1.0
+2023-05-02,2022,Barcelona,Osasuna,1.0,1.0,-1.0
+2023-05-03,2022,Atlético Madrid,Cádiz,1.0,3.0,-1.0
+2023-05-03,2022,Salernitana,Fiorentina,1.0,2.0,-1.0
+2023-05-03,2022,Hellas Verona,Inter,1.0,5.0,-1.0
+2023-05-03,2022,Lazio,Sassuolo,1.0,1.0,-1.0
+2023-05-03,2022,Sampdoria,Torino,1.0,5.0,-1.0
+2023-05-03,2022,Manchester City,West Ham United,1.0,3.0,-1.0
+2023-05-03,2022,Liverpool,Fulham,1.0,2.0,-1.0
+2023-05-03,2022,Milan,Cremonese,1.0,2.0,-1.0
+2023-05-03,2022,Juventus,Lecce,1.0,1.0,-1.0
+2023-05-04,2022,Udinese,Napoli,1.0,3.0,-1.0
+2023-05-06,2022,Milan,Lazio,1.0,3.0,-1.0
+2023-05-07,2022,Torino,Monza,1.0,4.0,-1.0
+2023-05-08,2022,Brighton & Hove Albion,Everton,1.0,3.0,8.0
+2023-05-12,2022,Mallorca,Cádiz,1.0,4.0,-1.0
+2023-05-12,2022,Lazio,Lecce,1.0,2.0,-1.0
+2023-05-13,2022,Spezia,Milan,1.0,3.0,3.2
+2023-05-13,2022,Salernitana,Atalanta,1.0,3.0,3.75
+2023-05-13,2022,Real Madrid,Getafe,1.0,2.0,-1.0
+2023-05-14,2022,Elche,Atlético Madrid,1.0,2.0,7.0
+2023-05-14,2022,RB Leipzig,Werder Bremen,1.0,1.0,-1.0
+2023-05-14,2022,Espanyol,Barcelona,1.0,4.0,-1.0
+2023-05-14,2022,Monza,Napoli,1.0,2.0,3.75
+2023-05-14,2022,Juventus,Cremonese,1.0,2.0,-1.0
+2023-05-14,2022,Everton,Manchester City,1.0,3.0,-1.0
+2023-05-15,2022,Leicester City,Liverpool,1.0,3.0,-1.0
+2023-05-20,2022,Getafe,Elche,1.0,2.0,-1.0
+2023-05-20,2022,Athletic Club,Celta Vigo,1.0,2.0,-1.0
+2023-05-20,2022,Milan,Sampdoria,1.0,1.0,-1.0
+2023-05-20,2022,Nottingham Forest,Arsenal,1.0,3.0,4.25
+2023-05-21,2022,Manchester City,Chelsea,1.0,2.0,-1.0
+2023-05-21,2022,Brighton & Hove Albion,Southampton,1.0,3.0,-1.0
+2023-05-21,2022,Torino,Fiorentina,1.0,4.0,-1.0
+2023-05-22,2022,Roma,Salernitana,1.0,3.0,-1.0
+2023-05-22,2022,Empoli,Juventus,1.0,5.0,4.5
+2023-05-24,2022,Betis,Getafe,1.0,4.0,3.2
+2023-05-28,2022,Barcelona,Mallorca,1.0,1.0,-1.0
+2023-05-28,2022,Southampton,Liverpool,1.0,1.0,-1.0
+2023-05-28,2022,Athletic Club,Elche,1.0,4.0,10.0
+2023-05-28,2022,Lazio,Cremonese,1.0,1.0,-1.0
+2023-06-04,2022,Napoli,Sampdoria,1.0,1.0,-1.0
